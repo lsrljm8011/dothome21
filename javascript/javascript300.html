@@ -224,6 +224,9 @@
         <li><a href="javascript200.html">조건문</a></li>
         <li><a href="javascript200.html">반복문</a></li>
     </ol>
+    <ol>
+        <li><a href="javascript400.html">알고리즘</a></li>
+    </ol>
 
     <h2 class="mt20">데이터 실행 : 함수</h2>
     <ul>
@@ -246,7 +249,78 @@
 
     <!-- smaple1 -->
     <div id="sample1" class="sample">
-        <h2>01.  <span class="dot"></span></h2>
+        <h2>01. 선언적 함수  <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    function func(){
+        document.write("*** 01. 선언적 함수 ***");
+        document.write("01. 함수가 실행되었습니다.");
+        //실행문
+    }
+    func(); //실행함수
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- smaple2 -->
+    <div id="sample2" class="sample">
+        <h2>02. 익명 함수(변수 안에 설정)  <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const func = function(){
+        document.write("*** 02. 익명 함수 ***");
+        document.write("02. 함수가 실행되었습니다.");
+    }
+    func();
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- smaple3 -->
+    <div id="sample3" class="sample">
+        <h2>03. 매개변수 함수  <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    function func(str){
+        document.write("*** 03. 매개변수 함수 *** ");
+        document.write(str);
+    }
+    func("03. 함수가 실행되었습니다.");
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- smaple4 -->
+    <div id="sample4" class="sample">
+        <h2>04. 리턴값 함수   <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    function func(){
+        const str = "함수가 실행되었습니다.";
+        return str;
+    }
+
+    document.write("*** 04. 리턴값 함수 ***");
+    document.write(func());
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- smaple5 -->
+    <div id="sample5" class="sample">
+        <h2>05. 재귀 함수    <span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
 
@@ -262,8 +336,51 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
     <script>
-        //sample1
+        //sample01
+        //01. 선언적 함수
+        {
+            function func(){
+                document.write("*** 01. 선언적 함수 *** <br>");
+                document.write("함수가 실행되었습니다.<br><br>");
+                //실행문
+            }
+            func(); //실행함수
+        }
 
+        //sample02
+        //02. 익명 함수 (변수 안에 설정)
+        {
+            const func = function(){
+                document.write("*** 02. 익명 함수 *** <br>");
+                document.write("함수가 실행되었습니다.<br><br>");
+            }
+            func();
+        }
+
+        //sample03
+        //03. 매개변수 함수
+        {
+            function func(str){
+                document.write("*** 03. 매개변수 함수 *** <br>");
+                document.write(str);
+            }
+            func("함수가 실행되었습니다.<br><br>");
+        }
+
+        //sample04
+        //04. 리턴값(결과) 함수
+        {
+            function func(){
+                const str = "함수가 실행되었습니다.<br><br>";
+                return str;
+            }
+
+            document.write("*** 04. 리턴값 함수 *** <br>");
+            document.write(func());
+        }
+
+        //sample05
+        //05. 재귀 함수
 
     </script>
 </body>
