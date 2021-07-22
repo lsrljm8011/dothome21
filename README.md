@@ -1,6 +1,6 @@
 # 스마트웹 2021
 
-## 메인 https://lsrljm8011.github.io/dothome21/
+메인 <a href="https://lsrljm8011.github.io/dothome21/">바로가기</a>
 
-### 자바스크립트 https://lsrljm8011.github.io/dothome21/javascript/javascript100.html
-### 레이아웃 https://lsrljm8011.github.io/dothome21/layout/index.html
+자바스크립트 <a href="https://lsrljm8011.github.io/dothome21/javascript/javascript100.html>바로가기</a>
+레이아웃 <a href="https://lsrljm8011.github.io/dothome21/layout/index.html바로가기</a>
