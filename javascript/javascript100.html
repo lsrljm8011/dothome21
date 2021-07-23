@@ -206,21 +206,36 @@
         .mt20 {
             margin-top: 20px;
         }
+        .ol1::before {
+            content: "데이터 저장하기 : ";
+        }
+        .ol2::before {
+            content: "데이터 불러오기 : ";
+        }
+        .ol3::before {
+            content: "데이터 실행하기 : ";
+        }
+        .ol4::before {
+            content: "데이터 제어하기 : ";
+        }
     </style>
 </head>
 
 <body>
     <h1>Javascript 문법 정리</h1>
-    <ol>
+    <ol class="ol1">
         <li><a href="javascript100.html#sample1">변수</a></li>
         <li><a href="javascript100.html#sample4">상수</a></li>
         <li><a href="javascript100.html#sample5">배열(Array)</a></li>
         <li><a href="javascript100.html#sample9">객체(Object)</a></li>
     </ol>
-    <ol>
+    <ol class="ol2">
+        <li><a href="javascript500.html">데이터(function)</a></li>
+    </ol>
+    <ol class="ol3">
         <li><a href="javascript300.html">함수(function)</a></li>
     </ol>
-    <ol>
+    <ol class="ol4"> 
         <li><a href="javascript200.html">조건문</a></li>
         <li><a href="javascript200.html">반복문</a></li>
     </ol>
@@ -230,22 +245,22 @@
 
     <h2 class="mt20">데이터 저장하기</h2>
     <ul>
-        <li>01. 변수 : 데이터 저장</li>
-        <li>02. 변수 : 데이터 저장 + 데이터 변경</li>
-        <li>03. 변수 : 데이터 저장 + 데이터 변경 + 데이터 추가</li>
-        <li>04. 상수 : 데이터 저장(변하지 않음)</li>
-        <li>05. 배열 : 데이터 저장(여러개) : 표현 방법1</li>
-        <li>06. 배열 : 데이터 저장(여러개) : 표현 방법2</li>
-        <li>07. 배열 : 데이터 저장(여러개) : 표현 방법3</li>
-        <li>08. 배열 : 데이터 저장(여러개) : 표현 방법4</li>
-        <li>09. 객체 : 데이터 저장(키와 값) : 표현 방법1 : 배열 스타일</li>
-        <li>10. 객체 : 데이터 저장(키와 값) : 표현 방법2 : 객체 스타일</li>
-        <li>11. 객체 : 데이터 저장(키와 값) : 표현 방법3</li>
-        <li>12. 객체 : 데이터 저장(키와 값) : 표현 방법4</li>
-        <li>13. 객체 : 데이터 저장(키와 값) : 표현 방법5 : 배열 속에 객체</li>
-        <li>14. 객체 : 데이터 저장(키와 값) : 표현 방법6 : 객체 속에 배열</li>
-        <li>15. 객체 : 데이터 저장(키와 값) : 표현 방법7 : 객체 속에 변수</li>
-        <li>16. 객체 : 데이터 저장(키와 값) : 표현 방법8 : 객체 속에 함수</li>
+        <li><a href="#sample1">01. 변수 : 데이터 저장</a></li>
+        <li><a href="#sample2">02. 변수 : 데이터 저장 + 데이터 변경</a></li>
+        <li><a href="#sample3"></a>03. 변수 : 데이터 저장 + 데이터 변경 + 데이터 추가</a></li>
+        <li><a href="#sample4"></a>04. 상수 : 데이터 저장(변하지 않음)</a></li>
+        <li><a href="#sample5"></a>05. 배열 : 데이터 저장(여러개) : 표현 방법1</a></li>
+        <li><a href="#sample6"></a>06. 배열 : 데이터 저장(여러개) : 표현 방법2</a></li>
+        <li><a href="#sample7"></a>07. 배열 : 데이터 저장(여러개) : 표현 방법3</a></li>
+        <li><a href="#sample8"></a>08. 배열 : 데이터 저장(여러개) : 표현 방법4</a></li>
+        <li><a href="#sample9"></a>09. 객체 : 데이터 저장(키와 값) : 표현 방법1 : 배열 스타일</a></li>
+        <li><a href="#sample10"></a>10. 객체 : 데이터 저장(키와 값) : 표현 방법2 : 객체 스타일</a></li>
+        <li><a href="#sample11"></a>11. 객체 : 데이터 저장(키와 값) : 표현 방법3</a></li>
+        <li><a href="#sample12"></a>12. 객체 : 데이터 저장(키와 값) : 표현 방법4</a></li>
+        <li><a href="#sample13"></a>13. 객체 : 데이터 저장(키와 값) : 표현 방법5 : 배열 속에 객체</a></li>
+        <li><a href="#sample14"></a>14. 객체 : 데이터 저장(키와 값) : 표현 방법6 : 객체 속에 배열</a></li>
+        <li><a href="#sample15"></a>15. 객체 : 데이터 저장(키와 값) : 표현 방법7 : 객체 속에 변수</a></li>
+        <li><a href="#sample16"></a>16. 객체 : 데이터 저장(키와 값) : 표현 방법8 : 객체 속에 함수</a></li>
     </ul>
 
     <hr>
@@ -435,7 +450,7 @@
     <hr>
 
     <div id="sample10" class="sample">
-        <h2>10. 데이터 저장(키와 값) : 표현 방법2<span class="dot"></span></h2>
+        <h2>10. 객체 : 데이터 저장(키와 값) : 표현 방법2<span class="dot"></span></h2>
         <div class="code">
             <pre class="line-numbers"><code class="language-js">{
     const obj = new Object();

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 연습7</title>
+</head>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #header{
+            height: 110px;
+            background-color: #fff3e0;
+        }
+        #banner{
+            height: 750px;
+            background-color: #ffe0b2;
+        }
+        #content1{
+            height: 2480px;
+            background-color: #ffcc80;
+        }
+        #content2{
+            height: 1870px;
+            background-color: #ffb74d;
+        }
+        #content3{
+            height: 530px;
+            background-color: #ffa726;
+        }
+        #footer{
+            height: 270px;
+            background-color: #ff9800;
+        }
+        .container{
+            width: 1200px;
+            height: inherit;
+            background-color: rgba(0, 0, 0, 0.3);
+            margin: 0 auto;
+        }
+        #title{
+            width: 1200px;
+            height: 200px;
+            margin: 0 auto;
+            background-color: #b71c1c;
+        }
+        #box1{
+            width: 600px;
+            height: 300px;
+            float: left;
+            margin: 0 auto;
+            background-color: #c62828;  
+        }
+        #box2{
+            width: 600px;
+            height: 300px;
+            float: left;
+            margin: 0 auto;
+            background-color: #d32f2f;
+        }
+    </style>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="container"></div>
+        </div>
+        <!-- //header -->
+
+        <div id="banner">
+            <div class="container"></div>
+        </div>
+        <!-- //banner -->
+
+        <div id="contents">
+            <div id="content1">
+                <div class="container">
+                    <div id="title"></div>
+                </div>
+            </div>
+            <div id="content2">
+                <div class="container">
+                    <div id="box1"></div>
+                    <div id="box2"></div>
+                </div>
+            </div>
+            <div id="content3">
+                <div class="container"></div>
+            </div>
+        </div>
+        <!-- //contents -->
+
+        <div id="footer">
+            <div class="container"></div>
+        </div>
+        <!-- //footer -->
+
+    </div>
+    <!-- //wrap -->
+
+</body>
+</html>

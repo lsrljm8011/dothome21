@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습</title>
+</head>
+<body>
+
+    <script>
+        //변수 : 데이터 저장소
+        //100, 200, 300 변수에 저장을 출력
+        {
+        var x = 100;
+        var y = 200;
+        var z = 300;
+
+        document.write(x);
+        document.write(y);
+        document.write(z);
+
+        document.write("<br>");
+        }
+
+        //배열 
+        {
+        const arr = [100, 200, 300];
+
+        document.write(arr[0]);
+        document.write(arr[1]);
+        document.write(arr[2]);
+
+        document.write("<br>");
+        }
+
+        //for문을 이용해서 1부터 50까지 출력
+        {
+            for (var i=1; i<=50; i++) {
+
+                document.write(i, "&nbsp");
+            }
+        document.write("<br>");
+        }
+
+        //for문을 이용해서 50에서 1까지 출력
+        {
+            for (var i=50; i>=1; i-- ) {
+
+                document.write(i, "&nbsp");
+
+            }
+        document.write("<br>");
+
+        }
+
+        //for문을 이용해서 1부터 50(짝수) 출력
+        {
+            num = 0;
+
+            for(var i=1; i<=50; i++)
+                if(i % 2 == num){
+
+                document.write(i, "&nbsp");
+                }
+        document.write("<br>");
+        }
+
+        //for문을 이용해서 1부터 50(홀수) 출력
+        {
+            num = 1;
+
+            for(var i=1; i<=50; i++)
+                if(i % 2 == num) {
+
+                document.write(i, "&nbsp");
+                }
+        document.write("<br>");
+        }
+
+        //구구단 8단 출력
+        {
+            var i =8
+
+             for(var j=1; j<=9; j++){
+                var sum = i*j
+
+                document.write(i, "*", j, "=", sum, "<br>");
+            }
+        document.write("<br>");
+        }
+        
+
+        //구구단 5단부터 8단
+        {
+            for(var i=5; i<=8; i++)
+                for(var j=1; j<=9; j++)
+            {
+                var sum = i*j
+
+                document.write(i, "*", j, "=", sum, "<br>");
+            }
+        }
+
+
+    </script>
+</body>
+</html>
