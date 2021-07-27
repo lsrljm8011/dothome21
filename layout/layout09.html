@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 연습9</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    body {
+        background-color: #e8f5e9;
+    }
+    #wrap {
+        width: 1200px;
+        margin: 0 auto;
+    }
+    header {
+        width: 100%;
+        height: 100px;
+        background-color: #c8e6c9;
+    }
+    main {
+        width: 100%;
+        overflow: hidden;
+    }
+    aside {
+        width: 20%;
+        height: 700px;
+        background-color: #a5d6a7;
+        float: left;
+    }
+    section {
+        width: 60%;
+        height: 700px;
+        background-color: #81c784;
+        float: left;
+    }
+    article {
+        width: 20%;
+        height: 700px;
+        background-color: #66bb6a;
+        float: left;
+    }
+    footer {
+        width: 100%;
+        height: 100px;
+        background-color: #4caf50;
+    }
+    @media (max-width:1210px) {
+        aside {
+            width: 30%;
+        }
+        section {
+            width: 70%;
+        }
+        article {
+            width: 100%;
+            height: 300px;
+        }
+    }
+    @media (max-width:800px) {
+        aside {
+            width: 100%;
+            height: 300px;
+        }
+        section {
+            width: 100%;
+            height: 300px;
+        }
+        article {
+            width: 100%;
+            height: 300px;
+        }
+    }
+    @media (max-width:600px) {
+        aside {
+            width: 100%;
+            height: 200px;
+        }
+        section {
+            width: 100%;
+            height: 200px;
+        }
+        article {
+            width: 100%;
+            height: 200px;
+        }
+    }
+</style>
+<body>
+    <div id="wrap">
+        <header></header>
+        <main>
+            <aside></aside>
+            <section></section>
+            <article></article>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+</html>

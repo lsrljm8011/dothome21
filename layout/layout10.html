@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 연습10</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    body {
+        background-color: #e1f5fe;
+    }
+    wrap {
+        width: 1200px;
+        margin: 0 auto;
+    }
+    header {
+        width: 100%;
+        height: 100px;
+        background-color: #b3e5fc;
+    }
+    main {
+        width: 100%;
+        overflow: hidden;
+    }
+    aside {
+        width: 30%;
+        height: 900px;
+        background-color: #81d4fa;
+        float: left;
+    }
+    section {
+        width: 70%;
+        height: 300px;
+        background-color: #4fc3f7;
+        float: left;
+    }
+    article1 {
+        width: 70%;
+        height: 300px;
+        background-color: #29b6f6;
+        float: left;
+    }
+    article2 {
+        width: 70%;
+        height: 300px;
+        background-color: #03a9f4;
+        float: left;
+    }
+    footer {
+        width: 100%;
+        height: 100px;
+        background-color: #039be5;
+    }
+    @media (max-width:1210px) {
+        aside {
+            width: 40%;
+            height: 800px;
+        } 
+        section {
+            width: 60%;
+            height: 400px;
+        }
+        article1 {
+            width: 60%;
+            height: 400px;
+        }  
+        article2 {
+            width: 100%;
+            height: 300px;
+        }
+    }
+    @media (max-width:800px) {
+        aside {
+            width: 100%;
+            height: 400px;
+        } 
+        section {
+            width: 50%;
+            height: 500px;
+        }
+        article1 {
+            width: 50%;
+            height: 500px;
+        }  
+        article2 {
+            width: 100%;
+            height: 300px;
+        }
+    }
+    @media (max-width:600px) {
+        aside {
+            width: 100%;
+            height: 600px;
+        } 
+        section {
+            width: 100%;
+            height: 600px;
+        }
+        article1 {
+            width: 100%;
+            height: 600px;
+        }  
+        article2 {
+            width: 100%;
+            height: 600px;
+        }
+    }
+</style>
+<body>
+    <div id="wrap">
+        <header></header>
+        <main>
+            <aside></aside>
+            <section></section>
+            <article1></article1>
+            <article2></article2>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+</html>
