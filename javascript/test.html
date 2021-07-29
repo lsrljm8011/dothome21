@@ -93,13 +93,57 @@
 
         //구구단 5단부터 8단
         {
-            for(var i=5; i<=8; i++)
-                for(var j=1; j<=9; j++)
+            for(var i=5; i<=8; i++);
+                for(var j=1; j<=9; j++);
             {
-                var sum = i*j
+                var sum = i*j;
 
-                document.write(i, "*", j, "=", sum, "<br>");
+                document.write(i, "*", j, "=", sum, "<br><br>");
             }
+        }
+
+        //배열의 개수 구하기
+        {
+            const num = [100, 200, 300, 400, 500];
+
+            document.write(num.length, "<br>");
+            document.write("<br>");
+        }
+
+        //3번째 값만 출력
+        {
+            const num = [100, 200, 300, 400, 500];
+            
+            document.write(num[2], "<br>");
+            document.write("<br><br>");
+        }
+
+        //for문을 이용해서 모든 값을 출력
+        {
+            const num = [100, 200, 300, 400, 500];
+
+            for(let i=0; i<num.length; i++){
+                document.write(num[i]);
+            }
+            document.write("<br><br>");
+        }
+
+        //forEach문을 이용해서 모든 값을 출력
+        {
+            const num = [100, 200, 300, 400, 500];
+            
+            num.forEach(element => {
+                document.write(element);
+            });
+            document.write("<br><br>");
+        }
+
+        {
+            const num = [100, 200, 300, 400, 500];
+
+            num.forEach(function(el){
+                document.write(el);
+            });
         }
 
 
