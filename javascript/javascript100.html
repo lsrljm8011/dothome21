@@ -289,7 +289,6 @@
     var y = 200;    // 변수 y에 숫자 200을 저장
     var z = "javascript";   //변수 z에 문자 javascript를 저장
 
-    document.write("*** 01. 변수 ***"); //출력
     document.write(x);  //저장한 변수 x 출력
     document.write(y);
     document.write(z);
@@ -311,7 +310,6 @@
     y = 400; 
     z = "jquery";
 
-    document.write("*** 02. 변수 ***");
     document.write(x);
     document.write(y);
     document.write(z);
@@ -333,7 +331,6 @@
     y += 400;   //y = y + 400
     z += "jquery";  //z = z + "jquery"
     
-    document.write("*** 03. 변수 ***");
     document.write(x);
     document.write(y);
     document.write(z);
@@ -357,7 +354,6 @@
     //Uncaught TypeError: Assignment to constant variable.
     //값이 변하지 않는 값들
     
-    document.write("*** 04. 상수 ****");
     document.write(x);
     document.write(y);
     document.write(z);
@@ -377,7 +373,6 @@
     arr[1] = 200;   //두번째 배열 저장소에 숫자 200을 저장
     arr[2] = "javascript";  //세번째 배열 저장소에 문자 javascript를 저장
     
-    document.write("*** 05. 배열 ***");
     document.write(arr[0]);
     document.write(arr[1]);
     document.write(arr[2]);
@@ -394,7 +389,6 @@
             <pre class="line-numbers"><code class="language-js">{
     const arr = new Array(100, 200, "javascript");  //배열 선언
 
-    document.write("*** 06. 배열 ***");
     document.write(arr[0]);
     document.write(arr[1]);
     document.write(arr[2]);
@@ -414,7 +408,6 @@
     arr[1] = 200;              
     arr[2] = "javascript";
     
-    document.write("*** 07. 배열 ***");
     document.write(arr[0];
     document.write(arr[1]);
     document.write(arr[2]);
@@ -431,7 +424,6 @@
             <pre class="line-numbers"><code class="language-js">{
     const arr = [100, 200, "javascript"];   //배열 선언
 
-    document.write("*** 08. 배열 ***");
     document.write(arr[0]);
     document.write(arr[1]);
     document.write(arr[2]);
@@ -451,7 +443,6 @@
     obj[1] = 200;
     obj[2] = "javascript";
 
-    document.write("*** 09. 객체 ***");
     document.write(obj[0]);
     document.write(obj[1];
     document.write(obj[2]);
@@ -471,7 +462,6 @@
     obj.b = 200;
     obj.c = "javaecript";
 
-    document.write("*** 10. 객체 ***");
     document.write(obj.a);
     document.write(obj.b);
     document.write(obj.c);
@@ -491,7 +481,6 @@
     obj.b = 200;
     obj.c = "javaecript";
 
-    document.write("*** 11. 객체 ***");
     document.write(obj.a);
     document.write(obj.b);
     document.write(obj.c);
@@ -508,7 +497,6 @@
 <pre class="line-numbers"><code class="language-js">{
     const obj = {a:100, b:200, c:"javascript"};
 
-    document.write("*** 12. 객체 ***");
     document.write(obj.a);
     document.write(obj.b);
     document.write(obj.c);
@@ -528,7 +516,6 @@
     {c:"javascript"}
     ];
 
-    document.write("*** 13. 객체 ***");
     document.write(obj[0].a);
     document.write(obj[0].b);
     document.write(obj[1].c);
@@ -548,7 +535,7 @@
         b : [200, 300],
         c : "javascript"
     }
-    document.write("*** 14. 객체 ***");
+
     document.write(obj.a);
     document.write(obj.b);
     document.write(obj.b[0]);
@@ -571,7 +558,6 @@
 
     const obj = { a, b, c }
 
-    document.write("*** 15. 객체 ***");
     document.write(obj.a);
     document.write(obj.b);
     document.write(obj.c);
@@ -601,7 +587,6 @@
         }
     }
 
-    document.write("*** 16. 객체 ***");
     document.write(obj.a);
     document.write(obj.b);
     document.write(obj.b[0]);
@@ -811,6 +796,7 @@
                 b : [200, 300],
                 c : "javascript"
             }
+            
             document.write("*** 14. 객체 ***<br>");
             document.write(obj.a, "<br>");
             document.write(obj.b, "<br>");
