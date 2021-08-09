@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 연습14</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: #E8F5E9;
+        }
+        #wrap{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        header{
+            width: 100%;
+            height: 100px;
+            background-color: #C8E6C9;
+        }
+        aside{
+            width: 100%;
+            height: 100px;
+            background-color: #A5D6A7;
+        }
+        main{
+            overflow: hidden;
+        }
+        section1{
+            width: 25%;
+            height: 700px;
+            background-color: #81C784;
+            float: left;
+        }
+        section2{
+            width: 50%;
+            height: 700px;
+            background-color: #66BB6A;
+            float: left;
+        }
+        section3{
+            width: 25%;
+            height: 700px;
+            background-color: #4CAF50;
+            float: left;
+        }
+        footer{
+            width: 100%;
+            height: 100px;
+            background-color: #43A047;
+        }
+        @media (max-width:1220px){
+            #wrap{
+                width: 100%;
+            }
+        }
+        @media (max-width:1000px){
+            #wrap{
+                width: 100%;
+            }
+            section1{
+                width: 20%;
+                height: 450px;
+            }
+            section2{
+                width: 80%;
+                height: 450px;
+            }
+            section3{
+                width: 100%;
+                height: 250px;
+            }
+        }
+        @media (max-width:600px){
+            aside{
+                height: 150px;
+            }
+            section1{
+                width: 100%;
+                height: 150px;
+            }
+            section2{
+                width: 100%;
+                height: 200px;
+            }
+            section3{
+                width: 100%;
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header></header>
+        <aside></aside>
+        <main>
+            <section1></section1>
+            <section2></section2>
+            <section3></section3>
+        </main>
+        <footer></footer>
+    </div>    
+</body>
+</html>

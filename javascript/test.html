@@ -9,144 +9,20 @@
 <body>
 
     <script>
-        //변수 : 데이터 저장소
-        //100, 200, 300 변수에 저장을 출력
         {
-        var x = 100;
-        var y = 200;
-        var z = 300;
+            let num = 0;
 
-        document.write(x);
-        document.write(y);
-        document.write(z);
-
-        document.write("<br>");
-        }
-
-        //배열 
-        {
-        const arr = [100, 200, 300];
-
-        document.write(arr[0]);
-        document.write(arr[1]);
-        document.write(arr[2]);
-
-        document.write("<br>");
-        }
-
-        //for문을 이용해서 1부터 50까지 출력
-        {
-            for (var i=1; i<=50; i++) {
-
-                document.write(i, "&nbsp");
-            }
-        document.write("<br>");
-        }
-
-        //for문을 이용해서 50에서 1까지 출력
-        {
-            for (var i=50; i>=1; i-- ) {
-
-                document.write(i, "&nbsp");
-
-            }
-        document.write("<br>");
-
-        }
-
-        //for문을 이용해서 1부터 50(짝수) 출력
-        {
-            num = 0;
-
-            for(var i=1; i<=50; i++)
-                if(i % 2 == num){
-
-                document.write(i, "&nbsp");
+            while(true){
+                num++;
+                if(num==3){
+                    continue;
                 }
-        document.write("<br>");
-        }
-
-        //for문을 이용해서 1부터 50(홀수) 출력
-        {
-            num = 1;
-
-            for(var i=1; i<=50; i++)
-                if(i % 2 == num) {
-
-                document.write(i, "&nbsp");
+                if(num>6){
+                    break;
                 }
-        document.write("<br>");
-        }
-
-        //구구단 8단 출력
-        {
-            var i =8
-
-             for(var j=1; j<=9; j++){
-                var sum = i*j
-
-                document.write(i, "*", j, "=", sum, "<br>");
-            }
-        document.write("<br>");
-        }
-        
-
-        //구구단 5단부터 8단
-        {
-            for(var i=5; i<=8; i++);
-                for(var j=1; j<=9; j++);
-            {
-                var sum = i*j;
-
-                document.write(i, "*", j, "=", sum, "<br><br>");
+                document.write(num);
             }
         }
-
-        //배열의 개수 구하기
-        {
-            const num = [100, 200, 300, 400, 500];
-
-            document.write(num.length, "<br>");
-            document.write("<br>");
-        }
-
-        //3번째 값만 출력
-        {
-            const num = [100, 200, 300, 400, 500];
-            
-            document.write(num[2], "<br>");
-            document.write("<br><br>");
-        }
-
-        //for문을 이용해서 모든 값을 출력
-        {
-            const num = [100, 200, 300, 400, 500];
-
-            for(let i=0; i<num.length; i++){
-                document.write(num[i]);
-            }
-            document.write("<br><br>");
-        }
-
-        //forEach문을 이용해서 모든 값을 출력
-        {
-            const num = [100, 200, 300, 400, 500];
-            
-            num.forEach(element => {
-                document.write(element);
-            });
-            document.write("<br><br>");
-        }
-
-        {
-            const num = [100, 200, 300, 400, 500];
-
-            num.forEach(function(el){
-                document.write(el);
-            });
-        }
-
-
     </script>
 </body>
 </html>

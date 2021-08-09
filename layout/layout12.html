@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 연습12</title>
+    <style>
+        #wrap {
+            padding: 0;
+            margin: 0;
+        }
+        header {
+            height: 100px;
+            background-color: #EFEBE8;
+        }
+        aside {
+            height: 100px;
+            background-color: #BDAAA4;
+        }
+        main {
+            height: 100%;
+            background-color: #8C6E63;
+            overflow: hidden;
+        }
+        section1 {
+            width: 400px;
+            height: 500px;
+            float: left;
+            margin: 0 auto;
+            background-color: #795547;
+        }
+        section2 {
+            width: 800px;
+            height: 500px;
+            float: left;
+            margin: 0 auto;
+            background-color: #6D4D42;
+        }
+        section3 {
+            width: 1200px;
+            height: 300px;
+            float: left;
+            margin: 0 auto;
+            background-color: #5D4038;
+        }
+        footer {
+            height: 100px;
+            background-color: #4F332F;
+        }
+        .container{
+            background-color: rgba(0, 0, 0, 0.2);
+            width: 1200px;
+            height: inherit;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div class="container"></div>
+        </header>
+        <aside>
+            <div class="container"></div>
+        </aside>
+        <main>
+            <div class="container">
+                <section1></section1>
+                <section2></section2>
+                <section3></section3>
+            </div>
+        </main>
+        <footer>
+            <div class="container"></div>
+        </footer>
+    </div>
+</body>
+</html>
