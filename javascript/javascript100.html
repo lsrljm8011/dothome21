@@ -258,6 +258,9 @@
         <li><a href="javascript604.html">날짜 메서드</a></li>
         <li><a href="javascript605.html">이벤트 메서드</a></li>
     </ol>
+    <ol class="ol7"> 
+        <li><a href="javascript606.html">샘플</a></li>
+    </ol>
 
     <h2 class="mt20">데이터 저장하기</h2>
     <ul>
@@ -279,12 +282,19 @@
         <li><a href="#sample16">16. 객체 : 데이터 저장(키와 값) : 표현 방법8 : 객체 속에 함수</a></li>
     </ul>
 
+    <h2 class="mt20">추가</h2>
+    <ul>
+        <li><a href="#sample17">01. 변수의 종류 : 변수(전역/지역), 매개변수</a></li>
+        <li><a href="#sample18">02. 변수의 변환 : 형 변환</a></li>
+        <li><a href="#sample19">03. 변수의 유형(데이터타입)</a></li>
+    </ul>
+
     <hr>
 
     <div id="sample01" class="sample">
         <h2>01. 변수 : 데이터 저장소 <span class="dot"></span></h2>
-        <div class="code">
-            <pre class="line-numbers"><code class="language-js">{
+<div class="code">
+    <pre class="line-numbers"><code class="language-js">{
     var x = 100;    //변수 x에 숫자 100을 저장
     var y = 200;    // 변수 y에 숫자 200을 저장
     var z = "javascript";   //변수 z에 문자 javascript를 저장
@@ -301,8 +311,8 @@
 
     <div id="sample02" class="sample">
         <h2>02. 변수 : 데이터 저장 + 데이터 변경 <span class="dot"></span></h2>
-        <div class="code">
-            <pre class="line-numbers"><code class="language-js">{
+<div class="code">
+    <pre class="line-numbers"><code class="language-js">{
     let x = 100;    //변수 x에 숫자 100을 저장
     let y = 200; 
     let z = "javascript"; 
@@ -322,8 +332,8 @@
 
     <div id="sample03" class="sample">
         <h2>03. 변수 : 데이터 저장 + 데이터 변경 + 데이터 추가 <span class="dot"></span></h2>
-        <div class="code">
-            <pre class="line-numbers"><code class="language-js">{
+<div class="code">
+    <pre class="line-numbers"><code class="language-js">{
     let x = 100;
     let y = 200;
     let z = "javascript";
@@ -343,8 +353,8 @@
 
     <div id="sample04" class="sample">
         <h2>04. 상수 <span class="dot"></span></h2>
-        <div class="code">
-            <pre class="line-numbers"><code class="language-js">{
+<div class="code">
+    <pre class="line-numbers"><code class="language-js">{
     const x = 100;
     const y = 200;
     const z = "javascript";
@@ -366,8 +376,8 @@
 
     <div id="sample05" class="sample">
         <h2>05. 배열 : 표현 방법 1<span class="dot"></span></h2>
-        <div class="code">
-            <pre class="line-numbers"><code class="language-js">{
+<div class="code">
+    <pre class="line-numbers"><code class="language-js">{
     const arr = new Array();    //배열 선언
     arr[0] = 100;   //첫번째 배열 저장소에 숫자 100을 저장
     arr[1] = 200;   //두번째 배열 저장소에 숫자 200을 저장
@@ -385,8 +395,8 @@
 
     <div id="sample06" class="sample">
         <h2>06. 배열 : 표현 방법 2<span class="dot"></span></h2>
-        <div class="code">
-            <pre class="line-numbers"><code class="language-js">{
+<div class="code">
+    <pre class="line-numbers"><code class="language-js">{
     const arr = new Array(100, 200, "javascript");  //배열 선언
 
     document.write(arr[0]);
@@ -401,8 +411,8 @@
 
     <div id="sample07" class="sample">
         <h2>07. 배열 : 표현 방법 3 <span class="dot"></span></h2>
-        <div class="code">
-            <pre class="line-numbers"><code class="language-js">{
+<div class="code">
+    <pre class="line-numbers"><code class="language-js">{
     const arr = []; //배열 선언
     arr[0] = 100;              
     arr[1] = 200;              
@@ -420,8 +430,8 @@
 
     <div id="sample08" class="sample">
         <h2>08. 배열 : 표현 방법 4<span class="dot"></span></h2>
-        <div class="code">
-            <pre class="line-numbers"><code class="language-js">{
+<div class="code">
+    <pre class="line-numbers"><code class="language-js">{
     const arr = [100, 200, "javascript"];   //배열 선언
 
     document.write(arr[0]);
@@ -436,8 +446,8 @@
 
     <div id="sample09" class="sample">
         <h2>09. 객체 : 데이터 저장(키와 값) : 표현 방법1 : 배열 스타일<span class="dot"></span></h2>
-        <div class="code">
-<pre class="line-numbers"><code class="language-js">{
+<div class="code">
+    <pre class="line-numbers"><code class="language-js">{
     const obj = new Object;
     obj[0] = 100;
     obj[1] = 200;
@@ -455,7 +465,7 @@
 
     <div id="sample10" class="sample">
         <h2>10. 객체 : 데이터 저장(키와 값) : 표현 방법2<span class="dot"></span></h2>
-        <div class="code">
+    <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     const obj = new Object();
     obj.a = 100;
@@ -474,7 +484,7 @@
 
     <div id="sample11" class="sample">
         <h2>11. 객체 : 데이터 저장(키와 값) : 표현 방법3 : 키워드 생략2<span class="dot"></span></h2>
-        <div class="code">
+    <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     const obj = {};
     obj.a = 100;
@@ -493,7 +503,7 @@
 
     <div id="sample12" class="sample">
         <h2>12. 객체 : 데이터 저장(키와 값) : 표현 방법4<span class="dot"></span></h2>
-        <div class="code">
+    <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     const obj = {a:100, b:200, c:"javascript"};
 
@@ -509,7 +519,7 @@
 
     <div id="sample13" class="sample">
         <h2>13. 객체 : 데이터 저장(키와 값) : 표현 방법5 : 배열 속에 객체<span class="dot"></span></h2>
-        <div class="code">
+    <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     const obj = [
     {a:100, b:200}, 
@@ -528,7 +538,7 @@
 
     <div id="sample14" class="sample">
         <h2>14. 객체 : 데이터 저장(키와 값) : 표현 방법6 : 객체 속에 배열<span class="dot"></span></h2>
-        <div class="code">
+    <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     const obj = {
         a : 100,
@@ -550,7 +560,7 @@
 
     <div id="sample15" class="sample">
         <h2>15. 객체 : 데이터 저장(키와 값) : 표현 방법7 : 객체 속에 변수<span class="dot"></span></h2>
-        <div class="code">
+    <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     const a = 100;
     const b = 200;
@@ -570,7 +580,7 @@
 
     <div id="sample16" class="sample">
         <h2>16. 객체 : 데이터 저장(키와 값) : 표현 방법8 : 객체 속에 함수<span class="dot"></span></h2>
-        <div class="code">
+    <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     const obj = {
         a: 100,
@@ -595,6 +605,101 @@
     obj.d();
     obj.e();
     obj.f();
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <div id="sample17" class="sample">
+        <h2>01. 변수의 종류 : 지역변수, 전역변수<span class="dot"></span></h2>
+    <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    let x = 100;    //변수 설정 : 전역 변수
+    let y = 200;
+    let z = "javascript";
+    let a = 300;
+
+    function func(){
+        let x = 100;
+        let y = 200;    //변수 설정 : 지역 변수
+        let z = "javascript";
+        a = 400;    //전역 변수 : 변수 값이 300 -> 400 변경
+        y = 500;    //지역 변수 : 변수 값이 200 -> 500 변경
+
+        document.write("함수 안");
+        document.write(x);
+        document.write(y);
+        document.write(z);
+        document.write(a);
+    }
+    func();
+
+    document.write("함수 밖");
+    document.write(y);
+    document.write(x);
+    document.write(z);
+    document.write(a);
+}
+</code></pre>
+        </div>
+    </div>
+
+
+    <hr>
+
+    <div id="sample18" class="sample">
+        <h2>18. 변수의 변환수<span class="dot"></span></h2>
+    <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    let x = 100;
+    let y = "100";
+
+    document.write("x : " + x + " : " + typeof(x));  //typeof() 문자열인지아닌지 알려주는 함수
+    document.write("y : " + y + " : " + typeof(y));
+
+    x = "" + x; //숫자를 문자열로 형 변환
+    document.write("x : " + x + " : " + typeof(x));
+
+    y = Number(y); //내장 객체를 이용한 형 변환
+    document.write("y : " + y + " : " + typeof(y));
+
+    x = Number(x);
+    document.write("x : " + x + " : " + typeof(x));
+
+    y = String(y);
+    document.write("y : " + y + " : " + typeof(y));
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <div id="sample17" class="sample">
+        <h2>19. 변수의 유형(데이터타입)span class="dot"></span></h2>
+    <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    let num1 = 100;
+    let str = "javascript";
+    let func = function(){};
+    let arr = [];
+    let obj = {};
+    let boo = true;
+    let nul;    //아무런 값이 없을 때
+    let und = undefined;    //값이 정의 되어 있지 않을 때
+    let sym = Symbol();
+
+    document.write(typeof(num1));
+    document.write(typeof(str));
+    document.write(typeof(func);
+    document.write(typeof(arr));
+    document.write(typeof(obj);
+    document.write(typeof(boo));
+    document.write(typeof(nul));
+    document.write(typeof(und));
+    document.write(typeof(sym));
 }
 </code></pre>
         </div>
@@ -838,7 +943,7 @@
                 }
             }
 
-            document.write("*** 16. 객체 ***<br>");
+            document.write("<br>*** 16. 객체 ***<br>");
             document.write(obj.a, "<br>");
             document.write(obj.b, "<br>");
             document.write(obj.b[0], "<br>");
@@ -847,7 +952,123 @@
             obj.d();
             obj.e();
             obj.f();
+            document.write("<br>");
         }
+
+        //sample17
+        //변수의 종류 : 지역변수, 전역변수
+        {
+            document.write("<br>*** 17. 변수의 종류 ***<br>");
+
+            let x = 100;    //변수 설정 : 전역 변수
+            let y = 200;
+            let z = "javascript";
+            let a = 300;
+
+            //선언적 함수 안에 넣고 실행
+            function func(){
+                let x = 100;
+                let y = 200;    //변수 설정 : 지역 변수
+                let z = "javascript";
+                a = 400;    //전역 변수 : 변수 값이 300 -> 400 변경
+                y = 500;    //지역 변수 : 변수 값이 200 -> 500 변경
+
+                document.write("함수 안", "<br>");
+                document.write(x, "<br>");
+                document.write(y, "<br>");
+                document.write(z, "<br>");
+                document.write(a, "<br><br>");
+            }
+            func();
+
+            document.write("함수 밖", "<br>");
+            document.write(y, "<br>");
+            document.write(x, "<br>");
+            document.write(z, "<br>");
+            document.write(a, "<br><br>");
+
+            // //익명 함수
+            // const func1 = function(){
+            //     let x = 100;
+            //     let y = 200;
+            //     let z = "javascript";
+
+            //     document.write(x, "<br>");
+            //     document.write(y, "<br>");
+            //     document.write(z, "<br>");
+            // }
+            // func1();
+
+            // //매개변수 함수
+            // const func2 = function(x, y, z){
+            //     document.write(x, "<br>");
+            //     document.write(y, "<br>");
+            //     document.write(z, "<br>");
+            // }
+            // func2(100, 200, "javascript");
+
+            // //리턴값 함수
+            // const func3 = function(){
+            //     let x = "100 <br>";
+            //     let y = "200 <br>";
+            //     let z = "javascript <br>";
+
+            //     return x + y +z;
+            // }
+            // document.write(func3());
+
+            //sample18
+            //변수의 변환 : 형 변환
+        }
+            {
+                document.write("<br>*** 18. 변수의 변환 ***<br>");
+
+                let x = 100;
+                let y = "100";
+
+                document.write("x : " + x + " : " + typeof(x), "<br>");  //typeof() 문자열인지아닌지 알려주는 함수
+                document.write("y : " + y + " : " + typeof(y), "<br><br>");
+
+                x = "" + x; //숫자를 문자열로 형 변환
+                document.write("x : " + x + " : " + typeof(x), "<br>");
+
+                y = Number(y); //내장 객체를 이용한 형 변환
+                document.write("y : " + y + " : " + typeof(y), "<br><br>");
+
+                x = Number(x);
+                document.write("x : " + x + " : " + typeof(x), "<br>");
+
+                y = String(y);
+                document.write("y : " + y + " : " + typeof(y), "<br><br>");
+            }
+
+            //sample19
+            //변수의 유형(데이터타입)
+            //변수 : 숫자(number), 문자(string), 함수(function), 배열(object), 
+            //      객체(object), 불린(boolen), 특수값(null, undefined), 심볼(symbol)
+            {
+                document.write("<br>*** 19. 변수의 유형(데이터타입) ***<br>");
+
+                let num1 = 100;
+                let str = "javascript";
+                let func = function(){};
+                let arr = [];
+                let obj = {};
+                let boo = true;
+                let nul;    //아무런 값이 없을 때
+                let und = undefined;    //값이 정의 되어 있지 않을 때
+                let sym = Symbol();
+
+                document.write(typeof(num1), "<br>");
+                document.write(typeof(str), "<br>");
+                document.write(typeof(func), "<br>");
+                document.write(typeof(arr), "<br>");
+                document.write(typeof(obj), "<br>");
+                document.write(typeof(boo), "<br>");
+                document.write(typeof(nul), "<br>");
+                document.write(typeof(und), "<br>");
+                document.write(typeof(sym), "<br>");
+            }
     </script>
 </body>
 
