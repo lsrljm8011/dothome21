@@ -269,12 +269,33 @@
             color: #fff;
             border-radius: 30px;
         }
+        .page {
+            text-align: right;
+            margin-bottom: 3px;
+        }
+        .page li {
+            display: inline;
+            list-style: none;
+        }
+        .page li a {
+            text-decoration: none;
+            color: #222;
+        }
+        .page li a:hover {
+            color: #089450;
+        }
     </style>
     </style>
 </head>
 
 <body>
     <h1>Javascript 문법 정리</h1>
+    
+    <ul class="page">
+        <li><a href="../refer-html/index.html">HTML</a></li>
+        <li><a href="../refer-css/index.html">CSS</a></li>
+        <li><a href="../javascript/javascript100.html">JAVASCRIPT</a></li>
+    </ul>
     <ol class="ol1">
         <li><a href="javascript100.html#sample01">변수</a></li>
         <li><a href="javascript100.html#sample04">상수</a></li>
@@ -435,7 +456,7 @@
 
     <!-- sample02 -->
     <div id="sample02" class="sample">
-        <h2>01. 날짜 메서드  <span class="dot"></span></h2>
+        <h2>02. 날짜 메서드  <span class="dot"></span></h2>
         <div class="view">
             <table>
                 <colgroup>
@@ -496,7 +517,7 @@
 
     <!-- sample03 -->
     <div id="sample03" class="sample">
-        <h2>01. 날짜 메서드  <span class="dot"></span></h2>
+        <h2>03. 날짜 메서드  <span class="dot"></span></h2>
         <div class="view">
             <table>
                 <colgroup>
@@ -537,16 +558,19 @@
         </div>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
+    const date = Date.parse("2021/8/11");
+    document.querySelector(".sample03_R1").innerHTML = date;
+    
+    const date2 = Date.parse("8 11 2021");
+    document.querySelector(".sample03_R2").innerHTML = date2; 
 
+    const date3 = Date.now();
+    document.querySelector(".sample03_R3").innerHTML = date3; 
 }
 </code></pre>
         </div>
     </div>
     <!-- sample03 -->
-
-
-    <hr>
-    <hr>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
