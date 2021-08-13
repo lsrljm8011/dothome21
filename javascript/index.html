@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Reference</title>
+    <style>
+        @font-face {
+            font-family: 'NEXON Lv1 Gothic OTF';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'TmonMonsori';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* width: margin + padding + border */
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        #wrap {
+            margin: 2%;
+            border : 8px solid #0243f1;
+            border-radius: 20px;
+            height: 96vh;  /* 화면에 꽉 참*/
+        }
+        #contents {
+            border : 8px solid #50b5f9;
+            border-radius: 12px;
+            text-align: center;
+            padding: 2%;
+            height: 100%;   /* wrap에 있는 hwight값 상속받음 */
+            display: flex;    /* 가운데 오게 작업 */
+            align-items: center;
+            justify-content: center;
+            flex-direction: column; /* 다시 세로형으로 바꿔줌 */
+        }
+        #contents h1 {
+            font-family: 'TmonMonsori';
+            color: #0243f1;
+            font-size: 8vw;    /* 화면을 100등분해서 8정도 크기 */
+            text-transform: uppercase;
+        }
+        #contents p {
+            font-family: 'NEXON Lv1 Gothic OTF';
+            background-color: #0243f1;
+            color: #fff;
+            display: inline-block;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 16px;
+            margin-bottom: 5%;
+        }
+        .menu li {
+            display: inline;
+        }
+        .menu li a {
+            font-family: 'NEXON Lv1 Gothic OTF';
+            color: #0243f1 ;
+            border: 1px dashed #0243f1;
+            padding: 10px 30px;
+            display: inline-block;
+            border-radius: 50px;
+            font-size: 16px;
+            margin: 2px;
+        }
+        @media (max-width: 800px) {
+            #contents p,
+            .menu li a {
+                font-size: 12px;
+                padding: 5px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <main id="contents">
+            <h1>Javascript</h1>
+            <p>자바스크립트 레퍼런스 북입니다.</p>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#">데이터 저장하기</a></li>
+                    <li><a href="#">데이터 불러오기</a></li>
+                    <li><a href="#">데이터 실행하기</a></li>
+                    <li><a href="#">데이터 제어하기</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">문자열 객체</a></li>
+                    <li><a href="#">배열 객체</a></li>
+                    <li><a href="#">날짜 객체</a></li>
+                    <li><a href="#">수학 객체</a></li>
+                    <li><a href="#">브라우저 객체</a></li>
+                    <li><a href="#">요소 객체</a></li>
+                    <li><a href="#">이벤트 객체</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">샘플</a></li>
+                    <li><a href="#">알고리즘</a></li>
+                </ul>
+            </nav>
+        </main>
+    </div>
+</body>
+</html>
