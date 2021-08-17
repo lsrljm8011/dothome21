@@ -513,13 +513,13 @@
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     // function func(){
-        //     document.write("함수가 실행되었습니다.");
-        // }
-        // func();
+    //     document.write("함수가 실행되었습니다.");
+    // }
+    // func();
 
-        (function (){
-            document.write("함수가 실행되었습니다.");
-        })();
+    (function (){
+        document.write("함수가 실행되었습니다.");
+    })();
 }
 </code></pre>
         </div>
@@ -533,17 +533,17 @@
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     // function func(str){
-        //     if(str == null){
-        //         str = "함수가 실행되었습니다.;
-        //         document.write(str);
-        //     }
-        // }
-        // func();
+    //     if(str == null){
+    //         str = "함수가 실행되었습니다.;
+    //         document.write(str);
+    //     }
+    // }
+    // func();
 
-        function func(str = "함수가 실행되었습니다."){
-            document.write(str);
-        }
-        func();
+    function func(str = "함수가 실행되었습니다."){
+        document.write(str);
+    }
+    func();
 }
 </code></pre>
         </div>
@@ -576,20 +576,20 @@
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     // function func(){
-        //     document.write("함수가 실행되었습니다.);
-        //     func();
-        // }
-        // func();
+    //     document.write("함수가 실행되었습니다.);
+    //     func();
+    // }
+    // func();
 
-        function func(num){
-            if(num &lt;= 1){
-                document.write("함수가 실행되었습니다.");
-            } else {
-                document.write("함수가 실행되었습니다."); 
-                func(num-1);
-            }
+    function func(num){
+        if(num &lt;= 1){
+            document.write("함수가 실행되었습니다.");
+        } else {
+            document.write("함수가 실행되었습니다."); 
+            func(num-1);
         }
-        func(5);
+    }
+    func(5);
 }
 </code></pre>
         </div>
@@ -646,10 +646,10 @@
 <pre class="line-numbers"><code class="language-js">{
     //01
     function funA(){
-        console.log("funA가 실행되었습니다.");
+        document.write("funA가 실행되었습니다.");
     }
     function funB(){
-        console.log("funB가 실행되었습니다.");
+        document.write("funB가 실행되었습니다.");
     }
     funA();
     funB();
