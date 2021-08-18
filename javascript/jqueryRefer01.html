@@ -113,7 +113,7 @@
             font-size: 16px;
         }
         .table table tr:nth-child(even) {
-            background-color: #f2f6fd;
+            background-color: #f9f9f9;
         }
         .table table th {
             border-bottom: 2px solid #ddd;
@@ -135,7 +135,7 @@
         .sample h2 {
             position: relative;
             font-size: 16px;
-            background-color: #f2f6fd;
+            background-color: #f2f2f2;
             padding: 15px;
             border-radius: 5px 5px 0 0;
             font-weight: normal;
@@ -272,14 +272,24 @@
         }
         @media (max-width: 800px) {
             .view {
-                padding: 10px;
+                padding: 10px 10px 0 10px;
             }
             .view li {
                 padding: 10px;
-                margin: 0 8px 0 0;
+                margin: 0 8px 8px 0;
             }
             .btn {
                 padding: 10px;
+            }
+            .table {
+                overflow: auto;
+            }
+            .table table th {
+                font-weight: normal;
+                white-space: nowrap;
+            }
+            .table table td {
+                white-space: nowrap;
             }
         }
     </style>
@@ -397,6 +407,7 @@
 }
 </code></pre>
         </div>
+        
         <hr>
         <script>
             $(".reset1").click(function(){
@@ -405,9 +416,6 @@
             $(".btn1-1").click(function(){
                 $(".view1 .class").addClass("blue");
             });
-            // document.querySelector(".vew1 .class").addEventListener("click", function(){
-            //     document.querySelector(".view .class").classList.add("blue");
-            // })
             $(".btn1-2").click(function(){
                 $(".view1 #id").addClass("blue");
             });
@@ -423,17 +431,47 @@
         </script>
         <!-- //sample01 -->
 
-    <hr>
-    <hr>
+        <hr>
+
+        <!-- sample02 -->
+       <div id="sample02" class="sample">
+           <h2>02. 기본 선택자 <span class="dot"></span></h2>
+           <div class="view view1j">
+               <ul>
+                   <li>$("li")</li>
+                   <li class="class">$(".class")</li>
+                   <li id="id">$("#id")</li>
+                   <li>$(".class, #id")</li>
+                   <li>$("*")</li>
+               </ul>
+           </div>
+           <div class="btn btn1">
+               <a href="#c" class="reset1j">리셋</a>
+               <a href="#c" class="btn1-1j">클릭하면 클래스(.class)를 선택합니다.</a>
+               <a href="#c" class="btn1-2j">클릭하면 아이디(#id)를 선택합니다.</a>
+               <a href="#c" class="btn1-3j">클릭하면 기본(li) 태그를 선택합니다.</a>
+               <a href="#c" class="btn1-4j">클릭하면 여러가지(#id, .class) 태그를 선택합니다.</a>
+               <a href="#c" class="btn1-5j">클릭하면 전체 태그(*)를 선택합니다.</a>
+           </div>
+   <div class="code">
+       <pre class="line-numbers"><code class="language-js">{
+
+   }
+   </code></pre>
+           </div>
+           
+           <hr>
+           <script>
+               const btn1 = document.querySelector(".btn1-1j"); //선택자를 변수에 저장
+               const class = document.querySelector(".class");
+               btn1.addEventListener("click", function(){    //버튼을 클릭하면 함수를 실행
+                
+               });
+           </script>
+           <!-- //sample02 -->
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
-    <script>
-        //sample1
-        //01. 기본 선택자
-        {
-            document.write("*** 01. 기본 선택자  ***<br>"); 
-        }
-        </script>
 </body>
 </html>
