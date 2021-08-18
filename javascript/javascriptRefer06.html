@@ -672,24 +672,16 @@
 <pre class="line-numbers"><code class="language-js">{
     const arr = [100, 200, 300, 400, 500];
     const text = arr.reverse();       
-    
     document.querySelector(".sample06_R1").innerHTML = text; 
 
     const text2 = arr.sort();
-
     document.querySelector(".sample06_R2").innerHTML = text2; 
 
     const text3 = arr.sort(function(a, b){return b-a;});
-
     document.querySelector(".sample06_R3").innerHTML = text3; 
 
     const str1 = ['c', 'd', 'e', 'a', 'b'];
-    // const text4 = str1.sort((a, b) => {
-    //     return a.localeCompare(b);
-    //});
     const text4 = str1.sort((a, b) => a.localeCompare(b));
-
-    document.querySelector(".sample06_Q4").innerHTML = "['c', 'd', 'e', 'a', 'b']";
     document.querySelector(".sample06_R4").innerHTML = text4; 
 }
 </code></pre>
@@ -1472,7 +1464,7 @@
 
             document.querySelector(".sample06_N3").innerHTML = "3";
             document.querySelector(".sample06_Q3").innerHTML = "[100, 200, 300, 400, 500]";
-            document.querySelector(".sample06_M3").innerHTML = ".sort()";
+            document.querySelector(".sample06_M3").innerHTML = ".sort(function(a, b){return b-a;})";
             document.querySelector(".sample06_R3").innerHTML = text3; 
 
             const str1 = ['c', 'd', 'e', 'a', 'b'];
@@ -1483,7 +1475,7 @@
 
             document.querySelector(".sample06_N4").innerHTML = "4";
             document.querySelector(".sample06_Q4").innerHTML = "['c', 'd', 'e', 'a', 'b']";
-            document.querySelector(".sample06_M4").innerHTML = ".sort()";
+            document.querySelector(".sample06_M4").innerHTML = ".sort((a, b) => a.localeCompare(b))";
             document.querySelector(".sample06_R4").innerHTML = text4; 
         }
 
