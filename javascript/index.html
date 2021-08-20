@@ -59,15 +59,19 @@
     }
     #contents p a {
         font-family: 'NEXON Lv1 Gothic OTF';
-        background-color: #0243f1;
-        color: #fff;
+        background-color: #fff;
+        color: #0243f1;
         display: inline-block;
         padding: 15px 40px;
         border-radius: 50px;
         font-size: 16px;
         margin-bottom: 2%;
-        border: 1px solid #fff;
+        border: 1px solid #0243f1;
     }
+    #contents p a.active {
+            background: #0243f1;
+            color: #fff;
+        }
     #contents p a:hover {
         border: 1px solid #0243f1;
         background-color: #fff;
@@ -432,7 +436,7 @@
             </div>
             <h1>Javascript</h1>
             <p>
-                <a href="index.html">자바스크립트 레퍼런스 북</a>
+                <a href="index.html" class="active">자바스크립트 레퍼런스 북</a>
                 <a href="index2.html">제이쿼리 레퍼런스 북</a>
             </p>
             <nav class="menu">
