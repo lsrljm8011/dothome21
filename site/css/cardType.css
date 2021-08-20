@@ -149,5 +149,95 @@ x {
     border: solid 1px #000;
     background-color: #000;
     color: #fff;
-  
+}
+
+/* cardType03 */
+
+.cardType03 {
+    font-family: 'S-CoreDream';
+    padding: 150px 0;
+}
+.cardType03 h2 {
+    font-size: 50px;
+    font-weight: 800;
+    display: block;
+}
+.cardType03 p {
+    display: inline;
+    font-size: 18px;
+}
+.cardType03 .menu1 {
+    float: right;
+    margin-right: 20px;
+}
+.cardType03 .menu2 {
+    color: red;
+    float: right;
+}
+.cardType03 .card-wrap {
+}
+.cardType03 .card a {
+    display: flex;
+    height: 185px;
+    margin: 30px 0;
+}
+.cardType03 .card-img {
+    width: 285px;
+    border-radius: 10px;
+}
+.cardType03 .button1{
+    margin: 46px 716px 9px 20px;
+    padding: 2px 15px 2px 15px;
+    border-radius: 20px;
+    background-color: #ff4646;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+.cardType03 .button2{
+    margin: 46px 716px 9px 20px;
+    padding: 2px 15px 2px 15px;
+    border-radius: 20px;
+    background-color: #5465ff;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+.cardType03 .button3{
+    margin: 46px 716px 9px 20px;
+    padding: 2px 15px 2px 15px;
+    border-radius: 20px;
+    background-color: #ff4646;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+.cardType03 .button4{
+    margin: 46px 716px 9px 20px;
+    padding: 2px 15px 2px 15px;
+    border-radius: 20px;
+    background-color: #11c865;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+.cardType03 .card-title {
+    margin: 9px 179px 5px 19px;
+    font-size: 26px;
+    font-weight: bold;
+    display: block;
+    white-space: nowrap;
+}
+.cardType03 .card-desc {
+    height: 75px;
+    margin: 2px 2px 25px 19px;
+    font-size: 16px;
+    color: #555;
+    display: inline-block;
+}
+.cardType03 .card-date {
+    margin: 2px 682px 27px 20px;
+    font-size: 14px;
+    text-decoration: underline;
+    color: #555;
 }
