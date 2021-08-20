@@ -214,12 +214,12 @@ x {
     line-height: 1.53;
     color: #555;
     font-weight: 300;
-    margin-bottom: 20px;
     margin-top: 10px;
 }
-.cardType03 .card-wrap .card .card-date {
+.cardType03 .card-wrap .card .right .card-date {
     display: block;
     color: #555;
+    font-size: 14px;
     font-weight: bold;
     line-height: 1.4;
     text-decoration: underline;
