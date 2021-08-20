@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //자바스크립트가 실행되었습니다.
+    {
+        function func(){
+            document.write("자바스크립트가 실행되었습니다.<br>");
+        }
+        func();
+    }
+    {
+        const func = function(){
+            document.write("자바스크립트가 실행되었습니다.<br>");
+        }
+        func();
+    }
+    {
+        const func = function(str){
+            document.write(str);
+        }
+        func("자바스크립트가 실행되었습니다.<br>");
+    }
+    {
+        const func = function(){
+            const str = "자바스크립트가 실행되었습니다.<br>";
+            return str;
+        }
+        document.write(func());
+    }
+    {
+        for(let i=1; i<=10; i++){
+            document.write(i), "<br>";
+        }
+    }
+    {
+        const num = [1,2,3,4,5];
+        
+        for(let i=0; i<num.length; i++){
+            document.write(num[i]);
+        }
+        num.forEach(function(el){
+            document.write(el);
+        });
+        // num.forEach((el) => {
+        //     document.write(el);
+        // });
+        // num.forEach(el => {
+        //     document.write(el);
+        // });
+        // num.forEach(el => document.write(el));
+        //for of문
+        for(let i of num){
+            document.write(i);
+        }
+        //for in문
+        for(let i in num){
+            document.write(num[i]);
+        }
+    }
+    </script>
+</body>
+</html>
