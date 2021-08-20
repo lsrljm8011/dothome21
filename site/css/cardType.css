@@ -154,17 +154,20 @@ x {
 /* cardType03 */
 
 .cardType03 {
-    font-family: 'S-CoreDream';
-    padding: 150px 0;
+    font-family: 'NanumSquare';
+    padding: 100px 0;
 }
 .cardType03 h2 {
     font-size: 50px;
     font-weight: 800;
+    margin-bottom: 4px;
     display: block;
 }
 .cardType03 p {
     display: inline;
     font-size: 18px;
+    font-weight: 400;
+    line-height: 1.28;
 }
 .cardType03 .menu1 {
     float: right;
@@ -232,6 +235,7 @@ x {
     height: 75px;
     margin: 2px 2px 25px 19px;
     font-size: 16px;
+    font-weight: 300;
     color: #555;
     display: inline-block;
 }
