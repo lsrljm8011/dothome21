@@ -88,12 +88,14 @@ body {
 .imageType02 .card-title {
     width: 161px;
     height: 35px;
+    margin-bottom: 20px;
     font-size: 30px;
     font-weight: 500;
     text-align: left;   
     color: #fff;
 }
 .imageType02 .card-button {
+    display: inline-block;
     width: 102px;
     height: 26px;
     margin: 19px 29px 0 30px;
