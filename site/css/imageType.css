@@ -58,3 +58,47 @@ body {
     color: #fff;
     text-decoration: underline;
 }
+
+/* imageType02 */
+.imageType02 {
+    font-family: 'GmarketSans';
+    padding: 100px 0;
+}
+.imageType02 h2 {
+    margin: 0 399px 43px 0;
+    font-size: 50px;
+    font-weight: 500;
+    text-align: left;
+    color: #000;
+}
+.imageType02 .card-wrap {
+    display: flex;
+    gap: 20px;
+}
+.imageType02 .card {
+    position: relative;
+}
+.imageType02 .img-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.imageType02 .card-title {
+    width: 161px;
+    height: 35px;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: left;   
+    color: #fff;
+}
+.imageType02 .card-button {
+    width: 102px;
+    height: 26px;
+    margin: 19px 29px 0 30px;
+    padding: 5px 15px;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+}
