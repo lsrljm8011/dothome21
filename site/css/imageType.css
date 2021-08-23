@@ -1,0 +1,112 @@
+/* imageType */
+body {
+    background-color: #f3f3f3;
+}
+.imageType {
+    margin: 100px 0;
+    background-color: #fff;
+    box-shadow: 0 0 50px rgba(0,0,0,0.1);
+}
+
+/* imageType01 */
+
+.imageType01 {
+    font-family: 'GmarketSans';
+    padding: 150px 0;
+}
+.imageType01 h2 {
+    font-size: 50px;
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: 43px;
+}
+.imageType01 .card-wrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.imageType01 .card {
+    position: relative;
+}
+.imageType01 .img-container {
+    width: 530px;
+    height: 141px;
+    bottom: 30px;
+    right: 15px;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    z-index: 1;
+}
+.imageType01 .card-title {
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+}
+.imageType01 .card-desc {
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #fff;
+    display: block;
+}
+.imageType01 .card-keyword {
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: underline;
+}
+.imgType01 { 
+    font-family: 'GmarketSans';
+    padding: 100px 0;
+}
+.imgType01 h2 {
+    font-weight: bold;
+    font-size: 48px;
+    padding: 0;
+    margin: 0 0 50px 0;
+}
+.imgType01 .card-wrap {
+    display: flex;
+    gap:20px
+}
+.imgType01 .card-wrap .card {
+    position: relative;
+}
+.imgType01 .card-wrap .card .card-exp {
+    position: absolute;
+    top:198px
+}
+.imgType01 .card-wrap .card .card-title {
+    font-size: 30px;
+    font-weight: 500;
+    padding: 0;
+    margin: 30px;
+    color: white;
+    margin: 0 30px px 30px;
+
+}
+.imgType01 .card-wrap .card .card-desc {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 300;
+    display: inline-block;
+    margin: 8px 183px 10px 30px;
+    overflow: hidden;
+    display: -webkit-box; 
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+}
+.imgType01 .card-wrap .card .readmore {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 300;
+    display: inline-block;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 4px 6px;
+    margin: 0 30px 30px 30px 
+}
