@@ -4,35 +4,98 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>test</title>
+    <style>
+        *  {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            background-color: #fce4ec;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 50px;
+        }
+        .wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            width: 1200px;
+            height: 100px;
+            line-height: 100px;
+            background-color: #880e4f;
+            color: #fff;
+        }
+        .nav {
+            width: 1200px;
+            height: 100px;
+            line-height: 100px;
+            background-color: #ad1457;
+            color: #fff;
+        }
+        .side {
+            width: 400px;
+            height: 900px;
+            line-height: 900px;
+            background-color: #c2185b;
+            float: left;
+            color: #fff;
+        }
+        .content1 {
+            width: 800px;
+            height: 500px;
+            line-height: 500px;
+            background-color: #d81b60;
+            color: #fff;
+            float: left;
+        }
+        .cont {
+            width: 800px;
+            height: 400px;
+            text-transform: lowercase;
+            background-color: #f06292;
+            float: left;
+        }
+        .cont1 {
+            width: 370px;
+            height: 360px;
+            line-height: 360px;
+            margin: 20px;
+            background-color: #e91e63;
+            color: #fff;
+            float: left;
+        }
+        .cont2 {
+            width: 370px;
+            height: 360px;
+            line-height: 360px;
+            margin: 20px 0 20px 0;
+            background-color: #e91e63;
+            color: #fff;
+            float: left;
+        }
+        .footer {
+            width: 1200px;
+            height: 100px;
+            line-height: 100px;
+            background-color: #ad1457;
+            clear: both;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
-    <script>
-        const obj = {
-            a: 1000,
-            b: 2000,
-            c: 3000
-        }
-
-        document.write(obj.a,obj.b,obj.c);
-        document.write(obj.a + obj.b + obj.c);
-        document.write(obj.b + obj.c);
-        document.write(obj.a + obj.c);
-        document.write(obj.a/obj.a);
-        document.write(obj.b/obj.a);
-        document.write(obj.c/obj.a);
-        document.write(Object.keys(obj));
-        document.write("<br>");
-
-        const obj2 = [
-            {a: 1000},
-            {a: 2000},
-            {a: 3000}
-        ]
-        document.write(obj2[a]);
-        document.write("<br>");
-
-        const obj3 = [1000, 2000, 3000, "a", "b", "c"]
-    </script>
+    <div class="wrap">
+        <div class="header">header</div>
+        <div class="nav">nav</div>
+        <div class="side">side</div>
+        <div class="content1">content1</div>
+        <div class="cont">
+            <div class="cont1">cont1</div>
+            <div class="cont2">cont2</div>
+        </div>
+        <div class="footer">footer</div>
+    </div>
 </body>
 </html>

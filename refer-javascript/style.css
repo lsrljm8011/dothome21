@@ -160,6 +160,96 @@ hr {
     color: #000;
     background-color: #f5f5f5;
 }
+.table table {
+    width: 100%; 
+    border: 1px solid #ddd;  
+    border-collapse: collapse;
+    border-spacing: 0;  
+    text-align: left;       
+}
+.table table caption {
+    text-align: left;
+    margin-bottom: 4px;
+    font-size: 16px;
+}
+.table table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+.table table th {
+    border-bottom: 2px solid #ddd;
+    border-right: 1px solid #ddd;
+    padding: 10px;
+}
+.table table td {
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    padding: 10px;
+}
+.table table .center {
+    text-align: center;
+}
+/* option */
+.view {
+    padding: 20px;
+    border: 1px solid #f2f2f2;
+}
+.view ul {
+    display: flex;
+    flex-wrap: wrap;   
+}
+.view li {
+    border: 1px solid #e6e6e6;
+    padding: 20px;
+    margin: 10px;
+    color: #222;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+.view .red {
+    border: 1px dashed #a51a3d;
+    background-color: #f9f2f4;
+    color: #a51a3d;
+}
+.view .blue {
+    border: 1px dashed #3d90b7;
+    background-color: #e7f6fd;
+    color: #3d90b7;
+}
+.btn {
+    padding: 20px;
+    border: 1px solid #f2f2f2;
+    border-top: 0;
+}
+.btn a {
+    border: 1px solid #e6e6e6;
+    padding: 7px 25px;
+    display: inline-block;
+    border-radius: 40px;
+    margin: 4px 0;
+    color: #222;
+    transition: all 0.2s;
+}
+.btn a:hover {
+    background: #000;
+    color: #fff;
+}
+.view2 > div span {
+    display: inline-block;
+    border: 1px solid #e6e6e6;
+    padding: 20px;
+    margin: 5px 5px 10px 5px;
+    color: #222;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+.view2 > div em {
+    background: #000;
+    color: #fff;
+    padding: 4px;
+    margin: 5px;
+    border-radius: 5px;
+    font-style: normal;
+}
 @media (max-width: 800px){
     body {
         padding: 5%;
@@ -223,50 +313,24 @@ hr {
         color: #bdbdbd;
         background: #f1f1f1;
     }
-}
-@media (max-width: 800px){
-    body {
-        padding: 5%;
-        font-size: 13px;
+    .view {
+        padding: 10px 10px 0 10px;
     }
-    #wrap {
-        margin: 0;
-        border-width: 6px;
-        border-radius: 18px;
+    .view li {
+        padding: 10px;
+        margin: 0 8px 8px 0;
     }
-    #contents {
-        border-width: 6px;
+    .btn {
+        padding: 10px;
     }
-    .title {
-        border-top-width: 2px; 
+    .table {
+        overflow: auto;
     }
-    .title h1 {
-        text-align: center;
+    .table table th {
+        font-weight: normal;
+        white-space: nowrap;
     }
-    .title h1 a {
-        font-size: 40px;
-    }
-    .menu {
-        text-align: center;
-    }
-    .menu li a {
-        font-size: 13px;
-        padding: 5px 20px;
-    }
-    .list li a {
-        font-size: 13px;
-    }
-    .sample h2 {
-        font-size: 13px;
-        padding: 12px 10px 10px;
-    }
-    .sample h2 .dot {
-        display: none;
-    }
-    .sample pre {
-        line-height: 1.2 !important;
-    }
-    .sample code {
-        font-size: 13px;
+    .table table td {
+        white-space: nowrap;
     }
 }
