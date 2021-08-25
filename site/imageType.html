@@ -22,103 +22,116 @@
 
 </head>
 <body>
-        <!-- imageType01 -->
-        <section class="imageType">
-            <div class="container">
-                <div class="imageType01">
-                    <h2>여행 일기</h2>
-                    <div class="card-wrap">
-                        <div class="card">
-                            <img src="img/img-card01.jpg" alt="싱가포르 여행 관련 이미지입니다." class="card-img">
-                            <div class="img-container">
-                                <strong class="card-title">싱가포르(Singapore)</strong>
-                                <span class="card-desc">싱가포르 공화국, 줄여서 싱가포르은 동남아시아, 말레이 반도의 끝에 위치한 섬나라이자 항구 도시로 이루어진 도시 국가이다.</span>
-                                <span class="card-keyword">자세히 보기</span>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img src="img/img-card02.jpg" alt="일본 여행 관련 이미지입니다." class="card-img">
-                            <div class="img-container">
-                                <strong class="card-title">일본(Japan) - 오사카</strong>
-                                <span class="card-desc">오사카시는 일본 오사카부에 있는 도시로 부청 소재지이다. 혼슈 긴키 지방의 요도가와 강 하구 오사카 만에 위치해 있다.</span>
-                                <span class="card-keyword">자세히 보기</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- 이미지를 표현하는 방법
+        1. 이미지를 img 태그 (alt) -> 의미가 있을 때
+        2. 이미지를 background 속성 -> 의미가 없을 때(장식, 배경)
+        3. 요즘엔 의미가 있는 이미지도 background로 사용 -> 이미지 스플라이트 기법
+        - 이미지 스플라이트를 사용학 되면 접근성이 깨짐 -> IR 효과(alt)
+        4. 이미지 해상도 -> 이미지 분류 -> picture 태그, figure 태그
+    -->
 
-        <!-- imageType02 -->
-        <section class="imageType">
-            <div class="container">
-                <div class="imageType02">
-                    <h2>태양의 꽃 해바라기</h2>
-                    <div class="card-wrap">
-                        <div class="card">
-                            <img src="img/img-card03.jpg" alt="해바라기 이미지입니다." class="card-img">
-                            <div class="img-container">
-                                <strong class="card-title">sunflower</strong>
-                            </div>
+    <!-- imageType01 -->
+    <section class="imageType">
+        <div class="container">
+            <div class="imageType01">
+                <h2>country</h2>
+                <div class="image-wrap">
+                    <div class="image">
+                        <img class="image-img" src="img/img-card01.jpg" alt="싱가포르 이미지입니다.">
+                        <div class="image-cont">
+                            <h3 class="image-title">싱가포르(Singapore)</h3>
+                            <p class="image-desc">싱가포르 공화국, 줄여서 싱가포르은 동남아시아, 말레이 반도의 끝에 위치한 섬나라이자 항구 도시로 이루어진 도시 국가이다.</p>
+                            <a href="#" class="image-btn">자세히 보기</a>
                         </div>
-                        <div class="card">
-                            <img src="img/img-card04.jpg" alt="해바라기 이미지입니다." class="card-img">
-                            <div class="img-container">
-                                <strong class="card-title">sunflower</strong>
-                                <span class="card-button">자세히 보기</span>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img src="img/img-card05.jpg" alt="해바라기 이미지입니다." class="card-img">
-                            <div class="img-container">
-                                <strong class="card-title">sunflower</strong>
-                            </div>
+                    </div>
+                    <div class="image">
+                        <img class="image-img" src="img/img-card02.jpg" alt="일본 이미지입니다.">
+                        <div class="image-cont s2">
+                            <h3 class="image-title">일본(Japan) - 오사카</h3>
+                            <p class="image-desc">오사카시는 일본 오사카부에 있는 도시로 부청 소재지이다. 혼슈 긴키 지방의 요도가와 강 하구 오사카 만에 위치해 있다.</p>
+                            <a href="#" class="image-btn">자세히 보기</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
+    <!-- //imageType01 -->
 
-        <!-- imageType03 -->
-        <section class="imageType">
-            <div class="container">
-                <div class="imageType03">
-                    <h2>car company</h2>
-                    <div class="card-wrap">
-                        <div class="card">
-                            <img src="img/img-card06.jpg" alt="현대 자동차 이미지입니다." class="card-img">
-                            <div class="img-container">
-                                <strong class="card-title1">Hyundai</strong>
-                                <span class="card-desc">Korea's most representative automobile company. The Genesis is a modern luxury car.</span>
-                            </div>
+    <!-- imageType02 -->
+    <section class="imageType">
+        <div class="container">
+            <div class="imageType02">
+                <h2>깊은 저 바닷속 해파리</h2>
+                <div class="image-wrap">
+                    <figure class="image"> 
+                        <img class="image-img" src="img/img-card03.jpg" alt="해파리 이미지1">
+                        <figcaption class="image-cont">
+                            <h3 class="image-title">sunflower</h3>
+                            <a href="#" class="image-btn">자세히 보기</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="image"> 
+                        <img class="image-img" src="img/img-card04.jpg" alt="해파리 이미지2">
+                        <figcaption class="image-cont">
+                            <h3 class="image-title">sunflower</h3>
+                            <a href="#" class="image-btn">자세히 보기</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="image"> 
+                        <img class="image-img" src="img/img-card05.jpg" alt="해파리 이미지3">
+                        <figcaption class="image-cont">
+                            <h3 class="image-title">sunflower</h3>
+                            <a href="#" class="image-btn">자세히 보기</a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //imageType02 -->
+
+    <!-- imageType03 -->
+    <section class="imageType">
+        <div class="container">
+            <div class="imageType03">
+                <h2>car company</h2>
+                <div class="card-wrap">
+                    <div class="card">
+                        <img src="img/img-card06.jpg" alt="현대 자동차 이미지입니다." class="card-img">
+                        <div class="img-container">
+                            <strong class="card-title1">Hyundai</strong>
+                            <span class="card-desc">Korea's most representative automobile company. The Genesis is a modern luxury car.</span>
                         </div>
-                        <div class="card">
-                            <img src="img/img-card07.jpg" alt="아우디 자동차 이미지입니다." class="card-img">
-                            <div class="img-container">
-                                <strong class="card-title2">Audi</strong>
-                            </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/img-card07.jpg" alt="아우디 자동차 이미지입니다." class="card-img">
+                        <div class="img-container">
+                            <strong class="card-title2">Audi</strong>
                         </div>
-                        <div class="card">
-                            <img src="img/img-card08.jpg" alt="BMW 자동차 이미지입니다." class="card-img">
-                            <div class="img-container">
-                                <strong class="card-title2">BMW</strong>
-                            </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/img-card08.jpg" alt="BMW 자동차 이미지입니다." class="card-img">
+                        <div class="img-container">
+                            <strong class="card-title2">BMW</strong>
                         </div>
-                        <div class="card">
-                            <img src="img/img-card09.jpg" alt="포르쉐 자동차 이미지입니다." class="card-img">
-                            <div class="img-container">
-                                <strong class="card-title2">Porsche</strong>
-                            </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/img-card09.jpg" alt="포르쉐 자동차 이미지입니다." class="card-img">
+                        <div class="img-container">
+                            <strong class="card-title2">Porsche</strong>
                         </div>
-                        <div class="card">
-                            <img src="img/img-card10.jpg" alt="벤츠 자동차 이미지입니다." class="card-img">
-                            <div class="img-container">
-                                <strong class="card-title2">Mercedes-Benz</strong>
-                            </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/img-card10.jpg" alt="벤츠 자동차 이미지입니다." class="card-img">
+                        <div class="img-container">
+                            <strong class="card-title2">Mercedes-Benz</strong>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
+    <!-- //imageType03 -->
 </body>
 </html> 
