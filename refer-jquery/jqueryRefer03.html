@@ -180,35 +180,59 @@
                     <td>클래스를 검색</td>
                 </tr>
                 <tr>
-                    <td class="center" rowspan="6">Dimensions</td>
+                    <td class="center" rowspan="11">Dimensions</td>
                     <td>.width()</td>
                     <td>-</td>
-                    <td>요소의 너비 값을 가져오거나 설정</td>
+                    <td>요소의 너비 값(패딩/보더/마진 불포함)을 가져오거나 설정합니다.</td>
                 </tr>
                 <tr>
                     <td>.innerWidth()</td>
-                    <td>-</td>
-                    <td>요소의 너비 + padding 값을 가져오거나 설정</td>
+                    <td><a href="../refer-javascript/javascriptRefer10.html#sample04" target="_blank">element.clientWidth</a></td>
+                    <td>요소의 너비 값(패딩 포함)을 가져오거나 설정합니다.</td>
                 </tr>
                 <tr>
                     <td>.outerWidth()</td>
-                    <td>-</td>
-                    <td>요소의 너비 + padding + border + margin 값을 가져오거나 설정</td>
+                    <td><a href="../refer-javascript/javascriptRefer10.html#sample04" target="_blank">element.offsetWidth</a></td>
+                    <td>요소의 너비 값(패딩/보더 포함)을 가져오거나 설정합니다.</td>
                 </tr>
                 <tr>
+                    <td>.outerWidth(true)</td>
+                    <td>-</td>
+                    <td>요소의 너비 값(패딩/보더/마진 포함)을 가져오거나 설정합니다.</td>
+                </tr>
                     <td>.height()</td>
-                    <td></td>
-                    <td>요소의 높이 값을 가져오거나 설정</td>
+                    <td>-</td>
+                    <td>요소의 높이 값(패딩/보더/마진 불포함)을 가져오거나 설정합니다.</td>
                 </tr>
                 <tr>
                     <td>.innerHeight()</td>
-                    <td>-</td>
-                    <td>요소의 높이 + padding 값을 가져오거나 설정</td>
+                    <td><a href="../refer-javascript/javascriptRefer10.html#sample04" target="_blank">element.clientHeight</a></td>
+                    <td>요소의 높이 값(패딩 포함)을 가져오거나 설정합니다.</td>
                 </tr>
                 <tr>
                     <td>.outerHeight()</td>
+                    <td><a href="../refer-javascript/javascriptRefer10.html#sample04" target="_blank">element.offsetHeight</a></td>
+                    <td>요소의 높이 값(패딩/보더 포함)을 가져오거나 설정합니다.</td>
+                </tr>
+                <tr>
+                    <td>.outerHeight(true)</td>
                     <td>-</td>
-                    <td>요소의 높이 값 + padding + border + margin 값을 가져오거나 설정</td>
+                    <td>요소의 높이 값(패딩/보더/마진 포함)을 가져오거나 설정합니다.</td>
+                </tr>
+                <tr>
+                    <td>.$(document).width()</td>
+                    <td>-</td>
+                    <td>문서의 너비 값을 가져오거나 설정합니다.</td>
+                </tr>
+                <tr>
+                    <td>.$(window).width()</td>
+                    <td>window.innerWidth()</td>
+                    <td>브라우저의 너비 값을 가져오거나 설정합니다.</td>
+                </tr>
+                <tr>
+                    <td>.$(window).height()</td>
+                    <td>window.innerHeight()</td>
+                    <td>브라우저의 높이 값을 가져오거나 설정합니다.</td>
                 </tr>
                 <tr>
                     <td class="center" rowspan="5">offset</td>
@@ -229,12 +253,12 @@
                 <tr>
                     <td>.scrollLeft()</td>
                     <td>-</td>
-                    <td>요소의 가로 스크롤 값을 가져오거나 설정합니다.</td>
+                    <td>요소의 너비 스크롤 값을 가져오거나 설정합니다.</td>
                 </tr>
                 <tr>
                     <td>.scrollTop()</td>
                     <td>-</td>
-                    <td>요소의 세로 스크롤 값을 가져오거나 설정합니다.</td>
+                    <td>요소의 높이 스크롤 값을 가져오거나 설정합니다.</td>
                 </tr>
                 <tr>
                     <td class="center" rowspan="2">Data</td>
@@ -393,6 +417,7 @@
             padding: 10px;
             margin: 10px;
             border: 5px solid #ffe0f6;
+            box-sizing: content-box;
             border-radius: 50%;
             background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
         }
@@ -410,49 +435,56 @@
             <a href="#c" class="btn4-1">클릭하면 원의 너비(width) 값을 구합니다.</a>
             <a href="#c" class="btn4-2">클릭하면 원의 너비(innerWidth) 값을 구합니다.</a>
             <a href="#c" class="btn4-3">클릭하면 원의 너비(outerWidth) 값을 구합니다.</a>
-            <a href="#c" class="btn4-4">클릭하면 원의 높이(htight) 값을 구합니다.</a>
-            <a href="#c" class="btn4-5">클릭하면 원의 높이(innerHeight) 값을 구합니다.</a>
-            <a href="#c" class="btn4-6">클릭하면 원의 높이(outerHeight) 값을 구합니다.</a>
+            <a href="#c" class="btn4-4">클릭하면 원의 너비(outerWidth(true)) 값을 구합니다.</a>
+            <a href="#c" class="btn4-5">클릭하면 원의 높이(htight) 값을 구합니다.</a>
+            <a href="#c" class="btn4-6">클릭하면 원의 높이(innerHeight) 값을 구합니다.</a>
+            <a href="#c" class="btn4-7">클릭하면 원의 높이(outerHeight) 값을 구합니다.</a>
+            <a href="#c" class="btn4-8">클릭하면 원의 높이(outerHeight(true)) 값을 구합니다.</a>
         </div>
         <div class="btn">
-            <a href="#c" class="btn4-7">클릭하면 샘플 박스의 너비(width) 값을 구합니다.</a>
-            <a href="#c" class="btn4-8">클릭하면 문서의 너비(width) 값을 구합니다.</a>
-            <a href="#c" class="btn4-9">클릭하면 브라우저의 너비(width) 값을 구합니다.</a>
+            <a href="#c" class="btn4-9">클릭하면 샘플 박스의 너비/높이 값을 구합니다.</a>
+            <a href="#c" class="btn4-10">클릭하면 문서의 너비/높이 값을 구합니다.</a>
+            <a href="#c" class="btn4-11">클릭하면 브라우저의 너비/높이 값을 구합니다.</a>
         </div>
 <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    function demension(name, size){
-        $(".text4").text("이 원의 " + name + "값은 " + size + "px 입니다.");
-    }
+    $(".text4").text("이 원의 " + name + "값은 " + size + "px 입니다.");
+}
 
-    $(".btn4-1").click(function(){
-        demension("가로(width)", $(".circle4").width())
-    });
-    $(".btn4-2").click(function(){
-        demension("가로(innerWidth)", $(".circle4").innerWidth())
-    });
-    $(".btn4-3").click(function(){
-        demension("가로(outerWidth)", $(".circle4").outerWidth())
-    });
-    $(".btn4-4").click(function(){
-        demension("세로(height)", $(".circle4").height())
-    });
-    $(".btn4-5").click(function(){
-        demension("세로(innerHeight)", $(".circle4").innerHeight())
-    });
-    $(".btn4-6").click(function(){
-        demension("세로(outerHeight)", $(".circle4").outerHeight())
-    });
+$(".btn4-1").click(function(){
+    dimension("너비(width)", $(".circle4").width())
+});
+$(".btn4-2").click(function(){
+    dimension("너비(innerWidth)", $(".circle4").innerWidth())
+});
+$(".btn4-3").click(function(){
+    dimension("너비(outerWidth)", $(".circle4").outerWidth())
+});
+$(".btn4-4").click(function(){
+    dimension("너비(outerWidth(true))", $(".circle4").outerWidth(true))
+});
+$(".btn4-5").click(function(){
+    dimension("높이(height)", $(".circle4").height())
+});
+$(".btn4-6").click(function(){
+    dimension("높이(innerHeight)", $(".circle4").innerHeight())
+});
+$(".btn4-7").click(function(){
+    dimension("높이(outerHeight)", $(".circle4").outerHeight())
+});
+$(".btn4-8").click(function(){
+    dimension("높이(outerHeight(true))", $(".circle4").outerHeight(true))
+});
 
-    $(".btn4-7").click(function(){
-        $(".text4").text("이 샘플 박스의 너비 값은 " + $("#sample04").width() + "px 입니다.");
-    });
-    $(".btn4-8").click(function(){
-        $(".text4").text("이 문서의 너비 값은 " + $(document).width() + "px 입니다.");
-    });
-    $(".btn4-9").click(function(){
-        $(".text4").text("이 브라우저의 너비 값은 " + $(window).width() + "px 입니다.");
-    });
+$(".btn4-9").click(function(){
+    $(".text4").html("이 샘플 박스의 너비 값은 " + $("#sample04").width() + "px 입니다. <br>이 샘플 박스의 높이 값은 " + $("#sample04").height() + "px 입니다.");
+});
+$(".btn4-10").click(function(){
+    $(".text4").html("이 문서의 너비 값은 " + $(document).width() + "px 입니다. <br>이 문서의 높이 값은 " + $(document).height() + "px 입니다.");
+});
+$(".btn4-11").click(function(){
+    $(".text4").html("이 브라우저의 너비 값은 " + $(window).width() + "px 입니다. <br>이 브라우저의 높이 값은 " + $(window).height() + "px 입니다.");
+});
 }
 </code></pre>
         </div>
@@ -474,23 +506,29 @@
                 dimension("너비(outerWidth)", $(".circle4").outerWidth())
             });
             $(".btn4-4").click(function(){
-                dimension("높이(height)", $(".circle4").height())
+                dimension("너비(outerWidth(true))", $(".circle4").outerWidth(true))
             });
             $(".btn4-5").click(function(){
-                dimension("높이(innerHeight)", $(".circle4").innerHeight())
+                dimension("높이(height)", $(".circle4").height())
             });
             $(".btn4-6").click(function(){
+                dimension("높이(innerHeight)", $(".circle4").innerHeight())
+            });
+            $(".btn4-7").click(function(){
                 dimension("높이(outerHeight)", $(".circle4").outerHeight())
             });
-
-            $(".btn4-7").click(function(){
-                $(".text4").text("이 샘플 박스의 너비 값은 " + $("#sample04").width() + "px 입니다.");
-            });
             $(".btn4-8").click(function(){
-                $(".text4").text("이 문서의 너비 값은 " + $(document).width() + "px 입니다.");
+                dimension("높이(outerHeight(true))", $(".circle4").outerHeight(true))
             });
+
             $(".btn4-9").click(function(){
-                $(".text4").text("이 브라우저의 너비 값은 " + $(window).width() + "px 입니다.");
+                $(".text4").html("이 샘플 박스의 너비 값은 " + $("#sample04").width() + "px 입니다. <br>이 샘플 박스의 높이 값은 " + $("#sample04").height() + "px 입니다.");
+            });
+            $(".btn4-10").click(function(){
+                $(".text4").html("이 문서의 너비 값은 " + $(document).width() + "px 입니다. <br>이 문서의 높이 값은 " + $(document).height() + "px 입니다.");
+            });
+            $(".btn4-11").click(function(){
+                $(".text4").html("이 브라우저의 너비 값은 " + $(window).width() + "px 입니다. <br>이 브라우저의 높이 값은 " + $(window).height() + "px 입니다.");
             });
         </script>
         <!-- //sample04 -->
