@@ -134,7 +134,7 @@ body {
 
 /* imageType03 */
 
-.imageType03 {
+/* .imageType03 {
     padding: 100px 0;
     font-family: GmarketSansTTF;
 }
@@ -172,16 +172,16 @@ body {
     font-size: 25px;
     font-weight: 500;
     color: #000;
-}
-.imageType03 .card-desc {
+} */
+/* .imageType03 .card-desc {
     font-size: 18px;
     font-weight: 500;
-    color: #000;
+    color: #000; */
     /* 두줄 효과 */
-    overflow: hidden;
-    display: -webkit-box;   /* 벤더 프리픽스 */
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
+    /* overflow: hidden;
+    display: -webkit-box;   벤더 프리픽스 */
+    /* -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical; */
     /* //두줄 효과 */
 }
 

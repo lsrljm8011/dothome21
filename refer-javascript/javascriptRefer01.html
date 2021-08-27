@@ -27,15 +27,16 @@
         .box h3:hover {
             cursor: pointer;
         }
-        .box div {
+        .box .result {
+            display: inline-block;
             background-color: #272822;
             color: #fff;
             padding: 8px;
             border-radius: 0 5px 5px 5px;
             display: none;
-            margin-top: 0;
+            margin-top: -5px;
         }
-        .box div.active {
+        .box .result.active {
             display: block;
         }
     </style>
@@ -116,12 +117,13 @@
         </div>
         <div class="box">
             <h3>결과보기</h3>
-            <div>
+            <div class="result">
                 <span class="result1-1"></span>
                 <span class="result1-2"></span>
                 <span class="result1-3"></span>
             </div>
         </div>
+    </div>
     
     <hr>
 
@@ -142,6 +144,14 @@
 }
 </code></pre>
         </div>
+        <!-- <div class="box">
+            <h3>결과보기</h3>
+            <div class="result">
+                <span class="result2-1"></span>
+                <span class="result2-2"></span>
+                <span class="result2-3"></span>
+            </div>
+        </div> -->
     </div>
 
     <hr>
@@ -526,9 +536,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
     <script>
         //결과보기 버튼
+    
         document.querySelector(".box").addEventListener("click", function(){
-            document.querySelector(".box div").classList.toggle("active");
+            document.querySelector(".box .result").classList.toggle("active");
         })
+
         //sample1
         //01. 변수 : 데이터 저장소
         //한개의 데이터 저장
@@ -561,6 +573,10 @@
             document.write(x, "<br>");
             document.write(y, "<br>");
             document.write(z, "<br><br>");
+
+            // document.querySelector(".result2-1").innerHTML = x;
+            // document.querySelector(".result2-2").innerHTML = y;
+            // document.querySelector(".result2-3").innerHTML = z;
         }
 
         //sample3
