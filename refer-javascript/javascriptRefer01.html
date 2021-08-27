@@ -13,13 +13,26 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css" />
     <style>
-        .box {
-            width: 90px;
-            height: 40px;
-            margin-top: 10px;
+        .box h3 {
+            font-size: 14px;
+            font-weight: normal;
             padding: 8px;
+            width: 80px;
+            height: 40px;
+            margin-top: 5px;
             background-color: #eee;
             text-align: center;
+            border-radius: 5px;
+        }
+        .box div {
+            background-color: #272822;
+            color: #fff;
+            padding: 8px;
+            border-radius: 0 5px 5px 5px;
+            display: none;
+        }
+        .box div.show {
+            display: block;
         }
     </style>
 </head>
@@ -92,18 +105,23 @@
     var z = "javascript";   //변수 z에 문자 javascript를 저장ƒ
 
     document.write(x);  //저장한 변수 x 출력
-    document.write(y);
+    document.write(y);btn
     document.write(z);
 }
 </code></pre>
         </div>
-        <div>
-            <div class="box">결과보기</div>
-            <div class="result">100 200 javascript</div>
+        <div class="box">
+            <h3>결과보기</h3>
+            <div>
+                <span class="result1-1"></span>
+                <span class="result1-2"></span>
+                <span class="result1-3"></span>
+            </div>
         </div>
-    </div>
     <script>
-        document.querySelectorAll("")
+        document.querySelector(".box").addEventListener("click", function(){
+            document.querySelector(".box div").classList.toggle("show");
+        })
     </script>
     
     <hr>
