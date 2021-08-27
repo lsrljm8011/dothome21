@@ -24,6 +24,9 @@
             text-align: center;
             border-radius: 5px;
         }
+        .box h3:hover {
+            cursor: pointer;
+        }
         .box div {
             background-color: #272822;
             color: #fff;
@@ -538,6 +541,10 @@
             document.write(x, "<br>"); //저장한 변수 x 출력
             document.write(y, "<br>");
             document.write(z, "<br><br>");
+
+            document.querySelector(".result1-1").innerHTML = x;
+            document.querySelector(".result1-2").innerHTML = y;
+            document.querySelector(".result1-3").innerHTML = z;
         }
 
         //sample2
