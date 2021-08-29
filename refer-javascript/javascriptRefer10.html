@@ -76,6 +76,29 @@
             border-radius: 5px;
             vertical-align: top;
         }
+        @media (max-width: 800px){
+            .ex1 {
+                flex-wrap: wrap;
+            }
+            .ex1 > div {
+                width: 30%;
+                margin: 1%;
+            }
+            .ex2 {
+                flex-wrap: wrap;
+            }
+            .ex2 > div {
+                width: 30%;
+                margin: 1%;
+            }
+            .ex3 {
+                flex-wrap: wrap;
+            }
+            .ex3 > div {
+                width: 30%;
+                margin: 1%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -142,6 +165,7 @@
             <div><img src="img/image03.jpg" alt="이미지3"></div>
             <div><img src="img/image04.jpg" alt="이미지4"></div>
             <div><img src="img/image05.jpg" alt="이미지5"></div>
+            <div><img src="img/image06.jpg" alt="이미지6"></div>
         </div>
         <div class="btn">
             <a href="#c" class="btn1-1">클릭하면 모든 이미지에 클래스(active)를 추가합니다.</a>
@@ -193,11 +217,12 @@
 <div id="sample02" class="sample">
     <h2>02. classList 속성 : .classList.toggle() <span class="dot"></span></h2>
     <div class="view ex2">
-        <div><img src="img/image06.jpg" alt="이미지1"></div>
-        <div><img src="img/image07.jpg" alt="이미지2"></div>
-        <div><img src="img/image08.jpg" alt="이미지3"></div>
-        <div><img src="img/image09.jpg" alt="이미지4"></div>
-        <div><img src="img/image10.jpg" alt="이미지5"></div>
+        <div><img src="img/image07.jpg" alt="이미지1"></div>
+        <div><img src="img/image08.jpg" alt="이미지2"></div>
+        <div><img src="img/image09.jpg" alt="이미지3"></div>
+        <div><img src="img/image10.jpg" alt="이미지4"></div>
+        <div><img src="img/image11.jpg" alt="이미지5"></div>
+        <div><img src="img/image12.jpg" alt="이미지6"></div>
     </div>
     <div class="btn">
         <a href="#c" class="btn2-1">이미지를 클릭하면 이미지에 클래스(active)를 추가/삭제합니다.</a>
@@ -258,11 +283,12 @@
 <div id="sample03" class="sample">
     <h2>03. classList 속성 : .classList.contains()<span class="dot"></span></h2>
     <div class="view ex3">
-        <div class="active"><img src="img/image11.jpg" alt="이미지1"></div>
-        <div><img src="img/image12.jpg" alt="이미지2"></div>
-        <div><img src="img/image13.jpg" alt="이미지3"></div>
-        <div class="active"><img src="img/image14.jpg" alt="이미지4"></div>
-        <div><img src="img/image15.jpg" alt="이미지5"></div>
+        <div class="active"><img src="img/image13.jpg" alt="이미지1"></div>
+        <div><img src="img/image14.jpg" alt="이미지2"></div>
+        <div><img src="img/image15.jpg" alt="이미지3"></div>
+        <div class="active"><img src="img/image16.jpg" alt="이미지4"></div>
+        <div><img src="img/image17.jpg" alt="이미지5"></div>
+        <div><img src="img/image18.jpg" alt="이미지6"></div>
     </div>
     <div class="btn">
         <a href="#c" class="btn3-0">리셋</a>
