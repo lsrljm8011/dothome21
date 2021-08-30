@@ -693,12 +693,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
     <script>
-        //결과보기 버튼
+        //자바스크립트 - 결과보기 버튼
         document.querySelectorAll(".box h3").forEach(el => {
             el.addEventListener("click", function(){
                 this.parentNode.classList.toggle("active");
             })
         })
+
+        //제이쿼리 - 결과보기 버튼
+        // $(".box h3").click(function(){
+        //     $(this).parent().toggleClass("active");
+        // });
 
         // document.querySelector(".box h3").addEventListener("click", function(){
         //         document.querySelector(".box > div").classList.toggle("active");
