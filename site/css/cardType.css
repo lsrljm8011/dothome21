@@ -306,6 +306,7 @@ x {
 .cardType05 .card {
     width: 387px;
     height: 558px;
+    border-radius: 2px;
     margin-right: 20px;
     margin-bottom: 20px;
     padding-bottom: 30px;
