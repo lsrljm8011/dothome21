@@ -695,15 +695,21 @@
     <script>
         //결과보기 버튼
         document.querySelectorAll(".box h3").forEach(el => {
-            el.addEventListener("click", function(e){
-                e.preventDefault();
+            el.addEventListener("click", function(){
                 this.parentNode.classList.toggle("active");
             })
         })
 
-        // document.querySelector(".box").addEventListener("click", function(){
+        // document.querySelector(".box h3").addEventListener("click", function(){
         //         document.querySelector(".box > div").classList.toggle("active");
         //     })
+
+        // document.querySelector(".box h3").addEventListener("click", resultBtn);
+
+        // function resultBtn(e) {
+        //     e.preventDefault(); //a코드 때문에 화면이 움직이는 걸 막아줌
+        //     document.querySelector(".box div").classList.toggle("active");
+        // }
     
         //sample1
         //01. 변수 : 데이터 저장소
