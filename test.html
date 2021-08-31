@@ -4,98 +4,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test</title>
-    <style>
-        *  {
-            padding: 0;
-            margin: 0;
-        }
-        body {
-            background-color: #fce4ec;
-            text-align: center;
-            text-transform: uppercase;
-            font-size: 50px;
-        }
-        .wrap {
-            width: 1200px;
-            margin: 0 auto;
-        }
-        .header {
-            width: 1200px;
-            height: 100px;
-            line-height: 100px;
-            background-color: #880e4f;
-            color: #fff;
-        }
-        .nav {
-            width: 1200px;
-            height: 100px;
-            line-height: 100px;
-            background-color: #ad1457;
-            color: #fff;
-        }
-        .side {
-            width: 400px;
-            height: 900px;
-            line-height: 900px;
-            background-color: #c2185b;
-            float: left;
-            color: #fff;
-        }
-        .content1 {
-            width: 800px;
-            height: 500px;
-            line-height: 500px;
-            background-color: #d81b60;
-            color: #fff;
-            float: left;
-        }
-        .cont {
-            width: 800px;
-            height: 400px;
-            text-transform: lowercase;
-            background-color: #f06292;
-            float: left;
-        }
-        .cont1 {
-            width: 370px;
-            height: 360px;
-            line-height: 360px;
-            margin: 20px;
-            background-color: #e91e63;
-            color: #fff;
-            float: left;
-        }
-        .cont2 {
-            width: 370px;
-            height: 360px;
-            line-height: 360px;
-            margin: 20px 0 20px 0;
-            background-color: #e91e63;
-            color: #fff;
-            float: left;
-        }
-        .footer {
-            width: 1200px;
-            height: 100px;
-            line-height: 100px;
-            background-color: #ad1457;
-            clear: both;
-            color: #fff;
-        }
-    </style>
+    <title>Document</title>
 </head>
 <body>
-    <div class="wrap">
-        <div class="header">header</div>
-        <div class="nav">nav</div>
-        <div class="side">side</div>
-        <div class="content1">content1</div>
-        <div class="cont">
-            <div class="cont1">cont1</div>
-            <div class="cont2">cont2</div>
-        </div>
-        <div class="footer">footer</div>
-    </div>
+    <script>
+        // const num = [100, 200, 300, 400, 500];
+        // //for
+        // for(let i=0; i<num.length; i++){
+        //     document.write(num[i], "<br>");
+        // }
+        // //forEach
+        // num.forEach(function(el){
+        //     document.write(el, "<br>")
+        // });
+        // //forEach(element, index, array)
+        // num.forEach(function(elemant, index, array){
+        //     document.write(index, "<br>");
+        //     document.write(elemant, "<br>");
+        //     document.write(array, "<br>");
+        // })
+        // 300만 빼고
+        // document.write(num.filter(el => el !== 300), "<br>");
+
+        // const text = num.splice(2,1);
+        // document.write(num, "<br>");
+
+        // const text1 = num.slice(2,3);
+        // document.write(num, "<br>");
+
+        //map
+        // num.map(el => {
+        //     document.write(el, "<br>");
+        // });
+
+        // //펼침연산자
+        // document.write(...num, "<br>");
+
+        // const obj = [
+        //     {a:100},
+        //     {a:200},
+        //     {a:300}
+        // ]
+        // document.write(obj[0].a);
+        // document.write(obj[1].a);
+        // document.write(obj[2].a);
+
+        // obj.map(el => {
+        //     document.write(el.a)
+        // })
+
+        // obj.map(el => document.write(el.a))
+
+        function func(num, name, job){
+            this.num = num;
+            this.name = name;
+            this.job = job;
+
+            this.result = function(){
+                document.write(`${num}. 내 이름은 ${name}이며 직업은 ${job}입니다.`)
+            }
+        }
+        const info = new func("1", "웹쓰", "웹 퍼블리셔")
+
+    </script>
 </body>
 </html>
