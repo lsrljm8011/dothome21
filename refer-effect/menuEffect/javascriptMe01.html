@@ -38,22 +38,23 @@
         </div>
     </div>
     <!-- //info -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
     <script>
-        // $(".btn-wrap  button").click(function(){
-        //     $("#code").removeClass().addClass("show");
-        // });
-
-        // $(".code-cont button").click(function(){
-        //     $("#code").addClass("hide");
-        // });
-
-        document.querySelector(".btn-wrap button").addEventListener("click", function(){
-            document.querySelector("#code").remove().add("show");
+        $(".btn-wrap  button").click(function(){
+            $("#code").removeClass().addClass("show");
         });
-        document.querySelector(".code-cont button").addEventListener("click", function(){
-            document.querySelector("#code").remove("hide");
+
+        $(".code-cont button").click(function(){
+            $("#code").addClass("hide");
         });
+
+        // document.querySelector(".btn-wrap button").addEventListener("click", function(){
+        //     document.querySelector("#code").add("show");
+        // });
+        // document.querySelector(".code-cont button").addEventListener("click", function(){
+        //     document.querySelector("#code").remove("hide");
+        // });
     </script>
 
 </body>
