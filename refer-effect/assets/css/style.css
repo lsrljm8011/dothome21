@@ -280,22 +280,16 @@ figcaption {
 
 @media (max-width: 800px) {
   #contents h1 {
-    font-size: 90px;
+    font-size: 70px;
   }
 
-  #nav {
-    bottom: -40px;
-  }
-  #nav li {
-    list-style: none;
-    display: inline;
+  #nav ul {
+    display: flex;
   }
   #nav li a {
-    color: #fff;
-    text-decoration: none;
-    width: 90px;
-    height: 40px;
-    line-height: 40px;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
     font-size: 12px;
   }
 
