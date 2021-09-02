@@ -612,7 +612,7 @@ figcaption {
   }
 
   .code-view {
-    width: 70vh;
+    width: 90vw;
     border-radius: 10px;
   }
   .code-view .view-cont {
