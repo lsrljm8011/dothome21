@@ -39,6 +39,63 @@
     font-style: normal;
 }
 
+/* 에스코어 드림 */
+
+@font-face {
+    font-family: 'S-CoreDream';
+    font-weight: 100;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-1Thin.woff') format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'S-CoreDream';
+    font-weight: 200;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-2ExtraLight.woff') format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'S-CoreDream';
+    font-weight: 300;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'S-CoreDream';
+    font-weight: 400;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'S-CoreDream';
+    font-weight: 500;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'S-CoreDream';
+    font-weight: 600;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'S-CoreDream';
+    font-weight: 700;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-7ExtraBold.woff') format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'S-CoreDream';
+    font-weight: 800;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'S-CoreDream';
+    font-weight: 900;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-9Black.woff') format('woff');
+    font-style: normal;
+}
+
 // reset
 // 여백 초기화 
 body,
@@ -129,7 +186,7 @@ $gradient6: linear-gradient(60deg, #abecd6 0%, #fbed96 100%);
 //     background-position: center center;
 //     background-repeat: no-repeat;
 // }
-@for $i from 1 through 10 {
+@for $i from 1 through 12 {
     .bg#{$i} {
         background-image: url(../img/bg#{$i}@2.jpg);
     }
@@ -228,14 +285,17 @@ $gradient6: linear-gradient(60deg, #abecd6 0%, #fbed96 100%);
     color: #fff;
     font-family: $font-Nexon1;
     padding: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
 
     &.right {
-        position: absolute;
+        left: auto;
         right: 0;
-        top: 0;
     }
     &.bottom {
-        position: absolute;
+        top: auto;
+        left: auto;
         bottom: 0;
         right: 0;
     }
@@ -296,6 +356,148 @@ $gradient6: linear-gradient(60deg, #abecd6 0%, #fbed96 100%);
     }
 }
 
+#modal {
+	position: fixed;
+	left: 0; top: 0;
+	width: 100%; height: 100vh;
+	background: rgba(0,0,0,0.4);
+	z-index: 1000;
+	transform: scale(0);	//대상을 보이게(1) 안보이게(0) 작업할 수 있음
+	
+	.modal-bg {
+		background: rgba(0,0,0,0.3);
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		
+		.modal-cont {
+
+			h2 {
+				font-weight: 400;
+				font-size: 30px;
+				margin-bottom: 10px;
+			}
+			p {
+				font-weight: 300;
+				line-height: 1.6;
+			}
+			button {
+				float: right;
+				border: 1px solid #000;
+				background: #000;
+				border-radius: 20px;
+				color: #fff;
+				padding: 5px 10px;
+				cursor: pointer;
+                margin-top: 10px;
+			}
+		}
+	}
+}
+
+#modal.show {
+	animation: unfoldIn 1s ease forwards;
+}
+@keyframes unfoldIn {
+	0%   {transform: scaley(0.005) scalex(0);}
+	50%  {transform: scaley(0.005) scalex(1);}
+	100% {transform: scaley(1) scalex(1);}
+}
+
+#modal.show.hide {
+	animation: unfoldOut 1s ease forwards;
+}
+@keyframes unfoldOut {
+	0%   {transform: scaley(1) scalex(1);}
+	50%  {transform: scaley(0.005) scalex(1);}
+	100% {transform: scaley(0.005) scalex(0);}
+}
+
+#modal.show .modal-bg .modal-cont{
+	transform: scale(0);
+	animation: zoomIn 0.5s 0.8s ease forwards;
+}
+#modal.show.hide .modal-bg .modal-cont{
+	transform: scale(0);
+	animation: zoomOut 0.5s ease forwards;
+}
+
+@keyframes zoomIn {
+	0% {transform: scale(0)}
+	100% {transform: scale(1)}
+}
+@keyframes zoomOut {
+	0% {transform: scale(1)}
+	100% {transform: scale(0)}
+}
+
+//code-view
+.code-view {
+    background: #fff;
+    width: 60vw;
+    border: 1px solid #f2f2f2;
+    border-radius: 10px;
+    overflow: hidden;
+
+    .view-header {
+        border-bottom: 1px solid #f2f2f2;
+        .dot {
+            padding: 13px 10px 10px 15px;
+
+            span {
+                width: 12px; height: 12px;
+                display: inline-block;
+                border-radius: 50%;
+                margin: 0 2px;
+            }
+            span:nth-child(1) {
+                background-color: #f56565;
+            }
+            span:nth-child(2) {
+                background-color: #f6e05e;
+            }
+            span:nth-child(3) {
+                background-color: #48bb78;
+            }
+        }
+    }
+    .view-title {
+        font-family: 'NEXONLv2Gothic';
+        border-bottom: 1px solid #f2f2f2;
+        padding: 0 11px;
+
+        li {
+            display: inline;
+            list-style: none;
+
+            a {
+                text-decoration: none;
+                color: #ccc;
+                padding: 10px 10px 12px;
+                margin: 0 5px;
+                display: inline-block;
+            }
+            &.active a {
+                border-top: 2px solid #667EEA;
+                color: #4a5568;
+            }
+        }
+    }
+    .view-cont {
+        height: 500px;
+        overflow-y: scroll;
+        background: #F8F8F9;
+
+        > div {
+            display: none;
+        }
+        > div:nth-child(1) {
+            display: block;
+        }
+    } 
+}
+
 @media (max-width:800px) {
     #contents {
         h1 {
@@ -316,6 +518,10 @@ $gradient6: linear-gradient(60deg, #abecd6 0%, #fbed96 100%);
         }
     }
     .info {
+        &.right {
+            left: 0;
+            top: 10vh;
+        }
         h1 {
             font-size: 18px;
         }
@@ -342,83 +548,44 @@ $gradient6: linear-gradient(60deg, #abecd6 0%, #fbed96 100%);
             line-height: 12px;
         }
     }
-}
+    .view-title {
+        font-family: 'NEXONLv2Gothic';
+        border-bottom: 1px solid #f2f2f2;
+        padding: 0 11px;
 
-#code {
-	position: fixed;
-	left: 0; top: 0;
-	width: 100%; height: 100vh;
-	background: rgba(0,0,0,0.4);
-	z-index: 1000;
-	transform: scale(0);	//대상을 보이게(1) 안보이게(0) 작업할 수 있음
-	
-	.code-bg {
-		background: rgba(0,0,0,0.3);
-		height: 100vh;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		
-		.code-cont {
-			background: #fff;
-			padding: 3vw;
-			max-width: 50vw;
-			border-radius: 5px;
-			
-			h2 {
-				font-weight: 400;
-				font-size: 30px;
-				margin-bottom: 10px;
-			}
-			p {
-				font-weight: 300;
-				line-height: 1.6;
-			}
-			button {
-				float: right;
-				border: 1px solid #000;
-				background: #000;
-				border-radius: 20px;
-				color: #fff;
-				padding: 5px 10px;
-				cursor: pointer;
-			}
-		}
-	}
-}
+        li {
+            display: inline;
+            list-style: none;
+            font-size: 12px;
 
-#code.show {
-	animation: unfoldIn 1s ease forwards;
-}
-@keyframes unfoldIn {
-	0%   {transform: scaley(0.005) scalex(0);}
-	50%  {transform: scaley(0.005) scalex(1);}
-	100% {transform: scaley(1) scalex(1);}
-}
+            a {
+                text-decoration: none;
+                color: #ccc;
+                padding: 10px 10px 12px;
+                margin: 0 5px;
+                display: inline-block;
+            }
+            &.active a {
+                border-top: 2px solid #667EEA;
+                color: #4a5568;
+            }
+        }
+    }
+    .code-view {
+        width: 40vh;
+        border-radius: 10px;
+        .view-cont {
+            height: 500px;
+            overflow-y: scroll;
+            background: #F8F8F9;
+            font-size: 12px;
 
-#code.show.hide {
-	animation: unfoldOut 1s ease forwards;
-}
-@keyframes unfoldOut {
-	0%   {transform: scaley(1) scalex(1);}
-	50%  {transform: scaley(0.005) scalex(1);}
-	100% {transform: scaley(0.005) scalex(0);}
-}
-
-#code.show .code-bg .code-cont{
-	transform: scale(0);
-	animation: zoomIn 0.5s 0.8s ease forwards;
-}
-#code.show.hide .code-bg .code-cont{
-	transform: scale(0);
-	animation: zoomOut 0.5s ease forwards;
-}
-
-@keyframes zoomIn {
-	0% {transform: scale(0)}
-	100% {transform: scale(1)}
-}
-@keyframes zoomOut {
-	0% {transform: scale(1)}
-	100% {transform: scale(0)}
+            > div {
+                display: none;
+            }
+            > div:nth-child(1) {
+                display: block;
+            }
+        } 
+    }
 }
