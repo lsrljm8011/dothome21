@@ -272,6 +272,7 @@ figcaption {
   transition: all 0.4s;
   width: 100px;
   height: 40px;
+  cursor: pointer;
 }
 .info button:hover {
   box-shadow: 0 -50px 0 #fff inset;

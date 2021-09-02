@@ -287,6 +287,7 @@ $gradient6: linear-gradient(60deg, #abecd6 0%, #fbed96 100%);
         transition: all 0.4s;
         width: 100px;
         height: 40px;
+        cursor: pointer;
 
         &:hover {
             box-shadow: 0 -50px 0 #fff inset;
