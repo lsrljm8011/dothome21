@@ -20,7 +20,6 @@
             font-family: 'NEXONLv1Gothic';
             color: #fff;
         }
-        .tab-btn {}
         .tab-btn ul {
             display: flex;
         }
@@ -57,6 +56,35 @@
         .tab-cont > div p {
             font-size: 15px;
             line-height: 1.6;
+        }
+        @media (max-width:800px) {
+            #tab-menu {
+                max-width: 500px;
+            }
+            .tab-btn ul {
+                display: flex;
+            }
+            .tab-btn li {
+                width: 20%;
+                font-size: 14px;
+            }
+            .tab-btn li a {
+                color: #fff;
+                text-decoration: none;
+                padding: 15px;  
+                display: block;
+            }
+            .tab-cont {
+                padding: 15px;
+            }
+            .tab-cont > div h2 {
+                font-size: 16px;
+                margin-bottom: 8px;
+            } 
+            .tab-cont > div p {
+                font-size: 12px;
+                line-height: 1.4;
+            }
         }
     </style>
 </head>
