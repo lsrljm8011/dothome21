@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test1</title>
+    <title>네이버 인플루언서 센터</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/fonts.css">
@@ -25,37 +25,45 @@
             color: #fff;
             font-family: 'NanumSquare';
         }
+        .menu-bg {
+            width: 100%;
+            height: 100px;
+        }
         .menu {
+            width: 100%;
+            height: 100px;
             position: absolute;
             top: 0;
             right: 0;
             left: 0;
+            margin-left: -60px;
         }
         .logo {
             display: inline-block;
             margin-left: 130px;
             margin-top: 30px;
             width: 40px;    
+            cursor: pointer;
         }
         .menu h1 {
             display: inline-block;
             font-weight: 700;
             margin-left: 15px;
-            margin-top: 30px;
             font-size: 20px;
             line-height: 20px;
+            cursor: pointer;
         }
         .menu .bar {
             display: flex;
             justify-content: space-between;
             display: inline-block;
             text-align: center;
-            font-size: 20px;
+            font-size: 18px;
             margin-left: 10%;
         }
         .menu .bar a {
             text-align: center;
-            margin-left: 50px;
+            margin-left: 20px;
             color: #fff;
         }
         .login {
@@ -66,13 +74,17 @@
             font-size: 12px;
             color: #fff;
             margin-top: 50px;
-            margin-left: 1650px;
+            margin-left: 150px;
+            
+        }
+        .wrap {
+            width: 1000px;
+            height: auto;
+            margin: 0 auto;
         }
         .main {
             display: block;
             text-align: left;
-            width: 1000px;
-            margin-left: 21%;
         }
         .main h1 {
             display: inline-block;
@@ -94,10 +106,9 @@
             line-height: 1.8;
             margin-bottom: 200px;
         }
+        /* slide */
         .swiper3 {
-            margin-left: 400px;
             position: relative;
-            width: 60%;
             overflow: hidden;
             margin-bottom: 200px;
             border-radius: 20px;
@@ -109,6 +120,7 @@
             background-repeat: no-repeat;
             background-position: center;
             width: 100%;
+            cursor: pointer;
         }
         .swiper-wrapper .swiper-slide:nth-child(3){
             background-image: url(img/slider2.png);
@@ -116,6 +128,7 @@
             background-repeat: no-repeat;
             background-position: center;
             width: 100%;
+            cursor: pointer;
         }
         .swiper-wrapper .swiper-slide:nth-child(4){
             background-image: url(img/slider3.jpg);
@@ -123,6 +136,7 @@
             background-repeat: no-repeat;
             background-position: center;
             width: 100%;
+            cursor: pointer;
         }
         .swiper-wrapper .swiper-slide:nth-child(5){
             background-image: url(img/slider4.jpg);
@@ -130,6 +144,7 @@
             background-repeat: no-repeat;
             background-position: center;
             width: 100%;
+            cursor: pointer;
         }
         .swiper-wrapper .swiper-slide:nth-child(6){
             background-image: url(img/slider5.png);
@@ -137,6 +152,7 @@
             background-repeat: no-repeat;
             background-position: center;
             width: 100%;
+            cursor: pointer;
         }
         .swiper-wrapper .swiper-slide:nth-child(7){
             background-image: url(img/slider6.png);
@@ -144,6 +160,7 @@
             background-repeat: no-repeat;
             background-position: center;
             width: 100%;
+            cursor: pointer;
         }
         .swiper-wrapper .swiper-slide:nth-child(8){
             background-image: url(img/slider1.png);
@@ -151,6 +168,7 @@
             background-repeat: no-repeat;
             background-position: center;
             width: 100%;
+            cursor: pointer;
         }
         .swiper-wrapper .swiper-slide:nth-child(9){
             background-image: url(img/slider2.png);
@@ -158,6 +176,7 @@
             background-repeat: no-repeat;
             background-position: center;
             width: 100%;
+            cursor: pointer;
         }
         .swiper-wrapper .swiper-slide:nth-child(10){
             background-image: url(img/slider3.png);
@@ -165,6 +184,7 @@
             background-repeat: no-repeat;
             background-position: center;
             width: 100%;
+            cursor: pointer;
         }
         .swiper-wrapper .swiper-slide:nth-child(11){
             background-image: url(img/slider4.jpg);
@@ -172,6 +192,7 @@
             background-repeat: no-repeat;
             background-position: center;
             width: 100%;
+            cursor: pointer;
         }
         .swiper-wrapper .swiper-slide:nth-child(12){
             background-image: url(img/slider5.jpg);
@@ -179,6 +200,7 @@
             background-repeat: no-repeat;
             background-position: center;
             width: 100%;
+            cursor: pointer;
         }
         .swiper-wrapper .swiper-slide:nth-child(1){
             background-image: url(img/slider6.png);
@@ -186,15 +208,15 @@
             background-repeat: no-repeat;
             background-position: center;
             width: 100%;
+            cursor: pointer;
         }
         .swiper-slide .slider-inner {
             width: 1000px;
             height: 500px;
-            margin: 0 auto;
             color: #fff;
+            margin-left: 8%;
         } 
         .swiper-slide .slider-inner em {
-            margin-left: 20px;
             margin-top: -50px;
             color: #eee;
             opacity: 50%;
@@ -206,13 +228,11 @@
         } 
         .swiper-slide .slider-inner h3 {
             margin-top: 20px;
-            margin-left: 20px;
             font-size: 30px;
             font-weight: 700;
             line-height: 1.2;
         } 
         .swiper-slide .slider-inner p {
-            margin-left: 20px;
             margin-top: 30px;
             font-size: 15px;
             font-weight: 500;
@@ -244,10 +264,11 @@
             width: 64px;
             height: 64px;
             border-radius: 50%;
-            background-color: #000;
+            background-color: #111;
             margin-top: -470px;
-            margin-left: 370px;
+            margin-left: -2%;
             z-index: 1000;
+            cursor: pointer;
         }
         .swiper-button-prev {
             width: 12px; height: 20px;
@@ -265,10 +286,11 @@
             width: 64px;
             height: 64px;
             border-radius: 50%;
-            background-color: #000;
+            background-color: #111;
             margin-top: -470px;
-            margin-left: 1520px;
+            margin-left: 67%;
             z-index: 1000;
+            cursor: pointer;
         }
         .swiper-button-next {
             width: 12px; height: 20px;
@@ -281,7 +303,8 @@
         .swiper-pagination-fraction {
             color: #fff;
         }
-        .tit {
+        /* //slide */
+        .tit1 {
             display: block;
             margin-bottom: 72px;
             font-size: 50px;
@@ -290,51 +313,51 @@
             letter-spacing: -1px;
             text-align: left;
             color: #6d8bff;
-            margin-left: 400px;
         }
         .article {
             display: flex;
-            margin-left: 720px;
             margin-top: -270px;
         }
         .article .article1 {
-            width: 600px;
-            height: 818px;
+            width: 485px;
+            height: 770px;
             background: rgb(52, 51, 51);
             display: block;
-            margin-top: 310px;
-            margin-left: -330px;
+            margin-top: 240px;
             border-radius: 20px;
             cursor: pointer;
             overflow: hidden;
             position: relative;
+            cursor: pointer;
         }
         .article .article1 em {
+            margin-left: 50px;
+            margin-top: 50px;
             display: block;
             font-size: 15px;
             font-weight: 800;
             line-height: 21px;
             color: hsla(0,0%,100%,.6);
-            margin-top: 50px; margin-left: 50px;
         }
         .article .article1 h3 {
+            margin-left: 50px;
+            margin-top: 10px;
             display: block;
             font-size: 34px;
             font-weight: 700;
             line-height: 46px;
             letter-spacing: -1px;
             color: #fff;
-            margin-left: 50px;
-            margin-top: 10px;
         }
         .article .article1 p {
+            margin-left: 50px;
+            margin-top: 20px;
             display: inline-block;
             font-size: 16px;
             font-weight: 700;
             line-height: 26px;
             letter-spacing: -.2px;
             color: #6d8bff;
-            margin-left: 50px;
         }
         .article .article1 img {
             transition: all 0.1s linear;
@@ -342,17 +365,19 @@
         .article .article1 img:hover {
             transform: scale(1.1);
         }
+        .article .ar2 {
+            margin-left: 30px;
+        }
         .article .article2 {
-            width: 560px;
-            height: 550px;
+            width: 485px;
+            height: 490px;
             background: rgb(52, 51, 51);
             float: left;
             border-radius: 20px;
-            margin-top: -20;
-            margin-left: 30px;
             overflow: hidden;
             position: relative;
             display: block;
+            cursor: pointer;
         }
         .article .article2 em {
             display: block;
@@ -360,7 +385,8 @@
             font-weight: 800;
             line-height: 21px;
             color: hsla(0,0%,100%,.6);
-            margin-top: 50px; margin-left: 50px;
+            margin-left: 50px;
+            margin-top: 50px;
         }
         .article .article2 h3 {
             display: block;
@@ -379,8 +405,9 @@
             line-height: 26px;
             letter-spacing: -.2px;
             color: #6d8bff;
-            margin-left: 50px;
             cursor: pointer;
+            margin-left: 50px;
+            margin-top: 20px;
         }
         .article .article2 img {
             transition: all 0.1s linear;
@@ -389,16 +416,16 @@
             transform: scale(1.1);
         }
         .article .article3 {
-            width: 560px;
-            height: 551px;
+            margin-top: 30px;
+            width: 485px;
+            height: 490px;
             background: rgb(52, 51, 51);
             float: left;
             border-radius: 20px;
-            margin-top: 30px;
-            margin-left: 30px;
             overflow: hidden;
             position: relative;
             display: block;
+            cursor: pointer;
         }
         .article .article3 em {
             display: block;
@@ -406,7 +433,8 @@
             font-weight: 800;
             line-height: 21px;
             color: hsla(0,0%,100%,.6);
-            margin-top: 50px; margin-left: 50px;
+            margin-left: 50px;
+            margin-top: 50px;
         }
         .article .article3 h3 {
             display: block;
@@ -425,8 +453,9 @@
             line-height: 26px;
             letter-spacing: -.2px;
             color: #6d8bff;
-            margin-left: 50px;
             cursor: pointer;
+            margin-left: 50px;
+            margin-top: 20px;
         }
         .article .article3 img {
             transition: all 0.1s linear;
@@ -434,12 +463,12 @@
         .article .article3 img:hover {
             transform: scale(1.1);
         }
-        .aside {
-            background-color: #000;
+        .wrap2 {
+            background-color: #1c1c1c;
             padding: 100px;
             margin-top: 200px;
         }
-        .aside .tit1 {
+        .wrap2 .tit2 {
             display: block;
             font-size: 50px;
             font-weight: 800;
@@ -447,63 +476,287 @@
             letter-spacing: -1.4px;
             text-align: center;
             color: #5cf0c6;
+            margin-bottom: 100px;
+        }
+        .aside {
+            width: 1000px;
+            height: auto;
+            margin: 0 auto;
+        }
+        .aside .boxgroup1 {
+            display: flex;
         }
         .aside .box1 {
             display: block;
             position: relative;
-            width: 500px;
-            height: 450px;
-            margin-top: 100px;
+            width: 485px;
+            height: 485px;
+            float: left;
+            cursor: pointer;
         }
-        .aside .box1 .box-inner {
+        .aside .box1 .box-inner1 {
             background-image: url(img/box1bg.png);
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
             width: 100%;
+            height: 100%;
             border-radius: 20px;
-            padding-top: 50px;
-            padding-left: 50px;
+            position: absolute;
+            overflow: hidden;
         }
-        .aside .box1 .box-inner img {
-            margin-bottom: -7px;
-        }
-        .aside .box1 .box-inner em {
+        .aside .box1 .box-inner1 em {
             display: block;
             font-size: 15px;
             font-weight: 800;
             line-height: 21px;
             color: hsla(0,0%,100%,.6);
+            margin-top: 50px;
+            margin-left: 50px;
         }
-        .aside .box1 .box-inner h3 {
+        .aside .box1 .box-inner1 h3 {
             display: block;
-            margin-top: 10px;
             font-size: 34px;
             font-weight: 700;
             line-height: 46px;
             letter-spacing: -1px;
             color: #fff;
+            margin-left: 50px;
+            margin-top: 10px;
+
         }
-        .aside .box1 .box-inner p {
+        .aside .box1 .box-inner1 p {
             display: inline-block;
             position: relative;
-            margin-top: 25px;
             font-size: 16px;
             font-weight: 700;
             color: #91ffc2;
+            margin-left: 50px;
+            margin-top: 20px;
+
+        }
+        .aside .box1 img {
+            margin-top: 68px;
+            transition: all 0.1s linear;
+            cursor: pointer;
+        }
+        .aside .box1 img:hover {
+            transform: scale(1.1);
         }
         .aside .box2 {
             display: block;
             position: relative;
+            width: 485px;
+            height: 485px;
+            background-color: #5A6FF0;
+            float: left;
+            border-radius: 20px;
+            margin-left: 30px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .aside .box2 em {
+            display: block;
+            font-size: 15px;
+            font-weight: 800;
+            line-height: 21px;
+            color: hsla(0,0%,100%,.6);
+            margin-top: 50px;
+            margin-left: 50px;
+        }
+        .aside .box2 h3 {
+            display: block;
+            font-size: 34px;
+            font-weight: 700;
+            line-height: 46px;
+            letter-spacing: -1px;
+            color: #fff;
+            margin-left: 50px;
+            margin-top: 10px;
+        }
+        .aside .box2 p {
+            display: inline-block;
+            position: relative;
+            font-size: 16px;
+            font-weight: 700;
+            color: #91ffc2;
+            margin-left: 50px;
+            margin-top: 20px;
+        }
+        .aside .box2 img {
+            margin-top: 9px;
+            cursor: pointer;
+            transition: all 0.1s linear;
+            cursor: pointer;
+        }
+        .aside .box2 img:hover {
+            transform: scale(1.1);
         }
         .aside .box3 {
             display: block;
             position: relative;
+            width: 1000px;
+            height: 300px;
+            background-color: #6452c7;
+            margin-top: 30px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        .aside .box3 .box-inner3 {
+            background-image: url(img/box3bg.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            position: absolute;
+            display: flex;
+            overflow: hidden;
+        }
+        .aside .box3 .box-inner3-1 {
+            float: left;
+            width: 1000px;
+        }
+        .aside .box3 .box-inner3-2 {
+            float: left;
+        }
+        .aside .box3 .box-inner3-2 img {
+            margin-top: 70px;
+            margin-right: 0;
+            transition: all 0.1s linear;
+            cursor: pointer;
+        }
+        .aside .box3 .box-inner3-2 img:hover {
+            transform: scale(1.1);
+        }
+        .aside .box3 em {
+            display: block;
+            font-size: 15px;
+            font-weight: 800;
+            line-height: 21px;
+            color: hsla(0,0%,100%,.6);
+            margin-top: 50px;
+            margin-left: 50px;
+        }
+        .aside .box3 h3 {
+            display: block;
+            font-size: 34px;
+            font-weight: 700;
+            line-height: 46px;
+            letter-spacing: -1px;
+            color: #fff;
+            margin-left: 50px;
+            margin-top: 10px;
+        }
+        .aside .box3 p {
+            display: inline-block;
+            position: relative;
+            font-size: 16px;
+            font-weight: 700;
+            color: #91ffc2;
+            margin-left: 50px;
+            margin-top: 20px;
+        }
+        .wrap3 {
+            padding: 135px 0;
+            background-image: url(img/bg02.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+            height: 100%;
+        }
+        .wrap3 .box4 {
+            width: 1000px;
+            margin: 0 auto;
+        }
+        .wrap3 .box4 h3 {
+            font-size: 34px;
+            font-weight: 800;
+            text-align: center;
+        }
+        .wrap3 .box4 .btn {
+            text-align: center;
+        }
+        .wrap3 .box4 .btn1 {
+            background: #fff;
+            border-radius: 50px;
+            width: 320px;
+            height: 80px;
+            display: inline-block;
+            margin-top: 50px;
+            text-align: center;
+
+        }
+        .wrap3 .box4 .btn1 a {
+            display: inline-block;
+            font-size: 20px;
+            padding: 25px;
+        }
+        .wrap3 .box4 .btn2 {
+            background: #4b65f7;;
+            border-radius: 50px;
+            width: 320px;
+            height: 80px;
+            display: inline-block;
+            margin-top: 50px;
+            text-align: center;
+            margin-left: 30px;
+        }
+        .wrap3 .box4 .btn2 a {
+            display: inline-block;
+            font-size: 20px;
+            padding: 25px;
+            color: #fff;
+        }
+        .footer {
+            margin: 0 auto;
+            text-align: center;
+            background: #000;
+        }
+        .footer .footer1 {
+            padding-top: 15px;
+            margin-bottom: 15px;
+            color: #666;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        .footer .line {
+            border-bottom: 1px solid hsla(0,0%,100%,.1);
+        }
+        .footer .footer2 a {
+            display: inline-block;
+            background: #323232;
+            color: #999;
+            font-size: 12px;
+            width: 80px;
+            border-radius: 2px;
+            text-align: center;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+        .footer .footer2 em {
+            display: block;
+            font-size: 5px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .footer .footer2 span {
+            display: block;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 800;
+            color: #666;
+            padding-bottom: 30px;
         }
     </style>
 </head>
 <body>
-    <div class="wrap">
+    <div class="menu-bg">
         <div class="menu">
             <img src="img/logo.gif" alt="로고" class="logo">
             <h1>NAVER<br>INFLUENCER CENTER</h1>
@@ -514,8 +767,10 @@
                 <a href="#">브랜드커넥트</a>
                 <a href="#">공지</a>
             </nav>
+            <a class="login" href="#">인플루언서로 로그인</a>
         </div>
-        <a class="login" href="#">인플루언서 로그인</a>
+    </div>
+    <div class="wrap">
         <div class="main">
             <h1>NAVER INFLUENCER<br>CENTER</h1>
             <h3>인플루언서에게 필요한 모든 것</h3>
@@ -530,42 +785,42 @@
                             <div class="slider-inner">
                                 <em>로고전문가 최은빈과 함께하는</em>
                                 <h3>세상에서 제일 쉬운<br>로고 만들기 심화편</h3>
-                                <p>지금 만나보세요 -></p>
+                                <p>지금 만나보세요 →</p>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="slider-inner">
                                 <em>로고전문가 최은빈과 함께하는</em>
                                 <h3>세상에서 제일 쉬운<br>나만의 로고 만들기</h3>
-                                <p>지금 만나보세요 -></p>
+                                <p>지금 만나보세요 →</p>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="slider-inner">
                                 <em>광교 표시, 어떻게 하지?</em>
                                 <h3>정당하게 광고하자!<br>추천보증광고 표시법</h3>
-                                <p>지금 만나보세요 -></p>
+                                <p>지금 만나보세요 →</p>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="slider-inner">
                                 <em>@여행작가 박은하의</em>
                                 <h3>클릭을 부르는<br>포스팅 방법</h3>
-                                <p>지금 만나보세요 -></p>
+                                <p>지금 만나보세요 →</p>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="slider-inner">
                                 <em>세남자와 해결해요!</em>
                                 <h3>세금신고의 꽃<br>절세 노하우!</h3>
-                                <p>지금 만나보세요 -></p>
+                                <p>지금 만나보세요 →</p>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="slider-inner">
                                 <em>세남자와 해결해요!</em>
                                 <h3>세금 신고 FAQ</h3>
-                                <p>지금 만나보세요 -></p>
+                                <p>지금 만나보세요 →</p>
                             </div>
                         </div>
                     </div>
@@ -580,53 +835,91 @@
             </div>
         </section>
         <!-- //sliderType -->
-        <h3 class="tit">인플루언서에게<br>제공되는<br>광고 수익과 혜택</h3>
+        <h3 class="tit1">인플루언서에게<br>제공되는<br>광고 수익과 혜택</h3>
         <div class="article">
-            <div class="article1">
-                <em>인플루언서 홈</em>
-                <h3>취향을 자유롭게 표현하는<br>나만의 홈페이지</h3>
-                <p>자세히 알아보기-></p>
-                <img src="img/article1.png" alt="인플루언서 홈 이미지">
+            <div class="ar1">
+                <div class="article1">
+                    <em>인플루언서 홈</em>
+                    <h3>취향을 자유롭게 표현하는<br>나만의 홈페이지</h3>
+                    <p>자세히 알아보기 →</p>
+                    <img src="img/article1.png" alt="인플루언서 홈 이미지">
+                </div>
             </div>
-            <div class="ar">
+            <div class="ar2">
                 <div class="article2">
                     <em>특별한 광고</em>
                     <h3>더 커진 수익과 효과적인<br>헤드뷰 광고</h3>
-                    <p>자세히 알아보기-></p>
+                    <p>자세히 알아보기 →</p>
                     <img src="img/article2.png" alt="특별한 광고이미지">
                 </div>
                 <div class="article3">
                     <em>검색 참여</em>
                     <h3>인플루언서의 콘텐츠를<br>더 많이 보여주는 검색 결과</h3>
-                    <p>자세히 알아보기-></p>
+                    <p>자세히 알아보기 →</p>
                     <img src="img/article3.png" alt="검색 참여 이미지">
                 </div>
             </div>
         </div>
+    </div>
+    <div class="wrap2">
+        <h3 class="tit2">오직 네이버 인플루언서만을 위한<br>성장 지원 프로그램</h3>
         <div class="aside">
-            <h3 class="tit1">오직 네이버 인플루언서만을 위한<br>성장 지원 프로그램</h3>
-            <div class="box1">
-                <div class="box-inner">
-                    <em>슈퍼애드</em>
-                    <h3>네이버 배너를 통한<br>홍보 지원</h3>
-                    <p>자세히 알아보기 -></p>
-                    <img src="img/box1.png" alt="슈퍼애드 이미지">
+            <div class="boxgroup1">
+                <div class="box1">
+                    <div class="box-inner1">
+                        <em>슈퍼애드</em>
+                        <h3>네이버 배너를 통한<br>홍보 지원</h3>
+                        <p>자세히 알아보기 →</p>
+                        <img src="img/box1.png" alt="슈퍼애드 이미지">
+                    </div>
+                </div>
+                <div class="box2">
+                    <em>엑스퍼트 프로그램</em>
+                    <h3>세금, 법률 등<br>컨설팅 비용 지원</h3>
+                    <p>자세히 알아보기 →</p>
+                    <img src="img/box2.png" alt="슈퍼애드 이미지">
                 </div>
             </div>
-            <div class="box2">
-                <em>엑스퍼트 프로그램</em>
-                <h3>세금, 법률 등<br>컨설팅 비용 지원</h3>
-                <p>자세히 알아보기 -></p>
-                <img src="img/box2.png" alt="슈퍼애드 이미지">
-            </div>
-            <div class="box3">
-                <em>크리에이터 워크숍</em>
-                <h3>어디에서도 볼 수 없었던<br>무료 강연과 교육</h3>
-                <img src="img/box3.png" alt="슈퍼애드 이미지">
+            <div class="boxgroup2">
+                <div class="box3">
+                    <div class="box-inner3">
+                        <div class="box-inner3-1">
+                            <em>크리에이터 워크숍</em>
+                            <h3>어디에서도 볼 수 없었던<br>무료 강연과 교육</h3>
+                            <p>자세히 알아보기 →</p>
+                        </div>
+                        <div class="box-inner3-2"> 
+                            <img src="img/box3.png" alt="크리에이터 워크숍 이미지">
+                        </div>
+                    </div>  
+                </div>
             </div>
         </div>
-
     </div>
+    <div class="wrap3">
+        <div class="box4">
+            <h3>인플루언서 검색에 대한 정보가 더 필요한가요?</h3>
+            <div class="btn">
+                <div class="btn1">
+                    <a href="#">인플루언서 검색 <b>지원 안내</b></a>
+                </div>
+                <div class="btn2">
+                    <a href="#">인플루언서 검색 <b>소개페이지</b></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer1">TOP↑</div>
+        <div class="line"></div>
+        <div class="footer2">
+            <a href="#">로그인</a>
+            <em>NAVER Copyright © NAVER Corp. All Rights Reserved.</em>
+            <span>NAVER</span>
+        </div>
+    </div>
+
+
     <script src="https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js"></script>
     <script>
         const swiper3 = new Swiper('.swiper3', {
