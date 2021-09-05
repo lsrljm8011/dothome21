@@ -124,6 +124,14 @@ figcaption {
   padding: 0;
 }
 
+.iphone main {
+  padding: 10px;
+}
+
+.android main {
+  padding: 10px;
+}
+
 .bg {
   position: relative;
   height: 100vh;
@@ -530,11 +538,11 @@ figcaption {
   display: inline-block;
 }
 .code-view .view-title li.active a {
-  border-top: 2px solid #667EEA;
+  border-top: 2px solid #66ea7c;
   color: #4a5568;
 }
 .code-view .view-cont {
-  height: 500px;
+  height: 70vh;
   overflow-y: scroll;
   background: #F8F8F9;
 }
@@ -595,37 +603,19 @@ figcaption {
     padding: 0 11px;
   }
   .view-title li {
-    display: inline;
-    list-style: none;
     font-size: 12px;
-  }
-  .view-title li a {
-    text-decoration: none;
-    color: #ccc;
-    padding: 10px 10px 12px;
-    margin: 0 5px;
-    display: inline-block;
-  }
-  .view-title li.active a {
-    border-top: 2px solid #667EEA;
-    color: #4a5568;
   }
 
   .code-view {
     width: 90vw;
-    height: 100vw;
-    border-radius: 10px;
+    font-size: 15px;
+    overflow: hidden;
+    padding-bottom: 10px;
+    background: #F8F8F9;
   }
   .code-view .view-cont {
-    height: 500px;
+    height: 55vh;
     overflow-y: scroll;
-    background: #F8F8F9;
     font-size: 12px;
-  }
-  .code-view .view-cont > div {
-    display: none;
-  }
-  .code-view .view-cont > div:nth-child(1) {
-    display: block;
   }
 }

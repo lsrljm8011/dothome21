@@ -35,8 +35,8 @@
             display: block;
         }
         .tab-btn li.active a {
-            border-bottom: 3px solid rgb(184, 197, 255);
-            color: rgb(184, 197, 255);
+            border-bottom: 3px solid rgb(250, 194, 245);
+            color: rgb(250, 194, 245);
         }
         .tab-cont {
             background: #fff;
@@ -59,7 +59,7 @@
         }
         @media (max-width:800px) {
             #tab-menu {
-                width: 90%;
+                max-width: 500px;
             }
             .tab-btn ul {
                 display: flex;
@@ -289,6 +289,11 @@ tabBtn.forEach((element, index) => {
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
+        window.onload = function() {
+            //init();
+            //animate();
+            agentCheck();   //호환성체크
+        }
         const tabBtn = document.querySelectorAll(".tab-btn ul li");
         const tabCont = document.querySelectorAll(".tab-cont > div");
 

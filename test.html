@@ -1,35 +1,62 @@
-&lt;main&gt;
-    &lt;div id="tab-menu"&gt;
-        &lt;div class="tab-btn"&gt;
-            &lt;ul&gt;
-                &lt;li class="active"&gt;&lt;a href="#"&gt;flower1&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#"&gt;flower2&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#"&gt;flower3&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#"&gt;flower4&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#"&gt;flower5&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/div&gt;
-        &lt;div class="tab-cont"&gt;
-            &lt;div&gt;
-                &lt;h2&gt;안개꽃&lt;/h2&gt;
-                &lt;p&gt;깨긋한 마음, 사랑의 성공&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;div&gt;
-                &lt;h2&gt;물망초&lt;/h2&gt;
-                &lt;p&gt;진실한 사랑&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;div&gt;
-                &lt;h2&gt;아마릴리스&lt;/h2&gt;
-                &lt;p&gt;눈부신 아름다움&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;div&gt;
-                &lt;h2&gt;제라늄&lt;/h2&gt;
-                &lt;p&gt;그대가 있어 행복합니다&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;div&gt;
-                &lt;h2&gt;에델바이스&lt;/h2&gt;
-                &lt;p&gt;소중한 추억&lt;/p&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/main&gt;
+const btn61 = document.querySelector(".btn6-1");
+const btn62 = document.querySelector(".btn6-2");
+const btn63 = document.querySelector(".btn6-3");
+const btn64 = document.querySelector(".btn6-4");
+const btn65 = document.querySelector(".btn6-5");
+const btn66 = document.querySelector(".btn6-6");
+const btn67 = document.querySelector(".btn6-7");
+const btn68 = document.querySelector(".btn6-8");
+const btn69 = document.querySelector(".btn6-9");
+
+var nowAppCodeName = navigator.appCodeName;
+var nowAppName = navigator.appName;
+var nowAppVersion = navigator.appVersion;
+var nowCookieEnabled = navigator.cookieEnabled;
+var nowLanguage = navigator.language;
+var nowOnLine = navigator.onLine;
+var nowPlatform = navigator.platform;
+var nowProduct = navigator.product;
+var nowUserAgent = navigator.userAgent;
+
+// btn61.addEventListener("click", function(){
+//     document.querySelector(".text6-1").innerHTML = nowAppCodeName;
+// });
+// btn62.addEventListener("click", function(){
+//     document.querySelector(".text6-2").innerHTML = nowAppName;
+// });
+// btn63.addEventListener("click", function(){
+//     document.querySelector(".text6-3").innerHTML = nowAppVersion;
+// });
+// btn64.addEventListener("click", function(){
+//     document.querySelector(".text6-4").innerHTML = nowCookieEnabled;
+// });
+// btn65.addEventListener("click", function(){
+//     document.querySelector(".text6-5").innerHTML = nowLanguage;
+// });
+// btn66.addEventListener("click", function(){
+//     document.querySelector(".text6-6").innerHTML = nowOnLine;
+// });
+// btn67.addEventListener("click", function(){
+//     document.querySelector(".text6-7").innerHTML = nowPlatform;
+// });
+// btn68.addEventListener("click", function(){
+//     document.querySelector(".text6-8").innerHTML = nowProduct;
+// });
+// btn69.addEventListener("click", function(){
+//     document.querySelector(".text6-9").innerHTML = nowUserAgent;
+// });
+
+const name = [nowAppCodeName, nowAppName, nowAppVersion, nowCookieEnabled, nowLanguage, nowOnLine, nowPlatform, nowProduct, nowUserAgent]
+
+// for(let i=1; i<=name.length; i++){
+//     document.querySelector(".btn6-"+i).addEventListener("click",() => {
+//     document.querySelector(".text6-"+i).innerHTML = name[i-1];
+//     });
+// }
+
+name.forEach((element, index) => {
+document.querySelector(".btn6-" + (index+1)).addEventListener("click", () => {
+    document.querySelector(".text6-" + (index+1)).innerHTML = name[index];
+    });
+});
+
