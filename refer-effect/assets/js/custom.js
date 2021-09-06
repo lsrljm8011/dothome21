@@ -80,12 +80,14 @@ viewTit.forEach((element, index) => {
     });
 })
 
-//Modal-javascript
-document.querySelector(".btn-wrap button").addEventListener("click", function(){
-    document.querySelector("#modal").classList.add("show");
-    document.querySelector("#modal").classList.remove("hide");
-});
-
-document.querySelector(".modal-cont button").addEventListener("click", function(){
-    document.querySelector("#modal").classList.add("hide");
-});
+//Modal
+// function modal() {
+    document.querySelector(".btn-wrap button").addEventListener("click", function(){
+        document.querySelector("#modal").classList.add("show");
+        document.querySelector("#modal").classList.remove("hide");
+    });
+    
+    document.querySelector(".modal-cont button").addEventListener("click", function(){
+        document.querySelector("#modal").classList.add("hide");
+    });
+// }
