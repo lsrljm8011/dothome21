@@ -149,6 +149,9 @@ figcaption {
   background: rgba(0, 0, 0, 0.6);
   z-index: -1;
 }
+.bg.blue::before {
+  background-color: rgba(107, 159, 255, 0.6);
+}
 
 .bg1 {
   background-image: url(../img/bg1@2.jpg);
@@ -303,6 +306,11 @@ figcaption {
   bottom: 0;
   right: 0;
 }
+.info.left {
+  top: auto;
+  left: 0;
+  bottom: 0;
+}
 .info h1 {
   font-weight: 300;
   font-size: 20px;
@@ -310,6 +318,10 @@ figcaption {
   border-bottom: 1px dashed #fff;
   display: inline-block;
   margin-bottom: 10px;
+}
+.info h1 a {
+  text-decoration: none;
+  color: #fff;
 }
 .info p {
   font-weight: 300;
@@ -336,6 +348,18 @@ figcaption {
 .info li.active a {
   background: #fff;
   color: #000;
+}
+.info.list {
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  padding: 20px;
+  font-size: 12px;
+  line-height: 1.8;
+  border-radius: 10px;
+  margin: 20px;
+}
+.info.list li {
+  display: block;
 }
 .info button {
   background: transparent;
@@ -872,5 +896,53 @@ figcaption {
 }
 .source button:hover {
   box-shadow: 0 -50px 0 #fff inset;
+  color: #000;
+}
+
+.paraFooter {
+  padding: 200px 0;
+}
+.paraFooter h1 {
+  font-size: 8vw;
+  line-height: 1.2;
+  padding: 10vw 8vw 0 8vw;
+  text-transform: uppercase;
+  margin-bottom: 3vw;
+}
+.paraFooter h1 em {
+  display: block;
+  font-family: ‘Lato’;
+  font-weight: 100;
+  padding-left: 18vw;
+}
+.paraFooter .footerInfo {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  padding: 15px 20px;
+  margin-bottom: 2px;
+}
+.paraFooter .footerInfo h2 {
+  padding-right: 20px;
+}
+.paraFooter .footerInfo li {
+  display: inline;
+  list-style: none;
+}
+.paraFooter .footerInfo li a {
+  color: #fff;
+  border: 1px dashed #fff;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  border-radius: 50%;
+  line-height: 30px;
+  text-decoration: none;
+}
+.paraFooter .footerInfo li.active a {
+  background: #fff;
   color: #000;
 }

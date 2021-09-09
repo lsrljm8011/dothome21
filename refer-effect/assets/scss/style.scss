@@ -185,6 +185,16 @@ $gradient6: linear-gradient(60deg, #abecd6 0%, #fbed96 100%);
         background: rgba(0,0,0,0.6);
         z-index: -1;
     }
+    &.blue {
+        &::before {
+            background-color: rgba(107, 159, 255, 0.6);
+        }
+    }
+    // &.red {
+    //     &::before {
+    //         background-color: rgba(233, 209, 255, 0.6);
+    //     }
+    // }
 }
 //bg1
 // .bg1 {
@@ -306,6 +316,11 @@ $gradient6: linear-gradient(60deg, #abecd6 0%, #fbed96 100%);
         bottom: 0;
         right: 0;
     }
+    &.left {
+        top: auto;  //top초기화
+        left: 0;
+        bottom: 0;
+    }
 
     h1 {
         font-weight: 300;
@@ -314,6 +329,11 @@ $gradient6: linear-gradient(60deg, #abecd6 0%, #fbed96 100%);
         border-bottom: 1px dashed #fff;
         display: inline-block;
         margin-bottom: 10px;
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
     }
     p {
         font-weight: 300;
@@ -343,7 +363,22 @@ $gradient6: linear-gradient(60deg, #abecd6 0%, #fbed96 100%);
                 color: #000;
             }
         }
+
     }
+    &.list {
+        background: rgba(0,0,0,.4);
+        color: #fff;
+        padding: 20px;
+        font-size: 12px;
+        line-height: 1.8;
+        border-radius: 10px;
+        margin: 20px;
+
+        li {
+            display: block;
+        }
+    }
+
     button {
         background: transparent;
         border: 1px solid #fff;
@@ -768,6 +803,7 @@ $gradient6: linear-gradient(60deg, #abecd6 0%, #fbed96 100%);
         font-weight: 300;
         font-size: 16px;
     }
+
     li {
         list-style: none;
         display: inline;
@@ -811,3 +847,59 @@ $gradient6: linear-gradient(60deg, #abecd6 0%, #fbed96 100%);
         }
     }
 }
+
+//paraFooter
+.paraFooter {
+    padding: 200px 0;
+    
+    h1 {
+        font-size: 8vw;
+        line-height: 1.2;
+        padding: 10vw 8vw 0 8vw;
+        text-transform: uppercase;
+        margin-bottom: 3vw;
+
+        em {
+            display: block;
+            font-family: ‘Lato’;
+            font-weight: 100;
+            padding-left: 18vw;
+        }
+    }
+    .footerInfo {
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #000;
+        padding: 15px 20px;
+        margin-bottom: 2px;
+
+        h2 {
+            padding-right: 20px;
+        }
+
+        li {
+            display: inline;
+            list-style: none;
+
+            a {
+                color: #fff;
+                border: 1px dashed #fff;
+                width: 30px; height: 30px;
+                display: inline-block;
+                border-radius: 50%;
+                line-height: 30px;
+                text-decoration: none;
+            }
+
+            &.active a {
+                background: #fff;
+                color: #000;
+            }
+        }
+    }
+}
+
+

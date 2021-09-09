@@ -150,7 +150,27 @@
 ​
     <!-- footer -->
     <footer class="paraFooter">
-​
+        <h1>Parallax <em>Scrolling</em></h1>
+        <div class="footerInfo">
+            <h2>자바스크립트</h2>
+            <ul>
+                <li><a href="javascripPE01.html">1</a></li>
+                <li><a href="javascripPE02.html">2</a></li>
+                <li><a href="javascripPE03.html">3</a></li>
+                <li><a href="javascripPE04.html">4</a></li>
+                <li><a href="javascripPE05.html">5</a></li>
+            </ul>
+        </div>
+        <div class="footerInfo">
+            <h2>제이쿼리</h2>
+            <ul> 
+                <li class="active"><a href="jqueryPE01.html">1</a></li>
+                <li><a href="jqueryPE02.html">2</a></li>
+                <li><a href="jqueryPE03.html">3</a></li>
+                <li><a href="jqueryPE04.html">4</a></li>
+                <li><a href="jqueryPE05.html">5</a></li>
+            </ul>
+        </div>
     </footer>
     <!-- //footer -->
 ​
@@ -175,7 +195,7 @@
                     <div class="view-title">
                         <ul>
                             <li class="active"><a href="#">Html</a></li>
-                            <li><a href="#">CSS</a></li>
+                            <li><a href="#">SCSS</a></li>
                             <li><a href="#">Javascript</a></li>
                         </ul>
                     </div>
@@ -523,67 +543,48 @@ $(window).scroll(function(){
         $(window).scroll(function(){
             let scrollTop = $(window).scrollTop();
 
-            //for문
-        //     for ( let i=0; i<9; i++){
-        //         if( scrollTop >= $(".content-item").eq(i).offset().top -2 ){
-        //             $(".paraNav ul li").eq(i).addClass("active").siblings().removeClass("active");
-        //     }
-        // }
-            //each()
-            $(".content-item").each(function(index){
-                if( scrollTop >= $(this).offset().top -2 ){
-                    $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
-                }
-            })
 
-            // if( scrollTop >= $(".paraCont > section").eq(0).offset().top -2 ){
-            //     $(".paraNav ul li").eq(0).addClass("active").siblings().removeClass("active");
-            // }
-            // if( scrollTop >= $(".paraCont > section").eq(1).offset().top -2 ){
-            //     $(".paraNav ul li").eq(1).addClass("active").siblings().removeClass("active");
-            // }
-            // if( scrollTop >= $(".paraCont > section").eq(2).offset().top -2 ){
-            //     $(".paraNav ul li").eq(2).addClass("active").siblings().removeClass("active");
-            // }
-            // if( scrollTop >= $(".paraCont > section").eq(3).offset().top -2 ){
-            //     $(".paraNav ul li").eq(3).addClass("active").siblings().removeClass("active");
-            // }
-            // if( scrollTop >= $(".paraCont > section").eq(4).offset().top -2 ){
-            //     $(".paraNav ul li").eq(4).addClass("active").siblings().removeClass("active");
-            // }
-            // if( scrollTop >= $(".paraCont > section").eq(5).offset().top -2 ){
-            //     $(".paraNav ul li").eq(5).addClass("active").siblings().removeClass("active");
-            // }
-            // if( scrollTop >= $(".paraCont > section").eq(6).offset().top -2 ){
-            //     $(".paraNav ul li").eq(6).addClass("active").siblings().removeClass("active");
-            // }
-            // if( scrollTop >= $(".paraCont > section").eq(7).offset().top -2 ){
-            //     $(".paraNav ul li").eq(7).addClass("active").siblings().removeClass("active");
-            // }
-            // if( scrollTop >= $(".paraCont > section").eq(8).offset().top -2 ){
-            //     $(".paraNav ul li").eq(8).addClass("active").siblings().removeClass("active");
-            // }
-
-
+            if( scrollTop >= $(".paraCont > section").eq(0).offset().top -2 ){
+                $(".paraNav ul li").eq(0).addClass("active").siblings().removeClass("active");
+            }
+            if( scrollTop >= $(".paraCont > section").eq(1).offset().top -2 ){
+                $(".paraNav ul li").eq(1).addClass("active").siblings().removeClass("active");
+            }
+            if( scrollTop >= $(".paraCont > section").eq(2).offset().top -2 ){
+                $(".paraNav ul li").eq(2).addClass("active").siblings().removeClass("active");
+            }
+            if( scrollTop >= $(".paraCont > section").eq(3).offset().top -2 ){
+                $(".paraNav ul li").eq(3).addClass("active").siblings().removeClass("active");
+            }
+            if( scrollTop >= $(".paraCont > section").eq(4).offset().top -2 ){
+                $(".paraNav ul li").eq(4).addClass("active").siblings().removeClass("active");
+            }
+            if( scrollTop >= $(".paraCont > section").eq(5).offset().top -2 ){
+                $(".paraNav ul li").eq(5).addClass("active").siblings().removeClass("active");
+            }
+            if( scrollTop >= $(".paraCont > section").eq(6).offset().top -2 ){
+                $(".paraNav ul li").eq(6).addClass("active").siblings().removeClass("active");
+            }
+            if( scrollTop >= $(".paraCont > section").eq(7).offset().top -2 ){
+                $(".paraNav ul li").eq(7).addClass("active").siblings().removeClass("active");
+            }
+            if( scrollTop >= $(".paraCont > section").eq(8).offset().top -2 ){
+                $(".paraNav ul li").eq(8).addClass("active").siblings().removeClass("active");
+            }
 
 
             //info
             $(".paraScroll span").text(parseInt(scrollTop));
 
-            // $(".offset1").text(parseInt($("#section1").offset().top) + "px");
-            // $(".offset2").text(parseInt($("#section2").offset().top) + "px");
-            // $(".offset3").text(parseInt($("#section3").offset().top) + "px");
-            // $(".offset4").text(parseInt($("#section4").offset().top) + "px");
-            // $(".offset5").text(parseInt($("#section5").offset().top) + "px");
-            // $(".offset6").text(parseInt($("#section6").offset().top) + "px");
-            // $(".offset7").text(parseInt($("#section7").offset().top) + "px");
-            // $(".offset8").text(parseInt($("#section8").offset().top) + "px");
-            // $(".offset9").text(parseInt($("#section9").offset().top) + "px");
-
-            //for문
-            for(let i=1; i<10; i++){
-                $(".offset" + i).text(parseInt($("#section" + i).offset().top) + "px");
-            }
+            $(".offset1").text(parseInt($("#section1").offset().top) + "px");
+            $(".offset2").text(parseInt($("#section2").offset().top) + "px");
+            $(".offset3").text(parseInt($("#section3").offset().top) + "px");
+            $(".offset4").text(parseInt($("#section4").offset().top) + "px");
+            $(".offset5").text(parseInt($("#section5").offset().top) + "px");
+            $(".offset6").text(parseInt($("#section6").offset().top) + "px");
+            $(".offset7").text(parseInt($("#section7").offset().top) + "px");
+            $(".offset8").text(parseInt($("#section8").offset().top) + "px");
+            $(".offset9").text(parseInt($("#section9").offset().top) + "px");
         });
     </script>
 </body>
