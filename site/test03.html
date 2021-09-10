@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test02</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+
+    <!-- 나눔스퀘어 웹 폰트 -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+
+    <style>
+        body {
+            font-family: 'NanumSquare';
+        }
+        .wrap {
+            width: 100%;
+            height: auto;
+        }
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+            padding-bottom: 100px;
+        }
+        #header {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            min-width: 1240px;
+            height: 86px;
+            text-align: center;
+            z-index: 100;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            background-color: #fff;
+            border-bottom: 1px solid rgba(0,0,0,.05);
+        }
+        #header .menu {
+            width: 1140px;
+            text-align: center;
+            align-items: center;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 20px;
+        }
+        #header .menu .logo {
+            font-family: 'GmarketSans';
+            margin-left: 0;
+            margin-top: 10px;
+        }
+        #header .menu .logo h3{
+            font-size: 13px;
+            font-weight: bold;
+            display: inline-block;
+        }
+        #header .menu .logo h1{
+            font-weight: bold;
+            font-size: 20px;
+            display: inline-block;
+        }
+        #header .menu .btn {
+            margin-right: 0;
+            display: inline-block;
+            cursor: pointer;
+        }
+        #header .menu .btn p {
+            margin-left: 6px;
+            padding: 6px 13px;
+            border: 1px solid #999;
+            border-radius: 3px;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+        #header .menu .btn p:hover {
+            border: 1px solid #12ca8f;
+            background: #12ca8f;
+            color: #fff;
+        }
+        #header nav {
+            margin-top: 10px;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            display: inline-block;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 16px;
+            letter-spacing: -.25px;
+        }
+        #header nav span {
+            padding: 34px 36px;
+        }
+        #header nav span a {
+            color: rgba(0,0,0,.6);
+        }
+        #banner {
+            margin-bottom: 100px;
+        }
+        #banner img {
+            width: 100%;
+        }
+        #content h2 {
+            font-size: 40px;
+            font-weight: 800;
+            text-align: center;
+        }
+        #content p {
+            margin-top: 8px;
+            font-size: 16px;
+            line-height: 26px;
+            letter-spacing: -.42px;
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        #content .card-wrap {
+            display: flex;
+            justify-content: space-between;
+        }
+        #content .card {
+            display: inline-block;
+            width: 387px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border: solid 1px #f5f5f5;
+            background-color: rgba(245, 245, 245, 0);
+        }
+        #content .card-title {
+            display: inline-block;
+            margin-left: 30px;
+            margin-top: 30px;
+            font-size: 28px;
+            font-weight: 800;
+            line-height: 1.4;
+        }
+        #content .new {
+            display: inline-block;
+            width: 42px;
+            margin-left: 4px;
+            font-size: 11px;
+            line-height: 18px;
+            font-weight: 700;
+            letter-spacing: -.24px;
+            color: #fff;
+            text-align: center;
+            border-radius: 9px;
+            background-color: #fa615b;
+            margin-top: 20px;
+        }
+        #content .with {
+            display: inline-block;
+            width: 69px;
+            background-color: #c20034;
+            font-size: 11px;
+            line-height: 18px;
+            font-weight: 700;
+            letter-spacing: -.24px;
+            color: #fff;
+            text-align: center;
+            border-radius: 9px;
+            margin-top: 30px;
+            margin-left: 30px;
+        }
+        #content .card-title1 {
+            display: block;
+            margin-left: 30px;
+            margin-top: 10px;
+            font-size: 28px;
+            font-weight: 800;
+            line-height: 1.4;
+        }
+        #content .card-desc {
+            display: block;
+            margin-left: 30px;
+            margin-top: 10px;
+            font-size: 18px;
+            line-height: 1.4;
+            color: #8b8b8b;
+        }
+        #content .card-button1 {
+            display: inline-block;
+            margin-top: 20px;
+            margin-left: 30px;
+            padding-top: 5px;
+            width: 77px;
+            height: 25px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        #content .card-button2 {
+            display: inline-block;
+            margin-top: 20px;
+            margin-left: 10px;
+            padding-top: 5px;
+            width: 77px;
+            height: 25px;
+            text-align: center;
+            border: solid 1px #e5e5e5;
+            background-color: #fff;
+            color: #8b8b8b;
+            margin-bottom: 30px;
+        }
+        #content .card-button1.green {
+            background-color: #07d686;
+            color: #fff;
+        }
+        #content .card-button1.white {
+            border: solid 1px #e5e5e5;
+            background-color: #fff;
+            color: #8b8b8b;
+        }
+        #contetnt-1 {
+            border-top: 1px solid rgba(0,0,0,.1);
+            background-color: #f7f7f7;
+            padding-top: 100px;
+        }
+        #contetnt-1 h3 {
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 46px;
+            text-align: center;
+        }
+        #contetnt-1 p {
+            margin-top: 12px;
+            font-size: 18px;
+            line-height: 20px;
+            letter-spacing: -.25px;
+            color: rgba(0,0,0,.5);
+            text-align: center;
+        }
+        #contetnt-1 .btn {
+            display: inline-block;
+            margin-top: 21px;
+            padding: 16px 30px;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 18px;
+            text-align: center;
+            border-radius: 25px;
+            background-color: #2284f5;
+            margin-left: 42%;
+        }
+        #contetnt-1 .btn a {
+            color: #fff;
+        }
+        #footer {
+            position: relative;
+            min-width: 1240px;
+            height: 132px;
+            background-color: #191919;
+            color: #666;
+            font-size: 13px;
+            font-weight: 700;
+            line-height: 14px;
+            letter-spacing: -.3px;
+        }
+        #footer .footer-inner{
+            position: relative;
+            width: 1140px;
+            padding: 40px 0;
+            margin: 0 auto;
+        }
+        #footer .footer-inner .footer-info h5 {
+            font-weight: 500;
+            font-size: 30px;
+        }
+        .footerType {
+            position: relative;
+            background-color: #191919;
+            color: #666;
+            font-size: 13px;
+            font-weight: 700;
+            line-height: 14px;
+            letter-spacing: -.3px;
+        }
+        .footerType .footer-container {
+            position: relative;
+            overflow: hidden;
+            width: 1140px;
+            padding: 40px 0;
+            margin: 0 auto;
+        }
+        .footerType .footer-container .footer-info {
+            overflow: hidden;
+        }
+        .footerType .footer-container .footer-info2 {
+            margin-top: 18px;
+        }
+        .footerType .footer-container .footer-info .info-logo {
+            display: inline-block;
+            background-image: linear-gradient(transparent,transparent),url(https://static-clova.pstatic.net/static/d15c0af/img/sprite/sp_svg_icon.svg);
+            background-position: -4px -34px;
+            background-repeat: no-repeat;
+            width: 145px;
+            height: 20px;
+        }
+        .footerType .footer-container .footer-info .info-sns {
+            float: right;
+            font-size: 0;
+        }
+        .footerType .footer-container .footer-info .info-sns .sns_link {
+            display: inline-block;
+            vertical-align: top;
+        }
+        .footerType .footer-container .footer-info .info-sns .sns_link.blog {
+            margin-left: 26px;  
+            background-image: linear-gradient(transparent,transparent),url(https://static-clova.pstatic.net/static/d15c0af/img/sprite/sp_svg_icon.svg);
+            background-position: -128px -92px;
+            background-repeat: no-repeat;
+            width: 21px;
+            height: 18px;
+        }
+        .footerType .footer-container .footer-info .info-sns .sns_link.facebook {
+            margin-left: 26px;
+            background-image: linear-gradient(transparent,transparent),url(https://static-clova.pstatic.net/static/d15c0af/img/sprite/sp_svg_icon.svg);
+            background-position: -114px -244px;
+            background-repeat: no-repeat;
+            width: 18px;
+            height: 18px;
+        }
+        .footerType .footer-container .footer-info .info-sns .sns_link.instagram {
+            margin-left: 26px;
+            background-image: linear-gradient(transparent,transparent),url(https://static-clova.pstatic.net/static/d15c0af/img/sprite/sp_svg_icon.svg);
+            background-position: -88px -244px;
+            background-repeat: no-repeat;
+            width: 18px;
+            height: 18px;
+        }
+        .footerType .footer-container .footer-info .info-sns .sns_link.youtube {
+            margin-left: 26px;
+            background-image: linear-gradient(transparent,transparent),url(https://static-clova.pstatic.net/static/d15c0af/img/sprite/sp_svg_icon.svg);
+            background-position: -138px -218px;
+            background-repeat: no-repeat;
+            width: 20px;
+            height: 14px;
+            margin-top: 3px;
+        }
+        .footerType .footer-container .footer-info2 .info-text {
+            float: left;
+            display: inline-block;
+        }
+        .footerType .footer-container .footer-info2 .info-text .center {
+            margin-left: 198px;
+        }
+        .footerType .footer-container .footer-info2 .footer-more {
+            float: right;
+            display: inline-block;
+        }
+        .footerType .footer-container .footer-info2 .footer-more .more::before {
+            display: inline-block;
+            width: 1px;
+            height: 10px;
+            margin: 0 12px;
+            background: #2c2c2c;
+            vertical-align: -1px;
+            content: '';
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header id="header">
+            <div class="menu">
+                <div class="logo">
+                    <a href="#">
+                        <h3>NAVER</h3>
+                        <h1>CLOVA</h1>
+                    </a>
+                </div>
+                    <nav>
+                        <span><a href="#">기술 · 솔루션</a></span>
+                        <span><a href="#">제품</a></span>
+                        <span><a href="#">플랫폼</a></span>
+                        <span><a href="#">파트너</a></span>
+                        <span><a href="#">리서치</a></span>
+                    </nav>
+                <div class="btn">
+                    <p>Biz Start</p>
+                    <p>비즈니스 문의</p>
+                </div>
+            </div>
+        </header>
+        <!--//header-->
+
+        <div id="banner">
+            <img src="img/test03_1.png" alt="배너 이미지">
+        </div>
+        <!-- //banner -->
+
+        <div id="content">
+            <div class="container">
+                <h2>AI Devices</h2>
+                <p>AI 기술이 집약된 제품으로 편리한 일상을 만나보세요.</p>
+                <div class="card-wrap">
+                    <div class="card">
+                        <img src="img/test03_2.png" alt="CLOVA Lamp 이미지" class="card-img">
+                        <span class="card-title">CLOVA Lamp</span>
+                        <span class="new">NEW</span>
+                        <span class="card-desc">책을 읽어주는 아이 친구<br>프리미엄 기능의 스마트 램프</span>
+                        <span class="card-button1 green">구매하기</span>
+                        <span class="card-button2">알아보기</span>
+                    </div>
+                    <div class="card">
+                        <img src="img/test03_3.png" alt="CLOVA Clock 이미지" class="card-img">
+                        <span class="card-title">CLOVA Clock</span>
+                        <span class="new">NEW</span>
+                        <span class="card-desc">매일의 일상을 편리하게<br>변화시켜줄 스마트 클락</span>
+                        <span class="card-button1 white">알아보기</span>
+                    </div>
+                    <div class="card">
+                        <img src="img/test03_4.png" alt="CLOVA Friends 이미지" class="card-img">
+                        <span class="card-title">CLOVA Friends</span>
+                        <span class="card-desc">음악 추천부터 네이버 검색까지<br>다재다능한 스마트 스피커</span>
+                        <span class="card-button1 white">알아보기</span>
+                    </div>
+                </div>
+                <div class="card-wrap">
+                    <div class="card">
+                        <img src="img/test03_5.png" alt="CLOVA WAVE 이미지" class="card-img">
+                        <span class="card-title">CLOVA WAVE</span>
+                        <span class="card-desc">풍부하고 선명한 사운드로 즐기는<br>최적의 스마트홈 스피커</span>
+                        <span class="card-button1 white">알아보기</span>
+                    </div>
+                    <div class="card">
+                        <img src="img/test03_6.png" alt="CLOVA Friends mini 이미지" class="card-img">
+                        <span class="card-title">CLOVA Friends mini</span>
+                        <span class="card-desc">더 작고 더 가벼워진<br>스마트 스피커</span>
+                        <span class="card-button1 white">알아보기</span>
+                    </div>
+                    <div class="card">
+                        <img src="img/test03_7.png" alt="Doraemon edition 이미지" class="card-img">
+                        <span class="card-title">Doraemon edition</span>
+                        <span class="card-desc">고양이형 만능 로봇 도라에몽을<br>모티브로 한 스마트 스피커</span>
+                        <span class="card-button1 white">알아보기</span>
+                    </div>
+                </div>
+                <div class="card-wrap">
+                    <div class="card">
+                        <img src="img/test03_8.png" alt="CLOVA WAVE 이미지" class="card-img">
+                        <span class="card-title">MINIONS edition</span>
+                        <span class="card-desc">귀여운 악동 미니언즈를<br>모티브로 한 스마트 스피커</span>
+                        <span class="card-button1 white">알아보기</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //content1 -->
+
+        <div id="content">
+            <div class="container">
+                <h2>With Partners</h2>
+                <p>파트너사와 함께 만든 클로바 스마트 디바이스들을 만나보세요.</p>
+                <div class="card-wrap">
+                    <div class="card">
+                        <img src="img/test03_9.png" alt="CLOVA Lamp 이미지" class="card-img">
+                        <span class="with">with LG U+</span>
+                        <span class="card-title1">CLOVA Clock+2</span>
+                        <span class="card-desc">집 안을 확장하고 연결하는<br>우리 집 생활 필수품</span>
+                        <span class="card-button1 white">알아보기</span>
+                    </div>
+                    <div class="card">
+                        <img src="img/test03_10.png" alt="CLOVA Clock 이미지" class="card-img">
+                        <span class="with">with LG U+</span>
+                        <span class="card-title1">CLOVA Clock+</span>
+                        <span class="card-desc">매일의 일상을 편리하게<br>변화시켜줄 스마트 클락</span>
+                        <span class="card-button1 white">알아보기</span>
+                    </div>
+                    <div class="card">
+                        <img src="img/test03_11.png" alt="CLOVA Friends 이미지" class="card-img">
+                        <span class="with">with LG U+</span>
+                        <span class="card-title1">CLOVA Friends+</span>
+                        <span class="card-desc">음악 추천부터 네이버 검색까지<br>다재다능한 스마트 스피커</span>
+                        <span class="card-button1 white">알아보기</span>
+                    </div>
+                </div>
+                <div class="card-wrap">
+                    <div class="card">
+                        <img src="img/test03_12.png" alt="CLOVA WAVE 이미지" class="card-img">
+                        <span class="with">with LG U+</span>
+                        <span class="card-title1">CLOVA ON+</span>
+                        <span class="card-desc">귀여운 악동 미니언즈를<br>모티브로 한 스마트 스피커</span>
+                        <span class="card-button1 white">알아보기</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //content2 -->
+
+        <div id="contetnt-1">
+            <div class="container">
+                <h3>인공지능 플랫폼 클로바와 함께<br>당신의 일상이 더욱 편리해집니다.</h3>
+                <p>스마트 디바이스를 더욱 스마트하게 이용하는 명령어 가이드</p>
+                <div class="btn">
+                    <a href="#">클로바 명령어 가이드</b></a>
+                </div>
+            </div>
+        </div>
+        <!-- //contetnt-1 -->
+
+        <footer class="footerType">
+            <div class="footer-container">
+                <div class="footer-info">
+                    <span class="info-logo"></span>
+                    <div class="info-sns">
+                        <a href="https://blog.naver.com/clova_ai" class="sns_link blog" target="_blank"></a>
+                        <a href="https://www.facebook.com/ClovaAI/" class="sns_link facebook" target="_blank"></a>
+                        <a href="https://www.instagram.com/naver_clova/" class="sns_link instagram" target="_blank"></a>
+                        <a href="https://www.youtube.com/channel/UCUuTYvmFcwOg06KnH5xx2sQ" class="sns_link youtube" target="_blank"></a>
+                    </div>
+                </div>
+                <div class="footer-info2">
+                    <div class="info-text">
+                        <span class="text">고객센터 1833-5387</span>
+                        <span class="text2">09:00 - 18:00 (주말, 공휴일 휴무)</span>
+                        <span class="center">Powered by <strong>NAVER · LINE</strong></span>
+                    </div>
+                    <div class="footer-more">
+                        <span class="more">공지사항</span>
+                        <span class="more">이용약관</span>
+                        <span class="more">CLOVA 채용안내</span>
+                        <span class="more">CLOVA JP</span>
+                        </dv>
+                    </div>
+                </div>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+</html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Effect</title>
+    <title>Mouse Effect</title>
 
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/highlight.css">
@@ -307,7 +307,7 @@ document.querySelectorAll(".mouseCont span").forEach((element) => {
             document.querySelector(".screenX").innerText = e.screenX + "px";   
             document.querySelector(".screenY").innerText = e.screenY + "px";   
         });
-        //마우스 움직익
+        //마우스 움직이기
         window.addEventListener("mousemove", function(e){
             // document.querySelector(".cursor").style.left = e.clientX - 25 + "px";
             // document.querySelector(".cursor").style.top = e.clientY - 25 + "px";
@@ -351,6 +351,7 @@ document.querySelectorAll(".mouseCont span").forEach((element) => {
         // document.querySelector(".mouseCont .style6").addEventListener("mouseout", function(){
         //     document.querySelector(".cursor").classList.remove("style6");
         // });
+        
         //for문
         // for( let i=1; i<=6; i++ ){
         //     document.querySelector(".mouseCont .style"+i).addEventListener("mouseover", function(){
@@ -360,6 +361,7 @@ document.querySelectorAll(".mouseCont span").forEach((element) => {
         //         document.querySelector(".cursor").classList.remove("style"+i);
         //     });
         // }
+
         //forEach
         // document.querySelectorAll(".mouseCont span").forEach((element, index) => {
         //     element.addEventListener("mouseover", () => {
@@ -369,6 +371,7 @@ document.querySelectorAll(".mouseCont span").forEach((element) => {
         //         document.querySelector(".cursor").classList.remove("style"+ (index+1));
         //     });
         // })
+
         //getAtrribute()
         document.querySelectorAll(".mouseCont span").forEach((element) => {
             let style = element.getAttribute("class");
