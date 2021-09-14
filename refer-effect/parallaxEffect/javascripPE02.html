@@ -59,7 +59,7 @@
     <!-- header -->
     <header class="paraInfo">
         <h1><a href="index.html">Parallax Effect02 - javascript</a></h1>
-        <p>패랠랙스 스크로링 효과 - 댯 메뉴</p>
+        <p>패럴럭스 스크로링 효과 - 닷 메뉴</p>
     </header>
     <!-- //header -->
 ​
@@ -573,7 +573,7 @@ $(window).scroll(function(){
             document.querySelector(".paraScroll span").innerText = parseInt(scrollTop) + "px";
 
             for( let i=1; i<10; i++){
-                if( scrollTop > document.getElementById("section" + i).offsetTop ){
+                if( scrollTop > document.getElementById("section" + i).offsetTop -2){
                     document.querySelectorAll(".paraDot ul li").forEach( (el) => {
                         el.classList.remove("active");
                     })

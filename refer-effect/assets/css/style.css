@@ -150,7 +150,7 @@ figcaption {
   z-index: -1;
 }
 .bg.blue::before {
-  background-color: rgba(107, 159, 255, 0.6);
+  background-color: rgba(40, 75, 142, 0.6);
 }
 
 .bg1 {

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Effect</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/highlight.css">
+    <style>
+        .mouseCont {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            font-family: 'S-CoreDream';
+            cursor: none;
+        }
+        .mouseCont p {
+            font-size: 2.2vw;
+            line-height: 2.3;
+            font-weight: 300;
+        }
+        .mouseCont h2 {
+            font-size: 2.8vw;
+            font-weight: 400;
+        }
+        .mouseCont em {
+            font-style: normal;
+            font-weight: normal;
+            border-bottom: 0.3vw dashed rgb(223, 180, 70);
+            color:rgb(223, 180, 70);
+        }
+        .cursor {
+            position: absolute;
+            left: 0; top: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            z-index: 9999;
+            background-color: rgba(255,255,255,0.1);
+            /* 마우스로 컨트롤 할 수가 없음 */
+            user-select: none;  
+            pointer-events: none;
+            transition: transform 0.3s, opacity 0.2s;
+        }
+        .cursor.active {
+            opacity: 5;
+            transform: scale(0);
+        }
+        .cursor-follower {
+            position: absolute;
+            width: 30px; height: 30px;
+            background: rgba(255,255,255,.3);
+            border-radius: 50%;
+            user-select: none;  
+            pointer-events: none;
+            transition: transform 0.6s ease-in-out, opacity 0.2s ease-in-out;
+        }
+        .cursor-follower.active {
+            opacity: .7;
+            transform: scale(5);
+            background: rgb(223, 180, 70, 0.3);
+        }
+    </style>
+</head>
+<body class="bg bg8 blue">
+
+    <!-- contents -->
+    <main>
+        <div class="cursor"></div>
+        <div class="cursor-follower"></div>
+
+        <article class="mouseCont">
+            <p>A genius is just <em>a talented person</em> who does his homework.</p>
+            <h2>천재란 자신에게 주어진 일을 하는 <em>재능 있는 사람</em>일 뿐이다.</h2>
+        </article>
+    </main>
+    <!-- //contents -->
+
+    <!-- info -->
+    <div class="info">
+        <h1><a href="index.html">Mouse Effect02 - javascript</a></h1>
+        <p>마우스 이펙트 - 마우스 따라다니기</p>
+    </div>
+    <div class="info right">
+        <ul>
+            <li><a href="javascriptMe01.html">1</a></li>
+            <li class="active"><a href="javascriptMe02.html">2</a></li>
+            <li><a href="javascriptMe03.html">3</a></li>
+            <li><a href="javascriptMe04.html">4</a></li>
+            <li><a href="javascriptMe05.html">5</a></li>
+        </ul>
+        <ul>
+            <li><a href="jqueryMe01.html">1</a></li>
+            <li><a href="jqueryMe02.html">2</a></li>
+            <li><a href="jqueryMe03.html">3</a></li>
+            <li><a href="jqueryMe04.html">4</a></li>
+            <li><a href="jqueryMe05.html">4</a></li>
+        </ul>
+    </div>
+
+    <div class="info left list">
+        <ul>
+            <li>pageX : <span class="pageX">0</span></li>
+            <li>pageY : <span class="pageY">0</span></li>
+        </ul>
+    </div>
+
+    <div class="info bottom btn-wrap">
+        <button>소스보기</button>
+    </div>
+    <div id="modal">
+        <div class="modal-bg">
+            <div class="modal-cont">
+                <div class="code-view">
+                    <div class="view-header">
+                        <div class="dot" aria-hidden="true"> <!-- aria-hidden을 true로 주면 읽지 않고 넘어감 -->
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="view-title">
+                        <ul>
+                            <li class="active"><a href="#">HTML</a></li>
+                            <li><a href="#">CSS</a></li>
+                            <li><a href="#">JQEURY</a></li>
+                        </ul>
+                    </div>
+                    <div class="view-cont">
+                        <div class="html">
+<pre><code class="language-html">&lt;main&gt;
+    &lt;div class="cursor"&gt;&lt;/div&gt;
+    &lt;div class="cursor-follower"&gt;&lt;/div&gt;
+
+    &lt;article class="mouseCont"&gt;
+        &lt;p&gt;A genius is just &lt;em&gt;a talented person&lt;/em&gt; who does his homework.&lt;/p&gt;
+        &lt;h2&gt;천재란 자신에게 주어진 일을 하는 &lt;em&gt;재능 있는 사람&lt;/em&gt;일 뿐이다.&lt;/h2&gt;
+    &lt;/article&gt;
+&lt;/main&gt;
+
+&lt;div class="info left list"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;pageX : &lt;span class="pageX"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;pageY : &lt;span class="pageY"&gt;0&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+                        </div>
+                        <div class="css">
+<pre><code class="language-css">.mouseCont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'S-CoreDream';
+    /* cursor: none; */
+}
+.mouseCont p {
+    font-size: 2.2vw;
+    line-height: 2.3;
+    font-weight: 300;
+}
+.mouseCont h2 {
+    font-size: 2.8vw;
+    font-weight: 400;
+}
+.mouseCont em {
+    font-style: normal;
+    font-weight: normal;
+    border-bottom: 0.3vw dashed rgb(223, 180, 70);
+    color:rgb(223, 180, 70);
+}
+.cursor {
+    position: absolute;
+    left: 0; top: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    z-index: 9999;
+    background-color: rgba(255,255,255,0.1);
+    /* 마우스로 컨트롤 할 수가 없음 */
+    user-select: none;  
+    pointer-events: none;
+    transition: transform 0.3s, opacity 0.2s;
+}
+.cursor.active {
+    opacity: 5;
+    transform: scale(0);
+}
+.cursor-follower {
+    position: absolute;
+    width: 30px; height: 30px;
+    background: rgba(255,255,255,.3);
+    border-radius: 50%;
+    user-select: none;  
+    pointer-events: none;
+    transition: transform 0.6s ease-in-out, opacity 0.2s ease-in-out;
+}
+.cursor-follower.active {
+    opacity: .7;
+    transform: scale(5);
+    background: rgb(223, 180, 70, 0.3);
+}
+</code></pre>
+                        </div>
+                        <div class="javascript">
+<pre><code class="language-javascript">const cursor = document.querySelector(".cursor");
+const follower = document.querySelector(".cursor-follower");
+
+//움직임 효과
+document.addEventListener("mousemove", (e) => {
+    //cursor.style.left = e.pageX -5 + "px";
+    //cursor.style.top = e.pageY -5 + "px";
+    // let x1 = e.pageX - 5 + "px";
+    // let y1 = e.pageY - 5 + "px";
+    // let x2 = e.pageX - 15 + "px";
+    // let y2 = e.pageY - 15 + "px";
+    // cursor.style.cssText = "left:" + x1 + "; top:" + y1;
+    // follower.style.cssText = "left:" + x2 + "; top:" + y2;
+    gsap.to(cursor, {duration: 0.3, left: e.pageX - 5, top: e.pageY - 5 });
+    gsap.to(follower, {duration: 0.8, left: e.pageX - 15, top: e.pageY - 15 });
+
+    //오버 효과
+    document.querySelectorAll(".mouseCont em").forEach(em => {
+        em.addEventListener("mouseenter", () => {
+            cursor.classList.add("active");
+            follower.classList.add("active");
+        });
+        em.addEventListener("mouseleave", () => {
+            cursor.classList.remove("active");
+            follower.classList.remove("active");
+        })
+    });
+
+    //출력용
+    document.querySelector(".pageX").innerText = e.pageX;
+    document.querySelector(".pageY").innerText = e.pageY;
+});
+</code></pre>
+                        </div>
+                    </div>
+                </div>
+            
+                <button>닫기</button>
+            </div>
+        </div>
+    </div>
+    <!-- //info -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        const cursor = document.querySelector(".cursor");
+        const follower = document.querySelector(".cursor-follower");
+
+        //움직임 효과
+        document.addEventListener("mousemove", (e) => {
+            //cursor.style.left = e.pageX -5 + "px";
+            //cursor.style.top = e.pageY -5 + "px";
+            // let x1 = e.pageX - 5 + "px";
+            // let y1 = e.pageY - 5 + "px";
+            // let x2 = e.pageX - 15 + "px";
+            // let y2 = e.pageY - 15 + "px";
+            // cursor.style.cssText = "left:" + x1 + "; top:" + y1;
+            // follower.style.cssText = "left:" + x2 + "; top:" + y2;
+
+            gsap.to(cursor, {duration: 0.3, left: e.pageX - 5, top: e.pageY - 5 });
+            gsap.to(follower, {duration: 0.8, left: e.pageX - 15, top: e.pageY - 15 });
+
+            //오버 효과
+            document.querySelectorAll(".mouseCont em").forEach(em => {
+                em.addEventListener("mouseenter", () => {
+                    cursor.classList.add("active");
+                    follower.classList.add("active");
+                });
+                em.addEventListener("mouseleave", () => {
+                    cursor.classList.remove("active");
+                    follower.classList.remove("active");
+                })
+            });
+
+            //오버 효과2
+            document.querySelectorAll(".info").forEach(em => {
+                em.addEventListener("mouseenter", () => {
+                    cursor.classList.add("show");
+                    follower.classList.add("show");
+                });
+                em.addEventListener("mouseleave", () => {
+                    cursor.classList.remove("show");
+                    follower.classList.remove("show");
+                })
+            });
+
+            //출력용
+            document.querySelector(".pageX").innerText = e.pageX;
+            document.querySelector(".pageY").innerText = e.pageY;
+        });
+    </script>
+</body>
+</html> 
