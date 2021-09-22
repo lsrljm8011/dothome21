@@ -306,8 +306,8 @@ window.addEventListener("scroll", function(){
             }
     
             //버튼
-            document.querySelectorAll(".content-item").forEach((item, index) => {
-                if( scrollTop >= item.offsetTop ){
+            document.querySelectorAll(".content-item").forEach((element, index) => {
+                if( scrollTop >= element.offsetTop ){
                     document.querySelectorAll(".paraNav ul li").forEach( li => {
                         li.classList.remove("active");
                     });
