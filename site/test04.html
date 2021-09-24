@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test04</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'NanumSquare';
+        }
+        .wrap {
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
+        #header {
+            position: relative;
+            display: block;
+            top: 0;
+            right: 0;
+            left: 0;
+            height: 86px;
+            text-align: center;
+            z-index: 100;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            background-color: #fff;
+            border-bottom: 1px solid rgba(0,0,0,.05);
+        }
+        #header .menu {
+            width: 1140px;
+            text-align: center;
+            align-items: center;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        #header .menu .logo {
+            display: block;
+            text-align: center;
+            line-height: 40px;
+            text-indent: -9999em;
+            background: url(img/test04_0.svg) no-repeat center;;
+        }
+        #header nav {
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            display: inline-block;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 90px;
+        }
+        #header nav span {
+            padding: 34px 36px;
+        }
+        #header nav span a {
+            color: #2d1d1d;
+            text-decoration: none;
+        }
+        #header .menu .btn1 {
+            text-align: center;
+            margin-right: 0;
+            display: inline-block;
+            cursor: pointer;
+            font-size: 15px;
+            right: 3%;
+            width: 100px;
+            font-size: 15px;
+            line-height: 40px;
+            border: 1px solid #15c5aa;
+            color: #15c5aa;
+            border-radius: 5px;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+        #header .menu .btn1:hover {
+            background: #15c5aa;
+            color: #fff;
+        }
+        #tabmenu {
+            background-color: #333;
+            color: #fff;
+            width: 100%;
+            text-align: center;
+        }
+        #tabmenu span {
+            display: inline-block;
+            width: 32%;
+            text-align: center;
+            height: 70px;
+            line-height: 70px;
+        }
+        #tabmenu span a {
+            text-decoration: none;
+            display: inline-block;
+            color: #838383;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        #tabmenu span:nth-child(1) a {
+            color: #05d6b4;
+        }
+        #banner {
+            width: 100%;
+            margin: 0 auto;
+            height: 100%;
+            background: url(img/test04_1.jpeg) no-repeat top center/ cover;
+        }
+        #banner .banner-inner {
+            display: table-cell;
+            width: 100%;
+            height: 670px;
+            vertical-align: middle;
+        }
+        #banner h3 {
+            margin-left: 200px;
+            font-size: 50px;
+            color: #fff;
+            font-weight: 500;
+        }
+        #banner p {
+            margin-left: 200px;
+            font-size: 22px;
+            color: #fff;
+            padding: 30px 0 50px;
+        }
+        #banner .btn2 {
+            margin-left: 200px;
+            width: 200px;
+            font-size: 24px;
+            font-weight: 100;
+            border-radius: 32px;
+            height: 64px;
+            line-height: 64px;
+        }
+        #banner .btn2 a {
+            text-decoration: none;
+            display: inline-block;
+            width: 250px;
+            text-align: center;
+            font-size: 30px;
+            color: #fff;
+            border-radius: 45px;
+            height: 77px;
+            line-height: 77px;
+            position: relative;
+            background: #05d6b4;
+        }
+        #banner .btn2 a:after {
+            content: "";
+            display: inline-block;
+            width: 30px;
+            height: 77px;
+            background: url(img/test04_31.png) 50% 50% no-repeat;
+            background-size: 100%;
+            margin-left: 18px;
+            vertical-align: top;
+        }
+        #article1 {
+            padding-top: 200px;
+            padding-bottom: 200px;
+            background-color: #ecedf1;
+            width: 100%;
+            display: flex;
+        }
+        #article1 .article-inner1 {
+            margin-left: 200px;
+            width: 45%;
+            display: table-cell;
+        }
+        #article1 .article-inner1 h3 {
+            padding-left: 75px;
+            height: 60px;
+            line-height: 70px;
+            font-size: 40px;
+            margin-bottom: 50px;
+        }
+        #article1 .article-inner1 h3:before {
+            position: absolute;
+            left: 200px;
+            display: inline-block;
+            content: "";
+            clear: both;
+            width: 70px;
+            height: 70px;
+            background-size: 100%;
+            background: url(img/test04_2.png) no-repeat top center;;
+        }
+        #article1 .article-inner1 p {
+            color: #333130;
+            font-size: 22px;
+            margin-bottom: 50px;
+        }
+        #article1 .article-inner1 span {
+            display: flex;
+            padding-left: 22px;
+            line-height: 18px;
+            font-size: 16px;
+            color: #2d68d2;
+            margin-bottom: 30px;
+        }
+        #article1 .article-inner1 span:before {
+            position: absolute;
+            left: 200px;
+            display: inline-block;
+            content: "";
+            clear: both;
+            width: 16px;
+            height: 16px;
+            background: url(img/test04_8.png) no-repeat top center;
+            background-size: 100%;
+        }
+        #article1 .article-inner1 .btn_p {
+            background: url(img/test04_10.png) no-repeat bottom center;
+            background-size: 100%;
+            width: 100%;
+            width: 118px;
+            height: 76px;
+            float: left;
+        }
+        #article1 .article-inner1 .btn_m {
+            margin-left: 5px;
+            background: url(img/test04_11.png) no-repeat bottom center;
+            background-size: 100%;
+            width: 100%;
+            width: 118px;
+            height: 76px;
+            float: left;
+        }
+        #article1 .article-inner2 {
+            width: 55%;
+            display: table-cell;
+        }
+        #article1 .article-inner2 img {
+            border-style: none;
+            vertical-align: middle;
+            width: 100%;
+        }
+        #article2 {
+            padding-top: 200px;
+            padding-bottom: 200px;
+            background-color: #fff;
+            width: 100%;
+            display: flex;
+        }
+        #article2 .article-inner1 {
+            margin-left: 200px;
+            width: 45%;
+            display: table-cell;
+        }
+        #article2 .article-inner1 img {
+            border-style: none;
+            vertical-align: middle;
+            width: 586.56px;
+        }
+        #article2 .article-inner2 {
+            padding-left: 5%;
+            width: 55%;
+            display: table-cell;
+        }
+        #article2 .article-inner2 h3 {
+            padding-left: 66px;
+            height: 60px;
+            line-height: 70px;
+            font-size: 40px;
+            margin-bottom: 50px;
+        }
+        #article2 .article-inner2 h3:before {
+            position: absolute;
+            left: 910px;
+            display: inline-block;
+            content: "";
+            clear: both;
+            width: 70px;
+            height: 70px;
+            background-size: 100%;
+            background: url(img/test04_7.png) no-repeat top center;;
+        }
+        #article2 .article-inner2 p {
+            color: #333130;
+            font-size: 22px;
+            margin-bottom: 30px;
+        }
+        #article2 .article-inner2 span {
+            display: flex;
+            padding-left: 22px;
+            line-height: 18px;
+            font-size: 16px;
+            color: #2d68d2;
+            margin-bottom: 10px;
+        }
+        #article2 .article-inner2 span:before {
+            position: absolute;
+            left: 916px;
+            display: inline-block;
+            content: "";
+            clear: both;
+            width: 16px;
+            height: 16px;
+            background: url(img/test04_8.png) no-repeat top center;
+            background-size: 100%;
+        }
+        #article2 .article-inner2 .btn_p {
+            background: url(img/test04_10.png) no-repeat bottom center;
+            background-size: 100%;
+            width: 100%;
+            width: 118px;
+            height: 76px;
+            float: left;
+        }
+        #article2 .article-inner2 .btn_m {
+            margin-left: 5px;
+            background: url(img/test04_11.png) no-repeat bottom center;
+            background-size: 100%;
+            width: 100%;
+            width: 118px;
+            height: 76px;
+            float: left;
+        }
+        #article3 {
+            padding-top: 200px;
+            padding-bottom: 200px;
+            background-color: #ecedf1;
+            width: 100%;
+            display: flex;
+        }
+        #article3 .article-inner1 {
+            margin-left: 200px;
+            width: 45%;
+            display: table-cell;
+        }
+        #article3 .article-inner1 h3 {
+            padding-left: 75px;
+            height: 60px;
+            line-height: 70px;
+            font-size: 40px;
+            margin-bottom: 50px;
+        }
+        #article3 .article-inner1 h3:before {
+            position: absolute;
+            left: 200px;
+            display: inline-block;
+            content: "";
+            clear: both;
+            width: 70px;
+            height: 70px;
+            background-size: 100%;
+            background: url(img/test04_12.png) no-repeat top center;;
+        }
+        #article3 .article-inner1 p {
+            color: #333130;
+            font-size: 22px;
+            margin-bottom: 50px;
+        }
+        #article3 .article-inner1 span {
+            display: flex;
+            padding-left: 22px;
+            line-height: 18px;
+            font-size: 16px;
+            color: #2d68d2;
+            margin-bottom: 10px;
+        }
+        #article3 .article-inner1 span:before {
+            position: absolute;
+            left: 200px;
+            display: inline-block;
+            content: "";
+            clear: both;
+            width: 16px;
+            height: 16px;
+            background: url(img/test04_8.png) no-repeat top center;
+            background-size: 100%;
+        }
+        #article3 .article-inner1 .btn_p {
+            background: url(img/test04_10.png) no-repeat bottom center;
+            background-size: 100%;
+            width: 100%;
+            width: 118px;
+            height: 76px;
+            float: left;
+        }
+        #article3 .article-inner1 .btn_m {
+            margin-left: 5px;
+            background: url(img/test04_11.png) no-repeat bottom center;
+            background-size: 100%;
+            width: 100%;
+            width: 118px;
+            height: 76px;
+            float: left;
+        }
+        #article3 .article-inner2 {
+            width: 55%;
+            display: table-cell;
+        }
+        #article3 .article-inner2 img {
+            border-style: none;
+            vertical-align: middle;
+            width: 100%;
+        }
+        #article4 {
+            padding-top: 200px;
+            padding-bottom: 200px;
+            background-color: #fff;
+            width: 100%;
+            display: flex;
+        }
+        #article4 .article-inner1 {
+            margin-left: 200px;
+            width: 45%;
+            display: table-cell;
+        }
+        #article4 .article-inner1 img {
+            border-style: none;
+            vertical-align: middle;
+            width: 586.56px;
+        }
+        #article4 .article-inner2 {
+            padding-left: 5%;
+            width: 55%;
+            display: table-cell;
+        }
+        #article4 .article-inner2 h3 {
+            padding-left: 66px;
+            height: 60px;
+            line-height: 70px;
+            font-size: 40px;
+            margin-bottom: 50px;
+        }
+        #article4 .article-inner2 h3:before {
+            position: absolute;
+            left: 910px;
+            display: inline-block;
+            content: "";
+            clear: both;
+            width: 70px;
+            height: 70px;
+            background-size: 100%;
+            background: url(img/test04_19.png) no-repeat top center;;
+        }
+        #article4 .article-inner2 p {
+            color: #333130;
+            font-size: 22px;
+            margin-bottom: 30px;
+        }
+        #article4 .article-inner2 span {
+            display: flex;
+            padding-left: 22px;
+            line-height: 18px;
+            font-size: 16px;
+            color: #2d68d2;
+            margin-bottom: 10px;
+        }
+        #article4 .article-inner2 span:before {
+            position: absolute;
+            left: 916px;
+            display: inline-block;
+            content: "";
+            clear: both;
+            width: 16px;
+            height: 16px;
+            background: url(img/test04_8.png) no-repeat top center;
+            background-size: 100%;
+        }
+        #article4 .article-inner2 .btn_p {
+            background: url(img/test04_10.png) no-repeat bottom center;
+            background-size: 100%;
+            width: 100%;
+            width: 118px;
+            height: 76px;
+            float: left;
+            margin-right: 5px;
+        }
+        #article4 .article-inner2 .btn_m {
+            background: url(img/test04_11.png) no-repeat bottom center;
+            background-size: 100%;
+            width: 100%;
+            width: 118px;
+            height: 76px;
+            float: left;
+        }
+        #article5 {
+            padding-top: 200px;
+            padding-bottom: 200px;
+            background-color: #ecedf1;
+            width: 100%;
+            display: flex;
+        }
+        #article5 .article-inner1 {
+            margin-left: 200px;
+            width: 45%;
+            display: table-cell;
+        }
+        #article5 .article-inner1 h3 {
+            padding-left: 75px;
+            height: 60px;
+            line-height: 70px;
+            font-size: 40px;
+            margin-bottom: 50px;
+        }
+        #article5 .article-inner1 h3:before {
+            position: absolute;
+            left: 200px;
+            display: inline-block;
+            content: "";
+            clear: both;
+            width: 70px;
+            height: 70px;
+            background-size: 100%;
+            background: url(img/test04_25.png) no-repeat top center;;
+        }
+        #article5 .article-inner1 p {
+            color: #333130;
+            font-size: 22px;
+            margin-bottom: 50px;
+        }
+        #article5 .article-inner1 span {
+            display: flex;
+            padding-left: 22px;
+            line-height: 18px;
+            font-size: 16px;
+            color: #2d68d2;
+            margin-bottom: 30px;
+        }
+        #article5 .article-inner1 span:before {
+            position: absolute;
+            left: 200px;
+            display: inline-block;
+            content: "";
+            clear: both;
+            width: 16px;
+            height: 16px;
+            background: url(img/test04_8.png) no-repeat top center;
+            background-size: 100%;
+        }
+        #article5 .article-inner1 .btn_p {
+            background: url(img/test04_10.png) no-repeat bottom center;
+            background-size: 100%;
+            width: 100%;
+            width: 118px;
+            height: 76px;
+            float: left;
+        }
+        #article5 .article-inner1 .btn_m {
+            margin-left: 5px;
+            background: url(img/test04_11.png) no-repeat bottom center;
+            background-size: 100%;
+            width: 100%;
+            width: 118px;
+            height: 76px;
+            float: left;
+        }
+        #article5 .article-inner2 {
+            width: 55%;
+            display: table-cell;
+        }
+        #article5 .article-inner2 img {
+            border-style: none;
+            vertical-align: middle;
+            width: 100%;
+        }
+        #article6 {
+            text-align: center;
+            border-style: none;
+            vertical-align: middle;
+            padding-top: 200px;
+            padding-bottom: 200px;
+            background-color: #fff;
+            width: 100%;
+        }
+        #article6 img {
+            display: inline-block;
+        }
+        #article6 .btn2 {
+            width: 200px;
+            font-size: 24px;
+            font-weight: 100;
+            border-radius: 32px;
+            height: 64px;
+            line-height: 64px;
+            margin-left: 43vw;
+        }
+        #article6 .btn2 a {
+            text-decoration: none;
+            display: inline-block;
+            width: 250px;
+            text-align: center;
+            font-size: 30px;
+            color: #fff;
+            border-radius: 45px;
+            height: 77px;
+            line-height: 77px;
+            position: relative;
+            background: #05d6b4;
+        }
+        #article6 .btn2 a:after {
+            content: "";
+            display: inline-block;
+            width: 30px;
+            height: 77px;
+            background: url(img/test04_31.png) 50% 50% no-repeat;
+            background-size: 100%;
+            vertical-align: top;
+        }
+        #footer {
+            position: relative;
+            padding: 50px 0;
+            width: 100%;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+        #footer .logo img {
+            border-style: none;
+            vertical-align: middle;
+        } 
+        #footer .info {
+            display: block;
+        }
+        #footer .info a {
+            text-decoration: none;
+            font-size: 16px;
+            color: #c0c0c0;
+            font-weight: 300;
+            margin-left: 40px;
+        }
+        #footer .info a ::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            right: -21px;
+            width: 1px;
+            height: 18px;
+            background: #dadada;
+        }
+        #footer .btn_B {
+            border: 1px solid #c0c0c0;
+            border-radius: 5px;
+            margin-top: 30px;
+            padding: 0 15px;
+            width: 110px;
+            margin-left: 45vw;
+        }
+        #footer .btn_B a {
+            text-align: center;
+            text-decoration: none;
+            position: relative;
+            color: #c0c0c0;
+            font-size: 16px;
+            line-height: 43px;
+        }
+        #footer .btn_B::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: calc(50% 10px);
+            left: calc(50% - 55px);
+            width: 20px;
+            height: 20px;
+            background: url(img/test04_32.svg) no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header id="header">
+            <div class="menu">
+                <div class="logo">
+                    <a href="#"></a>
+                </div>
+                <nav>
+                    <span><a href="#">Why We Whale</a></span>
+                    <span><a href="#">가이드</a></span>
+                    <span><a href="#">스토어</a></span>
+                    <span><a href="#">연구소</a></span>
+                    <span><a href="#">웨일 스페이스</a></span>
+                    <span><a href="#">웨일북</a></span>
+                </nav>
+                <div class="btn1">다운로드</div>
+            </div>
+        </header>
+        <!--//header-->
+    
+        <div id="tabmenu">
+            <span><a href="#">옴니 태스킹</a></span>
+            <span><a href="#">강력한 보안</a></span>
+            <span><a href="#">커스터 마이징</a></span>
+        </div>
+        <!-- //tabmenu -->
+
+        <div id="banner">
+            <div class="banner-inner">
+                <h3>하고 싶은 일들, 해야 할 일들<br>네이버 웨일로 한 번에!</h3>
+                <p>네이버 웨일의 다양한 기능을 만나보세요!</p>
+                <div class="btn2"><a href="#">다운로드</a></div>
+            </div>
+        </div>
+        <!-- //banner -->
+
+        <article id="article1">
+            <div class="article-inner1">
+                <h3>웨일온(Whale ON)</h3>
+                <p>시간제한 없는 무료 화상회의!</p>
+                <span>웨일온, 어떻게 사용하나요?</span>
+                <div class="btn_p"></div>
+                <div class="btn_m"></div>
+            </div>
+            <div class="article-inner2">
+                <img src="img/test04_5.gif" alt="웨일온 이미지">
+            </div>
+        </article>
+        <!-- //article1 -->
+
+        <article id="article2">
+            <div class="article-inner1">
+                <img src="img/test04_6.gif" alt="웨일온 이미지">
+            </div>
+            <div class="article-inner2">
+                <h3>사이드바</h3>
+                <p>휴대폰 열지말고 웨일에서 보세요!</p>
+                <span>사이드바, 어떻게 사용하나요?</span>
+                <span>어떤 확장앱이 있는지 궁금하다면?</span>
+                <div class="btn_p"></div>
+                <div class="btn_m"></div>
+            </div>
+        </article>
+        <!-- //article2 -->
+
+        <article id="article3">
+            <div class="article-inner1">
+                <h3>퀵서치 & 번역</h3>
+                <p>궁금한 부분? 드래그해서 바로 확인!</p>
+                <span>퀵서치, 어떤 기능까지 지원하나요?</span>
+                <span>번역의 자세한 기능이 궁금하다면?</span>
+                <div class="btn_p"></div>
+                <div class="btn_m"></div>
+            </div>
+            <div class="article-inner2">
+                <img src="img/test04_17.gif" alt="웨일온 이미지">
+            </div>
+        </article>
+        <!-- //article3 -->
+
+        <article id="article4">
+            <div class="article-inner1">
+                <img src="img/test04_6.gif" alt="웨일온 이미지">
+            </div>
+            <div class="article-inner2">
+                <h3>듀얼 탭 & 한글뷰어</h3>
+                <p>뒤로 가기는 이제 그만!</p>
+                <span>듀얼 탭의 자세한 기능이 궁금하다면?</span>
+                <span>한글 문서, 웨일에서 어떻게 볼 수 있나요?</span>
+                <div class="btn_p"></div>
+                <div class="btn_p"></div>
+                <div class="btn_m"></div>
+            </div>
+        </article>
+        <!-- //article4 -->
+
+        <article id="article5">
+            <div class="article-inner1">
+                <h3>편리한 캡처</h3>
+                <p>클릭 한 번으로 원하는 영역을 깔끔하게!</p>
+                <span>캡처의 자세한 기능이 궁금하다면?</span>
+                <div class="btn_p"></div>
+                <div class="btn_m"></div>
+            </div>
+            <div class="article-inner2">
+                <img src="img/test04_29.gif" alt="웨일온 이미지">
+            </div>
+        </article>
+        <!-- //article5 -->
+
+        <article id="article6">
+            <img src="img/test04_30.gif" alt="웨일온 이미지">
+            <div class="btn2"><a href="#">다운로드</a></div>
+        </article>
+        <!-- //article6 -->
+
+        <div id="footer">
+            <img src="img/test04_0.svg" alt="네이버웨일 로고">
+            <div class="info">
+                <a href="#">이용약관</a>
+                <a href="#">개인정보 처리방침</a>
+                <a href="#">Naver Whale 개인정보 보호를 위한 백서</a>
+                <a href="#">제휴 제안</a>
+                <a href="#">고객센터</a>
+                <a href="#">© NAVER Corp.</a>
+            </div>
+            <div class="btn_B"><a href="#">베타 다운로드</a></div>
+        </div>
+        <!-- //footer -->
+    </div>
+</body>
+</html>

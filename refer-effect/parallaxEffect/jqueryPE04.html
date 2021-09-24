@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Effect</title>
+​
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/highlight.css">
+​
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        .paraNav {
+            top: 20px;
+            transition: top 0.4s ease;
+        }
+        .paraNav.hide {
+            top: -200px;
+        }
+        .paraNav li a {
+            width: auto;
+            padding: 5px 20px;
+        }
+        .paraNav li.active a {
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body class="parallax">
+​
+    <!-- header -->
+    <header class="paraInfo">
+        <h1><a href="index.html">Parallax Effect04 - jQuery</a></h1>
+        <p>패랠랙스 스크로링 효과 - 숨김 메뉴2</p>
+    </header>
+    <!-- //header -->
+​
+    <!-- main -->
+    <main>
+
+        <div class="paraScroll">scrollTop() : <span>0</span>px</div> <!-- //scroll -->
+
+        <nav class="paraNav">
+            <ul>
+                <li class="active"><a href="#section1">메뉴1</a></li>
+                <li><a href="#section2">메뉴2</a></li>
+                <li><a href="#section3">메뉴3</a></li>
+                <li><a href="#section4">메뉴4</a></li>
+                <li><a href="#section5">메뉴5</a></li>
+                <li><a href="#section6">메뉴6</a></li>
+                <li><a href="#section7">메뉴7</a></li>
+                <li><a href="#section8">메뉴8</a></li>
+                <li><a href="#section9">메뉴9</a></li>
+            </ul>
+        </nav>
+        <!-- //nav -->
+
+        <div class="paraCont">
+            <section id="section1" class="content-item">
+                <span class="num">01</span>
+                <h2 class="title">Section1</h2>
+                <figure class="img-Wrap">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc">꿈을 이루고자 하는 용기만 있다면 모든 꿈을 이룰 수 있다.</p>
+            </section>
+            <!-- //section1 -->
+​
+            <section id="section2" class="content-item">
+                <span class="num">02</span>
+                <h2 class="title">Section2</h2>
+                <figure class="img-Wrap">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc">우리는 한 번도 존재하지 않았던 것을 꿈꿀 수 있는 사람들이 필요하다.</p>
+            </section>
+            <!-- //section2 -->
+​
+            <section id="section3" class="content-item">
+                <span class="num">03</span>
+                <h2 class="title">Section3</h2>
+                <figure class="img-Wrap">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc">무슨 일을 하기 전에는 그 일에 대해 기대를 가져야 한다.</p>
+            </section>
+            <!-- //section3 -->
+​
+            <section id="section4" class="content-item">
+                <span class="num">04</span>
+                <h2 class="title">Section4</h2>
+                <figure class="img-Wrap">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc">조금도 도전하지 않으려고 하는 것이 인생에서 가장 위험한 일이다.</p>
+            </section>
+            <!-- //section4 -->
+​
+            <section id="section5" class="content-item">
+                <span class="num">05</span>
+                <h2 class="title">Section5</h2>
+                <figure class="img-Wrap">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc">자신의 실수를 빨리 인정하고 다른 시도에 집중하는 것이 최선이다.</p>
+            </section>
+            <!-- //section5 -->
+​
+            <section id="section6" class="content-item">
+                <span class="num">06</span>
+                <h2 class="title">Section6</h2>
+                <figure class="img-Wrap">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc">행동은 모든 성공의 가장 기초적인 핵심이다.</p>
+            </section>
+            <!-- //section6 -->
+​
+            <section id="section7" class="content-item">
+                <span class="num">07</span>
+                <h2 class="title">Section7</h2>
+                <figure class="img-Wrap">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc">용기란 죽을만큼 두려워도 무언가 해보는 것이다.</p>
+            </section>
+            <!-- //section7 -->
+​
+            <section id="section8" class="content-item">
+                <span class="num">08</span>
+                <h2 class="title">Section8</h2>
+                <figure class="img-Wrap">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc">승리는 가장 끈기 있는 사람에게 돌아간다.</p>
+            </section>
+            <!-- //section8 -->
+​
+            <section id="section9" class="content-item">
+                <span class="num">09</span>
+                <h2 class="title">Section9</h2>
+                <figure class="img-Wrap">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc">인생에서 실패한 사람의 대부분은 성공이 눈앞에 왔는데도 모르고 포기한 사람들이다.</p>
+            </section>
+            <!-- //section9 -->
+        </div>
+        <!-- //contents -->
+    </main>
+    <!-- //main -->
+​
+    <!-- footer -->
+    <footer class="paraFooter">
+        <h1>Parallax <em>Scrolling</em></h1>
+        <div class="footerInfo">
+            <h2>자바스크립트</h2>
+            <ul>
+                <li><a href="javascripPE01.html">1</a></li>
+                <li><a href="javascripPE02.html">2</a></li>
+                <li><a href="javascripPE03.html">3</a></li>
+                <li><a href="javascripPE04.html">4</a></li>
+                <li><a href="javascripPE05.html">5</a></li>
+            </ul>
+        </div>
+        <div class="footerInfo">
+            <h2>제이쿼리</h2>
+            <ul> 
+                <li><a href="jqueryPE01.html">1</a></li>
+                <li><a href="jqueryPE02.html">2</a></li>
+                <li><a href="jqueryPE03.html">3</a></li>
+                <li class="active"><a href="jqueryPE04.html">4</a></li>
+                <li><a href="jqueryPE05.html">5</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- //footer -->
+​
+    <!-- source -->
+    <div class="source bottom btn-wrap">
+        <button>소스보기</button>
+    </div>
+    <!-- //source -->
+​
+    <!-- modal -->
+    <div id="modal">
+        <div class="modal-bg">
+            <div class="modal-cont">
+                <div class="code-view">
+                    <div class="view-header">
+                        <div class="dot" aria-hidden="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="view-title">
+                        <ul>
+                            <li class="active"><a href="#">HTML</a></li>
+                            <li><a href="#">SCSS</a></li>
+                            <li><a href="#">JQUERY</a></li>
+                        </ul>
+                    </div>
+                    <div class="view-cont">
+                        <div class="html">
+<pre><code class="language-html">&lt;div class="paraScroll"&gt;scrollTop() : &lt;span&gt;0&lt;/span&gt;px&lt;/div&gt; 
+&lt;nav class="paraNav"&gt;
+    &lt;ul&gt;
+        &lt;li class="active"&gt;&lt;a href="#section1"&gt;메뉴1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#section2"&gt;메뉴2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#section3"&gt;메뉴3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#section4"&gt;메뉴4&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#section5"&gt;메뉴5&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#section6"&gt;메뉴6&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#section7"&gt;메뉴7&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#section8"&gt;메뉴8&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#section9"&gt;메뉴9&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+</code></pre> 
+                        </div>
+                        <div class="css">
+<pre><code class="language-css">.paraNav {
+    top: 20px;
+    transition: top 0.4s ease;
+}
+.paraNav.hide {
+    top: -200px;
+}
+.paraNav li a {
+    width: auto;
+    padding: 5px 20px;
+}
+.paraNav li.active a {
+    border-radius: 30px;
+}
+</code></pre> 
+                        </div>
+                        <div class="javascript">
+<pre><code class="language-javascript">$(".paraNav ul li").click(function(e){
+    e.preventDefault();
+    let target = $(this);   //몇번째 선택했는지 알 수 있음
+    let index = target.index();
+    let section = $(".content-item").eq(index); //content-item와 일치하는 것을 찾아서 index를 가져옴
+    let offset = section.offset().top;  //index가져온 content-item의 offsettop값을 구함
+    $("html, body").animate({scrollTop:offset}, 800, "easeInOutCirc")
+});
+
+let nowScrollTop;   //현재 scrollTop값
+let lastScrollTop = 0;  //마지막(1초전) scrollTop 값
+
+$(window).scroll(function(){
+    let scrollTop = $(window).scrollTop();  //윈도우의 스크롤 탑 값 가져옴, window = document = this
+
+    //버튼용
+    $(".content-item").each(function(index){   
+        if(scrollTop >= $(this).offset().top -2){   
+            $(".paraNav ul li") .eq(index).addClass("active").siblings().removeClass("active"); 
+        }
+    });
+
+    //출력용
+    $(".paraScroll span").text(scrollTop); 
+
+    nowScrollTop = true;
+
+    setInterval(() => {
+        if(nowScrollTop) {  
+            nowScrollTop = false;   //true가 false로 바뀌기 때문에 1번만 감지함
+            hasScroll();    //실행함수
+        } 
+    }, 500);   //스크롤을 내렸을 때 0.5초에 한번 감지, 올렸을 때 0.5초에 한번 감지 (스크롤을 할 때만 감지함)
+}); 
+
+function hasScroll(){
+    let scrollTop = $(this).scrollTop();
+
+    if(scrollTop > lastScrollTop){  //현재 scrollTop값이 마지막(1초전) scrollTop값보다 크면
+        $(".paraNav").addClass("hide");
+    } else {
+        $(".paraNav").removeClass("hide");
+    }
+    lastScrollTop = scrollTop;
+
+    console.log("scrollTop :" + scrollTop)
+    console.log("lastScrollTop :" + lastScrollTop)
+}
+</code></pre> 
+                        </div>
+                    </div>
+                </div>
+                
+                <button>닫기</button>
+            </div>
+        </div>
+    </div>
+    <!-- //modal -->
+​
+    <!-- script -->
+    <script src="../assets/js/custom.js"></script>
+    <script src="../assets/js/highlight.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $(".paraNav ul li").click(function(e){
+            e.preventDefault();
+            let target = $(this);   //몇번째 선택했는지 알 수 있음
+            let index = target.index();
+            let section = $(".content-item").eq(index); //content-item와 일치하는 것을 찾아서 index를 가져옴
+            let offset = section.offset().top;  //index가져온 content-item의 offsettop값을 구함
+            $("html, body").animate({scrollTop:offset}, 800, "easeInOutCirc")
+        });
+
+        let nowScrollTop;   //현재 scrollTop값
+        let lastScrollTop = 0;  //마지막(1초전) scrollTop 값
+
+        $(window).scroll(function(){
+            let scrollTop = $(window).scrollTop();  //윈도우의 스크롤 탑 값 가져옴, window = document = this
+
+            //버튼용
+            $(".content-item").each(function(index){   
+                if(scrollTop >= $(this).offset().top -2){   
+                    $(".paraNav ul li") .eq(index).addClass("active").siblings().removeClass("active"); 
+                }
+            });
+
+            //출력용
+            $(".paraScroll span").text(scrollTop); 
+
+            nowScrollTop = true;
+
+            setInterval(() => {
+                if(nowScrollTop) {  
+                    nowScrollTop = false;   //true가 false로 바뀌기 때문에 1번만 감지함
+                    hasScroll();    //실행함수
+                } 
+            }, 500);   //스크롤을 내렸을 때 0.5초에 한번 감지, 올렸을 때 0.5초에 한번 감지 (스크롤을 할 때만 감지함)
+        }); 
+
+        function hasScroll(){
+            let scrollTop = $(this).scrollTop();
+
+            if(scrollTop > lastScrollTop){  //현재 scrollTop값이 마지막(1초전) scrollTop값보다 크면
+                $(".paraNav").addClass("hide");
+            } else {
+                $(".paraNav").removeClass("hide");
+            }
+            lastScrollTop = scrollTop;
+
+            console.log("scrollTop :" + scrollTop)
+            console.log("lastScrollTop :" + lastScrollTop)
+        }
+    </script>
+</body>
+</html>
