@@ -27,63 +27,14 @@
         .paraNav li.active a {
             border-radius: 30px;
         }
-
-        /* 한번에 나타나기 */
-        /* .content-item {
-            opacity: 0;
-            transform: translateY(100px);
-            transition: all 1s;
-        }
-        .content-item.show {
-            transform: translateY(0);
-            opacity: 1;
-        } */
-
-        /* 개별적으로 나타나기 */
-        .content-item .num {
-            opacity: 0 !important;
-            transform: translateY(200px);
-            transition: all 1s 0.1s cubic-bezier(0, 0.66, 0.38, 1.01);
-        }
-        .content-item .title {
-            opacity: 0;
-            transform: translateX(-100px);
-            transition: all 1s 0.3s cubic-bezier(0, 0.66, 0.38, 1.01);
-        }
-        .content-item .img-Wrap {
-            opacity: 0;
-            transform: translateY(200px) rotate(30deg) skew(50deg);
-            transition: all 1s 0.6s cubic-bezier(0, 0.66, 0.38, 1.01);
-        }
-        .content-item .desc {
-            opacity: 0;
-            transform: translateX(-200px);
-            transition: all 1s 0.9s cubic-bezier(0, 0.66, 0.38, 1.01);
-        }
-        .content-item.show .num {
-            opacity: 0.07 !important;
-            transform: translateY(0);
-        }
-        .content-item.show .title {
-            opacity: 0;
-            transform: translateX(0);
-        }
-        .content-item.show .img-Wrap {
-            opacity: 1;
-            transform: translateY(0) rotate(0);
-        }
-        .content-item.show .desc {
-            opacity: 1;
-            transform: translateX(0);
-        }
     </style>
 </head>
 <body class="parallax">
 ​
     <!-- header -->
     <header class="paraInfo">
-        <h1><a href="index.html">Parallax Effect05 - jQuery</a></h1>
-        <p>패랠랙스 스크로링 효과 - 나타나기</p>
+        <h1><a href="index.html">Parallax Effect06 - jQuery</a></h1>
+        <p>패랠랙스 스크로링 효과 - 이질감 효과</p>
     </header>
     <!-- //header -->
 ​
@@ -225,8 +176,8 @@
                 <li><a href="jqueryPE02.html">2</a></li>
                 <li><a href="jqueryPE03.html">3</a></li>
                 <li><a href="jqueryPE04.html">4</a></li>
-                <li class="active"><a href="jqueryPE05.html">5</a></li>
-                <li><a href="jqueryPE06.html">6</a></li>
+                <li><a href="jqueryPE05.html">5</a></li>
+                <li class="active"><a href="jqueryPE06.html">6</a></li>
                 <li><a href="jqueryPE07.html">7</a></li>
                 <li><a href="jqueryPE08.html">8</a></li>
             </ul>
@@ -391,59 +342,10 @@
 .paraNav li.active a {
     border-radius: 30px;
 }
-
-/* 한번에 나타나기 */
-/* .content-item {
-    opacity: 0;
-    transform: translateY(100px);
-    transition: all 1s;
-}
-.content-item.show {
-    transform: translateY(0);
-    opacity: 1;
-} */
-
-/* 개별적으로 나타나기 */
-.content-item .num {
-    opacity: 0 !important;
-    transform: translateY(200px);
-    transition: all 1s 0.1s cubic-bezier(0, 0.66, 0.38, 1.01);
-}
-.content-item .title {
-    opacity: 0;
-    transform: translateX(-100px);
-    transition: all 1s 0.3s cubic-bezier(0, 0.66, 0.38, 1.01);
-}
-.content-item .img-Wrap {
-    opacity: 0;
-    transform: translateY(200px) rotate(30deg) skew(50deg);
-    transition: all 1s 0.6s cubic-bezier(0, 0.66, 0.38, 1.01);
-}
-.content-item .desc {
-    opacity: 0;
-    transform: translateX(-200px);
-    transition: all 1s 0.9s cubic-bezier(0, 0.66, 0.38, 1.01);
-}
-.content-item.show .num {
-    opacity: 0.07 !important;
-    transform: translateY(0);
-}
-.content-item.show .title {
-    opacity: 0;
-    transform: translateX(0);
-}
-.content-item.show .img-Wrap {
-    opacity: 1;
-    transform: translateY(0) rotate(0);
-}
-.content-item.show .desc {
-    opacity: 1;
-    transform: translateX(0);
-}
 </code></pre> 
                         </div>
                         <div class="javascript">
-<pre><code class="language-javascript">$(".paraNav ul li").click(function(e){  
+<pre><code class="language-javascript">$(".paraNav ul li").click(function(e){ 
     e.preventDefault();
     let target = $(this);
     let index = target.index();
@@ -451,17 +353,41 @@
     let offset = section.offset().top;  
     $("html, body").animate({scrollTop : offset}, 600)  
 });
+
 $(window).scroll(function(){
-    let scrollTop = $(window).scrollTop() + $(window).height()/2;  
-    
+    let scrollTop = $(window).scrollTop();
+    // let offset1 = scrollTop - $("#section1").offset().top;    
+    // let offset2 = scrollTop - $("#section2").offset().top;
+    // let offset3 = scrollTop - $("#section3").offset().top;
+    // let offset4 = scrollTop - $("#section4").offset().top;
+    // let offset5 = scrollTop - $("#section5").offset().top;
+    // let offset6 = scrollTop - $("#section6").offset().top;
+    // let offset7 = scrollTop - $("#section7").offset().top;
+    // let offset8 = scrollTop - $("#section8").offset().top;
+    // let offset9 = scrollTop - $("#section9").offset().top;
+    // $("#section1").css({transform: "translateX("+offset1+"px)"});  
+    // $("#section2").css({transform: "translateX("+offset2+"px)"});
+    // $("#section3").css({transform: "translateX("+offset3+"px)"});
+    // $("#section4").css({transform: "translateX("+offset4+"px)"});
+    // $("#section5").css({transform: "translateX("+offset5+"px)"});
+    // $("#section6").css({transform: "translateX("+offset6+"px)"});
+    // $("#section7").css({transform: "translateX("+offset7+"px)"});
+    // $("#section8").css({transform: "translateX("+offset8+"px)"});
+    // $("#section9").css({transform: "translateX("+offset9+"px)"});
+
     //each문
-    $(".content-item").each(function(index, element){
-        if(scrollTop >= $(this).offset().top){  
-            $(this).addClass("show");
-            $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
+    $(".content-item").each(function(index){
+        let offset1 = (scrollTop - $(this).offset().top) * 0.1;   
+        let offset2 = (scrollTop - $(this).offset().top) * 0.2;   
+        $(this).find(".img").css({transform: "translateY("+offset2 +"px)"});    
+        $(this).find(".desc").css({transform: "translateY("+offset1 +"px)"}); 
+
+        //메뉴
+        if(scrollTop >= $(this).offset().top -2){   
+            $(".paraNav ul li") .eq(index).addClass("active").siblings().removeClass("active"); 
         }
     });
-    
+
     //출력
     $(".paraScroll span").text(parseInt(scrollTop)); 
 });
@@ -493,53 +419,47 @@ $(window).scroll(function(){
         });
 
         $(window).scroll(function(){
-            let scrollTop = $(window).scrollTop() + $(window).height()/2;   //모든 디바이스에서 표준화되어 속도 조절
+            let scrollTop = $(window).scrollTop();
 
-            // //for문
-            // for (let i=1; i<=9; i++){
-            //     if(scrollTop >= $("#section" + i).offset().top){  
-            //         $("#section" + i).addClass("show");
-            //     } else {
-            //         $("#section" + i).removeClass("show");
-            //     }
+            // let offset1 = scrollTop - $("#section1").offset().top;    //보이는 시점부터 0으로 시작하게 하기 위해 scrollTop값에서 고정된 값인 offset().top값을 빼줌
+            // let offset2 = scrollTop - $("#section2").offset().top;
+            // let offset3 = scrollTop - $("#section3").offset().top;
+            // let offset4 = scrollTop - $("#section4").offset().top;
+            // let offset5 = scrollTop - $("#section5").offset().top;
+            // let offset6 = scrollTop - $("#section6").offset().top;
+            // let offset7 = scrollTop - $("#section7").offset().top;
+            // let offset8 = scrollTop - $("#section8").offset().top;
+            // let offset9 = scrollTop - $("#section9").offset().top;
+
+            // $("#section1").css({transform: "translateX("+offset1+"px)"});   //#section을 X축으로 scrollTop값에서 고정된 값인 offset().top값을 빼준 만큼 이동
+            // $("#section2").css({transform: "translateX("+offset2+"px)"});
+            // $("#section3").css({transform: "translateX("+offset3+"px)"});
+            // $("#section4").css({transform: "translateX("+offset4+"px)"});
+            // $("#section5").css({transform: "translateX("+offset5+"px)"});
+            // $("#section6").css({transform: "translateX("+offset6+"px)"});
+            // $("#section7").css({transform: "translateX("+offset7+"px)"});
+            // $("#section8").css({transform: "translateX("+offset8+"px)"});
+            // $("#section9").css({transform: "translateX("+offset9+"px)"});
+
+            //for문
+            // for(let i=1; i<=9; i++){
+            //     let offset = scrollTop - $("#section" + i).offset().top;
+            //     $("#section" + i + " .desc").css({transform: "translateX("+offset +"px)"}); //글씨만 움직이게
             // }
 
             //each문
-            $(".content-item").each(function(index, element){
-                if(scrollTop >= $(this).offset().top){  
-                    $(this).addClass("show");
-                    $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
+            $(".content-item").each(function(index){
+                let offset1 = (scrollTop - $(this).offset().top) * 0.1;   //스크롤탑에서 각 세션의 오프셋탑값을 빼줌
+                let offset2 = (scrollTop - $(this).offset().top) * 0.2;   //스크롤탑에서 각 세션의 오프셋탑값을 빼줌
+
+                $(this).find(".img").css({transform: "translateY("+offset2 +"px)"});    //find()메서드로 img-Wrap을 찾아줘서 효과를 줌
+                $(this).find(".desc").css({transform: "translateY("+offset1 +"px)"});    //find()메서드로 img-Wrap을 찾아줘서 효과를 줌
+
+                //메뉴
+                if(scrollTop >= $(this).offset().top -2){   
+                    $(".paraNav ul li") .eq(index).addClass("active").siblings().removeClass("active"); 
                 }
             });
-
-            // if(scrollTop >= $("#section1").offset().top){  
-            //     $("#section1").addClass("show");
-            // }
-            // if(scrollTop >= $("#section2").offset().top){  
-            //     $("#section2").addClass("show");
-            // }
-            // if(scrollTop >= $("#section3").offset().top){  
-            //     $("#section3").addClass("show");
-            // }
-            // if(scrollTop >= $("#section4").offset().top){  
-            //     $("#section4").addClass("show");
-            // }
-            // if(scrollTop >= $("#section5").offset().top){  
-            //     $("#section5").addClass("show");
-            // }
-            // if(scrollTop >= $("#section6").offset().top){  
-            //     $("#section6").addClass("show");
-            // }
-            // if(scrollTop >= $("#section7").offset().top){  
-            //     $("#section7").addClass("show");
-            // }
-            // if(scrollTop >= $("#section8").offset().top){  
-            //     $("#section8").addClass("show");
-            // }
-            // if(scrollTop >= $("#section9").offset().top){  
-            //     $("#section9").addClass("show");
-            // }
-
 
             //출력
             $(".paraScroll span").text(parseInt(scrollTop)); 
