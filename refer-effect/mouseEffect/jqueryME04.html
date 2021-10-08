@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Effect</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/highlight.css">
+    <style>
+        body {
+            cursor: none;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .moveWrap {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .moveImage {
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%) perspective(600px) rotateX(0deg) rotateY(0deg);
+            transform-style: preserve-3d;
+            will-change: transform;
+            transition: all 0.2s;
+        }
+        .moveImage .mImg::before {
+            content: '';
+            position: absolute;
+            left: 5%; bottom: -3%;
+            width: 90%; height: 40px;
+            background: url(../assets/img/bg5.jpg) no-repeat;
+            background-size: 100% 30px;
+            filter: blur(15px);
+            z-index: -1;
+            opacity: 0.9;
+        }
+        .moveImage .mImg {
+            width: 50vw;
+        }
+        .moveImage .mImg img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .moveImage .mImg .mText {
+            font-family: "S-CoreDream";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate3d(-50%, -50%, 150px);
+            text-align: center;
+            color: #fff;
+            background: rgba(0,0,0,.3);
+            padding: 2vw;
+            font-size: 1.2vw;
+            line-height: 1.5;
+            white-space: nowrap;
+            border-radius: 5px;
+        }
+        .cursor {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #fff;
+            border-radius: 50%;
+            z-index: 10000;
+            user-select: none;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg bg7">
+
+    <!-- contents -->
+    <main>
+        <div class="cursor"></div>
+
+        <div class="moveWrap">
+            <article class="moveImage">
+                <div class="mImg"><img src="../assets/img/bg5.jpg" alt="이미지">
+                    <div class="mText">
+                        <p>Man is what he believes.</p>
+                        <p>사람은 스스로 믿는 대로 된다.</p>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+    </main>
+    <!-- //contents -->
+
+    <!-- info -->
+    <div class="info">
+        <h1><a href="index.html">Mouse Effect04 - jquery</a></h1>
+        <p>마우스 이펙트 - 마우스 방향에 따라 움직이기</p>
+    </div>
+    <div class="info right">
+        <ul>
+            <li><a href="javascriptMe01.html">1</a></li>
+            <li><a href="javascriptMe02.html">2</a></li>
+            <li><a href="javascriptMe03.html">3</a></li>
+            <li><a href="javascriptMe04.html">4</a></li>
+            <li><a href="javascriptMe05.html">5</a></li>
+        </ul>
+        <ul>
+            <li><a href="jqueryMe01.html">1</a></li>
+            <li><a href="jqueryMe02.html">2</a></li>
+            <li><a href="jqueryMe03.html">3</a></li>
+            <li class="active"><a href="jqueryMe04.html">4</a></li>
+            <li><a href="jqueryMe05.html">5</a></li>
+        </ul>
+    </div>
+
+    <div class="info left list">
+        <ul>
+            <li>pageX : <span class="pageX">0</span></li>
+            <li>pageY : <span class="pageY">0</span></li>
+            <li>standardX : <span class="standardX">0</span></li>
+            <li>standardY : <span class="standardY">0</span></li>
+            <li>maxX : <span class="maxX">0</span></li>
+            <li>maxY : <span class="maxY">0</span></li>
+            <li>angelX : <span class="angelX">0</span></li>
+            <li>angelY : <span class="angelY">0</span></li>
+        </ul>
+    </div>
+
+    <div class="info bottom btn-wrap">
+        <button>소스보기</button>
+    </div>
+    <div id="modal">
+        <div class="modal-bg">
+            <div class="modal-cont">
+                <div class="code-view">
+                    <div class="view-header">
+                        <div class="dot" aria-hidden="true"> <!-- aria-hidden을 true로 주면 읽지 않고 넘어감 -->
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="view-title">
+                        <ul>
+                            <li class="active"><a href="#">HTML</a></li>
+                            <li><a href="#">CSS</a></li>
+                            <li><a href="#">JQEURY</a></li>
+                        </ul>
+                    </div>
+                    <div class="view-cont">
+                        <div class="html">
+<pre><code class="language-html">&lt;div class="moveWrap"&gt;
+    &lt;article class="moveImage"&gt;
+        &lt;div class="mImg"&gt;&lt;img src="../assets/img/bg5.jpg" alt="이미지"&gt;
+            &lt;div class="mText"&gt;
+                &lt;p&gt;Man is what he believes.&lt;/p&gt;
+                &lt;p&gt;사람은 스스로 믿는 대로 된다.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/article&gt;
+&lt;/div&gt;
+
+&lt;div class="info left list"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;pageX : &lt;span class="pageX"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;pageY : &lt;span class="pageY"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;standardX : &lt;span class="standardX"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;standardY : &lt;span class="standardY"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;maxX : &lt;span class="maxX"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;maxY : &lt;span class="maxY"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;angelX : &lt;span class="angelX"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;angelY : &lt;span class="angelY"&gt;0&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+                        </div>
+                        <div class="css">
+<pre><code class="language-css">body {
+    cursor: none;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.moveWrap {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.moveImage {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%) perspective(600px) rotateX(0deg) rotateY(0deg);
+    transform-style: preserve-3d;
+    will-change: transform;
+    transition: all 0.2s;
+}
+.moveImage .mImg::before {
+    content: '';
+    position: absolute;
+    left: 5%; bottom: -3%;
+    width: 90%; height: 40px;
+    background: url(../assets/img/bg5.jpg) no-repeat;
+    background-size: 100% 30px;
+    filter: blur(15px);
+    z-index: -1;
+    opacity: 0.9;
+}
+.moveImage .mImg {
+    width: 50vw;
+}
+.moveImage .mImg img {
+    width: 100%;
+    border-radius: 5px;
+}
+.moveImage .mImg .mText {
+    font-family: "S-CoreDream";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 150px);
+    text-align: center;
+    color: #fff;
+    background: rgba(0,0,0,.3);
+    padding: 2vw;
+    font-size: 1.2vw;
+    line-height: 1.5;
+    white-space: nowrap;
+    border-radius: 5px;
+}
+.cursor {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 10000;
+    user-select: none;
+    pointer-events: none;
+}
+</code></pre>
+                        </div>
+                        <div class="javascript">
+<pre><code class="language-javascript">$(window).mousemove(function(e){
+    let pageX = e.pageX;
+    let pageY = e.pageY;
+
+    //기준점 가운데로 변경(마우스 좌표값)
+    let standardX = $(window).width()/2 - pageX;    //브라우저의 너비값 / 2
+    let standardY = $(window).height()/2 - pageY;   //브라우저의 높이값 / 2
+
+    // //최대값, 최소값 설정
+    // if(standardX >= 50) standardX = 50;
+    // if(standardX <= -50) standardX = -50;
+    // if(standardY >= 50) standardY = 50;
+    // if(standardY <= -50) standardY = -50;
+
+    //최소값은 -100, 최대값은 100 설정
+    let maxX = Math.max(-100, Math.min(100, standardX));  
+    let maxY = Math.max(-100, Math.min(100, standardY));
+
+    //각도를 줄이는 설정
+    let angelX = maxX * 0.15;
+    let angelY = maxY * 0.15;
+
+    //부드럽게 설정
+    let softX = 0;
+    let softY = 0;
+    softX += (angelX - softX) * 0.5;    //수치를 곱한 것을 softX에 누적
+    softY += (angelY - softY) * 0.5;
+
+    //이미지
+    $(".moveImage").css({"transform": "translate(-50%, -50%) perspective(600px) rotateX("+ -softY +"deg) rotateY("+ -softX +"deg)"});
+
+    //커서
+    gsap.to(".cursor", {duration: .3, left: pageX, top: pageY});
+
+    //출력
+    $(".pageX").text(pageX);
+    $(".pageY").text(pageY);
+    $(".standardX").text(standardX);
+    $(".standardY").text(standardY);
+    $(".maxX").text(maxX);
+    $(".maxY").text(maxY);
+    $(".angelX").text(parseInt(angelX));
+    $(".angelY").text(parseInt(angelY));
+});
+</code></pre>
+                        </div>
+                    </div>
+                </div>
+            
+                <button>닫기</button>
+            </div>
+        </div>
+    </div>
+    <!-- //info -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        $(window).mousemove(function(e){
+            let pageX = e.pageX;
+            let pageY = e.pageY;
+
+            //기준점 가운데로 변경(마우스 좌표값)
+            let standardX = $(window).width()/2 - pageX;    //브라우저의 너비값 / 2
+            let standardY = $(window).height()/2 - pageY;   //브라우저의 높이값 / 2
+
+            // //최대값, 최소값 설정
+            // if(standardX >= 50) standardX = 50;
+            // if(standardX <= -50) standardX = -50;
+            // if(standardY >= 50) standardY = 50;
+            // if(standardY <= -50) standardY = -50;
+
+            //최소값은 -100, 최대값은 100 설정
+            let maxX = Math.max(-100, Math.min(100, standardX));  
+            let maxY = Math.max(-100, Math.min(100, standardY));
+
+            //각도를 줄이는 설정
+            let angelX = maxX * 0.15;
+            let angelY = maxY * 0.15;
+
+            //부드럽게 설정
+            let softX = 0;
+            let softY = 0;
+            softX += (angelX - softX) * 0.5;    //수치를 곱한 것을 softX에 누적
+            softY += (angelY - softY) * 0.5;
+
+            //이미지
+            $(".moveImage").css({"transform": "translate(-50%, -50%) perspective(600px) rotateX("+ -softY +"deg) rotateY("+ -softX +"deg)"});
+
+            //커서
+            gsap.to(".cursor", {duration: .3, left: pageX, top: pageY});
+
+            //출력
+            $(".pageX").text(pageX);
+            $(".pageY").text(pageY);
+            $(".standardX").text(standardX);
+            $(".standardY").text(standardY);
+            $(".maxX").text(maxX);
+            $(".maxY").text(maxY);
+            $(".angelX").text(parseInt(angelX));
+            $(".angelY").text(parseInt(angelY));
+        });
+    </script>
+</body>
+</html> 
