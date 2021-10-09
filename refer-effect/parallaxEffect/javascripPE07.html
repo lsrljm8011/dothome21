@@ -369,7 +369,81 @@
 </code></pre> 
                         </div>
                         <div class="javascript">
-<pre><code class="language-javascript">
+<pre><code class="language-javascript">document.querySelectorAll(".paraNav ul li a").forEach(li =&gt; {
+    li.addEventListener("click", e =&gt; {
+        e.preventDefault();  //버튼 중 하나라도 클릭하면 preventDefault를 막아준다
+        document.querySelector(li.getAttribute("href")).scrollIntoView({
+            behavior: "smooth"   //선택한 li의 속성(주소)을 가지고 와서 효과를 줌 (속성을 ㄱ져오는 것 get 설정하는것 set)
+        });
+    });
+});
+
+//한글자씩 쪼개기
+// let text = document.querySelector("#section1 .desc").innerText;
+// let split = text.split('').join("&lt;/span&gt;&lt;span&gt;");
+//     split = "&lt;span&gt;" + split + "&lt;/span&gt;";
+// document.querySelector("#section1 .desc").innerHTML = split;
+
+//다중 글씨 쪼개기
+document.querySelectorAll(".split").forEach(el =&gt; {
+    let text = el.innerText; //split에 있는 text를 가져옴
+    let split =  text.split('').join("&lt;/span&gt;&lt;span aria-hidden='true'&gt;");
+    split = "&lt;span aria-hidden='true'&gt;" + split + "&lt;/span&gt;";
+    el.innerHTML = split;
+    el.setAttribute("aria-label", text);
+});
+
+//스크롤 이펙트
+window.addEventListener("scroll", () =&gt; {
+    let scrollTop =  (document.documentElement.scrollTop || window.scrollY || window.pageYOffset) + window.innerHeight/2; //babel: 자바스트립트 컴파일 해줌(최신 문법을 썼을 때 옛날 것까지 컴파일 해줌), typeScript
+
+    // for(let i=1; i&lt;=9; i++){
+    //     if(scrollTop &gt;= document.getElementById("section" + i).offsetTop - window.innerHeight/2){
+    //         document.querySelectorAll("#section" + i + " .split span").forEach((elem, index) =&gt; {
+    //             setTimeout(() =&gt; {
+    //                 elem.classList.add("show");
+    //             }, 50 * index)
+    //         });
+    //     }
+    // }
+
+    // document.querySelectorAll(".content-item").forEach(function(item){
+    //     if(scrollTop &gt;= item.offsetTop - window.innerHeight/2){
+    //         item.querySelectorAll(".split span").forEach((elem, index) =&gt; {
+    //             setTimeout(() =&gt; {
+    //                 elem.classList.add("show");
+    //             }, 50 * index)
+    //         });
+    //     }
+    // });
+
+    //gsap
+    document.querySelectorAll(".content-item").forEach((el,index) =&gt; {
+        if(scrollTop &gt;= el.offsetTop){
+            gsap.to(el.querySelectorAll(".desc span"),{
+                duration: .5,
+                opacity: 1,
+                stagger: .05,
+                y: 0,
+                scale: 1,
+                ease: "power2.out",
+                rotation: 0,
+            });
+        }
+    });
+    //출력용
+    document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
+
+    //메뉴
+    document.querySelectorAll(".content-item").forEach((item, index) =&gt; {
+        if(scrollTop &gt;= item.offsetTop){
+            document.querySelectorAll(".paraNav ul li").forEach(li =&gt; {
+                li.classList.remove("active");
+            });
+            document.querySelector(".paraNav ul li:nth-child(" + (index+1) + ")").classList.add("active");
+        }
+    });
+});
 </code></pre> 
                         </div>
                     </div>

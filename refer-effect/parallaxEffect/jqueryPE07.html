@@ -358,7 +358,7 @@
 </code></pre> 
                         </div>
                         <div class="javascript">
-<pre><code class="language-javascript">        //한글자씩 쪼개기(여러개)
+<pre><code class="language-javascript">//한글자씩 쪼개기(여러개)
 $(".content-item .desc").each(function(index){
     let text = $(this).text(); 
     let split = text.split('').join("&lt;/span&gt;&lt;span area-hidden='true'&gt;"); //area-hidden='true' : 웹표준은 준수하기 위해 생긴 속성, 글자를 읽지 않도록 해줌

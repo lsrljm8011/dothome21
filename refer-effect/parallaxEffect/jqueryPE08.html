@@ -438,7 +438,46 @@
 </code></pre> 
                         </div>
                         <div class="javascript">
-<pre><code class="language-javascript">
+<pre><code class="language-javascript">//클릭하면 이동
+$(".paraNav ul li").click(function(e){  //메뉴를 클릭하면 이벤트 발생
+    e.preventDefault();
+    let target = $(this);
+    let index = target.index();
+    let section = $(".content-item").eq(index); 
+    let offset = section.offset().top;  //현재 세션의 위치를 오프셋 탑으로 구함
+    $("html, body").animate({scrollTop : offset}, 600)  
+});
+
+// $(window).scroll(function(){
+//     let scrollTop = $(this).scrollTop();
+//     $(".reveal").each(function(){
+//         if(scrollTop + $(window).height() >= $(this).offset().top){
+//             $(this).addClass("show");
+//         }
+//     })
+// })
+
+$(window).scroll(function(){
+    let scrollTop = $(this).scrollTop() + $(window).height()/2;
+    $('.reveal').each(function(){
+        if(scrollTop + $(window).height() >= $(this).offset().top){
+            $(this).delay($(this).data('delay')).queue(function(){
+                $(this).addClass('show');
+            });
+        }
+    });
+
+    //each문
+    $(".content-item").each(function(index, element){
+        if(scrollTop >= $(this).offset().top){  
+            $(this).addClass("show");
+            $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
+        }
+    });
+    
+    //출력  
+    $(".paraScroll span").text(parseInt(scrollTop));    
+});
 </code></pre> 
                         </div>
                     </div>
