@@ -170,15 +170,166 @@
                     </div>
                     <div class="view-cont">
                         <div class="html">
-<pre><code class="language-html">
+<pre><code class="language-html">&lt;main&gt;
+    &lt;div class="slider-wrap"&gt;
+        &lt;div class="slider-img"&gt;
+            &lt;div class="slider-inner"&gt;
+                &lt;div class="slider" data-name="이미지1"&gt;&lt;img src="../assets/img/bg9.jpg" alt="이미지1"&gt;&lt;/div&gt;
+                &lt;div class="slider" data-name="이미지2"&gt;&lt;img src="../assets/img/bg10.jpg" alt="이미지2"&gt;&lt;/div&gt;
+                &lt;div class="slider" data-name="이미지3"&gt;&lt;img src="../assets/img/bg1.jpg" alt="이미지3"&gt;&lt;/div&gt;
+                &lt;div class="slider" data-name="이미지4"&gt;&lt;img src="../assets/img/bg2.jpg" alt="이미지4"&gt;&lt;/div&gt;
+                &lt;div class="slider" data-name="이미지5"&gt;&lt;img src="../assets/img/bg3.jpg" alt="이미지5"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="slider-btn"&gt;
+            &lt;a href="#" class="prev"&gt;prev&lt;/a&gt;
+            &lt;a href="#" class="next"&gt;next&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class="slider-dot"&gt;
+            &lt;!-- &lt;a href="#" class="dot active"&gt;1&lt;/a&gt;
+            &lt;a href="#" class="dot"&gt;2&lt;/a&gt;
+            &lt;a href="#" class="dot"&gt;3&lt;/a&gt;
+            &lt;a href="#" class="dot"&gt;4&lt;/a&gt;
+            &lt;a href="#" class="dot"&gt;5&lt;/a&gt; --&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/main&gt;
 </code></pre>
                         </div>
                         <div class="css">
-<pre><code class="language-css">
+<pre><code class="language-css">/* slider */
+.slider-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.slider-img img {
+    width: 100%;
+}
+.slider-img {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px; height: 480px;
+    overflow: hidden;
+}
+.slider-inner {
+    position: relative;
+    /* width: 4000px;  */
+    height: 480px;
+    overflow: hidden;
+}
+.slider-inner .slider {
+    float: left;
+    width: 800px; height: 480px;
+    position: relative;
+}
+.slider-inner .slider::before {
+    position: absolute;
+    left: 5px; top: 5px;
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+    padding: 5px 10px 3px;
+    font-family: 'S-CoreDream';
+}
+.slider-inner .slider:nth-child(1) { z-index: 5;}
+.slider-inner .slider:nth-child(2) { z-index: 4;}
+.slider-inner .slider:nth-child(3) { z-index: 3;}
+.slider-inner .slider:nth-child(4) { z-index: 2;}
+.slider-inner .slider:nth-child(5) { z-index: 1;}
+.slider-inner .slider::before { content: attr(data-name); }   
+.slider-btn a {
+    position: absolute;
+    top: 500px;
+    transform: translateY(-50%);
+    z-index: 1000;
+    width: 50px; height: 50px;
+    background: rgba(0,0,0,0.4);
+    text-align: center;
+    line-height: 50px;
+    transition: all 0.2s;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+.slider-btn a:hover {
+    background: rgba(241,96,86,1);
+}
+.slider-btn .prev {
+    left: 0;
+}
+.slider-btn .next {
+    right: 0;
+}
+.slider-dot {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+}
+.slider-dot .dot {
+    width: 20px; height: 20px;
+    background: rgba(0,0,0,0.4);
+    display: inline-block;
+    border-radius: 50%;
+    transition: all 0.3s;
+    text-indent: -9999px;
+    margin: 3px;
+}
+.slider-dot a.active {
+    background: #fff;
+}
 </code></pre>
                         </div>
                         <div class="javascript">
-<pre><code class="language-javascript">
+<pre><code class="language-javascript">const sliderInner = $(".slider-inner"); 
+const slider = $(".slider");
+const sliderBtn = $(".slider-btn"); 
+const sliderDot = $(".slider-dot");
+
+let sliderCount = slider.length;
+let sliderWidth = slider.width();
+let sliderTotalWidth = sliderWidth * sliderCount;  
+let currentIndex = 0;   
+let dotIndex = "";
+
+//이미지 너비값 세팅
+sliderInner.css({width: sliderTotalWidth});
+
+//닷 메뉴 생성 : 이미지 개수만큼 닷 메뉴 생성
+slider.each(function(index){ 
+    dotIndex += "&lt;a href='#' class='dot'&gt;" + index + "&lt;/a&gt;";   
+});
+
+sliderDot.html(dotIndex);
+sliderDot.find("a").eq(currentIndex).addClass("active"); 
+
+//이미지 움직이기
+function gotoSlider(num) {
+    sliderInner.animate({left: -sliderWidth * num}, 500, "easeInQuart");
+    currentIndex = num; 
+    sliderDot.find("a").removeClass("active").eq(currentIndex).addClass("active"); 
+}
+
+//닷 버튼 클릭하기
+sliderDot.on("click", "a", function(e){
+    e.preventDefault();
+    gotoSlider($(this).index()); 
+})
+
+//버튼 클릭하기
+sliderBtn.on("click", "a", function(e){   
+    e.preventDefault();
+    let nextIndex = (currentIndex + 1) % sliderCount;  
+    let prevIndex = (currentIndex - 1) % sliderCount;
+    if(currentIndex == 0) prevIndex = sliderCount - 1;  
+    if($(this).hasClass("prev")){ 
+        gotoSlider(prevIndex);
+    } else {
+        gotoSlider(nextIndex);
+    }
+});
 </code></pre>
                         </div>
                     </div>

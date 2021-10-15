@@ -126,15 +126,118 @@
                     </div>
                     <div class="view-cont">
                         <div class="html">
-<pre><code class="language-html">
+<pre><code class="language-html">&lt;main&gt;
+    &lt;div class="slider-wrap"&gt;
+        &lt;div class="slider-img slider-img1"&gt;
+            &lt;div class="slider-inner slider-inner1"&gt;
+                &lt;div class="slider slider1" data-name="이미지1"&gt;&lt;img src="../assets/img/bg8.jpg" alt="이미지1"&gt;&lt;/div&gt;
+                &lt;div class="slider slider1" data-name="이미지2"&gt;&lt;img src="../assets/img/bg9.jpg" alt="이미지2"&gt;&lt;/div&gt;
+                &lt;div class="slider slider1" data-name="이미지3"&gt;&lt;img src="../assets/img/bg10.jpg" alt="이미지3"&gt;&lt;/div&gt;
+                &lt;div class="slider slider1" data-name="이미지4"&gt;&lt;img src="../assets/img/bg11.jpg" alt="이미지4"&gt;&lt;/div&gt;
+                &lt;div class="slider slider1" data-name="이미지5"&gt;&lt;img src="../assets/img/bg12.jpg" alt="이미지5"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="slider-img slider-img2"&gt;
+            &lt;div class="slider-inner slider-inner2"&gt;
+                &lt;div class="slider slider2" data-name="이미지1"&gt;&lt;img src="../assets/img/bg8.jpg" alt="이미지1"&gt;&lt;/div&gt;
+                &lt;div class="slider slider2" data-name="이미지2"&gt;&lt;img src="../assets/img/bg9.jpg" alt="이미지2"&gt;&lt;/div&gt;
+                &lt;div class="slider slider2" data-name="이미지3"&gt;&lt;img src="../assets/img/bg10.jpg" alt="이미지3"&gt;&lt;/div&gt;
+                &lt;div class="slider slider2" data-name="이미지4"&gt;&lt;img src="../assets/img/bg11.jpg" alt="이미지4"&gt;&lt;/div&gt;
+                &lt;div class="slider slider2" data-name="이미지5"&gt;&lt;img src="../assets/img/bg12.jpg" alt="이미지5"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/main&gt;
 </code></pre>
                         </div>
                         <div class="css">
-<pre><code class="language-css">
+<pre><code class="language-css">.slider-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.slider-img img {
+    width: 100%;
+}
+.slider-img {
+    width: 600px;
+    height: 360px;
+    overflow: hidden;
+    margin: 10px;
+}
+.slider-inner {
+    overflow: hidden;
+    position: relative;
+    width: 600px;
+    height: 2160px;
+}
+.slider-inner .slider {
+    float: left;
+    width: 600px;
+    height: 360px;
+    position: relative;
+}
+.slider-inner .slider::before {
+    position: absolute;
+    left: 5px; top: 5px;
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+    padding: 5px 10px 3px;
+    font-family: "NEXONLv1Gothic";
+}
+.slider-inner .slider:nth-child(1){z-index: 5;}
+.slider-inner .slider:nth-child(2){z-index: 4;}
+.slider-inner .slider:nth-child(3){z-index: 3;}
+.slider-inner .slider:nth-child(4){z-index: 2;}
+.slider-inner .slider:nth-child(5){z-index: 1;}
+
+.slider-inner .slider::before{content: attr(data-name);}
 </code></pre>
                         </div>
                         <div class="javascript">
-<pre><code class="language-javascript">
+<pre><code class="language-javascript">// //sample1
+const sliderImg1 = document.querySelector(".slider-img1");
+const sliderInner1 = document.querySelector(".slider-inner1");
+const slider1 = document.querySelector(".slider1");
+
+let currentIndex1 = 0;
+let sliderHeight1 = slider1.offsetHeight;
+
+sliderInner1.style.transition = "all 0.3s";
+sliderInner1.style.top = "0";     
+
+setInterval(() => {
+    currentIndex1 &lt; 4 ? currentIndex1++ : currentIndex1 = 0;
+    let sliderPosition = currentIndex1 * -sliderHeight1 + "px";
+    sliderInner1.style.transition = "all 0.3s";
+    sliderInner1.style.top = sliderPosition;   
+}, 3000);
+
+//sample2
+const sliderImg2 = document.querySelector(".slider-img2");
+const sliderInner2 = document.querySelector(".slider-inner2");
+const slider2 = document.querySelector(".slider2");
+
+let currentIndex2 = 0;
+let sliderHeight2 = slider2.offsetHeight;       
+let sliderCount = document.querySelectorAll(".slider2").length;
+let sliderClone = sliderInner2.firstElementChild.cloneNode(true); 
+
+sliderInner2.appendChild(sliderClone);      
+setInterval(() => {
+    currentIndex2++;     //0 1 2 3 4 5 6 7 8 9 ...
+    sliderInner2.style.transition = "all 0.3s";
+    sliderInner2.style.transform = "translateY("+ -sliderHeight2 * currentIndex2 +"px)";   
+    if( currentIndex2 == sliderCount ){     
+        setTimeout(() => {
+            sliderInner2.style.transition = "0s";
+            sliderInner2.style.transform = "translateY(0)";
+        }, 300);
+        currentIndex2 = 0;   
+    }   
+}, 3000);
+
 </code></pre>
                         </div>
                     </div>
