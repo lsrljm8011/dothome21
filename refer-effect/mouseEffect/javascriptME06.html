@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Effect</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/highlight.css">
+    <style>
+        .cursor {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: url(../assets/img/bg10.jpg) center center;
+            background-attachment: fixed;
+            background-size: cover;
+            border: 5px solid #fff;
+            overflow: hidden;
+            z-index: -1;
+        }
+        .contents {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            flex-direction: column;
+            overflow: hidden;
+            color: #fff;
+        }
+        .contents p {
+            max-width: 70vw;
+            font-size: 3vw;
+            text-align: justify;
+        }
+        .contents p:first-child {
+            font-size: 2vw;
+            line-height: 2;
+        }
+        .contents p em {
+            color: rgb(0, 238, 255);
+            border-bottom: 2px dashed rgb(0, 238, 255);
+            font-style: normal;
+        }       
+    </style>
+</head>
+<body class="bg bg10">
+
+    <!-- contents -->
+    <main>
+        <div class="cursor"></div>
+
+        <div class="contents">
+            <p>Energy is eternal delight.</p>
+            <p>에너지는 <em>영원한 기쁨</em>이다.</p>
+        </div>
+    </main>
+    <!-- //contents -->
+
+    <!-- info -->
+    <div class="info">
+        <h1><a href="index.html">Mouse Effect06 - javascript</a></h1>
+        <p>마우스 이펙트 - 조명 효과</p>
+    </div>
+    <div class="info right">
+        <ul>
+            <li><a href="javascriptMe01.html">1</a></li>
+            <li><a href="javascriptMe02.html">2</a></li>
+            <li><a href="javascriptMe03.html">3</a></li>
+            <li><a href="javascriptMe04.html">4</a></li>
+            <li><a href="javascriptMe05.html">5</a></li>
+            <li class="active"><a href="javascriptMe06.html">6</a></li>
+            <li><a href="javascriptMe07.html">7</a></li>
+            <li><a href="javascriptMe08.html">8</a></li>
+        </ul>
+        <ul>
+            <li><a href="jqueryMe01.html">1</a></li>
+            <li><a href="jqueryMe02.html">2</a></li>
+            <li><a href="jqueryMe03.html">3</a></li>
+            <li><a href="jqueryMe04.html">4</a></li>
+            <li><a href="jqueryMe05.html">5</a></li>
+            <li><a href="jqueryMe06.html">6</a></li>
+            <li><a href="jqueryMe07.html">7</a></li>
+            <li><a href="jqueryMe08.html">8</a></li>
+        </ul>
+    </div>
+
+    <div class="info left list">
+        <ul>
+            <li>pageX : <span class="pageX">0</span></li>
+            <li>pageY : <span class="pageY">0</span></li>
+        </ul>
+    </div>
+
+    <div class="info bottom btn-wrap">
+        <button>소스보기</button>
+    </div>
+    <div id="modal">
+        <div class="modal-bg">
+            <div class="modal-cont">
+                <div class="code-view">
+                    <div class="view-header">
+                        <div class="dot" aria-hidden="true"> <!-- aria-hidden을 true로 주면 읽지 않고 넘어감 -->
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="view-title">
+                        <ul>
+                            <li class="active"><a href="#">HTML</a></li>
+                            <li><a href="#">CSS</a></li>
+                            <li><a href="#">JAVASCRIPT</a></li>
+                        </ul>
+                    </div>
+                    <div class="view-cont">
+                        <div class="html">
+<pre><code class="language-html">&lt;main&gt;
+    &lt;div class="cursor"&gt;&lt;/div&gt;
+
+    &lt;div class="contents"&gt;
+        &lt;p&gt;Energy is eternal delight.&lt;/p&gt;
+        &lt;p&gt;에너지는 &lt;em&gt;영원한 기쁨&lt;/em&gt;이다.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/main&gt;
+
+&lt;div class="info left list"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;pageX : &lt;span class="pageX"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;pageY : &lt;span class="pageY"&gt;0&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+                        </div>
+                        <div class="css">
+<pre><code class="language-css">.cursor {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: url(../assets/img/bg10.jpg) center center;
+    background-attachment: fixed;
+    background-size: cover;
+    border: 5px solid #fff;
+    overflow: hidden;
+    z-index: -1;
+}
+.contents {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+    color: #fff;
+}
+.contents p {
+    max-width: 70vw;
+    font-size: 3vw;
+    text-align: justify;
+}
+.contents p:first-child {
+    font-size: 2vw;
+    line-height: 2;
+}
+.contents p em {
+    color: rgb(0, 238, 255);
+    border-bottom: 2px dashed rgb(0, 238, 255);
+    font-style: normal;
+}  
+</code></pre>
+                        </div>
+                        <div class="javascript">
+<pre><code class="language-javascript">const cursor = document.querySelector(".cursor");
+const circle = cursor.getBoundingClientRect();  
+
+function mouseCircle(e) {
+
+    gsap.to(cursor, {duration: 0.5, left: e.pageX -circle.width/2, top: e.pageY -circle.height/2});
+    let pageX = e.pageX;
+    let pageY = e.pageY;
+
+    //출력
+    document.querySelector(".pageX").textContent = pageX;
+    document.querySelector(".pageY").textContent = pageY;
+}
+
+window.addEventListener("mousemove", mouseCircle);
+</code></pre>
+                        </div>
+                    </div>
+                </div>
+            
+                <button>닫기</button>
+            </div>
+        </div>
+    </div>
+    <!-- //info -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        // const width = document.querySelector(".cursor").clientWidth/2; //커서의 너비 값을 구해서 가운데로 오게 하기 위해 2로 나눠줌(커서의 크기가 바껴도 오류가 없게 하기 위해)
+        // const height = document.querySelector(".cursor").clientWidth/2;
+        const cursor = document.querySelector(".cursor");
+        const circle = cursor.getBoundingClientRect();  //요소의 위치 정보를 가져옴
+
+        function mouseCircle(e) {
+            gsap.to(cursor, {duration: 0.5, left: e.pageX -circle.width/2, top: e.pageY -circle.height/2});
+
+            let pageX = e.pageX;
+            let pageY = e.pageY;
+
+            //출력
+            document.querySelector(".pageX").textContent = pageX;
+            document.querySelector(".pageY").textContent = pageY;
+        }
+
+        window.addEventListener("mousemove", mouseCircle);
+    </script>
+</body>
+</html> 

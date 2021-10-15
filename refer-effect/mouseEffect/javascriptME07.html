@@ -125,7 +125,7 @@
 
     <!-- info -->
     <div class="info">
-        <h1><a href="index.html">Mouse Effect07 - jquery</a></h1>
+        <h1><a href="index.html">Mouse Effect07 - javascript</a></h1>
         <p>마우스 이펙트 - 반전 효과</p>
     </div>
     <div class="info right">
@@ -136,7 +136,7 @@
             <li><a href="javascriptMe04.html">4</a></li>
             <li><a href="javascriptMe05.html">5</a></li>
             <li><a href="javascriptMe06.html">6</a></li>
-            <li><a href="javascriptMe07.html">7</a></li>
+            <li class="active"><a href="javascriptMe07.html">7</a></li>
             <li><a href="javascriptMe08.html">8</a></li>
         </ul>
         <ul>
@@ -146,7 +146,7 @@
             <li><a href="jqueryMe04.html">4</a></li>
             <li><a href="jqueryMe05.html">5</a></li>
             <li><a href="jqueryMe06.html">6</a></li>
-            <li class="active"><a href="jqueryMe07.html">7</a></li>
+            <li><a href="jqueryMe07.html">7</a></li>
             <li><a href="jqueryMe08.html">8</a></li>
         </ul>
     </div>
@@ -176,10 +176,141 @@
                         <ul>
                             <li class="active"><a href="#">HTML</a></li>
                             <li><a href="#">CSS</a></li>
-                            <li><a href="#">JQEURY</a></li>
+                            <li><a href="#">JAVASCRIPT</a></li>
                         </ul>
                     </div>
                     <div class="view-cont">
+                        <div class="html">
+<pre><code class="language-html">&lt;main&gt;
+    &lt;div class="cursor"&gt;&lt;/div&gt;
+
+    &lt;div class="contents"&gt;
+        &lt;div class="moveImage"&gt;
+            &lt;div class="textWrap"&gt;
+                &lt;div class="line"&gt;
+                    &lt;div class="left"&gt;
+                        &lt;div class="spanWrap"&gt;
+                            &lt;span class="spanSlow"&gt;Men are born&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="right"&gt;
+                        &lt;div class="spanWrap"&gt;
+                            &lt;span class="spanSlow"&gt;Men are born&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="line"&gt;
+                    &lt;div class="left"&gt;
+                        &lt;div class="spanWrap"&gt;
+                            &lt;span class="spanFast"&gt;to succeed,not fail.&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="right"&gt;
+                        &lt;div class="spanWrap"&gt;
+                            &lt;span class="spanFast"&gt;to succeed,not fail.&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="line"&gt;
+                    &lt;div class="left"&gt;
+                        &lt;div class="spanWrap"&gt;
+                            &lt;span class="spanSlow"&gt;사람은 실패가 아니라&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="right"&gt;
+                        &lt;div class="spanWrap"&gt;
+                            &lt;span class="spanSlow"&gt;사람은 실패가 아니라&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="line"&gt;
+                    &lt;div class="left"&gt;
+                        &lt;div class="spanWrap"&gt;
+                            &lt;span class="spanFast"&gt;성공하기 위해 태어난다.&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="right"&gt;
+                        &lt;div class="spanWrap"&gt;
+                            &lt;span class="spanFast"&gt;성공하기 위해 태어난다.&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="imgWrap"&gt;
+                &lt;img src="../assets/img/bg8.jpg" alt="이미지"&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/main&gt;
+</code></pre>
+                        </div>
+                        <div class="css">
+<pre><code class="language-css">.textWrap {
+    font-family: "NEXONLv1Gothic";
+    font-size: 3vw;
+    line-height: 1.5;
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -20%);
+    color: rgb(165, 111, 40);
+}
+.textWrap .line {
+    width: 100%;
+    display: flex;
+}
+.textWrap .line .left {
+    width: 50vw;
+    color: burlywood;
+    overflow: hidden;
+    transform: skew(0deg, -15deg);
+}
+.textWrap .line .left .spanWrap {
+    width: 100vw;
+    text-align: center;
+}
+.textWrap .line .right {
+    width: 50vw;
+    overflow: hidden;
+    transform: skew(0deg, 15deg);
+}
+.textWrap .line .right .spanWrap {
+    width: 100vw;
+    text-align: center;
+    transform: translateX(-50vw);
+}
+.textWrap span {
+    display: inline-block;
+}
+.imgWrap {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    width: 50%;
+}
+.imgWrap img {
+    width: 100%;
+}
+</code></pre>
+                        </div>
+                        <div class="javascript">
+<pre><code class="language-javascript">function mouseMove(e){
+    let positionSlow = ( e.pageX - window.innerWidth/2) * 0.1;
+    let positionFast = ( e.pageX - window.innerHeight/2) * 0.2;
+
+    gsap.to(".spanSlow", {duration: 0.4, x: positionSlow});     
+    gsap.to(".spanFast", {duration: 0.4, x: -positionFast});     
+
+    let pageX = e.pageX;
+    let pageY = e.pageY;
+
+    //출력
+    document.querySelector(".pageX").textContent = pageX;
+    document.querySelector(".pageY").textContent = pageY;
+}
+window.addEventListener("mousemove", mouseMove); 
+</code></pre>
+                        </div>
                     </div>
                 </div>
             
@@ -189,11 +320,25 @@
     </div>
     <!-- //info -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
-    <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        function mouseMove(e){
+            let positionSlow = ( e.pageX - window.innerWidth/2) * 0.1;
+            let positionFast = ( e.pageX - window.innerHeight/2) * 0.2;
+
+            gsap.to(".spanSlow", {duration: 0.4, x: positionSlow});     
+            gsap.to(".spanFast", {duration: 0.4, x: -positionFast});     
+
+            let pageX = e.pageX;
+            let pageY = e.pageY;
+
+            //출력
+            document.querySelector(".pageX").textContent = pageX;
+            document.querySelector(".pageY").textContent = pageY;
+        }
+        window.addEventListener("mousemove", mouseMove); 
+    </script>
 </body>
 </html> 

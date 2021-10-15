@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test06</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/test06style.css">
+
+    <!-- 나눔스퀘어 웹 폰트 -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+
+</head>
+<body>
+    <div class="container">
+        <header id="header">
+            <div class="headerWrap">
+                <img src="img/test06_2.jpg" alt="헤더 로고 이미지">
+                <nav>
+                    <ul>
+                        <li><a href="#">COOKIT소개</a></li>
+                        <li><a href="#">COOKIT메뉴</a></li>
+                        <li><a href="#">메뉴</a></li>
+                        <li><a href="#">이벤트</a></li>
+                        <li><a href="#">마이쿡킷</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main id="slider">
+            <div class="slider-wrap">
+                <div class="slider-img">
+                    <div class="slider-inner">
+                        <div class="slider" data-name="이미지1"><img src="img/test06_1.jpg" alt="이미지1"></div>
+                        <div class="slider" data-name="이미지2"><img src="img/test06_1.jpg" alt="이미지2"></div>
+                        <div class="slider" data-name="이미지3"><img src="img/test06_1.jpg" alt="이미지3"></div>
+                        <div class="slider" data-name="이미지4"><img src="img/test06_1.jpg" alt="이미지4"></div>
+                        <div class="slider" data-name="이미지5"><img src="img/test06_1.jpg" alt="이미지5"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div id="banner">
+            <div class="bannerWrap">
+                <div class="boxs">
+                    <div class="box">
+                        <h3>우리집도 COOKIT 배송이 되나요?</h3>
+                        <p>배송이 가능한지 알려드려요.</p>
+                        <a href="#">배송지 검색</a>
+                        <div class="img1"><img src="img/test06_3.jpg" alt="이미지"></div>
+                    </div>
+                    <div class="box">
+                        <h3>7월 30일(화)에 받을 수 있어요.</h3>
+                        <p>오전 7시까지 주문하시면 다음날 배송됩니다.</p>
+                        <img src="img/test06_6.jpg" alt="시계 이미지">
+                        <span>남은시간</span>
+                        <div class="img2"><img src="img/test06_5.jpg" alt="이미지"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="contents">
+            <div class="contentsWrap">
+                <div class="menu">
+                    <a href="#">실시간 베스트</a>
+                    <a class="ml10" href="#">|</a>
+                    <a class="gray ml10" href="#">생생한 리뷰</a>
+                </div>
+                <div class="contentsImg">
+                    <div class="box box1">
+                        <img src="img/test06_7.jpg" alt="실시간 베스트 이미지" class="img1">
+                        <p>평양식 어복쟁반</p>
+                        <p>33,800원<span> /3인분</span></p>
+                        <div class="cart"><img src="img/test06_10.jpg" alt="장바구니 이미지"></div>
+                    </div>
+                    <div class="box box2">
+                        <img src="img/test06_8.jpg" alt="실시간 베스트 이미지" class="img1">
+                        <p>새우쭈꾸미삼겹살</p>
+                        <p>29,800원<span> /3인분</span></p>
+                        <div class="cart"><img src="img/test06_10.jpg" alt="장바구니 이미지"></div>
+                    </div>
+                    <div class="box box3">
+                        <img src="img/test06_9.jpg" alt="실시간 베스트 이미지" class="img1">
+                        <p>방풀나물 아귀찜</p>
+                        <p>32,800원<span> /3인분</span></p>
+                        <div class="cart"><img src="img/test06_10.jpg" alt="장바구니 이미지"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="footerWrap">
+            <img src="img/test06_11.jpg" alt="푸터 로고이미지">
+            <div class="footerText">
+                <p>이용약관&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;개인정보처리 방침&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;법적고지&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;사업자정보 확인</p>
+                <span>씨제이제일제당(주)  |  대표자 : 신현재<br>
+                    주소 : 서울 중구 동호로 330 CJ제일제당 센터 (우) 04560  |  사업자등록번호 : 104-86-09535<br>
+                    통신판매업신고 중구 제 07767호  |  개인정보보호책임자 : 류화정</span>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        const sliderWrap = $(".slider-wrap");
+        const sliderImg = $(".slider-img");
+        const slider = $(".slider");
+
+        let currentIndex = 0;  
+        let sliderCount = slider.length;
+
+        setInterval(function(){
+            let nextIndex = (currentIndex + 1) % sliderCount;
+
+            slider.eq(currentIndex).fadeOut() ;
+            slider.eq(nextIndex).fadeIn()  ;  
+
+            currentIndex = nextIndex;
+        } , 3000);
+    </script>
+</body>
+</html>
