@@ -1,0 +1,226 @@
+@charset "utf-8";
+
+/* 여백 초기화 */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+blockquote,
+th,
+td,
+input,
+select,
+button,
+figure,
+figcaption {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 폰트 초기화 */
+body,
+button,
+input,
+select,
+table,
+textarea {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #222;
+    font-family: 'NEXONLv1GothicOTF', AppleSDGothicNeo-Regular, 'Malgun Gothic', '맑은 고딕', dotum, '돋움', sans-serif;
+}
+
+/* 링크 초기화 */
+a {
+    color: #222;
+    text-decoration: none
+}
+
+/* 목록 초기화 */
+ol,
+ul {
+    list-style: none
+}
+
+/* 스타일 초기화 */
+strong {
+    font-weight: normal;
+}
+em {
+    font-style: normal;
+}
+img {
+    width: 100%;
+}
+fieldset {
+    border: 0 none;
+}
+button {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* 테이블 초기화 */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* 제목 초기화 */
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+}
+
+/* 리스트 스타일 유형 */
+ul.list li,
+ol.list li,
+dl.list li {
+    position: relative;
+    padding-left: 10px;
+}
+ul.list li::before,
+ol.list li::before,
+dl.list li::before {
+    content: '';
+    width: 3px; height: 3px;
+    background: #000;
+    position: absolute;
+    left: 0; top: 7px;
+} 
+ul.list2 li,
+ol.list2 li,
+dl.list2 li {
+    position: relative;
+    padding-left: 10px;
+}
+ul.list2 li::before,
+ol.list2 li::before,
+dl.list2 li::before {
+    content: '';
+    width: 7px; height: 7px;
+    background: #000;
+    position: absolute;
+    border-radius: 50%;
+    left: 0; top: 7px;
+} 
+
+/* 인풋 스타일 유형 */
+.input_write {
+    width: 100%;
+    display: block;
+    border: 1px solid #dfdfdf;
+    padding: 13px;
+    height: 56px;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+}
+.input_write2 {
+    border: 2px solid mediumpurple;
+    padding: 15px 30px;
+    margin: 5px;
+    border-radius: 50px;
+    outline: none;
+    background: rgb(206, 192, 235);
+    color: mediumpurple;
+}
+.input_write2.w100 {
+    min-width: 300px;
+}
+input::-webkit-input-placeholder {
+    color: rgb(223, 223, 223);
+}
+input:-ms-input-placeholder {
+    color: rgb(223, 223, 223);
+}
+input::placeholder {
+    color: rgb(223, 223, 223);
+}
+
+/* 버튼 스타일 유형 */
+.btn_submit {
+    width: 100%;
+    padding: 16px;
+    background-color: #eee;
+    transition: box-shadow .3s, background-color .3s;
+}
+.btn_submit:hover {
+    box-shadow: inset 0 0 0 2px #eee;
+    background-color: #fff;
+}
+.btn_submit2 {
+    background: mediumpurple;
+    color: #fff;
+    border-radius: 50px;
+    width: 58px;
+    height: 58px;
+    margin-top: 4px;
+    margin-left: 4px;
+    transition: box-shadow .3s;
+}
+.btn_submit2:hover {
+    box-shadow: inset 0 0 0 4px rgb(106, 57, 204);
+}
+
+/* 간격 */
+.mt0 {margin-top: 0;}
+.mt10 {margin-top: 10px;}
+.mt20 {margin-top: 20px;}
+.mt30 {margin-top: 30px;}
+.mt40 {margin-top: 40px;}
+.mt50 {margin-top: 50px;}
+
+/* 이미지 표현 방법 */
+/* 
+    img 태그를 이용해서 표헌 --> 이미지에 의미가 있을 때  --> alt(대체 문자)
+    background 속성을 이용해서 표현 --> 이미지에 의미가 없을 때 (장식용)
+
+    이미지 스플라이트 표현 --> 이미지를 효율적(의미가 있음)으로 쓰기 위한 방법(background) --> 대체문자가 없음
+    CSS로 대체 문자를 만들어줌 --> IR 효과
+*/
+
+/* ir 효과 */
+/* (.ir_pm)의미있는 이미지의 대체 텍스트를 제공하는 경우 */
+/* (.ir_wa)의미있는 이미지의 대체 텍스트로 이미지가 없어도 대체 텍스트를 보여주고자 할 때 */
+/* (.ir_so)대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제공할 때 */
+.ir_pm {
+    display: block; 
+    overflow: hidden; 
+    font-size: 0; 
+    line-height: 0; 
+    text-indent: -9999px;
+} 
+.ir_wa {
+    display: block; 
+    overflow: hidden; 
+    position: relative; 
+    z-index: -1; 
+    width: 100%; height: 100%;
+} 
+.ir_so {
+    overflow: hidden; 
+    position: absolute; 
+    width: 0; height: 0; 
+    line-height: 0; 
+    text-indent: -9999px;
+} 
