@@ -66,11 +66,7 @@
     left: 0; top: 0; 
     width: 100%; height: 100%; 
     background: #000; 
-    opacity: .2;
-}
-
-.swiper-container2 .swiper-slide:after {
-    opacity: 0;
+    opacity: .3;
 }
 .swiper-container2 .swiper-slide:after {
     opacity: 0;
@@ -212,4 +208,3 @@ button.swiper-pagination-bullet {
 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
     margin: 0 4px;
 }
-
