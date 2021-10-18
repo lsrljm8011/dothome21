@@ -1,0 +1,87 @@
+// #mainCont
+// #aboutCont
+// #referCont
+// #scriptCont
+// #portCont
+
+// #mainCont
+#mainCont {
+    background-color: #000;
+    height: 100vh;
+    color: #fff;
+    font-family: 'saol';
+    font-size: 9vw;
+    line-height: .91;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    br {
+        display: none;
+    }
+}
+
+@media (max-width: 800px){
+    #mainCont {
+        font-size: 15vw;
+        line-height: 0.9;
+
+        br {
+            display: block;
+        }
+    }
+}
+
+//main2
+#mainCont2 {
+    background-color: #F4F1EF;
+    height: 100vh;
+    color: #000;
+    font-family: 'saol';
+    font-size: 6vw;
+    text-align: center;
+    line-height: .91;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    br {
+        display: none;
+    }
+    
+    .main__cont2 {
+        margin-top: 450px;
+    }
+    img {
+        width: 300px; 
+        z-index: 10;
+        display: flex;
+        position: absolute;
+        margin-top: -160px;
+    }
+    .circle {
+        width: 2050px;
+        height: 2050px;
+        border: 3px solid #E9E3DF;
+        border-radius: 50%;
+        position: fixed;
+        margin-top: 1700px;
+        z-index: 1;
+    }
+}
+
+@media (max-width: 800px){
+    #mainCont2 {
+        font-size: 15vw;
+        line-height: 0.9;
+
+        br {
+            display: block;
+        }
+        img {
+            width: 200px;
+        }
+    }
+}
