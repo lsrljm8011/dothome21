@@ -228,9 +228,11 @@
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
-        document.addEventListener("mousemove", (e) => {
-            const item = document.querySelectorAll("item");
-            
+        const w = document.querySelector(".cursor").offsetWidth / 2;
+        const h = document.querySelector(".cursor").offsetHeight / 2;
+
+        document.addEventListener("mousemove", (e)=>{
+
             let pageX = 0;
             let pageY = 0;
 
@@ -240,25 +242,23 @@
 
             const mouseX = e.clientX;
             const mouseY = e.clientY;
-
-            item.forEach(item => {
-                // const itemX = item.offsetLeft + 20;
-                // const itemY = item.offsetTop + 20;    //가운데로 맞춰주기 위해 초기화
+            document.querySelectorAll(".item").forEach(item=>{
+                // const itemX = item.offsetLeft + 25;
+                // const itemY = item.offsetTop + 25;
                 // const diffX = mouseX - itemX;
                 // const diffY = mouseY - itemY;
                 // const radians = Math.atan2(diffY, diffX);
-                // const angel = radians * 180 / Math.PI;
-                
-                // item.style.transform = "rotate(" + angel + "deg)";
-
+                // const angle = radians * 180 / Math.PI;
+                // item.style.transform = "rotate("+angle+"deg)";
                 const itemX = item.offsetLeft - mouseX;
-                const itemY = item.offsetTop - mouseY;  //item에 기준점을 잡아줌
-
-                const dist = math.sqrt(itemX * itemX + itemY * itemY);
+                const itemY = item.offsetTop - mouseY;
+                const dist = Math.sqrt(itemX * itemX + itemY * itemY);
                 const score = Math.exp(dist * -0.003);
-
                 item.style.transform = `scale(${score})`;
-            })
+            });
+            
+            //움직임 효과
+            gsap.to(".cursor", {duration: 0.3, left: e.pageX - w, top: e.pageY - h});
 
             //커서
             const cursor = document.querySelector(".cursor");

@@ -1184,3 +1184,123 @@ table {
     width: 200px;
   }
 }
+#aboutMain .container {
+  width: 75vw;
+  margin: 0 auto;
+}
+#aboutMain .container .aboutTitle {
+  font-family: "saol";
+  font-size: 6vw;
+  line-height: 1.2;
+  color: #030406;
+  text-transform: uppercase;
+  padding: 260px 0px;
+}
+#aboutMain .container .aboutCont {
+  font-family: "Chosunilbo_myungjo";
+  margin-bottom: 250px;
+}
+#aboutMain .container .aboutCont h3 {
+  padding-bottom: 35px;
+  font-size: 1.2vw;
+}
+#aboutMain .container .aboutCont p {
+  font-size: 1vw;
+}
+#aboutMain .container .aboutCont.about1 img {
+  width: 100%;
+  margin-bottom: 60px;
+}
+#aboutMain .container .aboutCont.about2 {
+  overflow: hidden;
+}
+#aboutMain .container .aboutCont.about2 img {
+  float: left;
+  width: 70%;
+}
+#aboutMain .container .aboutCont.about2 .aboutTxt {
+  float: left;
+  width: 27%;
+  margin-left: 3%;
+}
+#aboutMain .container .aboutCont.about3 {
+  overflow: hidden;
+}
+#aboutMain .container .aboutCont.about3 img {
+  float: right;
+  width: 57%;
+  margin-left: 3%;
+}
+#aboutMain .container .aboutCont.about3 .aboutTxt {
+  float: left;
+  width: 40%;
+}
+
+@media (max-width: 1100px) {
+  #aboutMain .container {
+    width: 80vw;
+  }
+  #aboutMain .container .aboutCont {
+    font-family: "Chosunilbo_myungjo";
+    margin-bottom: 320px;
+  }
+  #aboutMain .container .aboutCont img {
+    width: 100%;
+  }
+  #aboutMain .container .aboutCont h3 {
+    padding-bottom: 32px;
+    font-size: 1.2vw;
+  }
+  #aboutMain .container .aboutCont p {
+    font-size: 1vw;
+  }
+}
+@media (max-width: 800px) {
+  #aboutMain .container {
+    width: 95%;
+  }
+  #aboutMain .container .aboutTitle {
+    font-size: 10vw;
+    padding: 200px 0;
+  }
+  #aboutMain .container .aboutCont {
+    font-family: "Chosunilbo_myungjo";
+    margin-bottom: 200px;
+  }
+  #aboutMain .container .aboutCont img {
+    width: 100%;
+  }
+  #aboutMain .container .aboutCont h3 {
+    padding-bottom: 30px;
+    font-size: 2.5vw;
+  }
+  #aboutMain .container .aboutCont p {
+    font-size: 2.2vw;
+  }
+  #aboutMain .container .aboutCont img {
+    margin-bottom: 350x;
+  }
+  #aboutMain .container .aboutCont.about1 img {
+    margin-bottom: 40px;
+  }
+  #aboutMain .container .aboutCont.about2 img {
+    float: none;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  #aboutMain .container .aboutCont.about2 .aboutTxt {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+  }
+  #aboutMain .container .aboutCont.about3 img {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 40px;
+  }
+  #aboutMain .container .aboutCont.about3 .aboutTxt {
+    float: none;
+    width: 100%;
+  }
+}
