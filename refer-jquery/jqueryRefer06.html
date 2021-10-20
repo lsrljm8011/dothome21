@@ -21,32 +21,34 @@
             <div class="title">
                 <h1><a href="index.html">jquery Reference Book</a></h1>
             </div>
-                <nav class="menu">
-                    <ul>
-                        <li><a href="jqueryRefer01.html">선택자</a></li>
-                        <li><a href="jqueryRefer02.html">선택자 메서드</a></li>
-                    </ul>
-                    <ul>
-                        <li><a href="jqueryRefer03.html">속성 메서드</a></li>
-                        <li><a href="jqueryRefer04.html">조작 메서드</a></li>
-                        <li><a href="jqueryRefer05.html">데이터 메서드</a></li>
-                        <li class="active"><a href="jqueryRefer06.html">애니메이션 메서드</a></li>
-                        <li><a href="jqueryRefer07.html">이벤트 메서드</a></li>
-                    </ul>
-                    <ul>
-                        <li><a href="jqueryRefer08.html">샘플</a></li>
-                    </ul>
-                </nav>
+            <nav class="menu">
+                <ul>
+                    <li><a href="jqueryRefer01.html">선택자</a></li>
+                    <li><a href="jqueryRefer02.html">선택 메서드</a></li>
+                </ul>
+                <ul>
+                    <li><a href="jqueryRefer03.html">속성 메서드</a></li>
+                    <li><a href="jqueryRefer04.html">조작 메서드</a></li>
+                    <li><a href="jqueryRefer05.html">데이터 메서드</a></li>
+                    <li class="active"><a href="jqueryRefer06.html">애니메이션 메서드</a></li>
+                    <li><a href="jqueryRefer07.html">이벤트 메서드</a></li>
+                </ul>
+                <ul>
+                    <li><a href="jqueryRefer08.html">샘플</a></li>
+                </ul>
+            </nav>
+        </main>
+    </div>
+    
     <hr>
 
     <div class="table">
         <table>
-            <caption>애니메이션 메서드</caption>
             <colgroup>
-                <col style = "width:10%">
-                <col style = "width:20%">
-                <col style = "width:20%">
-                <col style = "width:20%">
+                <col style = "width: 8%" />
+                <col style = "width: 20%" />
+                <col style = "width: 20%" />
+                <col style = "width: 20%" />
                 <col />
             </colgroup>
             <thead>
@@ -61,109 +63,109 @@
             <tbody>
                 <tr>
                     <td class="center" rowspan="3">기본</td>
-                    <td>.hide  *</td>
+                    <td>.hide()    ⭐</td>
                     <td>$("selector").hide()</td>
-                    <td>-</td>
                     <td></td>
+                    <td>선택한 요소를 숨깁니다.</td>
                 </tr>
                 <tr>
-                    <td>.show  *</td>
+                    <td>.show()    ⭐</td>
                     <td>$("selector").show()</td>
-                    <td>-</td>
                     <td></td>
+                    <td>선택한 요소를 보여줍니다.</td>
                 </tr>
                 <tr>
-                    <td>.toggle  *</td>
+                    <td>.toggle()    ⭐</td>
                     <td>$("selector").toggle()</td>
-                    <td>-</td>
                     <td></td>
+                    <td>선택한 요소를 선택한 요소를 숨기거나, 보여줍니다.</td>
                 </tr>
                 <tr>
                     <td class="center" rowspan="4">페이드</td>
-                    <td>.fadeIn  *</td>
+                    <td>.fadeIn()</td>
                     <td>$("selector").fadeIn()</td>
-                    <td>-</td>
                     <td></td>
+                    <td>선택한 요소를 서서히 나타나게 합니다.</td>
                 </tr>
                 <tr>
-                    <td>.fadeOut  *</td>
+                    <td>.fadeOut()</td>
                     <td>$("selector").fadeOut()</td>
-                    <td>-</td>
                     <td></td>
+                    <td>선택한 요소를 서서히 사라지게 합니다.</td>
                 </tr>
                 <tr>
-                    <td>.fadeTo  *</td>
+                    <td>.fadeTo()</td>
                     <td>$("selector").fadeTo()</td>
-                    <td>-</td>
                     <td></td>
+                    <td>선택한 요소의 투명도를 조절합니다.</td>
                 </tr>
                 <tr>
-                    <td>.fadeToggle</td>
+                    <td>.fadeToggle()</td>
                     <td>$("selector").fadeToggle()</td>
-                    <td>-</td>
                     <td></td>
+                    <td>선택한 요소를 천천히 보여주고/숨깁니다.</td>
                 </tr>
                 <tr>
                     <td class="center" rowspan="3">슬라이드</td>
-                    <td>.slideDown</td>
+                    <td>.slideDown()</td>
                     <td>$("selector").slideDown()</td>
-                    <td>-</td>
                     <td></td>
+                    <td>선택한 요소를 슬라이딩으로 보여줍니다.</td>
                 </tr>
                 <tr>
-                    <td>.slideUp</td>
+                    <td>.slideUp()</td>
                     <td>$("selector").slideUp()</td>
-                    <td>-</td>
                     <td></td>
+                    <td>선택한 요소를 슬라이딩으로 숨깁니다.</td>
                 </tr>
                 <tr>
-                    <td>.slideToggle</td>
+                    <td>.slideToggle()</td>
                     <td>$("selector").slideToggle()</td>
-                    <td>-</td>
                     <td></td>
+                    <td>선택한 요소를 슬라이딩으로 숨기고/보여줍니다.</td>
                 </tr>
                 <tr>
                     <td class="center" rowspan="7">커스텀</td>
-                    <td>.animate  *</td>
+                    <td>.animate()    ⭐</td>
                     <td>$("selector").animate()</td>
-                    <td>-</td>
                     <td></td>
+                    <td>선택한 요소에 애니메이션을 적용합니다.</td>
                 </tr>
                 <tr>
-                    <td>.delay</td>
+                    <td>.delay()</td>
                     <td>$("selector").delay()</td>
-                    <td>-</td>
                     <td></td>
+                    <td>선택한 요소의 애니메이션를 효과를 지연합니다.</td>
                 </tr>
                 <tr>
-                    <td>.finish</td>
+                    <td>.finish()</td>
                     <td>$("selector").finish()</td>
-                    <td>-</td>
                     <td></td>
+                    <td>선택한 요소의 진행중인 애니메이션을 강제로 종료합니다.</td>
                 </tr>
                 <tr>
-                    <td>.stop</td>
+                    <td>.stop()</td>
                     <td>$("selector").stop()</td>
-                    <td>-</td>
                     <td></td>
+                    <td>선택한 요소의 실행중인 애니메이션을 정지합니다.</td>
                 </tr>
                 <tr>
-                    <td>.queue</td>
+                    <td>.queue()</td>
                     <td>$("selector").queue()</td>
-                    <td>-</td>
                     <td></td>
+                    <td>선택한 요소 스택에 대기 중인 큐를 반환하거나 추가할 수 있습니다.</td>
                 </tr>
                 <tr>
-                    <td>.clearQueue</td>
+                    <td>.clearQueue()</td>
                     <td>$("selector").clearQueue()</td>
-                    <td>-</td>
                     <td></td>
+                    <td>선택한 요소에 첫 번째 큐만 실행하고 나머지 대기 중인 큐는 모두 삭제합니다.</td>
                 </tr>
                 <tr>
-                    <td>.deQueue</td>
-                    <td>$("selector").deQueue()</td>
-                    <td>-</td>
+                    <td>.dequeue()</td>
+                    <td>$("selector").dequeue()</td>
                     <td></td>
+                    <td>선택한 요소의 스택에 쌓인 큐를 모두 제거합니다.</td>
                 </tr>
             </tbody>
         </table>

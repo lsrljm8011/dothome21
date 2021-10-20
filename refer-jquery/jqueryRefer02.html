@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/themes/prism-okaidia.min.css"
         integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -21,34 +23,35 @@
             <div class="title">
                 <h1><a href="index.html">jquery Reference Book</a></h1>
             </div>
-                <nav class="menu">
-                    <ul>
-                        <li><a href="jqueryRefer01.html">선택자</a></li>
-                        <li class="active"><a href="jqueryRefer02.html">선택 메서드</a></li>
-                    </ul>
-                    <ul>
-                        <li><a href="jqueryRefer03.html">속성 메서드</a></li>
-                        <li><a href="jqueryRefer04.html">조작 메서드</a></li>
-                        <li><a href="jqueryRefer05.html">데이터 메서드</a></li>
-                        <li><a href="jqueryRefer06.html">애니메이션 메서드</a></li>
-                        <li><a href="jqueryRefer07.html">이벤트 메서드</a></li>
-                    </ul>
-                    <ul>
-                        <li><a href="jqueryRefer08.html">샘플</a></li>
-                    </ul>
-                </nav>
+            <nav class="menu">
+                <ul>
+                    <li><a href="jqueryRefer01.html">선택자</a></li>
+                    <li class="active"><a href="jqueryRefer02.html">선택 메서드</a></li>
+                </ul>
+                <ul>
+                    <li><a href="jqueryRefer03.html">속성 메서드</a></li>
+                    <li><a href="jqueryRefer04.html">조작 메서드</a></li>
+                    <li><a href="jqueryRefer05.html">데이터 메서드</a></li>
+                    <li><a href="jqueryRefer06.html">애니메이션 메서드</a></li>
+                    <li><a href="jqueryRefer07.html">이벤트 메서드</a></li>
+                </ul>
+                <ul>
+                    <li><a href="jqueryRefer08.html">샘플</a></li>
+                </ul>
+            </nav>
+        </main>
+    </div>
 
     <hr>
 
     <div class="table">
         <table>
-            <caption>선택 메서드</caption>
             <colgroup>
-                <col style = "width:8%">
-                <col style = "width:20%">
-                <col style = "width:20%">
-                <col style = "width:20%">
-                <col/ß>
+                <col style = "width: 8%" />
+                <col style = "width: 20%" />
+                <col style = "width: 20%" />
+                <col style = "width: 20%" />
+                <col />
             </colgroup>
             <thead>
                 <tr>
@@ -62,168 +65,168 @@
             <tbody>
                 <tr>
                     <td class="center" rowspan="9">필터링</td>
-                    <td>.eq()  *</td>
+                    <td>.eq()    ⭐</td>
                     <td>$("selector").eq(3)</td>
-                    <td>-</td>
                     <td></td>
+                    <td>선택한 요소의 인덱스 번호에 해당하는 요소를 찾습니다.</td>
                 </tr>
                 <tr>
                     <td>.filter()</td>
                     <td>$("selector").filter()</td>
-                    <td>-</td>
                     <td></td>
+                    <td>선택한 요소에서 선택자, 변수, 함수를 통해 선택하는 메서드입니다.</td>
                 </tr>
                 <tr>
                     <td>.first()</td>
                     <td>$("selector").first()</td>
-                    <td>-</td>
                     <td></td>
+                    <td>선택된 요소에서 첫 번째 요소를 찾습니다.</td>
                 </tr>
                 <tr>
-                    <td>.has()  *</td>
+                    <td>.has()   ⭐</td>
                     <td>$("selector").has()</td>
-                    <td>-</td>
                     <td></td>
+                    <td>선택한 요소에서 주어진 선택자가 있으면 선택한 요소를 선택합니다.</td>
                 </tr>
                 <tr>
                     <td>.is()</td>
                     <td>$("selector").is()</td>
-                    <td>-</td>
                     <td></td>
+                    <td>선택한 요소에서 주어진 선택자가 있는지 판별합니다.</td>
                 </tr>
                 <tr>
                     <td>.last()</td>
                     <td>$("selector").last()</td>
-                    <td>-</td>
                     <td></td>
+                    <td>선택된 요소에서 마지막 번째 요소를 찾습니다.</td>
                 </tr>
                 <tr>
                     <td>.map()</td>
                     <td>$("selector").map()</td>
-                    <td>-</td>
                     <td></td>
+                    <td>선택된 요소에서 함수를 사용하여 새로운 집합을 만듭니다.</td>
                 </tr>
                 <tr>
                     <td>.not()</td>
                     <td>$("selector").not()</td>
-                    <td>-</td>
                     <td></td>
+                    <td>선택된 요소에서 조건에 맞지(반대) 않는 것을 선택합니다.</td>
                 </tr>
                 <tr>
                     <td>.slice()</td>
                     <td>$("selector").slice()</td>
-                    <td>-</td>
                     <td></td>
+                    <td>선택된 요소에서 조건의 범위로 재선택합니다.</td>
                 </tr>
                 <tr>
                     <td class="center" rowspan="13">트리구조</td>
-                    <td>.childern()</td>
-                    <td>$("selector").childern()</td>
-                    <td>-</td>
+                    <td>.children()</td>
+                    <td>$("selector").children()</td>
                     <td></td>
+                    <td>선택한 요소의 바로 아래 자식 요소만 선택합니다.</td>
                 </tr>
                 <tr>
                     <td>.closets()</td>
                     <td>$("selector").closets()</td>
-                    <td>-</td>
                     <td></td>
+                    <td>선택한 요소를 포함하면서 가장 가까운 상위 요소를 선택합니다.</td>
                 </tr>
                 <tr>
-                    <td>.find()  *</td>
+                    <td>.find()  ⭐</td>
                     <td>$("selector").find()</td>
-                    <td>-</td>
                     <td></td>
+                    <td>선택한 요소의 자식 요소 중 조건에 맞는 요소를 선택합니다.</td>
                 </tr>
                 <tr>
-                    <td>.next()  *</td>
+                    <td>.next()    ⭐</td>
                     <td>$("selector").next()</td>
-                    <td>-</td>
                     <td></td>
+                    <td>선택한 요소의 다음 요소를 선택합니다.</td>
                 </tr>
                 <tr>
                     <td>.nextAll()</td>
                     <td>$("selector").nextAll()</td>
-                    <td>-</td>
                     <td></td>
+                    <td>선택한 요소의 다음 모든 형제 요소를 선택합니다.</td>
                 </tr>
                 <tr>
                     <td>.nextUntil()</td>
                     <td>$("selector").nextUntil()</td>
-                    <td>-</td>
                     <td></td>
+                    <td>선택한 요소의 다음에 위치한 요소를 조건에 맞을 때까지 찾습니다.</td>
                 </tr>
                 <tr>
                     <td>.parent()</td>
                     <td>$("selector").parent()</td>
-                    <td>-</td>
                     <td></td>
+                    <td>선택한 요소의 부모 요소를 선택합니다.</td>
                 </tr>
                 <tr>
-                    <td>.parents()  *</td>
+                    <td>.parents()    ⭐</td>
                     <td>$("selector").parents()</td>
                     <td>parentNode</td>
-                    <td></td>
+                    <td>선택한 요소의 모든 부모 요소를 선택합니다.</td>
                 </tr>
                 <tr>
                     <td>.parentUntil()</td>
                     <td>$("selector").parentUntil()</td>
-                    <td>-</td>
                     <td></td>
+                    <td>선택한 요소의 부모 요소 중 조건에 맞을 때까지 찾습니다.</td>
                 </tr>
                 <tr>
-                    <td>.prev()  *</td>
+                    <td>.prev()    ⭐</td>
                     <td>$("selector").prev()</td>
-                    <td>-</td>
                     <td></td>
+                    <td>선택한 요소의 이전 요소를 선택합니다.</td>
                 </tr>
                 <tr>
                     <td>.prevAll()</td>
                     <td>$("selector").prevAll()</td>
-                    <td>-</td>
                     <td></td>
+                    <td>선택한 요소의 부모 요소 중 조건에 맞을 때까지 찾습니다.</td>
                 </tr>
                 <tr>
                     <td>.prevUntil()</td>
                     <td>$("selector").prevUntil()</td>
-                    <td>-</td>
                     <td></td>
+                    <td>선택한 요소의 부모 요소 중 조건에 맞을 때까지 찾습니다.</td>
                 </tr>
                 <tr>
                     <td>.siblings()</td>
                     <td>$("selector").siblings()</td>
-                    <td>-</td>
                     <td></td>
+                    <td>선택한 요소의 형제 요소를 모두 찾습니다.</td>
                 </tr>
                 <tr>
                     <td class="center" rowspan="5">기타</td>
                     <td>.add()</td>
                     <td>$("selector").add()</td>
-                    <td>-</td>
                     <td></td>
+                    <td>선택된 요소와 새로운 요소에 추가로 선택합니다.</td>
                 </tr>
                 <tr>
                     <td>.addBack()</td>
                     <td>$("selector").addBack()</td>
-                    <td>-</td>
                     <td></td>
+                    <td>선택된 요소와 이전 요소를 선택합니다.</td>
                 </tr>
                 <tr>
-                    <td>.content()</td>
-                    <td>$("selector").content()</td>
-                    <td>-</td>
+                    <td>.contents()</td>
+                    <td>$("selector").contents()</td>
                     <td></td>
+                    <td>선택한 요소와 일치하는 콘텐츠 요소를 선택합니다.</td>
                 </tr>
                 <tr>
-                    <td>.each()  *</td>
+                    <td>.each()  ⭐</td>
                     <td>$("selector").each()</td>
                     <td>forEach</td>
-                    <td></td>
+                    <td>선택한 여러 요소들을 순차적으로 실행합니다.</td>
                 </tr>
                 <tr>
                     <td>.end()</td>
                     <td>$("selector").end()</td>
-                    <td>forEach</td>
                     <td></td>
+                    <td>선택한 요소가 선택되기 이전의 요소를 선택합니다.</td>
                 </tr>
             </tbody>
         </table>

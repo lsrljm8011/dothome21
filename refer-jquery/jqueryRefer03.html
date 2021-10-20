@@ -113,40 +113,41 @@
             <div class="title">
                 <h1><a href="index.html">jquery Reference Book</a></h1>
             </div>
-                <nav class="menu">
-                    <ul>
-                        <li><a href="jqueryRefer01.html">선택자</a></li>
-                        <li><a href="jqueryRefer02.html">선택자 메서드</a></li>
-                    </ul>
-                    <ul>
-                        <li class="active"><a href="jqueryRefer03.html">속성 메서드</a></li>
-                        <li><a href="jqueryRefer04.html">조작 메서드</a></li>
-                        <li><a href="jqueryRefer05.html">데이터 메서드</a></li>
-                        <li><a href="jqueryRefer06.html">애니메이션 메서드</a></li>
-                        <li><a href="jqueryRefer07.html">이벤트 메서드</a></li>
-                    </ul>
-                    <ul>
-                        <li><a href="jqueryRefer08.html">샘플</a></li>
-                    </ul>
-                </nav>
+            <nav class="menu">
+                <ul>
+                    <li><a href="jqueryRefer01.html">선택자</a></li>
+                    <li><a href="jqueryRefer02.html">선택 메서드</a></li>
+                </ul>
+                <ul>
+                    <li class="active"><a href="jqueryRefer03.html">속성 메서드</a></li>
+                    <li><a href="jqueryRefer04.html">조작 메서드</a></li>
+                    <li><a href="jqueryRefer05.html">데이터 메서드</a></li>
+                    <li><a href="jqueryRefer06.html">애니메이션 메서드</a></li>
+                    <li><a href="jqueryRefer07.html">이벤트 메서드</a></li>
+                </ul>
+                <ul>
+                    <li><a href="jqueryRefer08.html">샘플</a></li>
+                </ul>
+            </nav>
+        </main>
+    </div>
 
     <hr>
 
     <div class="table">
         <table>
-            <caption>속성 메서드</caption>
             <colgroup>
-                <col style = "width:24%">
-                <col style = "width:20%">
-                <col style = "width:20%">
-                <col style = "width:36%">
+                <col style = "width: 4%">
+                <col style = "width: 20%">
+                <col style = "width: 20%">
+                <col style = "width: 20%">
+
             </colgroup>
             <thead>
                 <tr>
                     <th class="center">종류</th>
-                    <th>제이쿼리</th>
-                    <th>예시</th>
-                    <th>자바스크립트</th>
+                    <th>jQuery</th>
+                    <th>Javascript</th>
                     <th>설명</th>
                 </tr>
             </thead>
@@ -155,108 +156,109 @@
                     <td class="center" rowspan="5">Attributes</td>
                     <td>.attr()</td>
                     <td>setAttribute()<br>getAttribute()</td>
-                    <td>-</td>
+                    <td>선택한 요소의 속성 값을 설정합니다.</td>
                 </tr>
                 <tr>
                     <td>.removeAttr()</td>
                     <td>-</td>
-                    <td>-</td>
+                    <td>선택한 HTML 요소에서 하나 이상의 속성을 제거합니다.</td>
                 </tr>
                 <tr>
                     <td>.prop()</td>
                     <td>-</td>
-                    <td>-</td>
+                    <td>선택한 JavaScript 요소의 속성 값을 설정하거나 반환합니다.</td>
                 </tr>
                 <tr>
                     <td>.removeProp()</td>
                     <td>-</td>
-                    <td>-</td>
+                    <td>선택한 JavaScript 요소에서 하나 이상의 속성을 제거합니다.</td>
                 </tr>
                 <tr>
                     <td>.val()</td>
                     <td>-</td>
-                    <td>-</td>
+                    <td>선택한 폼 요소의 속성 값을 설정하거나 반환합니다.</td>
                 </tr>
                 <tr>
                     <td class="center" rowspan="5">CSS</td>
                     <td>.css()</td>
                     <td>-</td>
-                    <td>-</td>
+                    <td>선택한 요소에 CSS 속성 값을 설정합니다.</td>
                 </tr>
                 <tr>
                     <td>.addClass()</td>
                     <td><a href="../refer-javascript/javascriptRefer10.html" target="_blank">.classList.add()</a></td>
-                    <td>클래스를 추가</td>
+                    <td>클래스를 추가합니다.</td>
                 </tr>
                 <tr>
                     <td>.removeClass()</td>
-                    <td><a href="../refer-javascript/javascriptRefer10.html" target="_blank">.classList.remove()</a></td>
-                    <td>클래스를 삭제</td>
+                    <td><a href="../refer-javascript/javascriptRefer10.html" target="_blank">.classList.remove()</td>
+                    <td>클래스를 삭제합니다.</td>
                 </tr>
                 <tr>
                     <td>.toggleClass()</td>
-                    <td><a href="../refer-javascript/javascriptRefer10.html" target="_blank">.classList.toggle()</a></td>
-                    <td>클래스를 추가/삭제</td>
+                    <td><a href="../refer-javascript/javascriptRefer10.html" target="_blank">.classList.toggle()</td>
+                    <td>클래스를 추가/삭제합니다.</td>
                 </tr>
                 <tr>
                     <td>.hasClass()</td>
-                    <td><a href="../refer-javascript/javascriptRefer10.html" target="_blank">.classList.contains()</a></td>
-                    <td>클래스를 검색</td>
+                    <td><a href="../refer-javascript/javascriptRefer10.html" target="_blank">.classList.contains()</td>
+                    <td>클래스를 검색합니다.</td>
                 </tr>
                 <tr>
                     <td class="center" rowspan="11">Dimensions</td>
                     <td>.width()</td>
                     <td>-</td>
-                    <td>요소의 너비 값(패딩/보더/마진 불포함)을 가져오거나 설정합니다.</td>
+                    <td>요소의 가로 값(패딩/보더/마진 불포함) 을 가져오거나 설정합니다.</td>
                 </tr>
                 <tr>
                     <td>.innerWidth()</td>
                     <td><a href="../refer-javascript/javascriptRefer10.html#sample04" target="_blank">element.clientWidth</a></td>
-                    <td>요소의 너비 값(패딩 포함)을 가져오거나 설정합니다.</td>
+                    <td>요소의 가로 값(패딩 포함) 을 가져오거나 설정합니다.</td>
                 </tr>
                 <tr>
                     <td>.outerWidth()</td>
                     <td><a href="../refer-javascript/javascriptRefer10.html#sample04" target="_blank">element.offsetWidth</a></td>
-                    <td>요소의 너비 값(패딩/보더 포함)을 가져오거나 설정합니다.</td>
+                    <td>요소의 가로 값(패딩/보더 포함) 을 가져오거나 설정합니다.</td>
                 </tr>
                 <tr>
                     <td>.outerWidth(true)</td>
                     <td>-</td>
-                    <td>요소의 너비 값(패딩/보더/마진 포함)을 가져오거나 설정합니다.</td>
+                    <td>요소의 가로 값(패딩/보더/마진 포함) 을 가져오거나 설정합니다.</td>
                 </tr>
+                <tr>
                     <td>.height()</td>
                     <td>-</td>
-                    <td>요소의 높이 값(패딩/보더/마진 불포함)을 가져오거나 설정합니다.</td>
+                    <td>요소의 세로 값(패딩/보더/마진 불포함) 을 가져오거나 설정합니다.</td>
                 </tr>
                 <tr>
                     <td>.innerHeight()</td>
                     <td><a href="../refer-javascript/javascriptRefer10.html#sample04" target="_blank">element.clientHeight</a></td>
-                    <td>요소의 높이 값(패딩 포함)을 가져오거나 설정합니다.</td>
+                    <td>요소의 세로(패딩 포함) 값을 가져오거나 설정합니다.</td>
                 </tr>
                 <tr>
                     <td>.outerHeight()</td>
                     <td><a href="../refer-javascript/javascriptRefer10.html#sample04" target="_blank">element.offsetHeight</a></td>
-                    <td>요소의 높이 값(패딩/보더 포함)을 가져오거나 설정합니다.</td>
+                    <td>요소의 세로 값(패딩/보더 포함) 을 가져오거나 설정합니다.</td>
                 </tr>
                 <tr>
                     <td>.outerHeight(true)</td>
                     <td>-</td>
-                    <td>요소의 높이 값(패딩/보더/마진 포함)을 가져오거나 설정합니다.</td>
+                    <td>요소의 세로 값(패딩/보더/마진 포함) 을 가져오거나 설정합니다.</td>
                 </tr>
                 <tr>
-                    <td>.$(document).width()</td>
+                    <td>$(document).width()</td>
                     <td>-</td>
-                    <td>문서의 너비 값을 가져오거나 설정합니다.</td>
+                    <td>문서의 가로 값을 가져오거나 설정합니다.</td>
                 </tr>
                 <tr>
-                    <td>.$(window).width()</td>
-                    <td><a href="../refer-javascript/javascriptRefer10.html#sample04" target="_blank">window.innerWidth</a></td>
-                    <td>브라우저의 너비 값을 가져오거나 설정합니다.</td>
+                    <td>$(window).width()</td>
+                    <td><a href="../refer-javascript/javascriptRefer09.html" target="_blank">window.innerWidth</a></td>
+                    <td>브라우저의 가로 값을 가져오거나 설정합니다.</td>
                 </tr>
                 <tr>
-                    <td>.$(window).height()</td>
-                    <td><a href="../refer-javascript/javascriptRefer10.html#sample04" target="_blank">window.innerHeight</a></td>
-                    <td>브라우저의 높이 값을 가져오거나 설정합니다.</td>
+                    <td>$(window).width()</td>
+                    <td><a href="../refer-javascript/javascriptRefer09.html" target="_blank">window.innerHeight</a></td>
+                    <td>브라우저의 세로 값을 가져오거나 설정합니다.</td>
                 </tr>
                 <tr>
                     <td class="center" rowspan="5">offset</td>
@@ -277,23 +279,23 @@
                 <tr>
                     <td>.scrollLeft()</td>
                     <td>-</td>
-                    <td>요소의 너비 스크롤 값을 가져오거나 설정합니다.</td>
+                    <td>요소의 가로 스크롤 값을 가져오거나 설정합니다.</td>
                 </tr>
                 <tr>
                     <td>.scrollTop()</td>
                     <td>-</td>
-                    <td>요소의 높이 스크롤 값을 가져오거나 설정합니다.</td>
+                    <td>요소의 세로 스크롤 값을 가져오거나 설정합니다.</td>
                 </tr>
                 <tr>
                     <td class="center" rowspan="2">Data</td>
                     <td>.data()</td>
                     <td>-</td>
-                    <td>-</td>
+                    <td>선택한 요소의 데이터를 설정하거나 반환합니다.</td>
                 </tr>
                 <tr>
-                    <td>.removedata()</td>
+                    <td>.removeData()</td>
                     <td>-</td>
-                    <td>-</td>
+                    <td>선택한 요소의 데이터를 삭제합니다.</td>
                 </tr>
             </tbody>
         </table>

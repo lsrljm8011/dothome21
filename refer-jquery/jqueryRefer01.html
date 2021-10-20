@@ -21,34 +21,35 @@
             <div class="title">
                 <h1><a href="index.html">jquery Reference Book</a></h1>
             </div>
-                <nav class="menu">
-                    <ul>
-                        <li class="active"><a href="jqueryRefer01.html">선택자</a></li>
-                        <li><a href="jqueryRefer02.html">선택자 메서드</a></li>
-                    </ul>
-                    <ul>
-                        <li><a href="jqueryRefer03.html">속성 메서드</a></li>
-                        <li><a href="jqueryRefer04.html">조작 메서드</a></li>
-                        <li><a href="jqueryRefer05.html">데이터 메서드</a></li>
-                        <li><a href="jqueryRefer06.html">애니메이션 메서드</a></li>
-                        <li><a href="jqueryRefer07.html">이벤트 메서드</a></li>
-                    </ul>
-                    <ul>
-                        <li><a href="jqueryRefer08.html">샘플</a></li>
-                    </ul>
-                </nav>
+            <nav class="menu">
+                <ul>
+                    <li class="active"><a href="jqueryRefer01.html">선택자</a></li>
+                    <li><a href="jqueryRefer02.html">선택 메서드</a></li>
+                </ul>
+                <ul>
+                    <li><a href="jqueryRefer03.html">속성 메서드</a></li>
+                    <li><a href="jqueryRefer04.html">조작 메서드</a></li>
+                    <li><a href="jqueryRefer05.html">데이터 메서드</a></li>
+                    <li><a href="jqueryRefer06.html">애니메이션 메서드</a></li>
+                    <li><a href="jqueryRefer07.html">이벤트 메서드</a></li>
+                </ul>
+                <ul>
+                    <li><a href="jqueryRefer08.html">샘플</a></li>
+                </ul>
+            </nav>
+        </main>
+    </div>
 
     <hr>
 
     <div class="table">
         <table>
-            <caption>선택자</caption>
             <colgroup>
-                <col style = "width:10%">
-                <col style = "width:15%">
-                <col style = "width:20%">
-                <col style = "width:20%">
-                <col style = "width:35%">
+                <col style = "width: 10%">
+                <col style = "width: 15%">
+                <col style = "width: 20%">
+                <col style = "width: 20%">
+                <col style = "width: 35%">
             </colgroup>
             <thead>
                 <tr>
@@ -102,13 +103,13 @@
                     <td>자식 선택자</td>
                     <td>$("div > p")</td>
                     <td>-</td>
-                    <td>div 태그 모든 자식 중 첫 번째 자식 p 태그만 선택합니다.</td>
+                    <td>div 태그 모든 자식 중 첫번째 자식 p 태그만 선택합니다.</td>
                 </tr>
                 <tr>
                     <td>형제 선택자</td>
                     <td>$("div + p")</td>
                     <td>-</td>
-                    <td>div 태그의 인접한 형제 p 태그 중 첫 번째 태그만 선택합니다.</td>
+                    <td>div 태그의 인접한 형제 p 태그 중 첫번째 태그만 선택합니다.</td>
                 </tr>
                 <tr>
                     <td>형제들 선택자</td>
@@ -179,62 +180,62 @@
                     <td>선택된 요소에서 애니메이션 요소를 선택합니다.</td>
                 </tr>
                 <tr>
-                    <td>:eq()  *</td>
+                    <td>:eq() ⭐</td>
                     <td>$("li:eq(2)")</td>
                     <td>-</td>
-                    <td>선택된 요소에서 인덱스 번호를 통해 요소를 선택합니다.</td>
+                    <td>선택한 요소에서 인덱스 번호를 통해 요소를 선택합니다.(0부터 시작)</td>
                 </tr>
                 <tr>
                     <td>:gt()</td>
                     <td>$("li:gt(2)")</td>
                     <td>-</td>
-                    <td>선택된 요소에서 인덱스 번호보다 큰 요소를 선택합니다.</td>
+                    <td>선택한 요소에서 인덱스 번호보다 큰 요소를 선택합니다.</td>
                 </tr>
                 <tr>
                     <td>:lt()</td>
                     <td>$("li:lt(2)")</td>
                     <td>-</td>
-                    <td>선택된 요소에서 인덱스 번호보다 작은 요소를 선택합니다.</td>
+                    <td>선택한 요소에서 인덱스 번호보다 작은 요소를 선택합니다.</td>
                 </tr>
                 <tr>
-                    <td>:header()</td>
+                    <td>:header</td>
                     <td>$("div:header")</td>
                     <td>-</td>
-                    <td>선택된 요소에서 제목요소(h1~h6)를 선택합니다.</td>
+                    <td>선택한 요소에서 제목 요소(h1~h6)를 선택합니다.</td>
                 </tr>
                 <tr>
                     <td>:first</td>
                     <td>$("div:first")</td>
                     <td>-</td>
-                    <td>선택된 요소에서 첫번째 요소를 선택합니다.</td>
+                    <td>선택한 요소에서 첫 번째 요소를 선택합니다.</td>
                 </tr>
                 <tr>
                     <td>:last</td>
                     <td>$("div:last")</td>
                     <td>-</td>
-                    <td>선택된 요소에서 마지막 요소를 선택합니다.</td>
+                    <td>선택한 요소에서 마지막 요소를 선택합니다.</td>
                 </tr>
                 <tr>
                     <td>:odd</td>
                     <td>$("li:odd")</td>
                     <td>-</td>
-                    <td>선택된 요소에서 홀수번째 요소를 선택합니다.</td>
+                    <td>선택한 요소에서 홀수 번째 요소를 선택합니다.</td>
                 </tr>
                 <tr>
                     <td>:even</td>
                     <td>$("li:even")</td>
                     <td>-</td>
-                    <td>선택된 요소에서 짝수 요소를 선택합니다.</td>
+                    <td>선택한 요소에서 짝수 번째 요소를 선택합니다.</td>
                 </tr>
                 <tr>
                     <td>:not()</td>
                     <td>$("li:not(eq(3))")</td>
                     <td>-</td>
-                    <td>선택된 요소에서 현재 선택한 요소의 반대 요소를 선택합니다.</td>
+                    <td>선택한 요소에서 현재 선택한 요소의 반대 요소를 선택합니다.</td>
                 </tr>
                 <tr>
                     <td>:root</td>
-                    <td>$("div:root")</td>
+                    <td>$(":root")</td>
                     <td>-</td>
                     <td>문서의 가장 기본 루트 요소를 선택합니다.</td>
                 </tr>
@@ -253,7 +254,7 @@
                 <tr>
                     <td class="center" rowspan="4">내용 필터 선택자</td>
                     <td>:contains()</td>
-                    <td>$("div:contains('webs')")</td>
+                    <td>$("div:contains('web')")</td>
                     <td>-</td>
                     <td>선택된 요소에서 일치하는 문자열 요소를 선택합니다.</td>
                 </tr>
@@ -264,7 +265,7 @@
                     <td>선택된 요소에서 텍스트가 없는 요소를 선택합니다.</td>
                 </tr>
                 <tr>
-                    <td>:has()  *</td>
+                    <td>:has() ⭐</td>
                     <td>$("div:has(p)")</td>
                     <td>-</td>
                     <td>선택된 요소에서 일치하는 요소를 선택합니다.</td>
@@ -293,37 +294,37 @@
                     <td>:first-child</td>
                     <td>$("li:first-child")</td>
                     <td>-</td>
-                    <td>선택된 요소에서 첫번째 자식 요소를 선택합니다.</td>
+                    <td>선택된 요소에서 첫 번째 자식 요소를 선택합니다.</td>
                 </tr>
                 <tr>
                     <td>:first-of-type</td>
                     <td>$("p:first-of-type")</td>
                     <td>-</td>
-                    <td>선택된 요소에서 첫번째 자식 유형 요소를 선택합니다.</td>
+                    <td>선택된 요소에서 첫 번째 자식 유형 요소를 선택합니다.</td>
                 </tr>
                 <tr>
                     <td>:last-child</td>
                     <td>$("li:last-child")</td>
                     <td>-</td>
-                    <td>선택된 요소에서 마지막 자식 요소를 선택합니다.</td>
+                    <td>선택된 요소에서 마지막 번째 요소를 선택합니다.</td>
                 </tr>
                 <tr>
                     <td>:last-of-type</td>
                     <td>$("p:last-of-type")</td>
                     <td>-</td>
-                    <td>선택된 요소에서 마지막 자식 유형 요소를 선택합니다.</td>
+                    <td>선택된 요소에서 마지막 번째 자식 유형 요소를 선택합니다.</td>
                 </tr>
                 <tr>
-                    <td>:nth-child()  *</td>
+                    <td>:nth-child()   ⭐</td>
                     <td>$("li:nth-child(2)")</td>
                     <td>-</td>
-                    <td>선택된 요소에서 인데스 번호 요소를 선택합니다.</td>
+                    <td>선택된 요소에서 인덱스 번호 요소를 선택합니다.(1부터 시작)</td>
                 </tr>
                 <tr>
                     <td>:nth-last-child()</td>
                     <td>$("li:nth-last-child(2)")</td>
                     <td>-</td>
-                    <td>선택된 요소에서 마지막 인데스 번호 요소를 선택합니다.</td>
+                    <td>선택된 요소에서 마지막 인덱스 번호 요소를 선택합니다.</td>
                 </tr>
                 <tr>
                     <td>:nth-of-type()</td>
@@ -360,13 +361,13 @@
                     <td>:checkbox</td>
                     <td>$(":checkbox")</td>
                     <td>-</td>
-                    <td>선택된 요소에서 체크박스 요소를 선택합니다.</td>
+                    <td>선택된 요소에서 체크 박스 요소를 선택합니다.</td>
                 </tr>
                 <tr>
                     <td>:checked</td>
                     <td>$(":checked")</td>
                     <td>-</td>
-                    <td>선택된 요소에서 checked된 체크박스 요소를 선택합니다.</td>
+                    <td>선택된 요소에서 체크된 박스 요소를 선택합니다.</td>
                 </tr>
                 <tr>
                     <td>:disabled</td>
@@ -384,7 +385,7 @@
                     <td>:focus</td>
                     <td>$(":focus")</td>
                     <td>-</td>
-                    <td>선택된 요소에서 focus된 요소를 선택합니다.</td>
+                    <td>선택된 요소에서 focus된 박스 요소를 선택합니다.</td>
                 </tr>
                 <tr>
                     <td>:file</td>
@@ -426,7 +427,7 @@
                     <td>:selected</td>
                     <td>$(":selected")</td>
                     <td>-</td>
-                    <td>선택된 요소에서 selected된 요소를 선택합니다.</td>
+                    <td>선택된 요소에서 선택된 요소를 선택합니다.</td>
                 </tr>
                 <tr>
                     <td>:submit</td>
