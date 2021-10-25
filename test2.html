@@ -1,290 +1,201 @@
-<?php
-    include "../connect/connect.php";
-    include "../connect/session.php";
-?>
-
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bild</title>
-    <!--style-->
-    <link rel="stylesheet" href="../assets/css/font.css">
-    <link rel="stylesheet" href="../assets/css/reset.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Document</title>
 
     <style>
-        /* body {
-            display: grid;
-            place-items: center;
-            min-height: 100vh;
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            --width: 30vw;
-            --height: 80vh;
-        } */
+        @import url("https://fonts.googleapis.com/css?family=Dosis:300,800");
+[data-filter*=image-] {
+  flex: 0 1 20%;
+  line-height: 0;
+  position: relative;
+  z-index: 0;
+}
+[data-filter*=image-] img {
+  height: auto;
+  width: 100%;
+}
 
-        .filter-img-wrap {
-            position: relative;
-            width: 30vw;
-            height: 80vh;
-        }
+[data-filter=image-grayscale] img {
+  filter: grayscale(70%);
+}
 
-        .img-after,
-        .img-before {
-            position: absolute;
-            width: 30vw;
-            height: 80vh;
-        }
+[data-filter=image-saturate] img {
+  filter: saturate(360%);
+}
 
-        .img-after {
-            height: 40vh;
-            overflow: hidden;
-        }
+[data-filter=image-sepia] img {
+  filter: sepia(100%);
+}
 
-        img {
-            width: 30vw;
-            height: 80vh;
-            object-fit: cover;
-        }
+[data-filter=image-invert] img {
+  filter: invert(100%);
+}
 
-        .filter-slider {
-            width: 59vh; height: 0.2rem;
-            background-color: white;
-            z-index: 1;
-            position: absolute;
-            top: 50%;
-            left: 0%;
-            transform: translate(0%, -50%);
-            pointer-events: none;
-        }
-        .filter-slider div {
-            width: 30px; height: 30px;
-            border-radius: 50%;
-            background: #fff;
-            z-index: 1000;
-            position: absolute;
-            left: 40%; top: 50%;
-            transform: translate(-50%, -50%);
-        }
-        .filter-slider div::after {
-            
-        }
+[data-filter=image-opacity] img {
+  filter: opacity(50%);
+}
 
-        /* @media (max-width: 700px) {
-        * {
-            --width: 70vw;
-        }    */
+[data-filter=image-brightness] img {
+  filter: brightness(120%);
+}
+
+[data-filter=image-contrast] img {
+  filter: contrast(160%);
+}
+
+[data-filter=image-hue-rotate] img {
+  filter: hue-rotate(160deg);
+}
+
+[data-filter=image-blur] img {
+  filter: blur(2px);
+}
+
+body {
+  background: #163065;
+  color: #fff;
+  font-family: "Dosis", sans-serif;
+  line-height: 1;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 1;
+  margin: 2rem 0 3rem;
+  padding: 0;
+  text-align: center;
+  width: 100vw;
+}
+h1 span {
+  color: #f8be00;
+  font-size: 5rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+h2 {
+  background: rgba(100, 0, 50, 0.8);
+  color: #fff;
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 300;
+  left: 0;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0.5rem;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1rem;
+}
+a:hover {
+  color: #f8be00;
+}
     </style>
 </head>
 <body>
-    <div id="skip">
-        <a href="#contents">컨텐츠 바로가기</a>
-        <a href="#footer">풋터 바로가기</a>
-    </div>
-    <!--//skip-->
+    <div class="child-page-listing">
 
-    <header id="header">
-        <?php
-          include "../include/header.php";
-        ?>
-    </header>
-    <!-- //header -->
-
-    <!-- main -->
-    <div class="main">
-        <section class="section" id="cont1">
-            <div class="container">
-                <article class="cont-wrap">
-                    <!-- <div class="img-wrap"> -->
-                        <div class="img-wrap">
-                            <div class="filter-img-wrap">
-                                <div class="img-before">
-                                    <img class="before" src="../assets/img/mainwomen.png" alt="보정 전 이미지" />
-                                </div>
-                                <div class="img-after">
-                                    <img class="after" src="../assets/img/after-mainwomen.png" alt="보정 후 이미지"/>
-                                </div>
-                                <div class="filter-slider">
-                                    <div></div>
-                                </div>  
-                            </div>
-                        </div>
-                    <!-- </div> -->
-                    <div class="desc-wrap">
-                        <h2>Want to get <br> &nbsp; &nbsp; &nbsp;better pictures?</h2>
-                        <p>R01로 편집됨</p>
-                        <button>EDIT</button>
-                    </div>
-                </article>
+        <h2>Our Locations</h2>
+      
+        <div class="grid-container">
+      
+          <article id="3685" class="location-listing">
+      
+            <a class="location-title" href="#">
+                          San Francisco						</a>
+      
+            <div class="location-image">
+              <a href="#">
+                              <img width="300" height="169" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/san-fransisco-768x432.jpg" alt="san francisco">		</a>
+      
             </div>
-        </section>
-        <section class="section" id="cont2">
-            <div class="container">
-                <article class="cont-wrap">
-                    <!-- <div class="img-wrap"> -->
-                    <div class="img-wrap">
-                        <div class="filter-img-wrap">
-                            <div class="img-before">
-                                <img class="before" src="../assets/img/mainbuilding.png" alt="보정 전 이미지" />
-                            </div>
-                            <div class="img-after">
-                                <img class="after" src="../assets/img/after-mainbuilding.png" alt="보정 후 이미지"/>
-                            </div>
-                            <div class="filter-slider">
-                                <div></div>
-                            </div>  
-                        </div>
-                    </div>
-                    <!-- </div> -->
-                    <div class="desc-wrap">
-                        <h2>More Creative,<br>More Fun!</h2>
-                        <p>G01로 편집됨</p>
-                        <button>EDIT</button>
-                    </div>
-                </article>
+      
+          </article>
+      
+          <article id="3688" class="location-listing">
+      
+            <a class="location-title" href="#">
+                          London						</a>
+      
+            <div class="location-image">
+              <a href="#">
+                              <img width="300" height="169" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/london-768x432.jpg" alt="london">	</a>
+      
             </div>
-        </section>
-        <section class="section" id="cont3">
-            <div class="container">
-                 <article class="cont-wrap">
-                    <!-- <div class="img-wrap"> -->
-                    <div class="img-wrap">
-                        <div class="filter-img-wrap">
-                            <div class="img-before">
-                                <img class="before" src="../assets/img/adjusticon.png" alt="보정 전 이미지" />
-                            </div>
-                            <div class="img-after">
-                                <img class="after" src="../assets/img/after-adjusticon.png" alt="보정 후 이미지"/>
-                            </div>
-                            <div class="filter-slider">
-                                <div></div>
-                            </div>  
-                        </div>
-                    </div>
-                    <!-- </div> -->
-                    <div class="desc-wrap">
-                        <h2>Make it with Bild.</h2>
-                        <p>Y01로 편집됨</p>
-                        <button>EDIT</button>
-                    </div>
-                    <div class="img-wrap">
-                    </div>
-                </article>
+      
+          </article>
+      
+          <article id="3691" class="location-listing">
+      
+            <a class="location-title" href="#">
+                          New York						</a>
+      
+            <div class="location-image">
+              <a href="#">
+                              <img width="300" height="169" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/new-york-768x432.jpg" alt="new york">	</a>
+      
             </div>
-        </section>
-        <section class="section" id="cont4">
-            <div class="container">
-                <div class="box aboutus">
-                    <h1>About Bild</h1>
-                    <p>사진 보정 웹사이트 Bild는 사용자가 손쉽게 자주 쓰는 필터를 저장하고 공유하여 필요할 때 마다 꺼내쓸 수 있는 웹사이트입니다.
-                    필터 레시피를 만들고 공유함으로써 자신만의 스타일을 뽐낼 수 있으며, 좋아요 및 댓글 기능을 제거한 나만의 공간입니다.
-                    </p>
-                    <p>B01로 편집됨</p>
-                </div>
+      
+          </article>
+      
+          <article id="3694" class="location-listing">
+      
+            <a class="location-title" href="#">
+                          Cape Town						</a>
+      
+            <div class="location-image">
+              <a href="#">
+                              <img width="300" height="169" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/cape-town-768x432.jpg" alt="cape town">	</a>
+      
             </div>
-        </section>
-        <section class="section" id="cont5">
-            <div class="cont5Box">
-                <div class="container">
-                    <article class="cont-wrap">
-                        <div class="desc-wrap">
-                        </div>
-                    </article>
-                </div>
+      
+          </article>
+      
+          <article id="3697" class="location-listing">
+      
+            <a class="location-title" href="#">
+                          Beijing						</a>
+      
+            <div class="location-image">
+              <a href="#">
+                              <img width="300" height="169" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/beijing-768x432.jpg" alt="beijing">		</a>
+      
             </div>
-        </section>
-        <section class="section" id="cont6">
-            <div class="container">
-                 <article class="cont-wrap">
-                     <div class="icon-inner">
-                         <img class="triangle" src="../assets/img/Triangle.png" alt="화살표아이콘">
-                    </div>
-                    <div class="desc-wrap">
-                        <div class="Box qna">
-                           <div class="qnaTitle">
-                                <h2>Q&A</h2>
-                                <a href="../board/baord.php"><img class="plus" src="../assets/img/plus.png" alt="plusbutton"></a>
-                           </div>
-                           <div class="BoardBox">
-                                <a href='../board/boardView.php?boardID=103'><ul><li>포인트 적립 유효기간은 언제인가요?</li><li>2021.10.14</li></ul></a>
-                                <a href='../board/boardView.php?boardID=100'><ul><li>같이 사진찍으러 갈사람~있나여</li><li>2021.10.14</li></ul></a>
-                                <a href='../board/boardView.php?boardID=99'><ul><li>필터는 어떻게 적용하는거예요?</li><li>2021.10.14</li></ul></a>
-                                <a href='../board/boardView.php?boardID=98'><ul><li>구글 연동 가능한가요?</li><li>2021.10.14</li></ul></a>
-                                <a href='../board/boardView.php?boardID=97'><ul><li>회원가입은 어떻게 하는건가요?</li><li>2021.10.14</li></ul></a>
-                           </div>
-                        </div>
-                        <div class="Box faq">
-                            <div class="faqTitle">
-                                <h2>COMMUNITY</h2>
-                                <a href="../board/board.php"><img class="plus" src="../assets/img/plus.png" alt="plusbutton"></a>
-                           </div>
-                           <div class="BoardBox">
-                                <a href='../board/boardView.php?boardID=103'><ul><li>집에 같이 가자~~~~</li><li>2021.10.14</li></ul></a>
-                                <a href='../board/boardView.php?boardID=100'><ul><li>필터효과 나만 못하나봐</li><li>2021.10.14</li></ul></a>
-                                <a href='../board/boardView.php?boardID=99'><ul><li>역시 유료가 좋은거 같아요.</li><li>2021.10.14</li></ul></a>
-                                <a href='../board/boardView.php?boardID=98'><ul><li>구글 연동 가능한가요?</li><li>2021.10.14</li></ul></a>
-                                <a href='../board/boardView.php?boardID=97'><ul><li>회원가입은 어떻게 하는건가요?</li><li>2021.10.14</li></ul></a>
-                           </div>
-                        </div>
-                    </div>
-                </article>
+      
+          </article>
+      
+          <article id="3700" class="location-listing">
+      
+            <a class="location-title" href="#">
+                          Paris						</a>
+      
+            <div class="location-image">
+              <a href="#">
+                              <img width="300" height="169" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/paris-768x432.jpg" alt="paris">					
+                          </a>
             </div>
-        </section>
-    </div>
-    <!-- //main -->
-    <!-- footer -->
-    <footer id="footer">
-        <?php
-            include "../include/mainFooter.php";
-        ?>
-    </footer>
-    <!-- //footer -->
-
-    <script>
-        // if (window.screen.width <= 800) {
-        //     alert("Visit this with pc to see the effect!");
-        // }
-
-        const slider = document.querySelector(".filter-slider");
-        const before = document.querySelector(".img-before");
-        const after = document.querySelector(".img-after");
-        const container = document.querySelector(".filter-img-wrap");
-
-        function dragmyImage(e) {
-            let yPos = e.layerY;
-
-            //take the image container width for different device
-            //다른 장치에 대한 이미지 컨테이너 너비 가져오기
-            let containerSize = container.offsetHeight;
-
-            //modify the before image width size with the bar
-            //막대를 사용하여 이전 이미지 너비 크기 수정
-            after.style.height = yPos + "px";
-            slider.style.top = yPos + "px";
-
-            //if the slider bar is close to the image edge pop the bar to the edge
-            //슬라이더 막대가 이미지 가장자리에 가까우면 막대를 가장자리로 팝니다.
-            if (yPos < 20) {
-                after.style.height = 0;
-                slider.style.top = 0;
-            }
-            if (yPos + 20 > containerSize) {
-                after.style.htight = containerSize + "px";
-                slider.style.top = containerSize + "px";
-            }
-        }
-
-        container.addEventListener("mousemove", dragmyImage);
-
-        //for mobile
-        // container.addEventListener("touchmove", dragmyImage);
-
-    </script>
-  </body>
+      
+          </article>
+      
+        </div>
+        <!-- end grid container -->
+      
+      </div>
+</body>
 </html>
