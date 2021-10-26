@@ -208,7 +208,7 @@
         </article>
 
         <div class="success">
-            <h2 class="msg">good!</h2>
+            <h2 class="msg"></h2>
             <div class="score core">
                 <p class="turns">기회 : <span>5</span>번</p>
                 <p class="attempts">시도 : <span>0</span></p>
@@ -301,12 +301,12 @@
               $themeSong = $("#theme-song")[0],
               $success = $(".success"),
               $successMsg = $(".success .msg"),
-              $btnContinue = $(".btn-continue"),
+              $btnCountinue = $(".btn-continue"),
               $turns = $(".turns span"),
               $wins = $(".wins span"),
               $attempts = $(".attempts span"),
 
-              dataMatched = "data-matched",
+              dataMatch = "data-matched",
               dataType = "data-type",
               selectedClass = "is-selected",
               playSoundClass = "is-playing",
@@ -317,62 +317,59 @@
         let sound = [
             "../assets/audio/match2.mp3",
             "../assets/audio/match.mp3",
-            "../assets/audio/up.mp3",
-        ],
+            "../assets/audio/up.mp3",],
             soundMatch = new Audio(sound[0]),
             soundNoMatch = new Audio(sound[1]),
             soundSuccess = new Audio(sound[2]),
-            turnsCount = 5, //기회
-            attempsCount = 0, //시도
-            winCount = 0,    //우승
+            turnsCount = 5,     //기회 횟수
+            attempsCount = 0,   //시도 횟수
+            winCount = 0,       //우승 횟수
             card1, card2, msg;
 
-        // audio 버튼을 클릭하면 꺼지고, 클릭하면 켜지게(toggleClass / attr)
+        // audio 
         $btnSound.on("click", function(){
-            //icon
             $(this).find("i").toggleClass("fa-volume-up fa-volume-off");
-
             $(this).toggleClass("is-playing");
 
-            //play
             if( $(this).hasClass("is-playing") ){
                 $themeSong.play();
             } else {
                 $themeSong.pause();
             }
         });
- 
-        //카드를 클릭하면 is-selected를 추가
-        $card.click(function(){
-            //dataMatched == false이면 클릭한 카드에 selectedClass 클래스 추가
-            if($(this).attr(dataMatched)=="false") {
-                $(this).addClass(selectedClass);
-            }
-            
-            let selectedCards = $("." + selectedClass);
 
-            if(selectedCards.length == 2) {
-                //버그방지
-                $cardWrap.addClass(playStop);
+        //카드를 클릭하면 is-selected를 추가
+        $card.on("click", function(){
+            
+            //dataMatched == false이면 클릭한 카드에 isslected 추가
+            if( $(this).attr(dataMatch) == "false"){
+                $(this).addClass(selectedClass);
+            }                      
+            let selectedCards = $("."+selectedClass);
+
+            //만약에 카드1와 카드2가 같다면 dataMatched -> true
+            if(selectedCards.length == 2){
+                //버그 방지
+                $cardWrap.addClass(playStop); 
                 card1 = selectedCards.eq(0).attr(dataType);
                 card2 = selectedCards.eq(1).attr(dataType);
 
-                if(card1 == card2) {
-                    //만약 카드1과 카드2가 같으면 dataMatched -> true / 음악 재생 (정답일 때)
-                    selectedCards.attr(dataMatched, true).removeClass(selectedClass);
+                if( card1 == card2 ){
+                    //만약에 카드1과 카드2가 같으면 dataMatched -> true / 음악재생(정답일때)
+                    selectedCards.attr(dataMatch, true).removeClass(selectedClass);
                     $cardWrap.removeClass(playStop);
 
-                    //성공 음악 재생 -> 음악이 off일 때 재생 x
-                    if( $btnSound.hasClass(playSoundClass) ){
+                    //성공 음악 재생 //음악 off -> 재생 X
+                    if( $btnSound.hasClass(playSoundClass)){
                         soundMatch.play();
                     }
                 } else {
                     //실패 음악 재생
-                    if( $btnSound.hasClass(playSoundClass) ){
+                    if( $btnSound.hasClass(playSoundClass)){
                         soundNoMatch.play();
                     }
 
-                    //만약에 카드1과 카드2가 같지 않으면 그대로 / 음악재생 (틀렸을 때) / 기회 -
+                    //만약에 카드1과 카드2가 같지 않으면 그대로~ / 음악재생(틀렸을 때) / 기회-
                     setTimeout(function(){
                         turnsCount--;
                         $turns.html(turnsCount);
@@ -380,80 +377,93 @@
                         $cardWrap.removeClass(playStop);
                     }, timeoutLength);
 
-                    //기회가 없을 때 시도 +1, 기회 +5
-                    if(turnsCount <= 0){
+                    //기회가 없을 때 시도+1 기회+5
+                    if( turnsCount <= 0 ){
                         turnsCount = 5;
                         attempsCount++;
                         $attempts.html(attempsCount);
-                        $card.attr(dataMatched, false); //모든 카드를 초기화
+                        //$card.attr(dataMatch, false); // 모든 카드를 초기화
                     }
                 }
             }
-
+            
             //카드를 완성 했을 때
-            //dataMatch의 true 개수 == 전체 카드 개수 : 성공 음악 추가, 우승+1, 성공 메시지
-            if($('['+dataMatched+'="true"]').length == $card.length){
+            //dataMatch의 ture 갯수 == 전체 카드 갯수 : 성공 음악 추가, 우승+1, 성공메세지
+            //$card.length
+            //$('['+dataMatch +'="true"]').length 
+            if( $('['+dataMatch +'="true"]').length  == $card.length ){
                 setTimeout(function(){
-                    //성공 메시지
-                    $success.addClass(visibleClass); 
+                    //성공 메세지   
+                    $success.addClass(visibleClass);
+                    winCount++;
+                    $wins.html(winCount);
 
                     //성공 음악 추가
-                    if( $btnSound.hasClass(playSoundClass) ){
+                    if( $btnSound.hasClass(playSoundClass )){
                         soundSuccess.play();
                     }
 
                 }, timeoutLength);
-
-                //완성 메시지
+                
+                //완성 메세지
                 switch(attempsCount){
                     case 0 :
-                        msg = "LEVEL1";
+                        msg = "레벨1.... 최고의 실력입니다. 머리가 좋네요!!";
                         break;
                     case 1 :
-                        msg = "LEVEL2";
+                        msg = "레벨2... 그럭저럭 하네요~~~";
                         break;
                     case 2 :
-                        msg = "LEVEL3";
+                        msg = "레벨3... 머리가 나쁘네요~~~~~";
                         break;
                     case 3 :
-                        msg = "LEVEL4";
+                        msg = "레벨4... 진짜 못하네~~~~~";
                         break;
                     default :
-                        msg = "^__^";
+                        msg = "^**^";
                 }
-                successMsg.text(msg);
+                $successMsg.text(msg);
             }
-            
+
             //게임 다시 시작할 때
-            $btnContinue.on("click", function(){
-                $success.removeClass(visibleClass); 
+            $btnCountinue.on("click", function(){
+                $success.removeClass(visibleClass);
                 shuffleCards();
                 turnsCount = 5;
                 attempsCount = 0;
                 $attempts.html(attempsCount);
                 $turns.html(turnsCount);
-            })
-        })
+            });
+        });
 
-        //카드 섞기 
+        //카드 섞기
         function shuffleCards(){
+            $card.attr(dataMatch, false);
 
-            //카드를 하나씩 뽑아낸 후 cardWrap에 넣기 (랜덤 섞기)
-            //for문 : 시작 ~ 끝
-            //while문 : 시작 ~ 중간, 중간 ~ 끝 (컨드롤 가능)
+            // var num = [1,2,3,4,5,6,7,8,9];
+            // for(
+            //     var remove = num.splice(3,1)
+            //     var remove = num.splice(4,1)
+            //     var remove = num.splice(1,1)
+            //     var remove = num.splice(6,1)
+            //     var remove = num.splice(8,1)
+            //     var remove = num.splice(2,1)
+            //     var remove = num.splice(5,1)
+            //     var remove = num.splice(7,1)
+            //     var remove = num.splice(0,1)
+            // )
+
+            //$cardWrap
             let cards = $cardWrap.children();
-            for(let i=0; i<=cards.length; i++){
-                $cardWrap.append(cards.splice(Math.floor(Math.random() * cards.length), 1)[0]);
+            for( let i=0; i<=cards.length; i++ ){
+                $cardWrap.append(cards.splice( Math.floor(Math.random() * cards.length), 1)[0] )
             }
-            console.log(cards);
-
-            $card.attr(dataMatched, false); 
 
             $card.each(function(index){
                 setTimeout(() => {
                     $(this).addClass(selectedClass);
                 }, 200 * index)
-            })
+            });
 
             setTimeout(() => {
                 $card.removeClass(selectedClass);
