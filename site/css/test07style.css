@@ -118,31 +118,31 @@ a {
 
 /* 탭메뉴 */
 /* tabMenu */
-.tabMenuWrap {
+#tbaMenu {
     margin-bottom: 50px;
 }
-.tabMenu {
+.tabMenuWrap {
     margin: 50px 0;
 }
-.tabMenu .tab-btn {}
-.tabMenu .tab-btn ul {
+.tabMenuWrap .tab-btn {}
+.tabMenuWrap .tab-btn ul {
     display: flex;
     justify-content: center;
 }
-.tabMenu .tab-btn ul li {}
-.tabMenu .tab-btn ul li a {
+.tabMenuWrap .tab-btn ul li {}
+.tabMenuWrap .tab-btn ul li a {
     font-size: 20px;
     padding: 10px 20px;
     color: #ddd;
     font-weight: 800;
 }
-.tabMenu .tab-btn ul li.active a {
+.tabMenuWrap .tab-btn ul li.active a {
     color: #000;
 }
-.tabMenu .tab-btn ul li .child {
+.tabMenuWrap .tab-btn ul li .child {
     position: relative;
 }
-.tabMenu .tab-btn ul li .child::after {
+.tabMenuWrap .tab-btn ul li .child::after {
     content: '';
     position: absolute;
     right: 0;
