@@ -136,10 +136,10 @@ a {
 .tabMenuWrap .tab-btn ul li.active a {
     color: #000;
 }
-.tabMenuWrap .tab-btn ul li .child {
+.tabMenuWrap .tab-btn ul li .click {
     position: relative;
 }
-.tabMenuWrap .tab-btn ul li .child::after {
+.tabMenuWrap .tab-btn ul li .click::after {
     content: '';
     position: absolute;
     right: 0;
