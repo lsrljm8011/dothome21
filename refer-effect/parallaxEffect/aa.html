@@ -522,6 +522,9 @@
                 font-weight: 500;
                 position: absolute;
             }
+            .s4Text2 p {
+
+            }
             .s4Text2 iframe {
                 width: 60vw; height: 60vh;
                 transform-style: preserve-3d;
@@ -545,6 +548,7 @@
                 position: absolute;
                 left: 0; top: 0;
             }
+            
         </style>
         <section id="section4">
             <div class="s4Text1"
@@ -584,14 +588,14 @@
                 data-48000="top: 10%;"
                 data-51000="top: -10%;"
             >
-            <div class="wrapper">
-                <span class="s1"
+            <div>
+                <p><span class="s1"
                     data-40500 = "top: 0; opacity:0;"
                     data-41000 = "top: 10; opacity:1;"
                     data-41500 = "top: 10%; opacity:0.5;"
                     data-42000 = "top: 20%; opacity:0.3;"
                     data-43000 = "top: 20%; opacity:0;"
-                >animation</span>
+                >animation</span></p>
             </div>
                 <div class="s4Text2 fixed">
                     <iframe class="i1" src="../codepen/codepen1.html" alt="mouse"
@@ -710,12 +714,18 @@
         </section> <!-- //section5 -->
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script>
         var s = skrollr.init();
         window.addEventListener("scroll", () => {
             let scrollTop = document.documentElement.scrollTop || window.scrollY || window.PageYOffset; 
             document.querySelector(".scroll").innerHTML = scrollTop;
         })
+
+        $(document).ready(function() {
+            $(".flag").lettering();
+        });
     </script>
 </body>
 </html>
