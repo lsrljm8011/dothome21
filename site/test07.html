@@ -84,8 +84,8 @@
             </main>
             <!-- slider -->
     
-            <div class="tabMenuWrap">
-                <div class="tabMenu">
+            <div id="tbaMenu">
+                <div class="tabMenuWrap">
                     <div class="tab-btn">
                         <ul>
                             <li class="active"><a class="child" href="#">자주찾는 서비스</a></li>
@@ -270,11 +270,13 @@
 
         tabBtn.click(function(e){
             e.preventDefault();
-            let target = $(this);           
+            let target = $(this);    
+
             tabBtn.removeClass("active");
             target.addClass("active");
 
             let index = target.index();
+            
             tabCont.css("display","none");
             tabCont.eq(index).css("display","flex");
         });
