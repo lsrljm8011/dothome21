@@ -123,12 +123,10 @@ a {
 .tabMenuWrap {
     margin: 50px 0;
 }
-.tabMenuWrap .tab-btn {}
 .tabMenuWrap .tab-btn ul {
     display: flex;
     justify-content: center;
 }
-.tabMenuWrap .tab-btn ul li {}
 .tabMenuWrap .tab-btn ul li a {
     font-size: 20px;
     padding: 10px 20px;
@@ -153,21 +151,20 @@ a {
     display: flex;
     justify-content: space-between;
 }
-.tab-cont .service {
+.tab-cont .box {
     text-align: center;
 }
-.tab-cont .service a {}
-.tab-cont .service a img {
+.tab-cont .box a img {
     width: 80%;
 }
-.tab-cont div p {
+.tab-cont .box p {
     display: block;
     margin-top: 20px;
     font-size: 15px;
     font-weight: 700;
     color: #373737;
 }
-.cont2 {
+.tab2 {
     display: none;
 }
 
