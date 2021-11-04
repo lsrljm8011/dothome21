@@ -1,0 +1,115 @@
+body {
+    font-family: 'YANGJIN';
+}
+
+/* 로딩 */
+.loading{
+    width:100%; height:100%;
+    position:fixed;
+    left:0px;
+    top:0px;
+    background:#fbe9e8;
+    z-index:1000; /* 이 값으로 레이어의 위치를 조정합니다. */
+}
+.loading p {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, 30vh);
+    font-size: 1.2vw;
+    color: #e91c0d;
+}
+
+/* audio */
+.audio {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, 34vh);
+}
+.audio .btn-sound {
+    display: block;
+    width: 30px; height: 30px;
+    text-align: center;
+    line-height: 33px;
+    border: 1px solid #e91c0d;
+    color: #e91c0d;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* circle */
+.loading {
+    width: 100%; height: 100%;
+    position: fixed;
+    background: #fbe9e8;
+}
+.loading p {
+    position: absolute;
+    left: 50%; top: 80%;
+    transform: translate(-50%, -50%);
+    font-size: 1vw;
+    color: #e91c0d;
+}
+
+/* audio */
+.loading .audio {
+    position: absolute;
+    left: 50%; top: 85%;
+    transform: translate(-50%, -50%);
+}
+.audio .btn-sound {
+    display: block;
+    width: 30px; height: 30px;
+    text-align: center;
+    line-height: 27px;
+    border: 1px solid #e91c0d;
+    color: #e91c0d;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* circle */
+.loading .circle-wrap {
+    position: relative;
+    left: 85%; top: 30%;
+    transform: translate(-50%, -50%);
+} 
+.loading  .circle-inner {
+    transform-style: preserve-3d;
+}
+.loading .circle-wrap .circle {
+    position: absolute;
+    height: 30vw; width: 30vw;
+    background: #e91c0d;
+    overflow: hidden;
+    animation: round 11000ms ease-in-out infinite alternate, rotateZ 13000ms linear infinite;
+}
+
+@keyframes round {
+    0% {
+        border-radius: 20% 70% 70% 30%/30% 36% 70% 78%;
+    }
+    25% {
+        border-radius: 65% 35% 55% 49%/49% 52% 36% 51%;
+    }
+    50% {
+        border-radius: 42% 58% 33% 72%/65% 34% 66% 48%;
+    }
+    75% {
+        border-radius: 34% 66% 82% 37%/77% 38% 62% 23%;
+    }
+    100% {
+        border-radius: 24% 76% 55% 28%/53% 62% 35% 52%;
+    }
+    }
+    @keyframes rotateZ {
+    0% {
+        transform: rotateZ(0deg) scale(1);
+    }
+    20% {transform: scale(1.5);}
+    40% {transform: scale(1.3);}
+    60% {transform: scale(1.7);}
+    80% {transform: scale(1.6);}
+    100% {
+        transform: rotateZ(360deg) scale(2.3);
+    }
+}
