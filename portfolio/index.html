@@ -92,14 +92,33 @@
             letter-spacing: 0.1em;
             font-size: 12px;
         }
-        #section1 .box2 p {
+        #section1 .text {
+            display: flex;
+        }
+        #section1 .box span {
             color: #e91c0d;
             font-size: 100px;
             letter-spacing: 0.05em;
             /* animation-duration: 3s;
             animation-name: slidein; */
             position: relative;
-            top: -100%;
+            top: -300%;
+            float: left;
+        }
+        #section1 .box1 span {}
+        #section1 .box2 {
+            
+        }
+        #section1 .box2 div {
+            position: relative;
+            width: 10px; height: 16.1px;
+            background: #e91c0d;
+            border-radius: 3px;
+            top: -260%; left: -11%;
+        }
+        #section1 .box3 span {
+            position: relative;
+            left: -15%;
         }
 
         /* @keyframes slidein {
@@ -155,13 +174,13 @@
     </style>
 </head>
 <body>
-    <div class="loading">
+    <!-- <div class="loading">
         <article class="audio">
             <span class="btn-sound">
-                <!-- <i class="fa fa-volume-up" aria-hidden="true"></i> -->
+                <i class="fa fa-volume-up" aria-hidden="true"></i>
                 <i class="fa fa-volume-off" aria-hidden="true"></i>
             </span>
-            <!-- <audio id="theme-song" src="../assets/audio/gameshow-brazz-658.mp3" loop="loop"></audio> -->
+            <audio id="theme-song" src="../assets/audio/gameshow-brazz-658.mp3" loop="loop"></audio>
         </article>
         <div class="circle-wrap">
             <div class="circle-inner">
@@ -169,7 +188,7 @@
             </div>
         </div>
         <p>제 포트폴리오의 방문해주셔서 감사합니다!</p>
-    </div>
+    </div> -->
     <!-- loding -->
 
     <main id="paraCont">
@@ -191,8 +210,16 @@
                     <span>scroll</span>
                     <img class="arrow-down" src="assets/img/arrow-down.png" alt="arrowdown">
                 </div>
-                <div class="box2">
-                    <p>안녕하세요!</p>
+                <div class="text">
+                    <div class="box box1">
+                        <span>안녕하</span>
+                    </div>
+                    <div class="box box2">
+                        <div></div>
+                    </div>
+                    <div class="box box3">
+                        <span>세요!</span>
+                    </div>
                 </div>
                 <div class="content">
                     <div class="circle-wrap">
@@ -278,12 +305,18 @@
 
         //텍스트 슬라이드
         gsap.registerPlugin(ScrollTrigger);
-        gsap.to(".box2", {
+        gsap.to(".box", {
         scrollTrigger: {
-            trigger: ".box2",
+            trigger: ".box",
             toggleActions: "restart none reverse none"
         },
-        x: -400, duration: 2, })
+        x: -400, duration: 2 })
+        gsap.to(".box2 div", {
+            scrollTrigger: {
+                trigger: ".box2",
+                toggleActions: "restart none reverse none"
+            },
+            width: 220})
     </script>
     <!-- script -->
 </body>
