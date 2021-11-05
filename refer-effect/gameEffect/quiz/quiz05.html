@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <style>
         @font-face {
             font-family: 'DungGeunMo';
@@ -109,6 +110,7 @@
             left: 0; bottom: 7px;
         }
         .quizWrap {
+            position: relative;
             max-width: 500px;
             width: 100%;
             background: #fff;
@@ -140,23 +142,21 @@
             background: url(dot.jpg) no-repeat -14px;
             background-size: cover;
         }
-        .quizConfirm {
-            max-width: 500px;
-            width: 100%;
-            margin: 0 auto; 
-        }
         .question__quiz {
             border: 4px ridge #cacaca;
+            min-height: 400px;
         }
         .question__title {
-            padding: 20px;
-            font-size: 34px;    
-            border-bottom: 6px ridge #cacaca;
+            position: relative;
+            font-size: 34px;
+            border-bottom: 6px ridge #CACACA;
+            padding: 20px 0 0 0;
         }
         .question__title__num {
-            color: #A5E151;
+            color: #51d7e1;
             font-size: 34px;
             text-shadow: 1px 1px 1px #000;
+            padding-left: 20px;
         }
         .question__title__num::after {
             content:'.';
@@ -164,12 +164,14 @@
         .question__title__ask {
             font-size: 24px;
             line-height: 1.4;
+            padding: 10px 20px 10px 20px;
+            display: inline-block;
         }
         .question__answer {
             background: #E8E7E8;
             padding: 20px;
         }
-        .question__answer__confirm {
+        .question__answer__next {
             background: #cacaca;
             text-align: center;
             padding: 13px 20px;
@@ -178,8 +180,12 @@
             text-shadow: 1px 1px 1px #fff;
             width: 100%;
             font-family: 'DungGeunMo';
+            display: none;
         }
-        .question__answer__confirm:active {
+        .question__answer__next.show {
+            display: block;
+        }
+        .question__answer__next:active {
             background: #a3a3a3;
         }
         .question__answer__view {
@@ -216,55 +222,158 @@
             height: 30px;
             background: #fff;
             border-radius: 50%;
-            box-shadow: inset 0 0 0 3px #d6ecb6;
+            box-shadow: inset 0 0 0 3px #b0dde0;
             position: absolute;
             left: 7px; top: 5px;
             transition: 0.25s ease;
         }
         .question__answer__selects label span:hover {
-            background-color: #d6ecb6;
+            background-color: #b0dde0;
         }
         .question__answer__selects label input {
             position: absolute;
             left: -9999px;
         }
-        .question__answer__selects input:checked + span {
-            background-color: #d6ecb6;
-        }
-        .question__answer__selects input:checked + span:before {
-            box-shadow: inset 0 0 0 10px #A5E151;
-        }
-        .question__answer__selects p {
-            line-height: 1.4;
-            font-size: 16px;
-        }
-        .question__arrow {
-            padding: 10px;
+        .question__answer__selects label span {
+            width: 100%;
             position: relative;
         }
-        .question__arrow button {
-            font-family: 'DungGeunMo';
-            border: 0;
-            padding: 10px;
-            border: 4px ridge #cacaca;
+        .question__answer__selects label span i {
+            position: absolute;
+            right: 10px; top: 50%;
+            transform: translateY(-50%);
+        }
+        /* .question__answer__selects input:checked + span {
+            background-color: #b0dde0;
+        }
+        .question__answer__selects input:checked + span:before {
+            box-shadow: inset 0 0 0 10px #51d7e1;
+        } */
+        .question__answer__selects label.correct input + span {
+            background-color: #b0dde0;
+        }
+        .question__answer__selects label.correct input + span:before {
+            box-shadow: inset 0 0 0 10px #51d7e1;
+        }
+        .question__answer__selects label.incorrect input + span {
+            background-color: #e0bab0;
+        }
+        .question__answer__selects label.incorrect input + span:before {
+            box-shadow: inset 0 0 0 10px #e76b4c;
+            
+        }
+        .question__answer__selects label.disabled {
+            pointer-events: none;
+        }
+        .question__answer__ex {
+            padding: 20px;
+            line-height: 1.4;
+        }
+
+        .question__timer {
+            text-align: right;
+        }
+        .question__timer__sec {
+            display: inline-block;
+            width: 50px; height: 50px;
+            background: #000;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+            font-size: 20px;
+            position: absolute;
+            right: 10px; top: 10px;
+            border-radius: 50%;
+        }
+        .question__timer__line {
+            width: 100%; height: 5px;
+            background: #51d7e1;
+        } 
+        .question__answer__count {
+            text-align: center;
+            padding-bottom: 20px;
             font-size: 20px;
         }
-        .question__arrow button:hover {
-            background-color: #d6ecb6;
-        }
-        .question__arrow .prev {
-            position: absolute;
-            left: 10px;
-        }
-        .question__arrow .next {
-            position: absolute;
-            right: 10px;
-        }
-        .question__arrow  .count {
+        .question__start {
             font-size: 30px;
-            text-align: center;
-            padding: 8px 0;
+            position: absolute; 
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%; height: 100%;
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            display: none;
         }
+        .question__start.active {
+            display: flex;
+        }
+        .question__start span {
+            background: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 100px;
+            cursor: pointer;
+        }
+        .question__start span:hover {
+            border: 2px solid #000;
+            background: #fff;
+            color: #000;
+        }
+        .question__result {
+            position: absolute;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            background: #ccc; 
+            display: none;
+        }
+        .question__result .wrap {
+            position: absolute;
+            top: 50%;   left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        .question__result.show {
+            display: block;
+        }
+        .question__result .title {
+            margin-top: 40px;
+            font-size: 22px;
+            line-height: 1.2;
+        }
+        .question__result .score {
+            font-size: 20px;
+            white-space: nowrap;
+        }
+        .question__result .score span {
+            display: inline-block;
+            padding: 0;
+            background: none;
+            font-size: 20px;
+            color: blue;
+            margin-top: 15px;
+        }
+        .question__result .buttons {
+            text-align: center;
+        }
+        .question__result .buttons button {
+            font-family: 'DungGeunMo';
+            font-size: 30px;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #000;
+            border-radius: 100px;
+            color: #fff;
+            border: none;
+        }
+        .question__result .buttons button:hover {
+            border: 2px solid #000;
+            background: #fff;
+            color: #000;
+        }
+        
+        /* 미디어쿼리 */
         @media (max-width: 1200px){
             .ham {display: block;}
             nav {
@@ -305,9 +414,9 @@
             <ul>
                 <li><a href="quiz01.html">주관식 한 문제</a></li>
                 <li><a href="quiz02.html">주관식 여러 문제</a></li>
-                <li class="active"><a href="quiz03.html">객관식 한 문제</a></li>
+                <li><a href="quiz03.html">객관식 한 문제</a></li>
                 <li><a href="quiz04.html">객관식 여러 문제</a></li>
-                <li><a href="quiz05.html">객관식 여러 문제 : 이미지 슬라이드</a></li>
+                <li class="active"><a href="quiz05.html">객관식 여러 문제 : 이미지 슬라이드</a></li>
             </ul>
         </nav>
         <div class="ham">
@@ -315,131 +424,302 @@
         </div>
     </header>
 
-    <main id="quiz">
-        <div class="quizWrap">
-            <h2>넌센스 퀴즈</h2>
-            <div class="question__quiz">
-                <h3 class="question__title">
-                    <span class="question__title__num"></span>
-                    <span class="question__title__ask"></span>
-                </h3>
-                <div class="question__answer">
-                    <div class="question__answer__img">
-                        <div class="card">
-                            <div class="dog">
-                                <div class="head">
-                                    <div class="ears"></div>
-                                    <div class="face"></div>
-                                    <div class="eyes">
-                                        <div class="teardrop"></div>
-                                    </div>
-                                    <div class="nose"></div>
-                                    <div class="mouth">
-                                        <div class="tongue"></div>
-                                    </div>
-                                    <div class="chin"></div>
-                                </div>
-                                <div class="body">
-                                    <div class="tail"></div>
-                                    <div class="legs"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="question__answer__selects">
-                        <label for="select1">
-                            <input class="select" type="radio" name="select" id="select1" value="1">
-                            <span class="choice"></span>
-                        </label>
-                        <label for="select2">
-                            <input class="select" type="radio" name="select" id="select2" value="2">
-                            <span class="choice"></span>
-                        </label>
-                        <label for="select3">
-                            <input class="select" type="radio" name="select" id="select3" value="3">
-                            <span class="choice"></span>
-                        </label>
-                        <label for="select4">
-                            <input class="select" type="radio" name="select" id="select4" value="4">
-                            <span class="choice"></span>
-                        </label>
-                    </div>
+    <div class="quizWrap">
+        <h2>넌센스 퀴즈</h2>
+        <div class="question__quiz">
+            <h3 class="question__title">
+                <div class="question__title__q">
+                    <!-- <span class="num"></span>
+                    <span class="ask"></span> -->
                 </div>
-            </div>
-            <div class="question__arrow">
-                <button class="prev">이전 문제</button>
-                <button class="next">다음 문제</button>
-                <div class="count">1/5</div>
-            </div>
-            <div class="question__Confirm">
-                <button class="question__answer__confirm">정답 확인하기</button>
-                <div class="question__answer__view"></div>
+                <span class="question__timer__sec">15</span> 
+                <div class="question__timer__line"></div>
+            </h3>
+            <div class="question__answer">
+                <div class="question__answer__selects">
+                    <!-- <label for="select1" class="correct">
+                        <input class="select" type="radio" name="select" id="select1" value="1">
+                        <span class="choice"><i class="fa fa-check-circle" aria-hidden="true"></i></span>
+                    </label>
+                    <label for="select2" class="incorrect">
+                        <input class="select" type="radio" name="select" id="select2" value="2">
+                        <span class="choice"><i class="fa fa-times-circle" aria-hidden="true"></i></span>
+                    </label>
+                    <label for="select3" class="disabled">
+                        <input class="select" type="radio" name="select" id="select3" value="3">
+                        <span class="choice"></span>
+                    </label>
+                    <label for="select4">
+                        <input class="select" type="radio" name="select" id="select4" value="4">
+                        <span class="choice"></span>
+                    </label> -->
+                </div>
+                <div class="question__answer__count">
+                    <!-- <span class="cu">1</span> / <span class="to">5</span> -->
+                </div>
                 <div class="question__answer__ex"></div>
+                <button class="question__answer__next">다음 문제</button>
+                <!-- <div class="question__answer__view"></div>
+                <div class="question__answer__ex"></div> -->
             </div>
         </div>
-    </main>
+        <div class="question__start active"><span>start</span></div>
+        <div class="question__result">
+            <div class="wrap">
+                <div class="title">퀴즈를 완료하였습니다.<br>축하합니다.👏👏</div>
+                <div class="score">
+                    <!-- 당신은 <span>몇</span> 문제 중에 <span>몇</span> 개를 맞추었습니다. -->
+                </div>
+                <div class="buttons">
+                    <button class="question__restart">reStart</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
-        // {
-        //     quizAsk : "다음 중 디자인의 기본 요소들로 옳은 것은?",
-        //     quizChoice : { 
-        //         1: "선, 색체, 공간, 수량", 
-        //         2: "점, 선, 면, 질감", 
-        //         3: "시간, 수량, 구조, 공간", 
-        //         4: "면, 구조, 공간, 수량"
-        //     },
-        //     quizAnswer : 2,
-        //     quizEx : "디자인의 기본 요소는 점, 선, 면, 질감으로 이루어져 있습니다."
-        // },
-
-        //문제 데이터
-        const questions = [ 
-            new Question('다음 중 디자인의 기본 요소들로 옳은 것은?', ['선', '색체', '공간', '수량'], '선'),
-            new Question('다음 중 시각 디자인의 4대 매체가 아닌 것은?', ['선', '색체', '공간', '수량'], '수량'),
-            new Question('다음 중 디자인의 기본 요소들로 옳은 것은?', ['선', '색체', '공간', '수량'], '공간'),
-            new Question('다음 중 시각 디자인의 4대 매체가 아닌 것은?', ['선', '색체', '공간', '수량'], '색체'),
-            new Question('다음 중 시각 디자인의 4대 매체가 아닌 것은?', ['선', '색체', '공간', '수량'], '선'),
+        //문제 정보
+        const quizInfo = [
+            {
+                quizNum: 1,
+                quizQuestion : "다음 중 디자인의 기본 요소들로 옳은 것은?",
+                quizAnswer : "점, 선, 면, 질감",
+                quizChoice : [
+                    "선, 색체, 공간, 수량", 
+                    "점, 선, 면, 질감", 
+                    "시간, 수량, 구조, 공간", 
+                    "면, 구조, 공간, 수량"
+            ],
+                quizEx : "디자인의 기본 요소는 점, 선, 면, 질감으로 이루어져 있습니다."
+            },
+            {
+                quizNum: 2,
+                quizQuestion : "다음 중 시각 디자인의 4대 매체가 아닌 것은?",
+                quizAnswer : "텍스타일 디자인",
+                quizChoice : [  
+                    "포스터 디자인", 
+                    "신문 광고 디자인", 
+                    "TV 광고", 
+                    "텍스타일 디자인"
+            ],
+                quizEx : "시각 디자인의 4대 매체는 포스터디자인, 신문 광고 디자인, TV 광고, 잡지 광고 디자인입니다."
+            },
+            {
+                quizNum: 3,
+                quizQuestion : "다음과 가장 관계있는 디자인 원리는? [바다 위의 빨간 등대, 무성한 나뭇잎들 사이에서 핀 꽃, 별이 총총한 밤하늘에 뜬 달, 평평한 벽에 생긴 갈라진 틈 등]",
+                quizAnswer : "강조",
+                quizChoice :[  
+                    "조화", 
+                    "통일", 
+                    "점", 
+                    "강조"
+            ],
+                quizEx : "조화: 통일과 변화, 균형감이 안정적으로 결합된 상태<br>통일: 하나의 규칙으로 단일화시키는 것<br>점증: 그라데이션이라고도 하며 조화적인 단계에 한하여 일정한 질서를 가진 자연적인 순서의 계열로서 기본적으로 유사한 일련의 흐름을 나타내는 것.<br>강조: 단조로움을 피하기 위해 일부 요소를 다르게 표현하는 것"
+            }
         ]
+        //선택자
+        const quizWrap = document.querySelector(".quizWrap");   
+        const questionStart = document.querySelector(".question__start");   //시작하기 버튼
+        const questionStartBtn = quizWrap.querySelector(".question__start span");   
+        const questionTitle = quizWrap.querySelector(".question__title__q");   
+        const questionSelect = quizWrap.querySelector(".question__answer__selects");   
+        const questionNext = quizWrap.querySelector(".question__answer__next"); 
+        const questionLength = quizWrap.querySelector(".question__answer__count"); 
+        const questionTimer = quizWrap.querySelector(".question__timer__sec"); 
+        const questionTimerLine = quizWrap.querySelector(".question__timer__line"); 
+        const questionResult = quizWrap.querySelector(".question__result"); 
+        const questionResultScore = quizWrap.querySelector(".question__result .score"); 
+        const questionRestart = quizWrap.querySelector(".question__restart"); 
+        const questionAnswerEx = document.querySelector(".question__answer__ex");
 
-        //문제 정보 객체
-        function Question(quizAsk, quizChoice, quizAnswer){
-            this.quizAsk = quizAsk;
-            this.quizChoice = quizChoice;
-            this.quizAnswer = quizAnswer;
+        
+        let quizCount = 0;  //문제 수 
+        let quizNum = 1;
+        let counter;
+        let counterLine;
+        let userScore = 0;
+
+
+        //시작하기 버튼 클릭
+        questionStartBtn.onclick = () => {
+            questionStart.classList.remove("active");   //버튼을 누르면 클래스 제거 (active 있을 때 block, 없을 때 none)
+            showQuestion(0); //클릭하면 showQuestion 함수 실행
+            questionCount(1);
+            startTimer(15);
+            startTimerLine(0);
         }
+        showQuestion(0);
 
-        //퀴즈 정보 객체
-        //객체 생성자함수 -> 프로토타입 함수
-        function Quiz(questions){
-            this.questions = questions;
-            this.questionScore = 0;
-            this.questionNum = 0;
-        }
+        //다시 시작 버튼 클릭
+        questionRestart.onclick = () => {
+            questionResult.classList.remove("show");
 
-        Quiz.prototype.updateQuiz = function(){
+            //초기화
+            quizCount = 0; 
+            quizNum = 1;
+            userScore = 0;
 
-        }
-        Quiz.prototype.checkAnswer = function(){
+            showQuestion(0);
+            questionCount(1);
+            startTimer(15);
+            startTimerLine(0);
             
         }
-        Quiz.prototype.buttonQuiz = function(){
 
-        }
-        Quiz.prototype.progress = function(){
+        //문제 출력하기
+        function showQuestion(index) {
+            let questionTag = `<span class="question__title__num">${quizInfo[index].quizNum}</span><span class="question__title__ask">${quizInfo[index].quizQuestion}</span>`;
+            let choiceTag = `
+                <label for="select1">
+                    <input class="select" type="radio" name="select" id="select1" value="1">
+                    <span class="choice">${quizInfo[index].quizChoice[0]}</span>
+                </label>
+                <label for="select2">
+                    <input class="select" type="radio" name="select" id="select2" value="2">
+                    <span class="choice">${quizInfo[index].quizChoice[1]}</span>
+                </label>
+                <label for="select3">
+                    <input class="select" type="radio" name="select" id="select3" value="3">
+                    <span class="choice">${quizInfo[index].quizChoice[2]}</span>
+                </label>
+                <label for="select4">
+                    <input class="select" type="radio" name="select" id="select4" value="4">
+                    <span class="choice">${quizInfo[index].quizChoice[3]}</span>
+                </label>
+            `;
+            questionTitle.innerHTML = questionTag;
+            questionSelect.innerHTML = choiceTag;
+            questionAnswerEx.innerHTML = quizInfo[0].quizEx;
+            let choice = questionSelect.querySelectorAll(".choice");
+            for( let i=0; i<choice.length; i++ ){
+                choice[i].setAttribute("onclick", "choiceSelected(this)")   //사용자가 선택한 것을 알아내서 속성을 넣어줌
+            }
 
+            //설명 감추기
+            questionAnswerEx.style.display = "none";
         }
-        Quiz.prototype.hamMenu = function(){
-            document.querySelector(".ham").addEventListener("click", () => {
-                document.querySelector("nav").classList.toggle("show");
-            });
+        
+        //정답 확인하기
+        function choiceSelected(answer){
+            //사용자가 클릭한 값 == quizAnswer 확인
+            let userAnswer = answer.textContent.trim(); //사용자가 선택한 값
+            let currentAnswer = quizInfo[quizCount].quizAnswer.trim(); //현재 값
+            let allChoices = questionSelect.children.length; 
+            let iconYes = '<i class="fa fa-check-circle" aria-hidden="true"></i>';
+            let iconNo = '<i class="fa fa-times-circle" aria-hidden="true"></i>';
+
+            if(userAnswer == currentAnswer){    //사용자가 클릭한 값과 정답이 같을 때
+                console.log("정답입니다.")
+                //클래스 추가 correct
+                answer.parentNode.classList.add("correct");
+                answer.insertAdjacentHTML("beforeend", iconYes);    //가상요소로 넣어줌
+                questionAnswerEx.style.display = "block";
+                userScore++;
+            } else {
+                console.log("틀렸습니다.")
+                //클래스 추가 incorrect
+                answer.parentNode.classList.add("incorrect");
+                answer.insertAdjacentHTML("beforeend", iconNo);
+                //틀렸을 때 정답 알려주기
+                for(let i=0; i<allChoices; i++){
+                    if(questionSelect.children[i].querySelector(".choice").textContent == currentAnswer) {
+                        questionSelect.children[i].classList.add("correct");
+                        questionAnswerEx.style.display = "block";
+                    }
+                }
+            }
+            //모든 문제 클래스 추가 disabled
+            for(let i=0; i<allChoices; i++){
+                questionSelect.children[i].classList.add("disabled");
+            }
+
+            //시간 정지 * 버튼 표시
+            clearInterval(counter);
+            clearInterval(counterLine);
+            questionNext.classList.add("show");
+        }
+        
+        //다음 문제 클릭 시
+        questionNext.onclick = () => {
+            if( quizCount < quizInfo.length -1 ){   //quizCount가 0부터 시작해서 -1 붙여줌
+                quizCount++;    //클릭할 때마다 +1
+                quizNum++;
+                showQuestion(quizCount);    //+1되어 출력
+                questionCount(quizNum);
+
+                questionNext.classList.remove("show");
+                clearInterval(counter);
+                clearInterval(counterLine);
+                startTimer(15);
+                startTimerLine(0);
+            } else {
+                clearInterval(counter);
+                clearInterval(counterLine);
+                showResult();
+            }
+            
         }
 
-        const quiz = new Quiz(questions);
-        quiz.updateQuiz();
-        quiz.checkAnswer();
-        quiz.buttonQuiz();
-        quiz.progress();
-        quiz.hamMenu();
+        //문제 카운팅
+        function questionCount(index){
+            let totalCountTag = `<span>${index}</span> / <span>${quizInfo.length}</span>`;
+            questionLength.innerHTML = totalCountTag;
+        }
+
+        //타이머
+        function startTimer(time){
+            counter = setInterval(() => {
+                questionTimer.textContent = time;
+                time--;
+                if( time < 9 ){
+                    let addZero = questionTimer.textContent;
+                    questionTimer.textContent = "0" + addZero;
+                }
+                if( time < 0 ){
+                    clearInterval(counter); //멈춤
+
+                    let allChoices = questionSelect.children.length;
+                    let currentAnswer = quizInfo[quizCount].quizAnswer;
+
+                    //시간 지나면 클릭 안되게
+                    for( let i=0; i<allChoices; i++){
+                        questionSelect.children[i].classList.add("disabled");
+                    }
+
+                    //시간 지나고 정답 표시 해줌
+                    for( let i=0; i<allChoices; i++){
+                        if( questionSelect.children[i].querySelector(".choice").textContent == currentAnswer ){
+                            questionSelect.children[i].classList.add("correct");
+                        }
+                    }
+
+                    //버튼 표시
+                    questionNext.classList.add("show");
+                }
+            }, 1000);
+        }
+
+        //타임 라인
+        function startTimerLine(time){
+            counterLine = setInterval(() => {
+                time += .066;
+                questionTimerLine.style.width = time + "%";
+
+                if( time > 100 ){
+                    clearInterval(counterLine);
+                }
+            }, 10);
+        }
+
+        //결과 보여주기
+        function showResult(){
+            questionResult.classList.add("show");
+
+            const scoreTag = `당신은 <span>${quizInfo.length}</span> 문제 중에 <span>${userScore}</span> 개를 맞추었습니다.`;
+            questionResultScore.innerHTML = scoreTag;
+        }
     </script>
 </body>
+
+
 </html>
