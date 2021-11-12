@@ -1,5 +1,12 @@
+@font-face { font-family: 'yangjin'; src: url('https://cdn.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff') format('woff'); font-weight: normal; font-style: normal; }
+* {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
-    font-family: 'YANGJIN';
+    font-family: 'yangjin';
 }
 
 /* 로딩 */
@@ -19,23 +26,6 @@ body {
     color: #e91c0d;
 }
 
-/* audio */
-.audio {
-    position: absolute;
-    left: 50%; top: 50%;
-    transform: translate(-50%, 34vh);
-}
-.audio .btn-sound {
-    display: block;
-    width: 30px; height: 30px;
-    text-align: center;
-    line-height: 33px;
-    border: 1px solid #e91c0d;
-    color: #e91c0d;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
 /* circle */
 .loading {
     width: 100%; height: 100%;
@@ -52,19 +42,19 @@ body {
 
 /* audio */
 .loading .audio {
-    position: absolute;
-    left: 50%; top: 85%;
-    transform: translate(-50%, -50%);
+    
 }
 .audio .btn-sound {
     display: block;
-    width: 30px; height: 30px;
+    width: 40px; height: 40px;
     text-align: center;
-    line-height: 27px;
-    border: 1px solid #e91c0d;
+    line-height: 30px;
+    border: 2px solid #e91c0d;
     color: #e91c0d;
     border-radius: 50%;
     cursor: pointer;
+    position: fixed;
+    left: 30px; bottom: 30px;
 }
 
 /* circle */
@@ -82,6 +72,29 @@ body {
     background: #e91c0d;
     overflow: hidden;
     animation: round 11000ms ease-in-out infinite alternate, rotateZ 13000ms linear infinite;
+}
+.loading .circle-wrap .circle img {
+    width: 90%;
+}
+.circle-wrap {
+    position: absolute;
+    left: 36%; top: 25%;
+    transform: translate(-50%, -50%);
+}
+.circle-inner {
+    transform-style: preserve-3d;
+}
+.circle-wrap .circle {
+    position: absolute;
+    height: 480px; width: 480px;
+    opacity: 0.8;
+    /* background: #e91c0d; */
+    overflow: hidden;
+    animation: round 8000ms ease-in-out infinite alternate;
+}
+.circle-wrap .circle img {
+    width: 100%; 
+    position: absolute;
 }
 
 @keyframes round {
@@ -112,4 +125,53 @@ body {
     100% {
         transform: rotateZ(360deg) scale(2.3);
     }
+}
+
+.header {
+    position: fixed;
+}
+.header .fa-bars {
+    color: #e91c0d;
+    position: fixed;
+    left: 30px; top: 30px;
+}
+.header .logo {
+    position: fixed;
+    width: 50px; height: 50px;
+    right: 30px; top: 30px;
+}
+
+.bottom {
+    position: fixed;
+    bottom: 300px;
+    animation: infinite;
+    animation-duration: 2s;
+    animation-name: opacity;
+}
+.bottom.end {
+    display: none;
+}
+@keyframes opacity {
+    from {
+        opacity: 0;
+        top: 53%;
+    }
+    to {
+        opacity: 1;
+        top: 63%;
+    }
+}
+.bottom .arrow-down {
+    position: absolute;
+    width: 20px;
+    left: 50%; bottom: -280px;
+    transform: translate(-50%, -50%);
+}
+.bottom span {
+    color: #e91c0d;
+    position: absolute;
+    left: 50%; bottom: -230px;
+    transform: translate(-50%, -50%);
+    letter-spacing: 0.1em;
+    font-size: 12px;
 }

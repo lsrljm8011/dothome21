@@ -1,112 +1,207 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-
-    <title>Document</title>
+    <title>test</title>
     <style>
         * {
-            margin: 0; 
-            padding: 0;
-        }
-        .loading {
-            width: 100%; height: 100%;
-            position: fixed;
-            background: #fbe9e8;
-        }
-        .loading p {
-            position: absolute;
-            left: 50%; top: 80%;
-            transform: translate(-50%, -50%);
-            font-size: 1vw;
-            color: #e91c0d;
-        }
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+}
 
-        /* audio */
-        .audio {
-            position: absolute;
-            left: 50%; top: 85%;
-            transform: translate(-50%, -50%);
-        }
-        .audio .btn-sound {
-            display: block;
-            width: 30px; height: 30px;
-            text-align: center;
-            line-height: 33px;
-            border: 1px solid #e91c0d;
-            color: #e91c0d;
-            border-radius: 50%;
-            cursor: pointer;
-        }
+body {
+  background-color: #f8f8f8;
+}
 
-        /* circle */
-        .circle-wrap {
+.top {
+  padding: 120px 50px;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #fff;
+}
+.top h1 {
+  font-size: 70px;
+}
+.top p {
+  margin-top: 8px;
+  font-size: 15px;
+  line-height: 140%;
+}
+
+.main {
+  margin-top: 120px;
+  padding: 0 50px;
+}
+.main h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+.main .textWrap {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #aaa;
+}
+.main .spacer {
+  height: 350px;
+}
+.main .text {
+  font-size: 14px;
+  margin-bottom: 10px;
+  line-height: 140%;
+}
+.main .iconWrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.main .icon {
+  width: 140px;
+  height: 140px;
+  margin-right: 30px;
+  color: #fff;
+  font-size: 40px;
+  line-height: 140px;
+  text-align: center;
+  background-color: #999;
+  border-radius: 100%;
+}
+
+.trigger {
+  width: 100%;
+  height: auto;
+  font-weight: bold;
+  font-size: 30px;
+  color: #aaa;
+  border-top: 1px solid #aaa;
+}
+
+
+.animation1 {
+  color: #fff;
+  padding: 40px;
+  font-size: 50px;
+  background-color: crimson;
+  box-shadow: 3px 14px 30px #ddd;
+  transform: translateY(30px);
+  opacity: 0;
+}
+.animation1.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 1.1s;
+}
+
+.animation2.box {
+  transform: translateX(50%);
+  text-align: center;
+  font-size: 30px;
+  line-height: 100px;
+  margin-bottom: 20px;
+  transition: all 0.5s;
+  display: flex;
+}
+.animation2.box:nth-child(2) {
+  margin-left: 80px;
+}
+.animation2.box:nth-child(3) {
+  margin-left: 160px;
+}
+.animation2.box:nth-child(4) {
+  margin-left: 240px;
+}
+.animation2.visible {
+  transform: translateX(0);
+  transition: all 0.5s;
+}
+
+
+        #section1 .box span {
+            color: #e91c0d;
+            font-size: 100px;
+            letter-spacing: 0.05em;
+            /* animation-duration: 3s;
+            animation-name: slidein; */
             position: relative;
-            left: 85%; top: 30%;
-            transform: translate(-50%, -50%);
+            top: -300%;
+            float: left;
         }
-        .circle-inner {
-            transform-style: preserve-3d;
+        #section1 .box1 span {}
+        #section1 .box2 {
+            
         }
-        .circle-wrap .circle {
-            position: absolute;
-            height: 30vw; width: 30vw;
+        #section1 .box2 div {
+            position: relative;
+            width: 0px; height: 16.1px;
             background: #e91c0d;
-            overflow: hidden;
-            animation: round 10000ms ease-in-out infinite alternate, rotateZ 13000ms linear infinite;
+            border-radius: 3px;
+            top: -260%; left: -100%;
         }
-
-
-        @keyframes round {
-            0% {
-                border-radius: 20% 70% 70% 30%/30% 36% 70% 78%;
-            }
-            25% {
-                border-radius: 65% 35% 55% 49%/49% 52% 36% 51%;
-            }
-            50% {
-                border-radius: 42% 58% 33% 72%/65% 34% 66% 48%;
-            }
-            75% {
-                border-radius: 34% 66% 82% 37%/77% 38% 62% 23%;
-            }
-            100% {
-                border-radius: 24% 76% 55% 28%/53% 62% 35% 52%;
-            }
-            }
-            @keyframes rotateZ {
-            0% {
-                transform: rotateZ(0deg) scale(1);
-            }
-            20% {transform: scale(1.5);}
-            40% {transform: scale(1.3);}
-            60% {transform: scale(1.7);}
-            80% {transform: scale(1.6);}
-            100% {
-                transform: rotateZ(360deg) scale(2.3);
-            }
+        #section1 .box3 span {
+            position: relative;
         }
     </style>
 </head>
 <body>
-    <div class="loading">
-        <article class="audio">
-            <span class="btn-sound">
-                <!-- <i class="fa fa-volume-up" aria-hidden="true"></i> -->
-                <i class="fa fa-volume-off" aria-hidden="true"></i>
-            </span>
-            <!-- <audio id="theme-song" src="../assets/audio/gameshow-brazz-658.mp3" loop="loop"></audio> -->
-        </article>
-        <div class="circle-wrap">
-            <div class="circle-inner">
-                <div class="circle"></div>
+    <div class="wrap">
+        <div class="main">
+          <div class="spacer"></div>
+          <div class="spacer"></div>
+          <div class="trigger" id="trigger2">Trigger 2</div>
+          <div class="ani2Wrap">
+            <div class="animation2 box">
+              <div class="box0 box1">
+                  <span>안녕하</span>
+              </div>
+              <div class="box0 box2">
+                  <div></div>
+              </div>
+              <div class="box0 box3">
+                  <span>세요!</span>
+              </div>
             </div>
+            <!-- <div class="animation2 box">이세린입니다.</div>
+            <div class="animation2 box">저를 소개할게요!</div> -->
+          </div>
+          <div class="spacer"></div>
         </div>
-        <p>제 포트폴리오의 방문해주셔서 감사합니다!</p>
-    </div>
+      </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+    <script>
+        (function () {
+
+            var controller = new ScrollMagic.Controller();
+            var scene1 = new ScrollMagic.Scene({
+                triggerElement: "#trigger1", //트리거 설정
+                triggerHook: 0.8
+            })
+            .setClassToggle("#animate1", "visible")
+            .addTo(controller)
+            .addIndicators();
+
+            var revealElements = document.getElementsByClassName("animation2");
+            for (var i=0; i<revealElements.length; i++) {
+            
+            var scene2 = new ScrollMagic.Scene({
+                triggerElement: revealElements[i],
+                offset: 50,
+                triggerHook: 0.9
+            })
+            .setClassToggle(revealElements[i], "visible") // add class toggle
+            .addTo(controller)
+            .addIndicators({name: "(box) " + (i+1), colorStart:"#F6B352", colorTrigger:"#F6B352"});
+            }
+
+
+            }())
+    </script>
 </body>
 </html>

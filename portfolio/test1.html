@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test1</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/ccss/fonts.css">
+    <link rel="stylesheet" href="assets/ccss/reset.css">
+
+    <style>
+        .scroll {
+            position: fixed;
+            right: 10px; top: 10px;
+            width: 50px; height: 50px;
+            background: rgba(0,0,0,0.3);
+            text-align: center;
+            line-height: 50px;
+            color: #fff;
+            border-radius: 50%;
+            z-index: 10000;
+        }
+        #section1 {
+            background: #fbe9e8;
+        }
+
+        .contentWrap {
+            position: fixed;
+            left: 0; top: 0;
+            display: flex;
+        }
+        .content__item {
+            width: 100vw; height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+            box-sizing: border-box;
+            overflow: visible !important;
+        }
+        .content__item {
+            
+        }
+        .content__item__num {
+            font-size: 10vw;
+            position: absolute;
+            right: 5vw; top: 0vw;
+            color: black;
+        }
+
+         /* text1 */
+         #section1 .text1 {
+            display: flex;
+            position: relative;
+            height: 90vh;
+            top: 100px; left: -20%;
+            z-index: 100;
+        }
+        #section1 .text1 span {
+            color: #e91c0d;
+            font-size: 100px;
+            letter-spacing: 0.05em;
+            /* animation-duration: 3s;
+            animation-name: slidein; */
+            position: relative;
+            float: left;
+        }
+        #section1 .text1 .box1 span {
+
+        }
+        #section1 .text1 .box2 {
+            
+        }
+        #section1 .text1 .box2 div {
+            position: relative;
+            width: 50vh; height: 16.2px;
+            background: #e91c0d;
+            border-radius: 3px;
+            margin-left: -15px; margin-right: -15px;
+            top: 43px;
+        }
+        #section1 .text1 .box3 span {
+            position: relative;
+        }
+
+        /* text2 */
+        #section1 .text2 {
+            display: flex;
+            position: relative;
+            height: 90vh;
+            top: 0px; left: 62%;
+            z-index: 100;
+        }
+        #section1 .text2 span {
+            color: #e91c0d;
+            font-size: 100px;
+            letter-spacing: 0.05em;
+            /* animation-duration: 3s;
+            animation-name: slidein; */
+            position: relative;
+            float: left;
+        }
+        #section1 .text2 .box1 span {
+
+        }
+        #section1 .text2 .box2 {
+            
+        }
+        #section1 .text2 .box2 div {
+            position: relative;
+            width: 50vh; height: 15px;
+            background: #e91c0d;
+            border-radius: 3px;
+            margin-left: -15px; margin-right: -15px;
+            top: 101px;
+        }
+        #section1 .text2 .box3 span {
+            position: relative;
+        }
+
+        /* text3 */
+        #section1 .text3 {
+            display: flex;
+            position: relative;
+            height: 90vh;
+            top: 50px; left: 70%;
+            z-index: 100;
+        }
+        #section1 .text3 span {
+            color: #e91c0d;
+            font-size: 100px;
+            letter-spacing: 0.05em;
+            /* animation-duration: 3s;
+            animation-name: slidein; */
+            position: relative;
+            float: left;
+        }
+        #section1 .text3 .box1 span {
+
+        }
+        #section1 .text3 .box2 {
+            
+        }
+        #section1 .text3 .box2 div {
+            position: relative;
+            width: 50vh; height: 13.2px;
+            background: #e91c0d;
+            border-radius: 3px;
+            margin-left: -15px; margin-right: -15px;
+            top: 59px;
+        }
+        #section1 .text3 .box3 span {
+            position: relative;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <!-- <div class="loading">
+        <article class="audio">
+            <span class="btn-sound">
+                <i class="fa fa-volume-up" aria-hidden="true"></i>
+                <i class="fa fa-volume-off" aria-hidden="true"></i>
+            </span>
+            <audio id="theme-song" src="../assets/audio/gameshow-brazz-658.mp3" loop="loop"></audio>
+        </article>
+        <div class="circle-wrap">
+            <div class="circle-inner">
+                <div class="circle"></div>
+            </div>
+        </div>
+        <p>제 포트폴리오의 방문해주셔서 감사합니다!</p>
+    </div> -->
+    <!-- loding -->
+    <div class="scroll">0</div>
+    <main id="contents">
+        <div class="contentWrap">
+            <section id="section1" class="content__item">
+                <!-- <span class="content__item__num">01</span> -->
+                <div class="header">
+                    <img class="logo" src="assets/img/logo.svg" alt="logo">
+                    <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+                </div>
+                <article class="audio">
+                    <span class="btn-sound">
+                        <!-- <i class="fa fa-volume-up" aria-hidden="true"></i> -->
+                        <i class="fa fa-volume-off" aria-hidden="true"></i>
+                    </span>
+                    <!-- <audio id="theme-song" src="../assets/audio/gameshow-brazz-658.mp3" loop="loop"></audio> -->
+                </article>
+                <div class="bottom">
+                    <span>scroll</span>
+                    <img class="arrow-down" src="assets/img/arrow-down.png" alt="arrowdown">
+                </div>
+                <div class="circle-wrap">
+                    <div class="circle-inner">
+                        <div class="circle">
+                            <img src="assets/img/serin2.jpeg" alt="image">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- //section1 -->
+        </div>
+    </main>
+    <!-- main -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+    <script>
+        //로딩
+        $(window).load(function(){
+            $(".loading").fadeOut();
+        });
+        
+        const contentWrap = $(".contentWrap").width();
+        $("body").css("height", contentWrap);
+        const scrollHeight = $(window).height();
+        let lastScrollTop = 0;
+        $(window).scroll(function(){
+            let scrollTop = $(window).scrollTop();
+            $(".contentWrap").css({"transform": "translateX("+ -scrollTop +"px)"});
+            clearTimeout($.data(this,"scrollCheck"));
+
+            //bottom 사라지게
+            $(".bottom").addClass("end");
+
+            lastScrollTop = scrollTop;
+        });
+
+        var s = skrollr.init();
+        window.addEventListener("scroll", () => {
+            let scrollTop = document.documentElement.scrollTop || window.scrollY || window.PageYOffset; 
+            document.querySelector(".scroll").innerHTML = scrollTop;
+        })
+
+    </script>
+    <!-- script -->
+</body>
+</html>
