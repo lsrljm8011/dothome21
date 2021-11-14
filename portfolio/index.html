@@ -16,15 +16,15 @@
     <style>
         .scroll {
             position: fixed;
-            right: 30px; bottom: 30px;
-            width: 40px; height: 40px;
+            right: 2.5vw; bottom: 2.5vw;
+            width: 3vw; height: 3vw;
             background: #e91c0d;
             text-align: center;
-            line-height: 40px;
-            font-size: 8px;
+            line-height: 3vw;
+            font-size: 0.5vw;
             color: #fff;
             border-radius: 50%;
-            z-index: 1000;
+            z-index: 10000;
         }
 
 
@@ -46,10 +46,11 @@
             position: relative;
         }
         #section1 {
-            background: #fbe9e8;
-            width: 8000px;
+            width: 10000px;
+            z-index: 1000;
         }
         #section2 {
+            width: 10000px;
             z-index: 2000;
         }
         .fixed {
@@ -59,16 +60,21 @@
         }
 
         /* section1 */
-        .sec1-text1 {
+        #section1 .sec1-text1 {
             z-index: 100;
             font-size: 8vw;
             white-space: nowrap;
             color: #e91c0d;
+            display: block !important;
         }
-        .sec1-text1 .t1 {
+        #section1 .sec1-text1 .t1 {
             animation-delay: 0s;
             animation-duration: 2s;
             animation-name: slidein;
+            margin-top: -15%;
+        }
+        #section1 .sec1-text1 .t3 {
+            margin-top: 15%
         }
         @keyframes slidein {
             from {
@@ -79,7 +85,7 @@
             }
         }
 
-        .sec1-text1 .t1 .line1 {
+        #section1 .sec1-text1 .t1 .line1 {
             width: 25vw;
             height: 1.2vw;
             background: #e91c0d;
@@ -90,7 +96,7 @@
             margin-left: -1vw;
             margin-right: -1vw;
         }
-        .sec1-text1 .t2 .line2 {    
+        #section1 .sec1-text1 .t2 .line2 {    
             width: 25vw;
             height: 1.1vw;
             background: #e91c0d;
@@ -101,7 +107,7 @@
             margin-left: -2vw;
             margin-right: -2vw;
         }
-        .sec1-text1 .t3 .line3 {
+        #section1 .sec1-text1 .t3 .line3 {
             width: 25vw;
             height: 1vw;
             background: #e91c0d;
@@ -112,7 +118,7 @@
             margin-left: -2vw;
             margin-right: -2vw;
         }
-        .sec1-text1 .t4 .line3 {
+        #section1 .sec1-text1 .t4 .line3 {
             height: 1.2vw;
             margin-left: 3vw;
             /* width: 25vw; height: 1.2vw; */
@@ -123,18 +129,208 @@
             position: relative;
             top: -2.65vw; 
         }
-        .sec1-img1 {
+        #section1 .sec1-img1 {
             z-index: 100;
-
+        }
+        #section1 .img1 {
+            width: 20vw;
+        }
+        #section1 .sec1-img2 {
+            z-index: 100;
+        }
+        #section1 .img2 {
+            width: 6vw;
+            animation:fly 2s infinite alternate;  
+        }
+        #section1 .img3 {
+            width: 12vw;
+            animation:fly 2s infinite alternate;  
         }
 
 
-        .sec1-img2 {
+        /* #section2 */
+        #section2 .sec1-text1 {
             z-index: 100;
+            font-size: 3.5vw;
+            color: #fff;
+            text-align: left;
+            white-space: nowrap;
         }
+        #section2 .sec1-text1 .t1 {margin-top: -18%; left: 45vw}
+        #section2 .sec1-text1 .t2 {margin-top: -9%; left: 45vw;}
+        #section2 .sec1-text1 .t3 {left: 35vw;}
+        #section2 .sec1-text1 .t4 {margin-top: 9%; left: 39.5vw;}
+        #section2 .sec1-text1 .t5 {margin-top: 18%; left: 39.5vw;}
+        
+        #section2 .sec1-text1 .line1 {
+            width: 50vw;
+            height: 0.7vw;
+            background: #fff;
+            display: inline-block;
+            border-radius: 5px;
+            position: relative;
+            top: 0.4vw;
+            margin-left: -1vw;
+            margin-right: -1vw;   
+        }
+        #section2 .sec1-text1 .line2 {
+            width: 47vw;
+            height: 0.55vw;
+            background: #fff;
+            display: inline-block;
+            border-radius: 5px;
+            position: relative;
+            top: 0.38vw;
+            margin-left: -1.2vw;
+            margin-right: -1vw;   
+        }
+        #section2 .sec1-text1 .line3 {
+            width: 25vw;
+            height: 0.6vw;
+            background: #fff;
+            display: inline-block;
+            border-radius: 5px;
+            position: relative;
+            top: 0.4vw;
+            margin-left: -1.2vw;
+            margin-right: -1vw;   
+        }
+        #section2 .sec1-text1 .line4 {
+            width: 31.5vw;
+            height: 0.6vw;
+            background: #fff;
+            display: inline-block;
+            border-radius: 5px;
+            position: relative;
+            top: 0.42vw;
+            margin-left: -1.3vw;
+            margin-right: -1.2vw;   
+        }
+        #section2 .sec1-text1 .line5 {
+            width: 24vw;
+            height: 0.7vw;
+            background: #fff;
+            display: inline-block;
+            border-radius: 5px;
+            position: relative;
+            top: 0.4vw;
+            margin-left: -1.2vw;
+            margin-right: -1.2vw;   
+        }
+        #section2 .sec1-text2 {
+            color: #fff;
+            font-size: 2vw;
+            top: 40vw; left: 85.5vw;
+            white-space: nowrap;
+        }
+        #section2 .sec1-img1 {
+            z-index: 100;
+            top: 25vw;
+            animation:fly 1.5s infinite alternate;  
+        }
+        @keyframes fly {
+            0%{transform:translate(0,0);}
+            100%{transform:translate(0.6vw,0.5vw);}
+        }
+        .face {
+            position: relative;
+            left: 1.5vw; top: 1.1vw;
+            width: 11vw;
+        }
+        .eye1 {
+            left: 8vw;
+            top: 5.3vw;
+            width: 1vw;
+            position: absolute;
+        }
+        .eye2 {
+            left: 4.8vw;
+            top: 4.9vw;
+            width: 1vw;
+            position: absolute;
+        }
+        .eye3 {
+            position: absolute;
+            width: 1.5vw;
+            left: 4.5vw;
+            top: 5vw;
+        }
+
+        /* section3 */
+        #section3 .sec1-text1 {
+            color: #00A470;
+            font-size: 8vw;
+            white-space: nowrap;
+        }
+        #section3 .sec1-text1 .t1 {
+            margin-top: -18vw;
+            left: 120vw;
+        }
+        #section3 .sec1-text1 .t1 .t1-1 {
+            left: 48vw;
+            top: 8.07vw;
+        }
+        #section3 .sec1-text1 .t2 {
+
+        }
+        #section3 .sec1-text1 .t3 {
+            margin-top: 15vw;
+            left: 130vw;
+        }
+        .sec1-text2 .t1 {
+            color: #fff;
+            z-index: 100;
+            font-size: 5vw;
+            white-space: nowrap;
+            left: 28vw; top: 20vw;
+        }
+        #section3 .sec1-img1 {
+            z-index: 100;
+            top: 2vw; left: 30vw;
+            width: 18vw;
+            animation: rotate 5s linear infinite;
+        }
+        @keyframes rotate {
+            from {transform: rotate(0deg);}
+            to {transform: rotate(360deg);}
+        }
+        #section3 .sec1-text1 .line1 {
+            width: 25vw;
+            height: 1.26vw;
+            background: #00A470;
+            display: inline-block;
+            border-radius: 5px;
+            position: relative;
+            top: -3.6vw;
+            margin-left: -1vw;
+            margin-right: -1vw;   
+        }
+        #section3 .sec1-text1 .line2 {
+            width: 40vw;
+            height: 1.2vw;
+            background: #00A470;
+            display: inline-block;
+            border-radius: 5px;
+            position: relative;
+            top: 0.73vw;
+            margin-left: -1.2vw;
+            margin-right: -1vw;   
+        }
+        #section3 .sec1-text1 .line3 {
+            width: 25vw;
+            height: 1.3vw;
+            background: #00A470;
+            display: inline-block;
+            border-radius: 5px;
+            position: relative;
+            top: -3.6vw;
+            margin-left: -1.2vw;
+            margin-right: -1vw;   
+        }
+
 
         /* svg */
-        #circle {
+        #section1 #circle {
             position: fixed;
             top: 50%; left: 50%;
             transform: translate(-50%, -50%);
@@ -153,35 +349,48 @@
             }
         }
         
-        .controls {
+        #section1  .controls {
             position: fixed;
             top: 0;
             left: 0;
             padding: 15px;
         }
 
-        .dot {
+        #section1  .dot {
             fill-opacity: 0.3;
             stroke-width: 1;
             vector-effect: non-scaling-stroke;
         }
 
 
-        #slider {
-            
-        }
-        #slider .slider-wrap {
+        #section1  #slider {
 
         }
-        #slider .slider-wrap .slider-img {
+        #section1  #slider .slider-wrap {
+
+        }
+        #section1  #slider .slider-wrap .slider-img {
             position: relative;
         }
 
-        #slider .slider-wrap .slider {
+        #section1  #slider .slider-wrap .slider {
             position: absolute;
             left: 0; top: 0;
         }
-        
+        #section3 #svg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: scale(0.6);
+        }
+        #section3  #path1 {
+            fill: #8AE2B3;
+            /* fill: #00A470; */
+            mix-blend-mode: multiply;
+        }
+
     </style>
 </head>
 <body>
@@ -203,7 +412,17 @@
     <!-- loding -->
 
 
-    <div class="contentWrap">
+    <div class="contentWrap"
+        data-0="background-color: rgba(251,233,232,1);"
+        data-22900="background-color: rgba(251,233,232,1);"
+        data-22901="background-color: rgba(233,28,13,0.5);"
+        data-23000="background-color: rgba(233,28,13,0.5);"
+        data-23500="background-color: rgba(233,28,13,1);"
+        data-43490="background-color: rgba(233,28,13,1);"
+        data-43491="background-color: rgba(233,28,13,0.8);"
+        data-44000="background-color: rgba(251,255,245,0.5);"
+        data-45000="background-color: rgba(251,255,245,1);"
+    >
 
         <div class="header">
             <img class="logo" src="assets/img/logo1.svg" alt="logo">
@@ -212,7 +431,7 @@
         <article class="audio">
             <span class="btn-sound">
                 <!-- <i class="fa fa-volume-up" aria-hidden="true"></i> -->
-                <i class="fa fa-volume-off fa-lg" aria-hidden="true"></i>
+                <img src="assets/img/audiooff.svg" alt="audio off 아이콘">
             </span>
             <!-- <audio id="theme-song" src="../assets/audio/gameshow-brazz-658.mp3" loop="loop"></audio> -->
         </article>
@@ -222,10 +441,9 @@
         <div class="scroll">0</div>
         
         <section id="section1" class="content__item">
-            
             <div class="sec1-text1">
                 <div class="t1 fixed"
-                    data-0 = "top: 10vw; left: 50vw;"
+                    data-0 = "left: 50vw;"
                     data-2000 = "left: 30vw;"
                     data-5000="left: 30vw;"
                     data-13000="left: 30vw;"
@@ -236,7 +454,7 @@
                     data-2000 = "width: 0vw; margin-left: 1vw; margin-right: -1vw;"
                 ></span>세요.</div>
                 <div class="t2 fixed"
-                    data-1500 = "top: 25vw; left: 140vw;"
+                    data-1500 = "left: 140vw;"
                     data-4500 = "left: 36.5vw;"
                     data-7000 = "left: 36.5vw;"
                     data-13000 = "left: 36.5vw;"
@@ -247,7 +465,7 @@
                     data-4500 = "width: 0vw; margin-left: 1vw; margin-right: -1vw;"
                 ></span>입니다'◡'</div>
                 <div class="t3 fixed"
-                    data-3500 = "top: 40vw; left: 140vw;"
+                    data-3500 = "left: 140vw;"
                     data-7500 = "left: 39vw;"
                     data-9000="left: 39vw;"
                     data-13000="left: 39vw;"
@@ -281,18 +499,18 @@
                 data-13000="left: 45vw; top: 5vw; transform: scale(1.2);"
                 data-14000="left: -30vw; top: 5vw; transform: scale(1.2);"
             >
-                <img src="assets/img/icon1.png" alt="구름 이미지">
+                <img class="img1" src="assets/img/icon1.svg" alt="구름 이미지">
             </div>
             <div class="sec1-img2 fixed"
                 data-16000 = "left : 100vw; top: 10vw; transform: scale(1);"
-                data-17000 = "left : 80vw; top: 18vw; transform: scale(1);"
-                data-18000 = "left : 70vw; top: 15vw; transform: scale(1.1);"
-                data-20000 = "left : 35vw; top: 20vw; transform: scale(1.2);"
+                data-17000 = "left : 78vw; top: 18vw; transform: scale(1);"
+                data-18000 = "left : 70vw; top: 10vw; transform: scale(1.1);"
+                data-20000 = "left : 35vw; top: 19vw; transform: scale(1.2);"
                 data-21000 = "left : 20vw; top: 12vw; transform: scale(1.3);"
                 data-22000 = "left : 20vw; top: 12vw; transform: scale(1.3);"
                 data-23000 = "left : -40vw; top: 12vw; transform: scale(1.3);"
             >
-                <img src="assets/img/icon2.png" alt="비눗방울 이미지">
+                <img class="img2"  src="assets/img/icon2.svg" alt="비눗방울 이미지">
             </div>
             <div class="sec1-img2 fixed"
                 data-18000 = "left : 100vw; top: 27vw; transform: scale(1)"
@@ -301,7 +519,7 @@
                 data-22000 = "left : 78vw; top: 18vw; transform: scale(1.2)"
                 data-23000 = "left : -15vw; top: 18vw; transform: scale(1.2)"
             >
-                <img src="assets/img/icon3.png" alt="여자아이 이미지">
+                <img class="img3" src="assets/img/icon3.svg" alt="여자아이 이미지">
             </div>
             <div class="sec1-img slider-wrap fixed"
                 data-22000="transform:scale(1)"
@@ -335,6 +553,132 @@
         </section> 
         <!-- //section1 -->
 
+        <section id="section2" class="content__item">
+            <div class="sec1-text1">
+                <div class="t1 fixed"
+                    data-26000="opacity: 0; left: 22.5vw;"
+                    data-27000="opacity: 1; left: 22.5vw;"
+                    data-29000="opacity: 1; left: 45vw;"
+                    data-43000="opacity: 1; left: 45vw;"
+                    data-44000="left: -40vw"
+                >CSS<span class="line1"
+                    data-27000="width: 0vw; margin-left: 3vw; margin-right: 0vw;"
+                    data-29000="width: 50vw; margin-left: -1vw; margin-right: -1vw;"
+                ></span>90%</div>
+                <div class="t2 fixed"
+                    data-29000="opacity: 0; left: 24.1vw;"
+                    data-30000="opacity: 1; left: 24.1vw;"
+                    data-32000="opacity: 1; left: 45vw;"
+                    data-43000="opacity: 1; left: 45vw;"
+                    data-44000="left: -40vw"
+                >HTML<span class="line2"
+                    data-30000="width: 0vw; margin-left: 3vw; margin-right: 0vw;"
+                    data-32000="width: 47vw; margin-left: -1.2vw; margin-right: -1vw;"
+                ></span>90%</div>
+                <div class="t3 fixed"
+                    data-32000="opacity: 0; left: 25.1vw;"
+                    data-33000="opacity: 1; left: 25.1vw;"
+                    data-35000="opacity: 1; left: 35vw;"
+                    data-43000="opacity: 1; left: 35vw;"
+                    data-44000="left: -40vw"
+                >REACT<span class="line3"
+                    data-33000="width: 0vw; margin-left: 3vw; margin-right: 0vw;"
+                    data-35000="width: 25vw; margin-left: -1.2vw; margin-right: -1vw;"
+                ></span>60%</div>
+                <div class="t4 fixed"
+                    data-35000="opacity: 0; left: 26.5vw;"
+                    data-36000="opacity: 1; left: 26.5vw;"
+                    data-38000="opacity: 1; left: 39.5vw;"
+                    data-43000="opacity: 1; left: 39.5vw;"
+                    data-44000="left: -40vw"
+                >JQUERY<span class="line4"
+                    data-36000="width: 0vw; margin-left: 3vw; margin-right: 0vw;"
+                    data-38000="width: 31.5vw; margin-left: -1.3vw; margin-right: -1.2vw;"
+                ></span>70%</div>
+                <div class="t5 fixed"
+                    data-38000="opacity: 0; left: 30.2vw;"
+                    data-39000="opacity: 1; left: 30.2vw;"
+                    data-41000="opacity: 1; left: 39.5vw;"
+                    data-43000="opacity: 1; left: 39.5vw;"
+                    data-44000="left: -40vw"
+                >JAVASCRIPT<span class="line5"
+                    data-39000="width: 0vw; margin-left: 3vw; margin-right: 0vw;"
+                    data-41000="width: 24vw; margin-left: -1.2vw; margin-right: -1.2vw;"
+                ></span>70%</div>
+            </div>
+            <div class="sec1-text2 fixed"
+                data-41000="opacity:0; left: 85.5vw;"
+                data-42000="opacity:1; left: 85.5vw;"
+                data-43000="opacity:1; left: 85.5vw;"
+                data-44000="opacity:0; left: 85.5vw;"
+            >
+                정도 할 수 있어요!
+            </div>
+            <div class="sec1-img1 fixed"
+                data-24000="left: 78vw; opacity: 0;"
+                data-25000="left: 78vw; opacity: 1;"
+                data-43000="left: 78vw; opacity: 1;"
+                data-44000="left: 78vw; opacity: 0;"
+            >
+                <img class="face" src="assets/img/icon4.svg" alt="여자아이이미지">
+                <img class="eye1" src="assets/img/eye1.svg" alt="오른쪽 눈">
+                <img class="eye2" src="assets/img/eye1.svg" alt="왼쪽 눈"
+                    data-24999="transform:scale(0)"
+                    data-25000="transform:scale(0.5)"
+                    data-25100="transform:scale(1)"
+                >
+                <img class="eye3" src="assets/img/eye2.svg" alt="감은 왼쪽 눈"
+                    data-24999="transform:scale(1)"
+                    data-25000="transform:scale(0.5)"
+                    data-25100="transform:scale(0)"
+                >
+            </div>
+        </section>
+        <!-- //section2 -->
+
+        <section id="section3" class="content__item">
+            <div class="sec1-text1"
+                data-52000="opacity: 1"
+                data-53000="opacity: 0"
+            >
+                <div class="t1 fixed"
+                    data-46000="left: 120vw"
+                    data-48000="left: 50vw"
+                >제가<span class="line1"></span><span class="t1-1 fixed">개발한</span></div>
+                <div class="t2 fixed"
+                    data-43000="opacity:0"
+                    data-45000="opacity:1"
+                >사이트<span class="line2"></span>레퍼런스</div>
+                <div class="t3 fixed"
+                    data-48000="left: 130vw"
+                    data-50000="left: 50vw"
+                >입니다<span class="line3"></span>!</div>
+            </div>
+            <div class="sec1-text2">
+                <div class="t1 fixed"
+                    data-53000="transform: scale(0)"
+                    data-56000="transform: scale(1)"
+                >
+                    SITE REFERENCE
+                </div>
+            </div>
+            <div class="sec1-img1 fixed"
+                data-56000="opacity: 0;"
+                data-57000="opacity: 1;"
+            >
+                <img src="assets/img/icon5.svg" alt="해와달 이미지">
+            </div>
+            <svg id="svg" viewBox="0 0 1000 1000" class="fixed"
+                data-45000=" transform:scale(0);"
+                data-46000=" transform:scale(0.6)"
+                data-53000="transform:scale(0.6);"
+                data-56000="transform:scale(2);"
+            >
+                <path id="path1"></path>
+            </svg>
+
+        </section>
+        <!-- section3 -->
 
     </div>
     
@@ -390,7 +734,16 @@
             minDuration: 1,
             maxDuration: 2
         });
-
+        var blob2 = createBlob({
+            element: document.querySelector("#path1"),
+            numPoints: 10,
+            centerX: 480,
+            centerY: 480,
+            minRadius: 300,
+            maxRadius: 320,
+            minDuration: 1,
+            maxDuration: 2
+        });
 
         function createBlob(options) {
             var points = [];  
@@ -491,6 +844,9 @@
 
             currentIndex = nextIndex;
         } , 3000);
+
+
+        
     </script>
 </body>
 </html>
