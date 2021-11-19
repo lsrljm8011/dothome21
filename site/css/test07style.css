@@ -36,7 +36,7 @@ a {
     /* background: rgb(167, 167, 167); */
     float: left;
 }
-
+ 
 /* 메뉴 */
 #aside h2 {
     display: inline-block;
@@ -116,7 +116,6 @@ a {
 .slider-inner .slider::before { content: attr(data-name); }  
 
 /* 탭메뉴 */
-/* tabMenu */
 #tbaMenu {
     margin-bottom: 50px;
 }

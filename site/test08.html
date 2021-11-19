@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test07</title>
+
+    <!-- Swiper Type CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/test08style.css">
+
+    <!-- 나눔스퀘어 웹 폰트 -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+
+    <style>
+        .swiper {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+        .swiper-wrapper .swiper-slide:nth-child(1){
+            background-image: url(img/banner.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+        }
+        .swiper-wrapper .swiper-slide:nth-child(2){
+            background-image: url(img/slidertype02.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+        }
+        .swiper-wrapper .swiper-slide:nth-child(3){
+            background-image: url(img/slidertype03.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+        }
+        .swiper-wrapper .swiper-slide:nth-child(4){
+            background-image: url(img/slidertype01.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+        }
+        .swiper-slide .slider-inner {
+            width: 100%; height: 820px;
+            margin: 0 auto;
+            color: #fff;
+        } 
+        .swiper-pagination {
+            position: absolute;
+            left: 50% !important;
+            bottom: 35px;
+            transform: translateX(-50%);
+        }
+        .swiper-button-prev {
+            width: 21px; height: 41px;
+            display: block;
+            position: absolute;
+            top: 45%; left: 2%;
+            transform: translateY(-50%);
+            color: #fff;
+        }
+        .swiper-button-next {
+            width: 21px; height: 41px;
+            display: block;
+            position: absolute;
+            top: 45%; right: 4%;
+            transform: translateY(-50%);
+            color: #fff;
+        }
+        .swiper-pagination-fraction {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img class="logo" src="img/test8_1.png" alt="헤더로고">
+            <!-- <div class="header">
+                <a href="#">무역통상정보</a>
+                <a href="#">회원/업무지원</a>
+                <a href="#">무역통계</a>
+                <a href="#">협회안내</a>
+            </div> -->
+            <div class="header">
+                <nav>
+                    <ul>
+                        <li class="sub-menu-parent" tab-index="0">
+                            <a href="#">무역통상정보</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Sub1</a></li>
+                                <li><a href="#">Sub2</a></li>
+                                <li><a href="#">Sub3</a></li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu-parent" tab-index="0">
+                            <a href="#">회원/업무지원</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Sub1</a></li>
+                                <li><a href="#">Sub2</a></li>
+                                <li><a href="#">Sub3</a></li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu-parent" tab-index="0">
+                            <a href="#">무역통계</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Sub1</a></li>
+                                <li><a href="#">Sub2</a></li>
+                                <li><a href="#">Sub3</a></li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu-parent" tab-index="0">
+                            <a href="#">협회안내</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Sub1</a></li>
+                                <li><a href="#">Sub2</a></li>
+                                <li><a href="#">Sub3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- header -->
+
+    <main id="slider">
+        <section class="sliderType">
+            <div class="sliderType01">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="slider-inner"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider-inner"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider-inner"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- slider -->
+
+    <div id="content1">
+        <h5>KITA 사업 일정</h5>
+        <img class="plus" src="img/test8_3.png" alt="이미지">
+        <div class="container">
+            <div class="box">
+                <span class="sub1">모집마감 -4일</span>
+                <p>2019 태국 국제식품전시회 업체<br>모집</p>
+                <div class="t1">사업기간<p>2019-05-28 ~ 2019-06-01</p></div>
+                <div class="t2">모집기간<p>2019-05-28 ~ 2019-06-01</p></div>
+            </div>
+            <div class="box">
+                <span class="sub1">모집마감 -4일</span>
+                <p>2019 태국 국제식품전시회 업체<br>모집</p>
+                <div class="t1">사업기간<p>2019-05-28 ~ 2019-06-01</p></div>
+                <div class="t2">모집기간<p>2019-05-28 ~ 2019-06-01</p></div>
+            </div>
+            <div class="box">
+                <span class="sub1">모집마감 -4일</span>
+                <p>2019 태국 국제식품전시회 업체<br>모집</p>
+                <div class="t1">사업기간<p>2019-05-28 ~ 2019-06-01</p></div>
+                <div class="t2">모집기간<p>2019-05-28 ~ 2019-06-01</p></div>
+            </div>
+            <div class="box">
+                <span class="sub1">모집마감 -4일</span>
+                <p>2019 태국 국제식품전시회 업체<br>모집</p>
+                <div class="t1">사업기간<p>2019-05-28 ~ 2019-06-01</p></div>
+                <div class="t2">모집기간<p>2019-05-28 ~ 2019-06-01</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="content2">
+        <div class="container">
+            <div class="box1">
+                <div class="sub1">
+                    <div id="tbaMenu">
+                        <div class="tabMenuWrap">
+                            <div class="tab-btn">
+                                <ul>
+                                    <li class="active"><a class="click" href="#">보도자료</a></li>
+                                    <li><a href="#">언론기고</a></li>
+                                </ul>
+                            </div>
+                            <img class="plus" src="img/test8_3.png" alt="플러스">
+                        </div>
+                        <div class="tab-cont tab1">
+                            <div class="box">
+                                <p>민관합동 현장중십 수출활력촉진단 가동<br><span>2019-01-31</span></p>
+                                <p>민관기업이 주도하는 유럽 스타트업 캠퍼스<br><span>2019-01-29</span></p>
+                            </div>
+                        </div>
+                        <div class="tab-cont tab2">
+                            <div class="box">
+                                <p>민관기업이 주도하는 유럽 스타트업 캠퍼스<br><span>2019-01-29</span></p>
+                                <p>민관합동 현장중십 수출활력촉진단 가동<br><span>2019-01-31</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tab -->
+                </div>
+                <div class="sub2">
+                    <h5>KITA 연구보고서</h5>
+                    <img class="plus" src="img/test8_3.png" alt="플러스">
+                    <div class="m">
+                        <span class="s">[Trade Brief]</span>
+                        <p>2019년 수출기업의 경영환경 전망 조사<span>2019-01-17</span></p>
+                    </div>
+                    <div class="m">
+                        <span class="s">[Trade Brief]</span>
+                        <p>2019년 수출기업의 경영환경 전망 조사<span>2019-01-17</span></p>
+                    </div>
+                    <div class="m">
+                        <span class="s">[Trade Brief]</span>
+                        <p>2019년 수출기업의 경영환경 전망 조사<span>2019-01-17</span></p>
+                    </div>
+                    <div class="m">
+                        <span class="s">[Trade Brief]</span>
+                        <p>2019년 수출기업의 경영환경 전망 조사<span>2019-01-17</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="box2">
+                <div class="sub1"><img src="img/sub_banner.jpg" alt="서브 배너"></div>
+                <div class="sub2">
+                    <h5>KITA 통상정보</h5>
+                    <img class="plus" src="img/test8_3.png" alt="플러스">
+                    <div class="b b2">
+                        <p>한미 통상현안 사례분석집<br><span>2019-01-15</span></p>
+                        <p>[통상리포트] 킥오프된 브렉시트 후반전 : 향후 통···<br><span>2019-01-15</span></p>
+                    </div>
+                    <div class="b b1">
+                        <p>한미 통상현안 사례분석집<br><span>2019-01-15</span></p>
+                        <p>[통상리포트] 킥오프된 브렉시트 후반전 : 향후 통···<br><span>2019-01-15</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <div class="box1">
+                <div class="container">
+                    <span>이용약관 | 개인정보처리방침 | 저장권 정책 | 이메일주소무단수집거부 | 온라인 고개상담 | 신문고</span>
+                    <div class="sub">
+                        <div class="familysite">
+                            <select name="sitelist">
+                                <option value="#">국내외지부1</option>
+                                <option value="#">국내외지부2</option>
+                                <option value="#">국내외지부3</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box2">
+                <div class="container">
+                    <img class="logo" src="img/test8_4.png" alt="푸터 로고">
+                    <p>(06164) 서울시 강남구 영동대로 511 (삼성동)<br>Copyright © KITA All right reserved</p>
+                    <img class="sns" src="img/test8_5.png" alt="sns 이미지">
+                    <div class="line">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer -->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        //탭메뉴
+        const tabBtn = $(".tab-btn ul li");        
+        const tabCont = $(".tab-cont");       
+
+        tabBtn.click(function(e){
+            e.preventDefault();
+            let target = $(this);    
+
+            tabBtn.removeClass("active");
+            target.addClass("active");
+
+            let index = target.index();
+            
+            tabCont.css("display","none");
+            tabCont.eq(index).css("display","flex");
+        });
+
+        const swiper = new Swiper('.swiper', {
+                direction: 'horizontal',
+
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+    </script>
+</body>
+</body>
+</html>
