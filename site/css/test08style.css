@@ -25,6 +25,7 @@ a {
 }
 header {
     margin-top: 50px;
+    z-index: 1000;
 }
 .logo {
     width: 20%;
@@ -32,13 +33,16 @@ header {
 .header {
     margin-top: -60px;
     margin-left: 660px;
+    z-index: 1000;
 }
 
 .sub-menu-parent {
     position: relative;
+    z-index: 1000;
 }
 
 .sub-menu {
+    z-index: 1000;
     visibility: hidden;
     /* hides sub-menu */
     opacity: 0;
