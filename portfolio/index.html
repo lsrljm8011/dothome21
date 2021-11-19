@@ -277,12 +277,22 @@
             margin-top: 15vw;
             left: 130vw;
         }
-        .sec1-text2 .t1 {
-            color: #fff;
+        #section3 .sec1-text2 .t1 {
+            color: #FBFFF5;
             z-index: 100;
             font-size: 5vw;
             white-space: nowrap;
-            left: 28vw; top: 20vw;
+            left: 28vw; top: 40%
+        }
+        #section3 .sec1-text2 .line1 {
+            width: 25vw; height: 0.77vw;
+            background: #FBFFF5;
+            display: inline-block;
+            border-radius: 5px;
+            position: relative;
+            top: 0.55vw;
+            margin-left: -1vw;
+            margin-right: -1vw; 
         }
         #section3 .sec1-img1 {
             z-index: 100;
@@ -359,7 +369,7 @@
         #section1  .dot {
             fill-opacity: 0.3;
             stroke-width: 1;
-            vector-effect: non-scaling-stroke;
+            vector-effec: non-scaling-stroke;
         }
 
 
@@ -422,14 +432,27 @@
         data-43491="background-color: rgba(233,28,13,0.8);"
         data-44000="background-color: rgba(251,255,245,0.5);"
         data-45000="background-color: rgba(251,255,245,1);"
+        data-57998="background-color: rgba(251,255,245,0.8);"
+        data-57999="background-color: rgba(0,164,112,0);"
+        data-58000="background-color: rgba(97,197,143,1);"
+        data-58100="background-color: rgba(0,164,112,1);"
     >
 
         <div class="header">
             <img class="logo" src="assets/img/logo1.svg" alt="logo">
-            <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+            <i class="fa fa-bars fa-2x" aria-hidden="true"
+
+            ></i>
         </div>
         <article class="audio">
-            <span class="btn-sound">
+            <span class="btn-sound"
+                data-22899="background-color:rgba(233,28,13,1)"
+                data-22900="background-color:rgba(248,254,130,1)"
+                data-43900="background-color:rgba(248,254,130,1)"
+                data-44000="background-color:rgba(0,164,112,1)"
+                data-57999="background-color:rgba(0,164,112,1)"
+                data-58000="background-color:rgba(251,255,245,1)"
+            >
                 <!-- <i class="fa fa-volume-up" aria-hidden="true"></i> -->
                 <img src="assets/img/audiooff.svg" alt="audio off 아이콘">
             </span>
@@ -438,7 +461,14 @@
         <div class="bottom fixed">
             <img class="arrow-down" src="assets/img/arrow-down.png" alt="arrowdown">
         </div>
-        <div class="scroll">0</div>
+        <div class="scroll"
+                data-22899="background-color:rgba(233,28,13,1);color:rgba(255,255,255,1)"
+                data-22900="background-color:rgba(248,254,130,1);color:rgba(233,28,13,1)"
+                data-43900="background-color:rgba(248,254,130,1);color:rgba(233,28,13,1)"
+                data-44000="background-color:rgba(0,164,112,1);color:rgba(251,255,245,1)"
+                data-57999="background-color:rgba(0,164,112,1);color:rgba(251,255,245,1)"
+                data-58000="background-color:rgba(251,255,245,1); color:rgba(0,164,112,1)"
+        >0</div>
         
         <section id="section1" class="content__item">
             <div class="sec1-text1">
@@ -656,11 +686,17 @@
             </div>
             <div class="sec1-text2">
                 <div class="t1 fixed"
-                    data-53000="transform: scale(0)"
-                    data-56000="transform: scale(1)"
-                >
-                    SITE REFERENCE
-                </div>
+                    data-53000="transform: scale(0); left:28vw; opacity:1;"
+                    data-56000="transform: scale(1); left:28vw; opacity:1;"
+                    data-59000="transform: scale(1); left:28vw; opacity:1;"
+                    data-60000="transform: scale(1); left:17vw; opacity:1;"
+                    data-61000="transform: scale(1); left:17vw; opacity:1;"
+                    data-62000="transform: scale(1); left:17vw; opacity:0;"
+                >SITE<span class="line1"
+                    data-58500="width: 0vw; margin-left: 3vw; margin-right: -1vw;"
+                    data-59000="width: 0vw; margin-left: 3vw; margin-right: -1vw;"
+                    data-60000="width: 25vw; margin-left: -1vw; margin-right: -1vw;"
+                    ></span>REFERENCE</div>
             </div>
             <div class="sec1-img1 fixed"
                 data-56000="opacity: 0;"
@@ -669,10 +705,13 @@
                 <img src="assets/img/icon5.svg" alt="해와달 이미지">
             </div>
             <svg id="svg" viewBox="0 0 1000 1000" class="fixed"
-                data-45000=" transform:scale(0);"
-                data-46000=" transform:scale(0.6)"
+                data-45000="transform:scale(0);"
+                data-46000="transform:scale(0.6)"
                 data-53000="transform:scale(0.6);"
                 data-56000="transform:scale(2);"
+                data-57000="transform:scale(2);"
+                data-58000="transform:scale(4);"
+                data-58001="transform:scale(0);"
             >
                 <path id="path1"></path>
             </svg>
