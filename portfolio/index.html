@@ -30,656 +30,256 @@
             z-index: 100000;
         }
 
-        .contentWrap {
-            position: fixed;
-            left: 0; top: 0;
-            display: flex;
+        #section10 .sec10-img1 {
+            width: 10vw;
+            top: 70%; 
+            left: 100vw;
+            /* left: 20vw; */
+            animation:fly 1.5s infinite alternate; 
         }
-        .content__item {
-            width: 100vw; height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            position: relative;
-            box-sizing: border-box;
+        #section10 .sec10-img2 {
+            width: 10vw;
+            top: 30%; 
+            left: 100vw;
+            /* left: 80vw; */
+            animation:fly 1.5s infinite alternate; 
         }
-        #contents > div {
-            position: relative;
-        }
-        #section1 {
-            z-index: 1000;
-        }
-        #section2 {
-            z-index: 2000;
-        }
-        #section3 {
-            z-index: 3000;
-        }
-        /* #section4 {
-            z-index: 4000;
-        }
-        #section5 {
-            z-index: 5000;
-        }
-        #section6 {
-            z-index: 6000;
-        }
-        #section7 {
-            z-index: 7000;
-        }
-        #section8 {
-            z-index: 8000;
-        }
-        #section9 {
-            z-index: 9000;
-        } */
-
-        .fixed {
-            position: fixed;
-            left: 50%; top: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        /* section1 */
-        #section1 .sec1-text1 {
+        #section10 .sec10-text1 .t1 {
+            color: #E6F0FC;
             z-index: 100;
-            font-size: 8vw;
+            font-size: 6vw;
             white-space: nowrap;
-            color: #e91c0d;
-            display: block !important;
-        }
-        #section1 .sec1-text1 .t1 {
-            animation-delay: 0s;
-            animation-duration: 2s;
-            animation-name: slidein;
-            margin-top: -15%;
-        }
-        #section1 .sec1-text1 .t3 {
-            margin-top: 15%
-        }
-        /* @keyframes slidein {
-            from {
-                left: 130vw;
-            }
-            to {
-                left: 50vw;
-            }
-        } */
-
-        #section1 .sec1-text1 .t1 .line1 {
-            width: 25vw;
-            height: 1.2vw;
-            background: #e91c0d;
-            display: inline-block;
-            border-radius: 5px;
-            position: relative;
-            top: -3.65vw;
-            margin-left: -1vw;
-            margin-right: -1vw;
-        }
-        #section1 .sec1-text1 .t2 .line2 {    
-            width: 25vw;
-            height: 1.1vw;
-            background: #e91c0d;
-            display: inline-block;
-            border-radius: 5px;
-            position: relative;
-            top: 0.9vw;
-            margin-left: -2vw;
-            margin-right: -2vw;
-        }
-        #section1 .sec1-text1 .t3 .line3 {
-            width: 25vw;
-            height: 1vw;
-            background: #e91c0d;
-            display: inline-block;
-            border-radius: 5px;
-            position: relative;
-            top: -2.6vw;
-            margin-left: -2vw;
-            margin-right: -2vw;
-        }
-        #section1 .sec1-text1 .t4 .line3 {
-            height: 1.2vw;
-            margin-left: 3vw;
-            /* width: 25vw; height: 1.2vw; */
-            /* margin-left: -1vw; margin-right: -2vw; */
-            background: #e91c0d;
-            display: inline-block;
-            border-radius: 5px;
-            position: relative;
-            top: -2.65vw; 
-        }
-        #section1 .sec1-img1 {
-            z-index: 100;
-        }
-        #section1 .img1 {
-            width: 20vw;
-        }
-        #section1 .sec1-img2 {
-            z-index: 100;
-        }
-        #section1 .img2 {
-            width: 6vw;
-            animation:fly 2s infinite alternate;  
-        }
-        #section1 .img3 {
-            width: 12vw;
-            animation:fly 2s infinite alternate;  
-        }
-
-
-        /* #section2 */
-        #section2 .sec2-text1 {
-            z-index: 100;
-            font-size: 3.5vw;
-            color: #fff;
-            text-align: left;
-            white-space: nowrap;
-        }
-        #section2 .sec2-text1 .t1 {margin-top: -18%; left: 45vw}
-        #section2 .sec2-text1 .t2 {margin-top: -9%; left: 45vw;}
-        #section2 .sec2-text1 .t3 {left: 35vw;}
-        #section2 .sec2-text1 .t4 {margin-top: 9%; left: 39.5vw;}
-        #section2 .sec2-text1 .t5 {margin-top: 18%; left: 39.5vw;}
-        
-        #section2 .sec2-text1 .line1 {
-            width: 50vw;
-            height: 0.7vw;
-            background: #fff;
-            display: inline-block;
-            border-radius: 5px;
-            position: relative;
-            top: 0.4vw;
-            margin-left: -1vw;
-            margin-right: -1vw;   
-        }
-        #section2 .sec2-text1 .line2 {
-            width: 47vw;
-            height: 0.55vw;
-            background: #fff;
-            display: inline-block;
-            border-radius: 5px;
-            position: relative;
-            top: 0.38vw;
-            margin-left: -1.2vw;
-            margin-right: -1vw;   
-        }
-        #section2 .sec2-text1 .line3 {
-            width: 25vw;
-            height: 0.6vw;
-            background: #fff;
-            display: inline-block;
-            border-radius: 5px;
-            position: relative;
-            top: 0.4vw;
-            margin-left: -1.2vw;
-            margin-right: -1vw;   
-        }
-        #section2 .sec2-text1 .line4 {
-            width: 31.5vw;
-            height: 0.6vw;
-            background: #fff;
-            display: inline-block;
-            border-radius: 5px;
-            position: relative;
-            top: 0.42vw;
-            margin-left: -1.3vw;
-            margin-right: -1.2vw;   
-        }
-        #section2 .sec2-text1 .line5 {
-            width: 24vw;
-            height: 0.7vw;
-            background: #fff;
-            display: inline-block;
-            border-radius: 5px;
-            position: relative;
-            top: 0.4vw;
-            margin-left: -1.2vw;
-            margin-right: -1.2vw;   
-        }
-        #section2 .sec2-text2 {
-            color: #fff;
-            font-size: 2vw;
-            top: 40vw; left: 85.5vw;
-            white-space: nowrap;
-        }
-        #section2 .sec2-img1 {
-            z-index: 100;
-            top: 25vw;
-            animation:fly 1.5s infinite alternate;  
-        }
-        @keyframes fly {
-            0%{transform:translate(0,0);}
-            100%{transform:translate(0.6vw,0.5vw);}
-        }
-        .face {
-            position: relative;
-            left: 1.5vw; top: 1.1vw;
-            width: 11vw;
-        }
-        .eye1 {
-            left: 8vw;
-            top: 5.3vw;
-            width: 1vw;
-            position: absolute;
-        }
-        .eye2 {
-            left: 4.8vw;
-            top: 4.9vw;
-            width: 1vw;
-            position: absolute;
-        }
-        .eye3 {
-            position: absolute;
-            width: 1.5vw;
-            left: 4.5vw;
-            top: 5vw;
-        }
-
-        /* section3 */
-        #section3 .sec3-text1 {
-            color: #00A470;
-            font-size: 8vw;
-            white-space: nowrap;
-        }
-        #section3 .sec3-text1 .t1 {
-            margin-top: -18vw;
-            left: 120vw;
-        }
-        #section3 .sec3-text1 .t1 .t1-1 {
-            left: 48vw;
-            top: 8.07vw;
-        }
-        #section3 .sec3-text1 .t2 {
-
-        }
-        #section3 .sec3-text1 .t3 {
-            margin-top: 15vw;
+            /* left: 35vw; */
             left: 130vw;
+            top: 15%;
         }
-        #section3 .sec3-img1 {
-            z-index: 10000;
-            top: 2vw; left: 30vw;
-            width: 18vw;
-            animation: rotate 5s linear infinite;
-        }
-        @keyframes rotate {
-            from {transform: rotate(0deg);}
-            to {transform: rotate(360deg);}
-        }
-        #section3 .sec3-text1 .line1 {
-            width: 25vw;
-            height: 1.26vw;
-            background: #00A470;
+        #section10 .sec10-text1 .t1 .line1 {
+            /* width: 20vw; */
+            height: 0.7vw;
+            background: #E6F0FC;
             display: inline-block;
             border-radius: 5px;
             position: relative;
-            top: -3.6vw;
-            margin-left: -1vw;
-            margin-right: -1vw;   
+            top: 0.65vw;
+            /* margin-left: -1vw;
+            margin-right: -1vw;   */
+            margin-left: 4vw;
+            margin-right: -0.8vw;  
         }
-        #section3 .sec3-text1 .line2 {
-            width: 40vw;
-            height: 1.2vw;
-            background: #00A470;
+        #section10 .sec10-text1 .t2 {
+            color: #E6F0FC;
+            z-index: 100;
+            font-size: 6vw;
+            white-space: nowrap;
+            /* left: 60vw;  */
+            top: 80%; left: 120vw;
+        }
+        #section10 .sec10-text1 .t2 .line1 {
+            /* width: 20vw; */
+            height: 1vw;
+            background: #E6F0FC;
             display: inline-block;
             border-radius: 5px;
             position: relative;
-            top: 0.73vw;
-            margin-left: -1.2vw;
-            margin-right: -1vw;   
+            top: -2.7vw;
+            /* margin-left: -1vw;
+            margin-right: -1vw;   */
+            margin-left: 1vw;
+            margin-right: -0.8vw;  
         }
-        #section3 .sec3-text1 .line3 {
-            width: 25vw;
-            height: 1.3vw;
-            background: #00A470;
-            display: inline-block;
-            border-radius: 5px;
-            position: relative;
-            top: -3.6vw;
-            margin-left: -1.2vw;
-            margin-right: -1vw;   
-        }
-        #section3 .sec3-text2 .t1 {
-            color: #FBFFF5;
+        #section10 .sec10-text1 .t3 {
+            color: #E6F0FC;
             z-index: 100;
             font-size: 5vw;
             white-space: nowrap;
-            left: 28vw; top: 40%
-        }
-        #section3 .sec3-text2 .line1 {
-            width: 25vw; height: 0.77vw;
-            background: #FBFFF5;
-            display: inline-block;
-            border-radius: 5px;
-            position: relative;
-            top: 0.55vw;
-            margin-left: -1vw;
-            margin-right: -1vw; 
-        }
-        #section4 .sec4-img1 {
-            width: 40vw;
-            top: 50%; left: 30vw;
-        }
-        #section4 .sec4-img2 {
-            width: 37.5vw;
-            left: 30vw;
-            margin-top: -5vw;
-        }
-        #section4 .sec4-text1 .t1 {
-            color: #FBFFF5;
-            z-index: 100;
-            font-size: 3vw;
-            white-space: nowrap;
-            left: 69vw;
-            margin-top: -10vw;
-        }
-        #section4 .sec4-text1 .t1 .line1 {
-            width: 10vw;
-            height: 0.6vw;
-            background: #FBFFF5;
-            display: inline-block;
-            border-radius: 5px;
-            position: relative;
-            top: -2.08vw;
-            margin-left: -0.5vw;
-            margin-right: -0.5vw;   
-        }
-        #section4 .sec4-text1 .t2 {
-            color: #FBFFF5;
-            z-index: 100;
-            font-size: 1.5vw;
-            left: 71.5vw;
-            margin-top: -1vw;
-            word-break: keep-all;
-        }
-        #section4 .sec4-text1 .button {
-            width: 10vw; height: 3vw;
-            border-radius: 50px;
-            background: #FBFFF5;
-            text-align: center;
-            line-height: 2.8vw;
-            font-size: 1vw;
-            left: 62%;
-            margin-top: 9.7vw;
-        }
-        #section4 .sec4-text1 .button a {
-            color: #00A470;
-        }
-        #section5 .sec5-img1 {
-            width: 40vw;
-            top: 50%; left: 70vw;
-        }
-        #section5 .sec5-img2 {
-            width: 37.5vw;
-            left: 70vw;;
-            margin-top: -5vw;
-        }
-        #section5 .sec5-text1 .t1 {
-            color: #FBFFF5;
-            z-index: 100;
-            font-size: 3vw;
-            white-space: nowrap;
-            left: 18vw;
-            margin-top: -10vw;
-        }
-        #section5 .sec5-text1 .t1 .line1 {
-            width: 10vw;
-            height: 0.6vw;
-            background: #FBFFF5;
-            display: inline-block;
-            border-radius: 5px;
-            position: relative;
-            top: -1.1vw;
-            margin-left: -0.8vw;
-            margin-right: -0.5vw;   
-        }
-        #section5 .sec5-text1 .t2 {
-            color: #FBFFF5;
-            z-index: 100;
-            font-size: 1.5vw;
-            left: 27.5vw;
-            margin-top: -1vw;
-            word-break: keep-all;
-        }
-        #section5 .sec5-text1 .button {
-            width: 10vw; height: 3vw;
-            border-radius: 50px;
-            background: #FBFFF5;
-            text-align: center;
-            line-height: 2.8vw;
-            font-size: 1vw;
-            left: 15%;
-            margin-top: 9.7vw;
-        }
-        #section5 .sec5-text1 .button a {
-            color: #00A470;
-        }
-        #section6 .sec6-img1 {
-            width: 40vw;
-            top: 50%; left: 30vw;
-        }
-        #section6 .sec6-img2 {
-            width: 37.5vw;
-            left: 30vw;
-            margin-top: -5vw;
-        }
-        #section6 .sec6-text1 .t1 {
-            color: #FBFFF5;
-            z-index: 100;
-            font-size: 3vw;
-            white-space: nowrap;
-            left: 64.5vw;
-            margin-top: -9vw;
-        }
-        #section6 .sec6-text1 .t1 .line1 {
-            width: 10vw;
-            height: 0.6vw;
-            background: #FBFFF5;
-            display: inline-block;
-            border-radius: 5px;
-            position: relative;
-            top: -2.08vw;
-            margin-left: -0.5vw;
-            margin-right: -0.5vw;   
-        }
-        #section6 .sec6-text1 .t2 {
-            color: #FBFFF5;
-            z-index: 100;
-            font-size: 1.5vw;
-            left: 71.5vw;
-            margin-top: -1vw;
-            word-break: keep-all;
-        }
-        #section6 .sec6-text1 .button {
-            width: 10vw; height: 3vw;
-            border-radius: 50px;
-            background: #FBFFF5;
-            text-align: center;
-            line-height: 2.8vw;
-            font-size: 1vw;
-            left: 62%;
-            margin-top: 9.7vw;
-        }
-        #section6 .sec6-text1 .button a {
-            color: #00A470;
-        }
-        #section7 .sec7-img1 {
-            width: 40vw;
-            top: 50%; left: 70vw;
-        }
-        #section7 .sec7-img2 {
-            width: 37.5vw;
-            left: 70vw;;
-            margin-top: -5vw;
-        }
-        #section7 .sec7-text1 .t1 {
-            color: #FBFFF5;
-            z-index: 100;
-            font-size: 3vw;
-            white-space: nowrap;
-            left: 18vw;
-            margin-top: -10vw;
-        }
-        #section7 .sec7-text1 .t1 .line1 {
-            width: 10vw;
-            height: 0.6vw;
-            background: #FBFFF5;
-            display: inline-block;
-            border-radius: 5px;
-            position: relative;
-            top: 0.35vw;
-            margin-left: -1vw;
-            margin-right: -1vw;   
-        }
-        #section7 .sec7-text1 .t2 {
-            color: #FBFFF5;
-            z-index: 100;
-            font-size: 1.5vw;
-            left: 24vw;
-            margin-top: -1vw;
-            word-break: keep-all;
-        }
-        #section7 .sec7-text1 .button {
-            width: 10vw; height: 3vw;
-            border-radius: 50px;
-            background: #FBFFF5;
-            text-align: center;
-            line-height: 2.8vw;
-            font-size: 1vw;
-            left: 14%;
-            margin-top: 9.7vw;
-        }
-        #section7 .sec7-text1 .button a {
-            color: #00A470;
-        }
-        #section8 .sec8-img1 {
-            width: 40vw;
-            top: 50%; left: 30vw;
-        }
-        #section8 .sec8-img2 {
-            width: 37.5vw;
-            left: 30vw;
-            margin-top: -5vw;
-        }
-        #section8 .sec8-text1 .t1 {
-            color: #FBFFF5;
-            z-index: 100;
-            font-size: 3vw;
-            white-space: nowrap;
-            left: 64.5vw;
-            margin-top: -10vw;
-        }
-        #section8 .sec8-text1 .t1 .line1 {
-            width: 10vw;
-            height: 0.53vw;
-            background: #FBFFF5;
-            display: inline-block;
-            border-radius: 5px;
-            position: relative;
-            top: -2.14vw;
-            margin-left: -0.5vw;
-            margin-right: -0.8vw;  
-        }
-        #section8 .sec8-text1 .t2 {
-            color: #FBFFF5;
-            z-index: 100;
-            font-size: 1.5vw;
-            left: 71.5vw;
-            margin-top: -1vw;
-            word-break: keep-all;
-        }
-        #section8 .sec8-text1 .button {
-            width: 10vw; height: 3vw;
-            border-radius: 50px;
-            background: #FBFFF5;
-            text-align: center;
-            line-height: 2.8vw;
-            font-size: 1vw;
-            left: 62%;
-            margin-top: 9.7vw;
-        }
-        #section8 .sec8-text1 .button a {
-            color: #00A470;
         }
 
-        #section9 .sec9-img1 {
-            position: relative;
-            right: -300%; bottom: -20%;
-            z-index: 9000;
-        }
-        #section9 .sec9-img1 img {
-            width: 80%;
-        }
-        #section9 .sec9-img2 {
-            width: 25vw;
-            left: 25%; top: 100%;
-        }
-        #section9 .sec9-img3 {
-            width: 25vw;
-            left: 25%; top: 100%;
-            /* left: 25%; top: 140%; */
-        }
-        #section9 .sec9-text1 .t1 {
-            z-index: 1;
-            white-space: nowrap;
+        #section11 .sec11-text1 .t1 {
             color: #0F15E2;
-            font-size: 8vw;
-            top: 47%; 
-            left: 140%;
+            z-index: 100;
+            font-size: 4vw;
+            white-space: nowrap;
+            /* left: 60vw;  */
+            top: 12%;
         }
-        #section9 .sec9-text1 .t1 .line1 {
-            /* width: 25vw; */
-            height: 1.12vw;
+        #section11 .sec11-text1 .t1 .line1 {
+            /* width: 20vw; */
+            height: 0.7vw;
             background: #0F15E2;
             display: inline-block;
             border-radius: 5px;
             position: relative;
-            top: 0.9vw;
-            /* margin-left: -1vw;
-            margin-right: -2vw; */
+            top: -2.8vw;
+            /* margin-left: -1.2vw;
+            margin-right: -1vw;   */
             margin-left: 3vw;
+            margin-right: -0.8vw;  
         }
-        #section9 .sec9-img4 {
-            width: 25vw;
-            /* left: 20%; top: 90%; */
-            left: 20%; top: 130%;
-        }
-        #section9 .sec9-img5 {
-            width: 20vw;
-            /* left: 70%; top: 10%; */
-            left: 100%; top: 10%;
-            animation:fly 1.5s infinite alternate;  
-        }
-        #section9 .sec9-text2 .t1 {
-            z-index: 1;
-            white-space: nowrap;
+        #section11 .sec11-text1 .t2 {
             color: #0F15E2;
-            font-size: 1.8vw;
-            left: 107%;  top: 8vw;
-            /* left: 77%;  top: 8vw; */
-            animation:fly 1.5s infinite alternate; 
-            cursor: pointer;        
-        }
-        #section9 .sec9-text3 .t1 {
-            z-index: 1;
+            z-index: 100;
+            font-size: 2vw;
             white-space: nowrap;
-            color: #0F15E2;
-            font-size: 3vw;
-            top: 90%; 
+            /* left: 60vw;  */
+            top: 25%;
         }
-        #section9 .sec9-text4 {
-            top: 45%;
+        #section11 .sec11-text1 .t3 {
+            z-index: 1;
+            top: 65%; left: 50%;
         }
-        #section9 .sec9-text4 iframe {
+        #section11 .sec11-text1 .t3 iframe {
+            width: 50vw; height: 55vh;
             transform-style: preserve-3d;
             transform: translate3d(0, 0, 0);
+            border-bottom-left-radius: 10px;
         }
-        #section9 .sec9-text4 .i1 {
+        #section11 .sec11-text1 .t3 .i1 {
             
         } 
+        #section11 .sec11-img1 {
+            top: 62%;
+            width: 50vw;
+        }
+        #section12 .sec12-text1 .t1 {
+            color: #0F15E2;
+            z-index: 100;
+            font-size: 4vw;
+            white-space: nowrap;
+            /* left: 60vw;  */
+            top: 12%;
+        }
+        #section12 .sec12-text1 .t1 .line1 {
+            /* width: 20vw; */
+            height: 0.7vw;
+            background: #0F15E2;
+            display: inline-block;
+            border-radius: 5px;
+            position: relative;
+            top: -2.8vw;
+            /* margin-left: -1.2vw;
+            margin-right: -1vw;   */
+            margin-left: 3vw;
+            margin-right: -0.8vw;  
+        }
+        #section12 .sec12-text1 .t2 {
+            color: #0F15E2;
+            z-index: 100;
+            font-size: 2vw;
+            white-space: nowrap;
+            /* left: 60vw;  */
+            top: 25%;
+        }
+        #section12 .sec12-text1 .t3 {
+            z-index: 1;
+            top: 65%; left: 50%;
+        }
+        #section12 .sec12-text1 .t3 iframe {
+            width: 50vw; height: 55vh;
+            transform-style: preserve-3d;
+            transform: translate3d(0, 0, 0);
+            border-bottom-left-radius: 10px;
+        }
+        #section12 .sec12-text1 .t3 .i1 {
+            
+        } 
+        #section12 .sec12-img1 {
+            top: 62%;
+            width: 50vw;
+        }
+        #section13 .sec13-text1 .t1 {
+            color: #0F15E2;
+            z-index: 100;
+            font-size: 4vw;
+            white-space: nowrap;
+            /* left: 60vw;  */
+            top: 12%;
+        }
+        #section13 .sec13-text1 .t1 .line1 {
+            /* width: 20vw; */
+            height: 0.6vw;
+            background: #0F15E2;
+            display: inline-block;
+            border-radius: 5px;
+            position: relative;
+            top: -2.9vw;
+            /* margin-left: -1.2vw;
+            margin-right: -1vw;   */
+            margin-left: 3vw;
+            margin-right: -0.8vw;  
+        }
+        #section13 .sec13-text1 .t2 {
+            color: #0F15E2;
+            z-index: 100;
+            font-size: 2vw;
+            white-space: nowrap;
+            /* left: 60vw;  */
+            top: 25%;
+        }
+        #section13 .sec13-text1 .t3 {
+            z-index: 1;
+            top: 65%; left: 50%;
+        }
+        #section13 .sec13-text1 .t3 iframe {
+            width: 50vw; height: 55vh;
+            transform-style: preserve-3d;
+            transform: translate3d(0, 0, 0);
+            border-bottom-left-radius: 10px;
+        }
+        #section13 .sec13-text1 .t3 .i1 {
+            
+        } 
+        #section13 .sec13-img1 {
+            top: 62%;
+            width: 50vw;
+        }
+        #section14 .sec14-text1 .t1 {
+            color: #0F15E2;
+            z-index: 100;
+            font-size: 4vw;
+            white-space: nowrap;
+            /* left: 60vw;  */
+            top: 12%;
+        }
+        #section14 .sec14-text1 .t1 .line1 {
+            /* width: 20vw; */
+            height: 0.6vw;
+            background: #0F15E2;
+            display: inline-block;
+            border-radius: 5px;
+            position: relative;
+            top: -2.9vw;
+            /* margin-left: -1.2vw;
+            margin-right: -1vw;   */
+            margin-left: 3vw;
+            margin-right: -0.8vw;  
+        }
+        #section14 .sec14-text1 .t2 {
+            color: #0F15E2;
+            z-index: 100;
+            font-size: 2vw;
+            white-space: nowrap;
+            /* left: 60vw;  */
+            top: 25%;
+        }
+        #section14 .sec14-text1 .t3 {
+            z-index: 1;
+            top: 65%; left: 50%;
+        }
+        #section14 .sec14-text1 .t3 iframe {
+            width: 50vw; height: 55vh;
+            transform-style: preserve-3d;
+            transform: translate3d(0, 0, 0);
+            border-bottom-left-radius: 10px;
+        }
+        #section14 .sec14-text1 .t3 .i1 {
+            
+        } 
+        #section14 .sec14-img1 {
+            top: 62%;
+            width: 50vw;
+        }
+
+
 
         /* svg */
         #section1 #circle {
@@ -742,14 +342,24 @@
             /* fill: #00A470; */
             mix-blend-mode: multiply;
         }
-        #section9 #svg {
+        #section10 #svg {
             position: fixed;
             top: 0; left: 0;
             width: 100%; height: 100%;
             transform: scale(0.6);
         }
-        #section9 #path2 {
-            fill: #BBC4F7;
+        #section10 #path2 {
+            fill: #F9FE94;
+            mix-blend-mode: multiply;
+        }
+        #section10 #svg {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            transform: scale(0.6);
+        }
+        #section10 #path3 {
+            fill: #0F15E2;
             mix-blend-mode: multiply;
         }
 
@@ -792,6 +402,12 @@
         data-83000="background-color: rgba(0,164,112,0.8);"
         data-83999="background-color: rgba(0,164,112,0.8);"
         data-84000="background-color: rgba(230,240,252,1);"
+        data-115000="background-color: rgba(230,240,252,1);"
+        data-116000="background-color: rgba(230,240,252,0.8);"
+        data-116999="background-color: rgba(15,21,226,0.8;"
+        data-117000="background-color: rgba(15,21,226,1);"
+        data-126999="background-color: rgba(15,21,226,1);"
+        data-127000="background-color: rgba(253,255,211,1);"
     >
 
         <div class="header">
@@ -1279,23 +895,19 @@
                     ></span>입니다!
                 </div>
             </div>
-            <svg id="svg" viewBox="0 0 1000 1000" class="fixed"
-                data-88000="transform: scale(0)"
-                data-89000="transform: scale(0.6)"
-                data-93000="transform: scale(0.6)"
-                data-94000="transform: scale(1)"
-            >
-                <path id="path2"></path>
-            </svg>
             <div class="sec9-img4 fixed"
                 data-93000="top: 130%"
                 data-94000="top: 90%"
+                data-116000="top: 90%"
+                data-117000="top: 130%"
             >
                 <img src="assets/img/icon7.svg" alt="여자아이 이미지">
             </div>
             <div class="sec9-img5 fixed"
                 data-97000="left:100%"
                 data-98000="left:70%"
+                data-100000="left:70%"
+                data-101000="left:-30%"
             >
                 <img src="assets/img/icon8.svg" alt="구름 이미지">
             </div>
@@ -1303,24 +915,284 @@
                 <div class="t1 fixed"
                     data-97000="left:107%"
                     data-98000="left:77%"
-                >view code</div>
+                    data-100000="left:77%"
+                    data-101000="left:-25%"
+                ><a href="https://codepen.io/lsrljm8011/pen/abwgNbX" target="_blank">view code</a></div>
             </div>
             <div class="sec9-text3">
                 <div class="t1 fixed"
-                    data-95000="opacity: 0"
-                    data-96000="opacity: 1"
+                    data-97000="opacity: 0"
+                    data-98000="opacity: 1"
+                    data-100000="opacity: 1"
+                    data-101000="opacity: 0"
                 >
                     Summer Dream Animation
                 </div>
             </div>
             <div class="sec9-text4 fixed"
-                data-95000="opacity: 0"
-                data-96000="opacity: 1"
+                data-95000="transform: scale(0); opacity: 1;"
+                data-96000="transform: scale(1); opacity: 1;"
+                data-99999="transform: scale(1); opacity: 1;"
+                data-100000="transform: scale(1); opacity: 0.5;"
+                data-101000="transform: scale(1); opacity: 1;"
+                data-102000="transform: scale(0); opacity: 1;"
             >
                 <iframe class="i1" src="assets/codepen/codepen2.html" alt="codepen1"></iframe>
             </div>
+            <!-- //animation part1 -->
+
+            <div class="sec9-img6 fixed"
+                data-104000="left:100%"
+                data-105000="left:70%"
+                data-107000="left:70%"
+                data-108000="left:-30%"
+            >
+                <img src="assets/img/icon8.svg" alt="구름 이미지">
+            </div>
+            <div class="sec9-text5">
+                <div class="t1 fixed"
+                    data-104000="left:107%"
+                    data-105000="left:77%"
+                    data-107000="left:77%"
+                    data-108000="left:-25%"
+                ><a href="https://codepen.io/lsrljm8011/pen/PoKjjbM?editors=0110" target="_blank">view code</a></div>
+            </div>
+            <div class="sec9-text6">
+                <div class="t1 fixed"
+                    data-104000="opacity: 0"
+                    data-105000="opacity: 1"
+                    data-107000="opacity: 1"
+                    data-108000="opacity: 0"
+                >
+                    Boom Box And Animation
+                </div>
+            </div>
+            <div class="sec9-text7 fixed"
+                data-102000="transform: scale(0); opacity: 1;"
+                data-103000="transform: scale(1); opacity: 1;"
+                data-106999="transform: scale(1); opacity: 1;"
+                data-107000="transform: scale(1); opacity: 0.5;"
+                data-108000="transform: scale(1); opacity: 1;"
+                data-110000="transform: scale(0); opacity: 1;"
+            >
+                <iframe class="i1" src="assets/codepen/codepen1.html" alt="codepen1"></iframe>
+            </div>
+            <!-- //animation part2 -->
+
+            <div class="sec9-img7 fixed"
+                data-111000="left:100%"
+                data-112000="left:70%"
+                data-114000="left:70%"
+                data-115000="left:-30%"
+            >
+                <img src="assets/img/icon8.svg" alt="구름 이미지">
+            </div>
+            <div class="sec9-text8">
+                <div class="t1 fixed"
+                    data-111000="left:107%"
+                    data-112000="left:77%"
+                    data-114000="left:77%"
+                    data-115000="left:-25%"
+                ><a href="https://codepen.io/lsrljm8011/pen/GRvMXGJ" target="_blank">view code</a></div>
+            </div>
+            <div class="sec9-text9">
+                <div class="t1 fixed"
+                    data-111000="opacity: 0"
+                    data-112000="opacity: 1"
+                    data-114000="opacity: 1"
+                    data-115000="opacity: 0"
+                >
+                    Paper Airplane
+                </div>
+            </div>
+            <div class="sec9-text10 fixed"
+                data-110000="transform: scale(0); opacity: 1;"
+                data-111000="transform: scale(1); opacity: 1;"
+                data-113999="transform: scale(1); opacity: 1;"
+                data-115000="transform: scale(1); opacity: 0.5;"
+                data-116000="transform: scale(1); opacity: 1;"
+                data-117000="transform: scale(0); opacity: 1;"
+            >
+                <iframe class="i1" src="assets/codepen/codepen3.html" alt="codepen3"></iframe>
+            </div>
+            <!-- //animation part3 -->
         </div>
         <!-- //section9 -->
+
+        <div id="section10" class="content__item">
+            <svg id="svg" viewBox="0 0 1000 1000" class="fixed"
+                data-118000="transform:scale(0);"
+                data-120000="transform:scale(0.6);"
+                data-126000="transform:scale(0.6);"
+                data-127000="transform:scale(0);"
+            >
+                <path id="path2"></path>
+            </svg>
+            <svg id="svg" viewBox="0 0 1000 1000" class="fixed"
+                data-126999="transform:scale(0); opacity: 1"
+                data-127000="transform:scale(4); opacity: 1"
+                data-129000="transform:scale(2); opacity: 1"
+                data-133000="transform:scale(2); opacity: 1"
+                data-134000="transform:scale(2); opacity: 0"
+            >
+                <path id="path3"></path>
+            </svg>
+            <div class="sec10-img1 fixed"
+                data-118000="left: 100vw; opacity: 1"
+                data-120000="left: 20vw; opacity: 1"
+                data-127000="left: 20vw; opacity: 1"
+                data-129000="left: 30vw; opacity: 1"
+                data-133000="left: 30vw; opacity: 1"
+                data-134000="left: 30vw; opacity: 0"
+            >
+                <img src="assets/img/icon9.svg" alt="물고기">
+            </div>
+            <div class="sec10-img2 fixed"
+                data-119000="left: 100vw; opacity: 1"
+                data-120000="left: 80vw; opacity: 1"
+                data-127000="left: 80vw; opacity: 1"
+                data-129000="left: 60vw; opacity: 1"
+                data-133000="left: 60vw; opacity: 1"
+                data-134000="left: 60vw; opacity: 0"
+            >
+                <img src="assets/img/icon9.svg" alt="물고기">
+            </div>
+            <div class="sec10-text1">
+                <div class="t1 fixed"
+                    data-120000="left: 130vw"
+                    data-122000="left: 35vw"
+                    data-125000="left: 35vw"
+                    data-126000="left: -30vw"
+                >
+                스크립트를<span class="line1"
+                    data-123000="width: 0vw; margin-left: 4vw; margin-right: -0.8vw;"
+                    data-124000="width: 20vw; margin-left: -1vw; margin-right: -0.8vw;"
+                ></span>활용한
+                </div>
+                <div class="t2 fixed"
+                    data-120000="left: 120vw"
+                    data-122000="left: 60vw"
+                    data-125000="left: 60vw"
+                    data-126000="left: -30vw"
+                >
+                예제입니다<span class="line1"
+                    data-123000="width: 0vw; margin-left: 1vw; margin-right: -0.8vw;"
+                    data-124000="width: 20vw; margin-left: -1vw; margin-right: -0.8vw;"
+                ></span>!
+                </div>
+                <div class="t3 fixed"
+                    data-130000="opacity: 0"
+                    data-131000="opacity: 1"
+                    data-133000="opacity: 1"
+                    data-134000="opacity: 0"
+                >
+                    SCRIPT EFFECT
+                </div>
+            </div>
+        </div>
+        <!-- //section10 -->
+
+        <div id="section11" class="content__item fixed"
+            data-135000="top: 150%"
+            data-136000="top: 50%"
+            data-140000="top: 50%"
+            data-141000="top: -50%"
+        >
+            <div class="sec11-text1">
+                <div class="t1 fixed">
+                    SLIDER<span class="line1"
+                        data-137000="width: 0vw; margin-left: 3vw; margin-right: -0.8vw;"
+                        data-138000="width: 20vw; margin-left: -1.2vw; margin-right: -1vw;"
+                    ></span>EFFECT
+                </div>
+                <div class="t2 fixed">
+                    자바스크립트와 제이쿼리를 활용하여 슬라이드의 여러가지 효과를 나타내어 제작한 예제입니다.
+                </div>
+                <div class="t3 fixed">
+                    <iframe class="i1" src="../refer-effect/sliderEffect/index.html" alt="sliderEffect"></iframe>
+                </div>
+            </div>
+            <div class="sec11-img1 fixed">
+                <img src="assets/img/mockup1.svg" alt="">
+            </div>
+        </div>
+        <!-- //section11 -->
+        
+        <div id="section12" class="content__item fixed"
+            data-141000="top: 150%"
+            data-142000="top: 50%"
+            data-146000="top: 50%"
+            data-147000="top: -50%"
+        >
+            <div class="sec12-text1">
+                <div class="t1 fixed">
+                    PARALLAX<span class="line1"
+                        data-143000="width: 0vw; margin-left: 3vw; margin-right: -0.8vw;"
+                        data-144000="width: 20vw; margin-left: -1vw; margin-right: -1vw;"
+                    ></span>EFFECT
+                </div>
+                <div class="t2 fixed">
+                    자바스크립트와 제이쿼리를 활용하여 패럴럭스의 여러가지 효과를 나타내어 제작한 예제입니다.
+                </div>
+                <div class="t3 fixed">
+                    <iframe class="i1" src="../refer-effect/parallaxEffect/index.html" alt="parallaxEffect"></iframe>
+                </div>
+            </div>
+            <div class="sec12-img1 fixed">
+                <img src="assets/img/mockup1.svg" alt="">
+            </div>
+        </div>
+        <!-- //section12 -->
+
+        <div id="section13" class="content__item fixed"
+            data-147000="top: 150%"
+            data-148000="top: 50%"
+            data-152000="top: 50%"
+            data-153000="top: -50%"
+        >
+            <div class="sec13-text1">
+                <div class="t1 fixed">
+                    GAME<span class="line1"
+                        data-149000="width: 0vw; margin-left: 3vw; margin-right: -0.8vw;"
+                        data-150000="width: 20vw; margin-left: -1vw; margin-right: -1vw;"
+                    ></span>EFFECT
+                </div>
+                <div class="t2 fixed">
+                    자바스크립트와 제이쿼리를 활용하여 여러가지 게임 효과를 제작한 예제입니다.
+                </div>
+                <div class="t3 fixed">
+                    <iframe class="i1" src="../refer-effect/gameEffect/index.html" alt="gameEffect"></iframe>
+                </div>
+            </div>
+            <div class="sec13-img1 fixed">
+                <img src="assets/img/mockup1.svg" alt="">
+            </div>
+        </div>
+        <!-- //section13 -->
+
+        <div id="section14" class="content__item fixed"
+            data-153000="top: 150%"
+            data-154000="top: 50%"
+        >
+            <div class="sec14-text1">
+                <div class="t1 fixed">
+                    MOUSE<span class="line1"
+                        data-155000="width: 0vw; margin-left: 3vw; margin-right: -0.8vw;"
+                        data-156000="width: 20vw; margin-left: -1vw; margin-right: -1vw;"
+                    ></span>EFFECT
+                </div>
+                <div class="t2 fixed">
+                    자바스크립트와 제이쿼리를 활용하여 마우스의 여러가지 효과를 나타내어 제작한 예제입니다.
+                </div>
+                <div class="t3 fixed">
+                    <iframe class="i1" src="../refer-effect/mouseEffect/index.html" alt="mouseEffect"></iframe>
+                </div>
+            </div>
+            <div class="sec14-img1 fixed">
+                <img src="assets/img/mockup1.svg" alt="">
+            </div>
+        </div>
+        <!-- //section14 -->
     </div>
     <!-- // contentWrap-->
     
@@ -1376,6 +1248,7 @@
             minDuration: 1,
             maxDuration: 2
         });
+        
         var blob2 = createBlob({
             element: document.querySelector("#path1"),
             numPoints: 10,
@@ -1388,6 +1261,16 @@
         });
         var blob3 = createBlob({
             element: document.querySelector("#path2"),
+            numPoints: 10,
+            centerX: 480,
+            centerY: 480,
+            minRadius: 300,
+            maxRadius: 320,
+            minDuration: 1,
+            maxDuration: 2
+        });
+        var blob4 = createBlob({
+            element: document.querySelector("#path3"),
             numPoints: 10,
             centerX: 480,
             centerY: 480,
