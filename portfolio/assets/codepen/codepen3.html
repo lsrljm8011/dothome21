@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+        body {
+            height: 90vh; width: 90vw;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div {
+            transform-style: preserve-3d;
+        }
+        @keyframes surface {
+            0% {
+                border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+            }
+            25% {
+                border-radius: 65% 35% 51% 49%/49% 52% 48% 51%;
+            }
+            50% {
+                border-radius: 42% 58% 28% 72%/65% 34% 66% 35%;
+            }
+            75% {
+                border-radius: 34% 66% 63% 37%/77% 38% 62% 23%;
+            }
+            100% {
+                border-radius: 24% 76% 72% 28%/53% 68% 32% 47%;
+            }
+        }
+        @keyframes rotateZ {
+            0% {
+                transform: rotateZ(0deg);
+            }
+            100% {
+                transform: rotateZ(360deg);
+            }
+        }
+        .sea {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .sea .surface {
+            background: #93D9D8;
+            animation-delay: 2s;
+            position: absolute;
+            height: 65vw; width: 65vw;
+            overflow: hidden;
+            animation: surface 13000ms ease-in-out infinite alternate, rotateZ 20000ms linear infinite;
+        }
+        .sea .surface .inner {
+            width: 65vw;
+            height: 65vw;
+            animation: rotateZ 20000ms linear infinite reverse;
+        }
+
+        .clouds{
+            background-image: url('http://jessicamichele.com/wp-content/uploads/2019/04/cloudy.svg');
+            background-position: 0px 0px;
+            background-repeat: repeat-x;
+            height:98px;  
+            animation: moving 50s linear infinite;
+        }
+        .airplane{
+            position: absolute;
+            width:15vw;
+            right:50%;
+            top:50%;
+            animation: up 2s ease-in-out infinite alternate, rotate 4s ease-out infinite;
+        }
+        .trees{
+            position:absolute;
+            background-image: url('http://jessicamichele.com/wp-content/uploads/2019/04/atree.svg');
+            background-position: 0px 0px;
+            background-repeat: repeat-x;
+            height:124px;
+            width:100%;
+            bottom:0;
+            animation: moving 30s linear infinite;
+        }
+        @keyframes moving{
+            to{
+                background-position: -110% 0;
+                }
+        }
+        @keyframes up{
+            to{
+            margin-top:-100px;
+            }
+        }
+        @keyframes rotate{
+            50%{
+                transform: rotate(-15deg);
+            }
+            75%{
+                transform: rotate(20deg);
+            }
+        }
+    </style>
+</head>
+<body>
+        <div class="sea">
+            <div class="surface"></div>
+        </div>
+        <div class="clouds"></div>
+        <svg class="airplane" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="301.18" height="99.44" viewBox="0 0 301.18 99.44">
+        <defs>
+        <style>
+        .cls-1, .cls-2 {
+            fill: #fff;
+        }
+
+        .cls-1 {
+            stroke: #000;
+            stroke-miterlimit: 10;
+        }
+        </style>
+        </defs>
+        <title>airplane</title>
+        <g>
+        <polyline class="cls-1" points="296.18 13.18 1.27 0.56 25.2 24.35"/>
+        <g>
+        <polygon class="cls-2" points="24.76 23.82 296.61 12.82 34.29 98.78 24.76 23.82"/>
+        <path d="M1166.08,987.66,907.75,1072.3l-9.38-73.81,267.71-10.83m7.14-1.29-276,11.17,9.67,76.09,266.31-87.26Z" transform="translate(-873.05 -974.19)"/>
+        </g>
+        <g>
+        <polygon class="cls-2" points="41.11 38.61 295.66 13.13 34.45 98.72 41.11 38.61"/>
+        <path d="M1164.18,988.28l-256.1,83.92,6.52-58.94,249.58-25m9-1.91-259.52,26-6.79,61.28,266.31-87.26Z" transform="translate(-873.05 -974.19)"/>
+        </g>
+        <g>
+        <polygon class="cls-2" points="41.76 38.55 297.93 13 99.94 96.46 41.76 38.55"/>
+        <path d="M1167.73,988l-194.63,82-57.2-56.93L1167.73,988m6.49-1.65-260.52,26,59.17,58.89,201.35-84.87Z" transform="translate(-873.05 -974.19)"/>
+        </g>
+        </g>
+        </svg>
+
+        <div class="trees"></div>       
+</body>
+</html>

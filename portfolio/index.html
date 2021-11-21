@@ -15,18 +15,7 @@
 
     <style>
         iframe {border: 0;}
-        /* #section3 .sec1-text4 {
-            z-index: 1;
-        }
-        #section3 .sec1-text4 iframe {
-            width: 37.5vw; height: 41.5vh;
-            transform-style: preserve-3d;
-            transform: translate3d(0, 0, 0);
-        }
-        #section3  .sec1-text4 .i1 {
-            position: absolute;
-            left: -38.8vw; top: -15.5vw;
-        } */
+
 
         .scroll {
             position: fixed;
@@ -38,11 +27,8 @@
             font-size: 0.5vw;
             color: #fff;
             border-radius: 50%;
-            z-index: 10000;
+            z-index: 100000;
         }
-
-        
-
 
         .contentWrap {
             position: fixed;
@@ -70,6 +56,24 @@
         #section3 {
             z-index: 3000;
         }
+        /* #section4 {
+            z-index: 4000;
+        }
+        #section5 {
+            z-index: 5000;
+        }
+        #section6 {
+            z-index: 6000;
+        }
+        #section7 {
+            z-index: 7000;
+        }
+        #section8 {
+            z-index: 8000;
+        }
+        #section9 {
+            z-index: 9000;
+        } */
 
         .fixed {
             position: fixed;
@@ -94,14 +98,14 @@
         #section1 .sec1-text1 .t3 {
             margin-top: 15%
         }
-        @keyframes slidein {
+        /* @keyframes slidein {
             from {
                 left: 130vw;
             }
             to {
                 left: 50vw;
             }
-        }
+        } */
 
         #section1 .sec1-text1 .t1 .line1 {
             width: 25vw;
@@ -551,15 +555,142 @@
         #section7 .sec7-text1 .button a {
             color: #00A470;
         }
+        #section8 .sec8-img1 {
+            width: 40vw;
+            top: 50%; left: 30vw;
+        }
+        #section8 .sec8-img2 {
+            width: 37.5vw;
+            left: 30vw;
+            margin-top: -5vw;
+        }
+        #section8 .sec8-text1 .t1 {
+            color: #FBFFF5;
+            z-index: 100;
+            font-size: 3vw;
+            white-space: nowrap;
+            left: 64.5vw;
+            margin-top: -10vw;
+        }
+        #section8 .sec8-text1 .t1 .line1 {
+            width: 10vw;
+            height: 0.53vw;
+            background: #FBFFF5;
+            display: inline-block;
+            border-radius: 5px;
+            position: relative;
+            top: -2.14vw;
+            margin-left: -0.5vw;
+            margin-right: -0.8vw;  
+        }
+        #section8 .sec8-text1 .t2 {
+            color: #FBFFF5;
+            z-index: 100;
+            font-size: 1.5vw;
+            left: 71.5vw;
+            margin-top: -1vw;
+            word-break: keep-all;
+        }
+        #section8 .sec8-text1 .button {
+            width: 10vw; height: 3vw;
+            border-radius: 50px;
+            background: #FBFFF5;
+            text-align: center;
+            line-height: 2.8vw;
+            font-size: 1vw;
+            left: 62%;
+            margin-top: 9.7vw;
+        }
+        #section8 .sec8-text1 .button a {
+            color: #00A470;
+        }
+
+        #section9 .sec9-img1 {
+            position: relative;
+            right: -300%; bottom: -20%;
+            z-index: 9000;
+        }
+        #section9 .sec9-img1 img {
+            width: 80%;
+        }
+        #section9 .sec9-img2 {
+            width: 25vw;
+            left: 25%; top: 100%;
+        }
+        #section9 .sec9-img3 {
+            width: 25vw;
+            left: 25%; top: 100%;
+            /* left: 25%; top: 140%; */
+        }
+        #section9 .sec9-text1 .t1 {
+            z-index: 1;
+            white-space: nowrap;
+            color: #0F15E2;
+            font-size: 8vw;
+            top: 47%; 
+            left: 140%;
+        }
+        #section9 .sec9-text1 .t1 .line1 {
+            /* width: 25vw; */
+            height: 1.12vw;
+            background: #0F15E2;
+            display: inline-block;
+            border-radius: 5px;
+            position: relative;
+            top: 0.9vw;
+            /* margin-left: -1vw;
+            margin-right: -2vw; */
+            margin-left: 3vw;
+        }
+        #section9 .sec9-img4 {
+            width: 25vw;
+            /* left: 20%; top: 90%; */
+            left: 20%; top: 130%;
+        }
+        #section9 .sec9-img5 {
+            width: 20vw;
+            /* left: 70%; top: 10%; */
+            left: 100%; top: 10%;
+            animation:fly 1.5s infinite alternate;  
+        }
+        #section9 .sec9-text2 .t1 {
+            z-index: 1;
+            white-space: nowrap;
+            color: #0F15E2;
+            font-size: 1.8vw;
+            left: 107%;  top: 8vw;
+            /* left: 77%;  top: 8vw; */
+            animation:fly 1.5s infinite alternate; 
+            cursor: pointer;        
+        }
+        #section9 .sec9-text3 .t1 {
+            z-index: 1;
+            white-space: nowrap;
+            color: #0F15E2;
+            font-size: 3vw;
+            top: 90%; 
+        }
+        #section9 .sec9-text4 {
+            top: 45%;
+        }
+        #section9 .sec9-text4 iframe {
+            transform-style: preserve-3d;
+            transform: translate3d(0, 0, 0);
+        }
+        #section9 .sec9-text4 .i1 {
+            
+        } 
+
         /* svg */
         #section1 #circle {
             position: fixed;
             top: 50%; left: 50%;
             transform: translate(-50%, -50%);
-            width: 0vw; height: 0vh;
+            width: 100vw; height: 100vh;
+            /* width: 0vw; height: 0vh; */
             animation-delay: 2s;
             animation-duration: 2s;
-            animation-name: show;
+            /* animation-name: show; */
             animation-fill-mode : forwards;
         }
         @keyframes show {
@@ -584,12 +715,11 @@
             vector-effec: non-scaling-stroke;
         }
 
-
         #section1  #slider {
-
+            
         }
         #section1  #slider .slider-wrap {
-
+            
         }
         #section1  #slider .slider-wrap .slider-img {
             position: relative;
@@ -610,6 +740,16 @@
         #section3  #path1 {
             fill: #8AE2B3;
             /* fill: #00A470; */
+            mix-blend-mode: multiply;
+        }
+        #section9 #svg {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            transform: scale(0.6);
+        }
+        #section9 #path2 {
+            fill: #BBC4F7;
             mix-blend-mode: multiply;
         }
 
@@ -648,10 +788,10 @@
         data-57999="background-color: rgba(0,164,112,0);"
         data-58000="background-color: rgba(97,197,143,1);"
         data-58200="background-color: rgba(0,164,112,1);"
-        data-77800="background-color: rgba(0,164,112,1);"
-        data-78000="background-color: rgba(97,197,143,1);"
-        data-78201="background-color: rgba(251,255,245,0.8);"
-        data-78200="background-color: rgba(97,197,143,0);"
+        data-82000="background-color: rgba(0,164,112,1);"
+        data-83000="background-color: rgba(0,164,112,0.8);"
+        data-83999="background-color: rgba(0,164,112,0.8);"
+        data-84000="background-color: rgba(230,240,252,1);"
     >
 
         <div class="header">
@@ -908,17 +1048,17 @@
                     data-60000="transform: scale(1); left:17vw; opacity:1;"
                     data-61000="transform: scale(1); left:17vw; opacity:1;"
                     data-62000="transform: scale(1); left:17vw; opacity:0;"
-                    data-75500="transform: scale(1); left:17vw; opacity:0;"
-                    data-76500="transform: scale(1); left:17vw; opacity:1;"
-                    data-77500="transform: scale(1); left:28vw; opacity:1;"
-                    data-78500="transform: scale(1); left:28vw; opacity:1;"
-                    data-79500="transform: scale(0.5); left:28vw; opacity:1;"
+                    data-79000="transform: scale(1); left:17vw; opacity:0;"
+                    data-80000="transform: scale(1); left:17vw; opacity:1;"
+                    data-81000="transform: scale(1); left:28vw; opacity:1;"
+                    data-84000="transform: scale(1); left:28vw; opacity:1;"
+                    data-84001="transform: scale(1); left:28vw; opacity:0;"
                 >SITE<span class="line1"
                     data-58500="width: 0vw; margin-left: 3vw; margin-right: -1vw;"
                     data-59000="width: 0vw; margin-left: 3vw; margin-right: -1vw;"
                     data-60000="width: 25vw; margin-left: -1vw; margin-right: -1vw;"
-                    data-76500="width: 25vw; margin-left: -1vw; margin-right: -1vw;"
-                    data-77500="width: 0vw; margin-left: 3vw; margin-right: -1vw;"
+                    data-80000="width: 25vw; margin-left: -1vw; margin-right: -1vw;"
+                    data-81000="width: 0vw; margin-left: 3vw; margin-right: -1vw;"
                     ></span>REFERENCE</div>
             </div>
             <div class="sec3-img1 fixed"
@@ -933,12 +1073,13 @@
                 data-72000="opacity: 1; width: 18vw;"
                 data-73000="opacity: 1; width: 13vw;"
                 data-75000="opacity: 1; width: 18vw;"
+                data-76000="opacity: 1; width: 13vw;"
                 data-78000="opacity: 1; width: 18vw;"
-                data-79500="opacity: 0; width: 13vw;"
+                data-84000="opacity: 1; width: 18vw;"
+                data-84001="opacity: 0; width: 18vw;"
             >
                 <img src="assets/img/icon5.svg" alt="해달 이미지">
             </div>
-            
             
             <svg id="svg" viewBox="0 0 1000 1000" class="fixed"
                 data-45000="transform:scale(0);"
@@ -948,10 +1089,6 @@
                 data-57000="transform:scale(2);"
                 data-58000="transform:scale(4);"
                 data-58001="transform:scale(0);"
-                data-77999="transform:scale(0);"
-                data-78000="transform:scale(4);"
-                data-78500="transform:scale(2);"
-                data-79500="transform:scale(1);"
             >
                 <path id="path1"></path>
             </svg>
@@ -1058,7 +1195,7 @@
                     ></span>SITE
                 </div>
                 <div class="t2 fixed">
-                    Node.js를 통해 NPM을 이용하여 터미널로<br>build후, React 컴퍼넌트를 사용하여 포트폴리오,<br>소개, 콘텍트 등 가상페이지를 만들어 출력시켜<br>만든 React 사이트입니다.
+                    Node.js를 통해 NPM을 이용하여 터미널로<br>build후, React 컴퍼넌트를 사용하여 포트폴리오<br>소개, 콘텍트 등 가상페이지를 만들어 출력시켜<br>만든 React 사이트입니다.
                 </div>
                 <div class="button fixed"><a href="http://bild.dothome.co.kr/bild-php/pages/main.php" target="_blank">view site</a></div>
             </div>
@@ -1071,7 +1208,121 @@
         </section>
         <!-- section7 -->
 
+        <section id="section8" class="content__item fixed"
+            data-75000="top: 140%;"
+            data-76000="top: 50%;"
+            data-77500="top: 50%;"
+            data-78000="top: -40%;"
+        >
+            <div class="sec8-text1">
+                <div class="t1 fixed">
+                    VUE<span class="line1"
+                        data-76000="width:0vw; margin-left: 2vw;"
+                        data-76500="width:0vw; margin-left: 2vw;"
+                        data-77000="width:10vw; margin-left: -1vw;"
+                    ></span>SITE
+                </div>
+                <div class="t2 fixed">
+                    Node.js를 통해 NPM을 이용하여 터미널로 build후, React 컴퍼넌트를 사용하여 포트폴리오 소개, 콘텍트 등 가상페이지를 만들어 출력시켜 만든 React 사이트입니다.
+                </div>
+                <div class="button fixed"><a href="http://bild.dothome.co.kr/bild-php/pages/main.php" target="_blank">view site</a></div>
+            </div>
+            <div class="sec8-img1 fixed">
+                <img src="assets/img/mockup.svg" alt="목업">
+            </div>
+            <div class="sec8-img2 fixed">
+                <img src="assets/img/site4.svg" alt="팀플 사이트">
+            </div>  
+        </section>
+        <!-- section8 -->
+
+        <div id="section9" class="content__item">
+            <div class="sec9-img1"
+                data-81999="right: -300%; bottom: -50%; transform: scale(1)"
+                data-82000="right: -100%; bottom: -100%; transform: scale(1)"
+                data-83000="right: -100%; bottom: -50%; transform: scale(2)"
+                data-83500="right: -100%; bottom: -50%; transform: scale(3)"
+                data-84000="right: 10%; bottom: -5%; transform: scale(5)"
+                data-84001="right: 10%; bottom: -5%; transform: scale(0)"
+            >
+                <img src="assets/img/cloud.svg" alt="구름 배경 이미지">
+            </div>
+            <div class="sec9-img2 fixed"
+                data-84000="opacity: 0; width: 24vw"
+                data-84500="opacity: 1; width: 20vw;"
+                data-85000="opacity: 1; width: 24vw"
+                data-89999="opacity: 1; width: 24vw"
+                data-92000="opacity: 1; width: 24vw"
+                data-92500="opacity: 1; width: 20vw;"
+                data-93000="opacity: 0; width: 24vw;"
+            >
+                <img src="assets/img/circle.svg" alt="원 이미지">
+            </div>
+            <div class="sec9-img3 fixed"
+                data-84000="width: 25vw; top: 140%"
+                data-85000="width: 25vw; top: 100%"
+                data-92000="width: 25vw; top: 100%"
+                data-93000="width: 25vw; top: 140%"
+            >
+                <img src="assets/img/icon6.svg" alt="여자아이 이미지">
+            </div>
+            <div class="sec9-text1">
+                <div class="t1 fixed"
+                    data-85000="left: 140%"
+                    data-86000="left: 50%"
+                    data-90000="left: 50%"
+                    data-91000="left: -50%"
+                >
+                    애니메이션<span class="line1"
+                        data-87000="width: 0vw; margin-left: 5vw; margin-right: -2vw;"
+                        data-88000="width: 25vw; margin-left: -1vw; margin-right: -2vw;"
+                    ></span>입니다!
+                </div>
+            </div>
+            <svg id="svg" viewBox="0 0 1000 1000" class="fixed"
+                data-88000="transform: scale(0)"
+                data-89000="transform: scale(0.6)"
+                data-93000="transform: scale(0.6)"
+                data-94000="transform: scale(1)"
+            >
+                <path id="path2"></path>
+            </svg>
+            <div class="sec9-img4 fixed"
+                data-93000="top: 130%"
+                data-94000="top: 90%"
+            >
+                <img src="assets/img/icon7.svg" alt="여자아이 이미지">
+            </div>
+            <div class="sec9-img5 fixed"
+                data-97000="left:100%"
+                data-98000="left:70%"
+            >
+                <img src="assets/img/icon8.svg" alt="구름 이미지">
+            </div>
+            <div class="sec9-text2">
+                <div class="t1 fixed"
+                    data-97000="left:107%"
+                    data-98000="left:77%"
+                >view code</div>
+            </div>
+            <div class="sec9-text3">
+                <div class="t1 fixed"
+                    data-95000="opacity: 0"
+                    data-96000="opacity: 1"
+                >
+                    Summer Dream Animation
+                </div>
+            </div>
+            <div class="sec9-text4 fixed"
+                data-95000="opacity: 0"
+                data-96000="opacity: 1"
+            >
+                <iframe class="i1" src="assets/codepen/codepen2.html" alt="codepen1"></iframe>
+            </div>
+        </div>
+        <!-- //section9 -->
     </div>
+    <!-- // contentWrap-->
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
@@ -1127,6 +1378,16 @@
         });
         var blob2 = createBlob({
             element: document.querySelector("#path1"),
+            numPoints: 10,
+            centerX: 480,
+            centerY: 480,
+            minRadius: 300,
+            maxRadius: 320,
+            minDuration: 1,
+            maxDuration: 2
+        });
+        var blob3 = createBlob({
+            element: document.querySelector("#path2"),
             numPoints: 10,
             centerX: 480,
             centerY: 480,

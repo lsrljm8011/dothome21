@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 90vh; width: 90vw;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div {
+            transform-style: preserve-3d;
+        }
+        @keyframes surface {
+            0% {
+                border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+            }
+            25% {
+                border-radius: 65% 35% 51% 49%/49% 52% 48% 51%;
+            }
+            50% {
+                border-radius: 42% 58% 28% 72%/65% 34% 66% 35%;
+            }
+            75% {
+                border-radius: 34% 66% 63% 37%/77% 38% 62% 23%;
+            }
+            100% {
+                border-radius: 24% 76% 72% 28%/53% 68% 32% 47%;
+            }
+        }
+        @keyframes rotateZ {
+            0% {
+                transform: rotateZ(0deg);
+            }
+            100% {
+                transform: rotateZ(360deg);
+            }
+        }
+        .sea {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .sea .surface {
+            background-color: #ccc;
+            animation-delay: 2s;
+            position: absolute;
+            height: 65vw; width: 65vw;
+            overflow: hidden;
+            animation: surface 13000ms ease-in-out infinite alternate, rotateZ 20000ms linear infinite, change-background 2s infinite;
+        }
+        .sea .surface .inner {
+            width: 65vw;
+            height: 65vw;
+            animation: rotateZ 20000ms linear infinite reverse;
+        }
+        @keyframes music {
+            0% {
+                -moz-box-shadow: 0 0 0 0 rgba(102, 102, 102, 0.4);
+                -webkit-box-shadow: 0 0 0 0 rgba(102, 102, 102, 0.4);
+                box-shadow: 0 0 0 0 rgba(102, 102, 102, 0.4);
+            }
+            70% {
+                -moz-box-shadow: 0 0 0 30px rgba(102, 102, 102, 0);
+                -webkit-box-shadow: 0 0 0 30px rgba(102, 102, 102, 0);
+                box-shadow: 0 0 0 30px rgba(102, 102, 102, 0);
+            }
+            100% {
+                -moz-box-shadow: 0 0 0 0 rgba(102, 102, 102, 0);
+                -webkit-box-shadow: 0 0 0 0 rgba(102, 102, 102, 0);
+                box-shadow: 0 0 0 0 rgba(102, 102, 102, 0);
+            } 
+            }
+            @keyframes dance-and-bounce {
+                0% {
+                    -moz-transform: rotate(0deg) translateY(0px);
+                    -webkit-transform: rotate(0deg) translateY(0px);
+                    transform: rotate(0deg) translateY(0px);
+                }
+                16.6% {
+                    -moz-transform: rotate(0deg) translateY(-20px);
+                    -webkit-transform: rotate(0deg) translateY(-20px);
+                    transform: rotate(0deg) translateY(-20px);
+                }
+                33.2% {
+                    -moz-transform: rotate(0deg) translateY(0px);
+                    -webkit-transform: rotate(0deg) translateY(0px);
+                    transform: rotate(0deg) translateY(0px);
+                }
+                49.8% {
+                    -moz-transform: rotate(-10deg) translateY(0px);
+                    -webkit-transform: rotate(-10deg) translateY(0px);
+                    transform: rotate(-10deg) translateY(0px);
+                }
+                66.4% {
+                    -moz-transform: rotate(0deg) translateY(0px);
+                    -webkit-transform: rotate(0deg) translateY(0px);
+                    transform: rotate(0deg) translateY(0px);
+                }
+                83% {
+                    -moz-transform: rotate(10deg) translateY(0px);
+                    -webkit-transform: rotate(10deg) translateY(0px);
+                    transform: rotate(10deg) translateY(0px);
+                }
+                100% {
+                    -moz-transform: rotate(0deg) translateY(0px);
+                    -webkit-transform: rotate(0deg) translateY(0px);
+                    transform: rotate(0deg) translateY(0px);
+                }
+            }
+            @keyframes click {
+                0%,
+                25%,
+                50%,
+                75% {
+                    background-color: #7ff0fd;
+                }
+                100% {
+                    background-color: #103950;
+                }
+                }
+                @keyframes change-background {
+                0% {
+                    background: #16a085;
+                }
+                25% {
+                    background: #1abc9c;
+                }
+                50% {
+                    background: #9b59b6;
+                }
+                75% {
+                    background: #8e44ad;
+                }
+                100% {
+                    background: #16a085;
+                }
+            }
+            @keyframes shadow {
+                0% {
+                    left: 2vw;
+                    width: 20vw;
+                    background: #11806a;
+                }
+                16.6% {
+                    left: 4vw;
+                    width: 18vw;
+                }
+                25% {
+                    background: #14967c;
+                }
+                33.2% {
+                    left: 2vw;
+                    width: 20vw;
+                }
+                50% {
+                    background: #7c4791;
+                }
+                75% {
+                    background: #71368a;
+                }
+                100% {
+                    background: #11806a;
+                }
+            }
+            .container {
+                position: fixed;
+                top: 45%;
+                left: 45%;
+                -moz-transform: translate(-50%, -50%);
+                -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+            .boombox {
+                position: relative;
+                width: 22vw;
+                height: 14vw;
+                border: 1vw solid #103950;
+                border-radius: 3vw;
+                background-color: #fff;
+                animation: dance-and-bounce 2s infinite;
+                animation-delay: 2s;
+                z-index: 2;
+            }
+            .boombox:before,
+            .boombox:after {
+                content: '';
+                position: absolute;
+                width: 15vw;
+                border: 1vw solid #103950;
+                border-radius: 1vw;
+            }
+            .boombox:before {
+            top: -5vw;
+            left:2vw;
+            height: 1vw;
+            background-color: #ffcf54;
+            border-bottom-width: 8px;
+            }
+            .boombox:after {
+            border-top: 0;
+            height: 1.5vw;
+            top: -3vw;
+            left: 2vw;
+            }
+            .boombox .lights {
+            position: absolute;
+            top: 0.8vw;
+            left: 3vw;
+            width: 0.85vw;
+            height: 0.85vw;
+            background-color: #7ff0fd;
+            border-radius: 3vw;
+            animation: click 1s 1s;
+            }
+            .boombox .lights:before,
+            .boombox .lights:after {
+            content: '';
+            position: absolute;
+            width: 0.85vw;
+            height: 0.85vw;
+            border-radius: 3vw;
+            }
+            .boombox .lights:before {
+            background-color: #ffcf54;
+            left: -1.5vw;
+            }
+            .boombox .lights:after {
+            background-color: #7ff0fd;
+            left: 1.5vw;
+            }
+            .boombox .lines {
+            position: absolute;
+            border: 0.15vw solid #103950;
+            background: #103950;
+            width: 6vw;
+            top: 1.5vw;
+            left: 7vw;
+            }
+            .boombox .lines:before {
+            content: '';
+            position: absolute;
+            border: 0.15vw solid #103950;
+            background: #103950;
+            width: 6vw;
+            top: -1vw;
+            left: -0.15vw;
+            }
+            .boombox .speaker {
+            position: absolute;
+            border: 1vw solid #7ff0fd;
+            border-radius: 5vw;
+            box-shadow: 0px 0px 0px 1vw #103950;
+            height: 4vw;
+            width: 4vw;
+            left: 3vw;
+            top: 4vw;
+            }
+            .boombox .speaker:last-child {
+            left: 13vw;
+            }
+            .boombox .speaker:before {
+            content: '';
+            position: absolute;
+            border-radius: 5vw;
+            box-shadow: 0px 0px 0px 0px #fff;
+            height: 4vw;
+            width: 4vw;
+            left: 0vw;
+            top: 0vw;
+            animation: music 0.5s infinite;
+            animation-delay: 2s;
+            }
+            .shadow {
+            position: absolute;
+            bottom: -3vw;
+            left: -2vw;
+            width: 28vw;
+            height: 4vw;
+            background: #b7b7b7;
+            border-radius: 50%;
+            animation: shadow 2s infinite;
+            animation-delay: 2s;
+            }
+    </style>
+</head>
+<body>
+    <div class="sea">
+        <div class="surface"></div>
+    </div>
+    <div class="container">
+        <div class="boombox">
+            <div class="lights"></div>
+            <div class="lines"></div>
+            <div class="speaker"></div>
+            <div class="speaker"></div>
+        </div>
+        <div class="shadow"></div>
+    </div>
+</body>
+</html>
