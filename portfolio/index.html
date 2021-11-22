@@ -279,6 +279,11 @@
             width: 50vw; height: 35vw;
         }
 
+        #section15 .sec15-img1 {
+            width: 10vw;
+            left: 30%; top: 30%;
+        }
+
 
 
         /* svg */
@@ -362,6 +367,16 @@
             fill: #0F15E2;
             mix-blend-mode: multiply;
         }
+        #section15 #svg {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            transform: scale(0.6);
+        }
+        #section15 #path4 {
+            fill: #FDFFD3;
+            mix-blend-mode: multiply;
+        }
 
     </style>
 </head>
@@ -408,6 +423,9 @@
         data-117000="background-color: rgba(15,21,226,1);"
         data-126999="background-color: rgba(15,21,226,1);"
         data-127000="background-color: rgba(253,255,211,1);"
+        data-155998="background-color: rgba(253,255,211,1);"
+        data-155999="background-color: rgba(254,186,148,0);"
+        data-156000="background-color: rgba(254,186,148,1);"
     >
 
         <div class="header">
@@ -1171,10 +1189,12 @@
         <!-- //section13 -->
 
         <div id="section14" class="content__item fixed"
-            data-153000="top: 150%"
-            data-154000="top: 50%"
-            data-156000="top: 50%"
-            data-159000="top: -50%"
+            data-153000="top: 150%; left: 0%; transform: scale(1); opacity: 1"
+            data-154000="top: -2%; transform: scale(1); opacity: 1"
+            data-157000="top: -2%; transform: scale(1); opacity: 1"
+            data-159000="top: -2%; transform: scale(0.8); opacity: 1"
+            data-163000="top: -2%; transform: scale(0.8); opacity: 1"
+            data-164000="top: -2%; transform: scale(0.8); opacity: 0"
         >
             <div class="sec14-text1">
                 <div class="t1 fixed">
@@ -1191,10 +1211,26 @@
                 </div>
             </div>
             <div class="sec14-img1 fixed">
-                <img src="assets/img/mockup1.svg" alt="">
+                <img src="assets/img/mockup1.svg" alt="사파리 목업">
             </div>
         </div>
         <!-- //section14 -->
+
+        <div id="section15" class="content__item fixed">
+            <svg id="svg" viewBox="0 0 1000 1000" class="fixed"
+                data-155999="transform:scale(0); opacity: 1"
+                data-156000="transform:scale(5); opacity: 1"
+                data-157000="transform:scale(4); opacity: 1"
+                data-159000="transform:scale(2); opacity: 1"
+                data-163000="transform:scale(2); opacity: 1"
+                data-164000="transform:scale(2); opacity: 0"
+            >
+                <path id="path4"></path>
+            </svg>
+            <!-- <div class="sec15-img1 fixed">
+                <img src="assets/img/logo1.svg" alt="로고">
+            </div> -->
+        </div>
     </div>
     <!-- // contentWrap-->
     
@@ -1273,6 +1309,16 @@
         });
         var blob4 = createBlob({
             element: document.querySelector("#path3"),
+            numPoints: 10,
+            centerX: 480,
+            centerY: 480,
+            minRadius: 300,
+            maxRadius: 320,
+            minDuration: 1,
+            maxDuration: 2
+        });
+        var blob5 = createBlob({
+            element: document.querySelector("#path4"),
             numPoints: 10,
             centerX: 480,
             centerY: 480,
