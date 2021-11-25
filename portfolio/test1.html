@@ -14,370 +14,264 @@
     
 
     <style>
-        iframe {border: 0;}
-
-
-        .scroll {
+        .flex-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        a,
+        a:visited,
+        a:hover,
+        a:active {
+            color: inherit;
+            text-decoration: none;
+        }
+        .outer-menu {
             position: fixed;
-            right: 2.5vw; bottom: 2.5vw;
+            top: 2vw; left: 2vw;
+            z-index: 1;
+        }
+        .outer-menu .checkbox-toggle {
+            position: absolute;
+            top: 0; left: 0;
+            z-index: 2;
+            cursor: pointer;
             width: 3vw; height: 3vw;
-            background: #e91c0d;
-            text-align: center;
-            line-height: 3vw;
-            font-size: 0.5vw;
-            color: #fff;
-            border-radius: 50%;
-            z-index: 100000;
+            opacity: 0;
         }
-
-        #section10 .sec10-img1 {
-            width: 10vw;
-            top: 70%; 
-            left: 100vw;
-            /* left: 20vw; */
-            animation:fly 1.5s infinite alternate; 
+        .outer-menu .checkbox-toggle:checked + .hamburger > div {
+            transform: rotate(135deg);
         }
-        #section10 .sec10-img2 {
-            width: 10vw;
-            top: 30%; 
-            left: 100vw;
-            /* left: 80vw; */
-            animation:fly 1.5s infinite alternate; 
+        .outer-menu .checkbox-toggle:checked + .hamburger > div:before,
+        .outer-menu .checkbox-toggle:checked + .hamburger > div:after {
+            top: 0;
+            transform: rotate(90deg);
         }
-        #section10 .sec10-text1 .t1 {
-            color: #E6F0FC;
-            z-index: 100;
-            font-size: 6vw;
-            white-space: nowrap;
-            /* left: 35vw; */
-            left: 130vw;
-            top: 15%;
+        .outer-menu .checkbox-toggle:checked + .hamburger > div:after {
+            opacity: 0;
         }
-        #section10 .sec10-text1 .t1 .line1 {
-            /* width: 20vw; */
-            height: 0.7vw;
-            background: #E6F0FC;
-            display: inline-block;
-            border-radius: 5px;
-            position: relative;
-            top: 0.65vw;
-            /* margin-left: -1vw;
-            margin-right: -1vw;   */
-            margin-left: 4vw;
-            margin-right: -0.8vw;  
+        .outer-menu .checkbox-toggle:checked ~ .menu {
+            pointer-events: auto;
+            visibility: visible;
         }
-        #section10 .sec10-text1 .t2 {
-            color: #E6F0FC;
-            z-index: 100;
-            font-size: 6vw;
-            white-space: nowrap;
-            /* left: 60vw;  */
-            top: 80%; left: 120vw;
+        .outer-menu .checkbox-toggle:checked ~ .menu > div {
+            transform: scale(1);
+            transition-duration: 0.75s;
         }
-        #section10 .sec10-text1 .t2 .line1 {
-            /* width: 20vw; */
-            height: 1vw;
-            background: #E6F0FC;
-            display: inline-block;
-            border-radius: 5px;
-            position: relative;
-            top: -2.7vw;
-            /* margin-left: -1vw;
-            margin-right: -1vw;   */
-            margin-left: 1vw;
-            margin-right: -0.8vw;  
+        .outer-menu .checkbox-toggle:checked ~ .menu > div > div {
+            opacity: 1;
+            transition: opacity 0.4s ease 0.4s;
         }
-        #section10 .sec10-text1 .t3 {
-            color: #E6F0FC;
-            z-index: 100;
-            font-size: 5vw;
-            white-space: nowrap;
+        .outer-menu .checkbox-toggle:checked:hover + .hamburger > div {
+            transform: rotate(225deg);
         }
-
-        #section11 .sec11-text1 .t1 {
-            color: #0F15E2;
-            z-index: 100;
-            font-size: 4vw;
-            white-space: nowrap;
-            /* left: 60vw;  */
-            top: 12%;
-        }
-        #section11 .sec11-text1 .t1 .line1 {
-            /* width: 20vw; */
-            height: 0.7vw;
-            background: #0F15E2;
-            display: inline-block;
-            border-radius: 5px;
-            position: relative;
-            top: -2.8vw;
-            /* margin-left: -1.2vw;
-            margin-right: -1vw;   */
-            margin-left: 3vw;
-            margin-right: -0.8vw;  
-        }
-        #section11 .sec11-text1 .t2 {
-            color: #0F15E2;
-            z-index: 100;
-            font-size: 2vw;
-            white-space: nowrap;
-            /* left: 60vw;  */
-            top: 25%;
-        }
-        #section11 .sec11-text1 .t3 {
+        .outer-menu .hamburger {
+            position: absolute;
+            top: 0vw; left: 0;
             z-index: 1;
-            top: 65%; left: 50%;
+            width: 3vw; height: 3vw;
+            padding: 0.5em 1em;
+            border-radius: 0 0.12em 0.12em 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        #section11 .sec11-text1 .t3 iframe {
-            width: 50vw; height: 30vw;
-            transform-style: preserve-3d;
-            transform: translate3d(0, 0, 0);
-            border-bottom-left-radius: 10px;
-        }
-        #section11 .sec11-text1 .t3 .i1 {
-            
-        } 
-        #section11 .sec11-img1 {
-            top: 64.5%;
-            width: 50vw; height: 35vw;
-        }
-        #section12 .sec12-text1 .t1 {
-            color: #0F15E2;
-            z-index: 100;
-            font-size: 4vw;
-            white-space: nowrap;
-            /* left: 60vw;  */
-            top: 12%;
-        }
-        #section12 .sec12-text1 .t1 .line1 {
-            /* width: 20vw; */
-            height: 0.7vw;
-            background: #0F15E2;
-            display: inline-block;
-            border-radius: 5px;
+        .outer-menu .hamburger > div {
+            border-radius: 3px;
             position: relative;
-            top: -2.8vw;
-            /* margin-left: -1.2vw;
-            margin-right: -1vw;   */
-            margin-left: 3vw;
-            margin-right: -0.8vw;  
+            flex: none;
+            width: 2.5vw; height: 0.42vw;
+            /* width: 32px; height: 8px; */
+            background: #E91C0D;
+            transition: all 0.4s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        #section12 .sec12-text1 .t2 {
-            color: #0F15E2;
-            z-index: 100;
-            font-size: 2vw;
-            white-space: nowrap;
-            /* left: 60vw;  */
-            top: 25%;
-        }
-        #section12 .sec12-text1 .t3 {
+        .outer-menu .hamburger > div:before,
+        .outer-menu .hamburger > div:after {
+            content: '';
+            position: absolute;
             z-index: 1;
-            top: 65%; left: 50%;
+            top: -0.8vw;
+            left: 0;
+            width: 100%; height: 0.4vw;
+            border-radius: 3px;
+            background: inherit;
+            /* transition: all 0.4s ease; */
         }
-        #section12 .sec12-text1 .t3 iframe {
-            width: 50vw; height: 30Vw;
-            transform-style: preserve-3d;
-            transform: translate3d(0, 0, 0);
-            border-bottom-left-radius: 10px;
+        .outer-menu .hamburger > div:after {
+            top: 0.8vw;
         }
-        #section12 .sec12-text1 .t3 .i1 {
-            
-        } 
-        #section12 .sec12-img1 {
-            top: 64.5%;
-            width: 50vw; height: 35vw;
-        }
-        #section13 .sec13-text1 .t1 {
-            color: #0F15E2;
-            z-index: 100;
-            font-size: 4vw;
-            white-space: nowrap;
-            /* left: 60vw;  */
-            top: 12%;
-        }
-        #section13 .sec13-text1 .t1 .line1 {
-            /* width: 20vw; */
-            height: 0.6vw;
-            background: #0F15E2;
-            display: inline-block;
-            border-radius: 5px;
-            position: relative;
-            top: -2.9vw;
-            /* margin-left: -1.2vw;
-            margin-right: -1vw;   */
-            margin-left: 3vw;
-            margin-right: -0.8vw;  
-        }
-        #section13 .sec13-text1 .t2 {
-            color: #0F15E2;
-            z-index: 100;
-            font-size: 2vw;
-            white-space: nowrap;
-            /* left: 60vw;  */
-            top: 25%;
-        }
-        #section13 .sec13-text1 .t3 {
-            z-index: 1;
-            top: 65%; left: 50%;
-        }
-        #section13 .sec13-text1 .t3 iframe {
-            width: 50vw; height: 30vw;
-            transform-style: preserve-3d;
-            transform: translate3d(0, 0, 0);
-            border-bottom-left-radius: 10px;
-        }
-        #section13 .sec13-text1 .t3 .i1 {
-            
-        } 
-        #section13 .sec13-img1 {
-            top: 64.5%;
-            width: 50vw; height: 35vw;
-        }
-        #section14 .sec14-text1 .t1 {
-            color: #0F15E2;
-            z-index: 100;
-            font-size: 4vw;
-            white-space: nowrap;
-            /* left: 60vw;  */
-            top: 12%;
-        }
-        #section14 .sec14-text1 .t1 .line1 {
-            /* width: 20vw; */
-            height: 0.6vw;
-            background: #0F15E2;
-            display: inline-block;
-            border-radius: 5px;
-            position: relative;
-            top: -2.9vw;
-            /* margin-left: -1.2vw;
-            margin-right: -1vw;   */
-            margin-left: 3vw;
-            margin-right: -0.8vw;  
-        }
-        #section14 .sec14-text1 .t2 {
-            color: #0F15E2;
-            z-index: 100;
-            font-size: 2vw;
-            white-space: nowrap;
-            /* left: 60vw;  */
-            top: 25%;
-        }
-        #section14 .sec14-text1 .t3 {
-            z-index: 1;
-            top: 65%; left: 50%;
-        }
-        #section14 .sec14-text1 .t3 iframe {
-            width: 50vw; height: 30vw;
-            transform-style: preserve-3d;
-            transform: translate3d(0, 0, 0);
-            border-bottom-left-radius: 10px;
-        }
-        #section14 .sec14-text1 .t3 .i1 {
-            
-        } 
-        #section14 .sec14-img1 {
-            top: 64.5%;
-            width: 50vw; height: 35vw;
-        }
-
-        #section15 .sec15-img1 {
-            width: 10vw;
-            left: 30%; top: 30%;
-        }
-
-
-
-        /* svg */
-        #section1 #circle {
+        .outer-menu .menu {
             position: fixed;
-            top: 50%; left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100vw; height: 100vh;
-            /* width: 0vw; height: 0vh; */
-            animation-delay: 2s;
-            animation-duration: 2s;
-            /* animation-name: show; */
-            animation-fill-mode : forwards;
+            top: 0;
+            left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            visibility: hidden;
+            overflow: hidden;
+            -webkit-backface-visibility: hidden;
+                    backface-visibility: hidden;
+            outline: 1px solid transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        @keyframes show {
+        .outer-menu .menu > div {
+            width: 200vw;
+            height: 200vw;
+            color: #E91C0D;
+            background: rgba(218, 209, 234, 0.97);
+            border-radius: 50%;
+            transition: all 0.4s ease;
+            flex: none;
+            transform: scale(0);
+            -webkit-backface-visibility: hidden;
+                    backface-visibility: hidden;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .outer-menu .menu > div img {
+            width: 10vw;
+            top: 40%; left: 70%;
+        }
+        .outer-menu .menu > div img:hover {
+            width : 12vw;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        .outer-menu .menu > div > div {
+            text-align: center;
+            max-width: 90vw;
+            max-height: 100vh;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            overflow-y: auto;
+            flex: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            }
+        .outer-menu .menu > div > div > ul {
+            list-style: none;
+            padding: 0 1em;
+            margin: 0;
+            display: block;
+            max-height: 100vh;
+        }
+        .outer-menu .menu > div > div > ul > li {
+            padding: 0;
+            margin: 4vw;
+            font-size: 5vw;
+            display: block;
+        }
+        .outer-menu .menu > div > div > ul > li > a {
+            position: relative;
+            display: inline;
+            cursor: pointer;
+            transition: color 0.4s ease;
+        }
+        @keyframes slide {
             from {
-                width: 0vw; height: 0vh;
+                width: 0vw;
+                margin-left: 1vw;
             }
             to {
-                width: 100vw; height: 100vh;
+                width: 25vw;
+                margin-left: -1vw;
             }
         }
-        
-        #section1  .controls {
-            position: fixed;
-            top: 0;
-            left: 0;
-            padding: 15px;
+        @keyframes unslide {
+            from {
+                width: 25vw;
+                margin-left: -1vw;
+            }
+            to {
+                width: 0vw;
+                margin-left: 1vw;
+            }
         }
-
-        #section1  .dot {
-            fill-opacity: 0.3;
-            stroke-width: 1;
-            vector-effec: non-scaling-stroke;
+        @keyframes l1 {
+            from {
+                background: #e91c0d;
+            }
+            to {
+                background: #e91c0d;
+            }
         }
-
-        #section1  #slider {
-            
+        .outer-menu .menu > div > div > ul > li > a > span {
+           animation-duration: 0.6s;
+           animation-name: unslide;
+           animation-direction: alternate;
+           animation-fill-mode: forwards;
         }
-        #section1  #slider .slider-wrap {
-            
+        .outer-menu .menu > div > div > ul > li > a:hover span {
+           animation-duration: 0.6s;
+           animation-name: slide;
+           animation-direction: alternate;
+           animation-fill-mode: forwards;
         }
-        #section1  #slider .slider-wrap .slider-img {
-            position: relative;
-        }
-
-        #section1  #slider .slider-wrap .slider {
-            position: absolute;
-            left: 0; top: 0;
-        }
-        #section3 #svg {
-            position: fixed;
-            top: 0;
-            left: 0;
+        /* .outer-menu .menu > div > div > ul > li > a:hover:after {
             width: 100%;
-            height: 100%;
-            transform: scale(0.6);
+        } */
+        .outer-menu .menu > div > div > ul > li > a:after {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            bottom: -0.15em;
+            left: 0;
+            width: 0; height: 2px;
+            background: #e5e5e5;
+            transition: width 0.4s ease;
         }
-        #section3  #path1 {
-            fill: #8AE2B3;
-            /* fill: #00A470; */
-            mix-blend-mode: multiply;
+        .outer-menu .menu .line1 { 
+                /* width: 25vw; height: 0.9vw; */
+                width: 0vw; height: 0.9vw;
+                background: #e91c0d;
+                display: inline-block;
+                border-radius: 5px;
+                position: relative;
+                top: 0.6vw;
+                margin-left: 1vw;
+                margin-right: -1vw;
         }
-        #section10 #svg {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            transform: scale(0.6);
+        .outer-menu .menu .line2 { 
+                width: 0vw; height: 0.9vw;
+                /* width: 25vw; height: 0.9vw; */
+                background: #e91c0d;
+                display: inline-block;
+                border-radius: 5px;
+                position: relative;
+                top: -2.2vw;
+                margin-left: 1vw;
+                margin-right: -1vw;
         }
-        #section10 #path2 {
-            fill: #F9FE94;
-            mix-blend-mode: multiply;
+        .outer-menu .menu .line3 { 
+                width: 0vw; height: 0.9vw;
+                /* width: 25vw; height: 0.9vw; */
+                background: #e91c0d;
+                display: inline-block;
+                border-radius: 5px;
+                position: relative;
+                top: -1.3vw;
+                margin-left: 1vw;
+                margin-right: -1vw;
         }
-        #section10 #svg {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            transform: scale(0.6);
+        .outer-menu .menu .line4 { 
+                width: 0vw; height: 0.8vw;
+                /* width: 25vw; height: 0.8vw; */
+                background: #e91c0d;
+                display: inline-block;
+                border-radius: 5px;
+                position: relative;
+                top: -2.5vw;
+                margin-left: 1vw;
+                margin-right: -1vw;
         }
-        #section10 #path3 {
-            fill: #0F15E2;
-            mix-blend-mode: multiply;
-        }
-        #section15 #svg {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            transform: scale(0.6);
-        }
-        #section15 #path4 {
-            fill: #FDFFD3;
-            mix-blend-mode: multiply;
-        }
-
     </style>
 </head>
 <body>
@@ -403,7 +297,7 @@
         data-0="background-color: rgba(251,233,232,1);"
         data-22900="background-color: rgba(251,233,232,1);"
         data-22901="background-color: rgba(233,28,13,0.5);"
-        data-23000="background-color: rgba(233,28,13,0.5);"
+        data-23000="background-color: rgba(233,28,13,1);"
         data-23500="background-color: rgba(233,28,13,1);"
         data-43490="background-color: rgba(233,28,13,1);"
         data-43491="background-color: rgba(233,28,13,0.8);"
@@ -426,36 +320,137 @@
         data-155998="background-color: rgba(253,255,211,1);"
         data-155999="background-color: rgba(254,186,148,0);"
         data-156000="background-color: rgba(254,186,148,1);"
+        data-180999="background-color: rgba(254,186,148,1);"
+        data-181000="background-color: rgba(218,209,234,0.5);"
+        data-181500="background-color: rgba(218,209,234,0.8);"
+        data-182000="background-color: rgba(218,209,234,1);"
     >
 
         <div class="header">
-            <img class="logo" src="assets/img/logo1.svg" alt="logo">
-            <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+            <a href="https://www.instagram.com/rnnsernn/" target="_blank"><img class="logo" src="assets/img/logo1.svg" alt="logo"></a>
+            <div class="outer-menu">
+                <input class="checkbox-toggle" type="checkbox" />
+                <div class="hamburger">
+                    <div class="ham"
+                        data-0="background: rgba(233,28,13,1)"
+                        data-22999="background: rgba(233,28,13,1)"
+                        data-23000="background: rgba(248,254,130,1)"
+                        data-43900="background: rgba(248,254,130,1)"
+                        data-44000="background: rgba(0,164,112,1)"
+                        data-57999="background: rgba(0,164,112,1)"
+                        data-58000="background: rgba(251,255,245,1)"
+                        data-83499="background: rgba(251,255,245,1)"
+                        data-83500="background: rgba(15,21,226,1)"
+                        data-116499="background: rgba(15,21,226,1)"
+                        data-116500="background: rgba(249,254,148,1)"
+                        data-128000="background: rgba(249,254,148,1)"
+                        data-128001="background: rgba(15,21,226,1)"
+                        data-157999="background: rgba(15,21,226,1)"
+                        data-158000="background: rgba(249,254,148,1)"
+                        data-180999="background: rgba(249,254,148,1)"
+                        data-181000="background: rgba(214,60,45,1)"
+                        data-182000="background: rgba(214,60,45,1)"
+                    ></div>
+                </div>
+                <div class="menu">
+                    <div>
+                    <a href="https://www.instagram.com/rnnsernn/" target="_blank"><img class="fixed" src="assets/img/logo1.svg" alt="로고"></a>
+                        <div>
+                            <ul>
+                                <li class="l1"><a href="https://lsrljm8011.github.io/dothome21" target="_blank">Git<span class="line1"></span>hub</a></li>
+                                <li class="l2"><a href="https://www.figma.com/files/project/41244108/Team-project?fuid=997698738059308147" target="_blank">Fig<span class="line2"></span>ma</a></li>
+                                <li class="l3"><a href="https://codepen.io/lsrljm8011" target="_blank">Code<span class="line3"></span>pen</a></li>
+                                <li class="l4"><a href="#" target="_blank">Con<span class="line4"></span>tact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <article class="audio">
             <span class="btn-sound"
-                data-22899="border: 0.25vw solid rgba(233,28,13,1)"
-                data-22900="bordår: 0.25vw solid rgba(248,254,130,1)"
+                data-0="border: 0.25vw solid rgba(233,28,13,1)"
+                data-22999="border: 0.25vw solid rgba(233,28,13,1)"
+                data-23000="border: 0.25vw solid rgba(248,254,130,1)"
                 data-43900="border: 0.25vw solid rgba(248,254,130,1)"
                 data-44000="border: 0.25vw solid rgba(0,164,112,1)"
                 data-57999="border: 0.25vw solid rgba(0,164,112,1)"
                 data-58000="border: 0.25vw solid rgba(251,255,245,1)"
+                data-83499="border: 0.25vw solid rgba(251,255,245,1)"
+                data-83500="border: 0.25vw solid rgba(15,21,226,1)"
+                data-116499="border: 0.25vw solid rgba(15,21,226,1)"
+                data-116500="border: 0.25vw solid rgba(249,254,148,1)"
+                data-128000="border: 0.25vw solid rgba(249,254,148,1)"
+                data-128001="border: 0.25vw solid rgba(15,21,226,1)"
+                data-157999="border: 0.25vw solid rgba(15,21,226,1)"
+                data-158000="border: 0.25vw solid rgba(249,254,148,1)"
+                data-158000="border: 0.25vw solid rgba(249,254,148,1)"
+                data-180999="border: 0.25vw solid rgba(249,254,148,1)"
+                data-181000="border: 0.25vw solid rgba(214,60,45,1)"
+                data-182000="border: 0.25vw solid rgba(214,60,45,1)"
             >
-                <!-- <i class="fa fa-volume-up" aria-hidden="true"></i> -->
-                <i class="fa fa-volume-off" aria-hidden="true"></i>
+                <!-- <i class="fa fa-volume-up" aria-hidden="true"
+                        data-0="color: rgba(233,28,13,1)"
+                        data-22999="color: rgba(233,28,13,1)"
+                        data-23000="color: rgba(248,254,130,1)"
+                        data-43900="color: rgba(248,254,130,1)"
+                        data-44000="color: rgba(0,164,112,1)"
+                        data-57999="color: rgba(0,164,112,1)"
+                        data-58000="color: rgba(251,255,245,1)"
+                        data-83499="color: rgba(251,255,245,1)"
+                        data-83500="color: rgba(15,21,226,1)"
+                        data-116499="color: rgba(15,21,226,1)"
+                        data-116500="color: rgba(249,254,148,1)"
+                        data-128000="color: rgba(249,254,148,1)"
+                        data-128001="color: rgba(15,21,226,1)"
+                        data-157999="color: rgba(15,21,226,1)"
+                        data-158000="color: rgba(249,254,148,1)"
+                        data-180999="color: rgba(249,254,148,1)"
+                        data-181000="color: rgba(214,60,45,1)"
+                        data-182000="color: rgba(214,60,45,1)"
+                    ></i> -->
+                <i class="fa fa-volume-off" aria-hidden="true"
+                    data-0="color: rgba(233,28,13,1)"
+                    data-22999="color: rgba(233,28,13,1)"
+                    data-23000="color: rgba(248,254,130,1)"
+                    data-43900="color: rgba(248,254,130,1)"
+                    data-44000="color: rgba(0,164,112,1)"
+                    data-57999="color: rgba(0,164,112,1)"
+                    data-58000="color: rgba(251,255,245,1)"
+                    data-83499="color: rgba(251,255,245,1)"
+                    data-83500="color: rgba(15,21,226,1)"
+                    data-116499="color: rgba(15,21,226,1)"
+                    data-116500="color: rgba(249,254,148,1)"
+                    data-128000="color: rgba(249,254,148,1)"
+                    data-128001="color: rgba(15,21,226,1)"
+                    data-157999="color: rgba(15,21,226,1)"
+                    data-158000="color: rgba(249,254,148,1)"
+                    data-180999="color: rgba(249,254,148,1)"
+                    data-181000="color: rgba(214,60,45,1)"
+                    data-182000="color: rgba(214,60,45,1)"
+                ></i>
             </span>
-            <!-- <audio id="theme-song" src="../assets/audio/gameshow-brazz-658.mp3" loop="loop"></audio> -->
+            <audio id="music" src="assets/audio/bgm.mp3" loop="loop"></audio>
         </article>
         <div class="bottom fixed">
             <img class="arrow-down" src="assets/img/arrow-down.png" alt="arrowdown">
         </div>
         <div class="scroll"
-                data-22899="background-color:rgba(233,28,13,1);color:rgba(255,255,255,1)"
-                data-22900="background-color:rgba(248,254,130,1);color:rgba(233,28,13,1)"
-                data-43900="background-color:rgba(248,254,130,1);color:rgba(233,28,13,1)"
-                data-44000="background-color:rgba(0,164,112,1);color:rgba(251,255,245,1)"
-                data-57999="background-color:rgba(0,164,112,1);color:rgba(251,255,245,1)"
-                data-58000="background-color:rgba(251,255,245,1); color:rgba(0,164,112,1)"
+            data-0="background-color: rgba(233,28,13,1); color:rgba(251,233,232,1)"
+            data-22999="background-color: rgba(233,28,13,1); color:rgba(251,233,232,1)"
+            data-23000="background-color: rgba(248,254,130,1); color: rgba(233,28,13,1);"
+            data-43900="background-color: rgba(248,254,130,1); color: rgba(233,28,13,1);"
+            data-44000="background-color: rgba(0,164,112,1); color: rgba(251,255,245,1);"
+            data-57999="background-color: rgba(0,164,112,1); color: rgba(251,255,245,1);"
+            data-58000="background-color: rgba(251,255,245,1); color: rgba(0,164,112,1);"
+            data-83499="background-color: rgba(251,255,245,1); color: rgba(0,164,112,1);"
+            data-83500="background-color: rgba(15,21,226,1); color: rgba(230,240,252,1);"
+            data-116499="background-color: rgba(15,21,226,1); color: rgba(230,240,252,1);"
+            data-116500="background-color: rgba(249,254,148,1); color: rgba(15,21,226,1);"
+            data-128000="background-color: rgba(249,254,148,1); color: rgba(15,21,226,1);"
+            data-128001="background-color: rgba(15,21,226,1); color: rgba(253,255,211,1);"
+            data-157999="background-color: rgba(15,21,226,1); color: rgba(253,255,211,1);"
+            data-158000="background-color: rgba(249,254,148,1); color: rgba(254,186,148,1);"
         >0</div>
         
         <section id="section1" class="content__item">
@@ -586,8 +581,8 @@
                 <div class="t2 fixed"
                     data-29000="opacity: 0; left: 24.1vw;"
                     data-30000="opacity: 1; left: 24.1vw;"
-                    data-32000="opacity: 1; left: 45vw;"
-                    data-43000="opacity: 1; left: 45vw;"
+                    data-32000="opacity: 1; left: 44.8vw;"
+                    data-43000="opacity: 1; left: 44.8vw;"
                     data-44000="left: -40vw"
                 >HTML<span class="line2"
                     data-30000="width: 0vw; margin-left: 3vw; margin-right: 0vw;"
@@ -596,8 +591,8 @@
                 <div class="t3 fixed"
                     data-32000="opacity: 0; left: 25.1vw;"
                     data-33000="opacity: 1; left: 25.1vw;"
-                    data-35000="opacity: 1; left: 35vw;"
-                    data-43000="opacity: 1; left: 35vw;"
+                    data-35000="opacity: 1; left: 34.5vw;"
+                    data-43000="opacity: 1; left: 34.5vw;"
                     data-44000="left: -40vw"
                 >REACT<span class="line3"
                     data-33000="width: 0vw; margin-left: 3vw; margin-right: 0vw;"
@@ -606,8 +601,8 @@
                 <div class="t4 fixed"
                     data-35000="opacity: 0; left: 26.5vw;"
                     data-36000="opacity: 1; left: 26.5vw;"
-                    data-38000="opacity: 1; left: 39.5vw;"
-                    data-43000="opacity: 1; left: 39.5vw;"
+                    data-38000="opacity: 1; left: 38.8vw;"
+                    data-43000="opacity: 1; left: 38.8vw;"
                     data-44000="left: -40vw"
                 >JQUERY<span class="line4"
                     data-36000="width: 0vw; margin-left: 3vw; margin-right: 0vw;"
@@ -616,8 +611,8 @@
                 <div class="t5 fixed"
                     data-38000="opacity: 0; left: 30.2vw;"
                     data-39000="opacity: 1; left: 30.2vw;"
-                    data-41000="opacity: 1; left: 39.5vw;"
-                    data-43000="opacity: 1; left: 39.5vw;"
+                    data-41000="opacity: 1; left: 38.8vw;"
+                    data-43000="opacity: 1; left: 38.8vw;"
                     data-44000="left: -40vw"
                 >JAVASCRIPT<span class="line5"
                     data-39000="width: 0vw; margin-left: 3vw; margin-right: 0vw;"
@@ -773,13 +768,13 @@
                 <div class="t2 fixed">
                     메가박스 사이트를 반응형으로 작업한 기업형 사이트입니다.<br>Swiper플러그인을 이용한 이미지 슬라이드 배너와 차트 탭<br>스크립트를 특징으로 하여 모바일 화면에서도 깨짐없이 볼 수<br>있도록 제작하였습니다.
                 </div>
-                <div class="button fixed"><a href="http://bild.dothome.co.kr/bild-php/pages/main.php" target="_blank">view site</a></div>
+                <div class="button fixed"><a href="https://lsrljm8011.github.io/dothome21/mega/index.html" target="_blank">view site</a></div>
             </div>
             <div class="sec5-img1 fixed">
                 <img src="assets/img/mockup.svg" alt="목업">
             </div>
             <div class="sec5-img2 fixed">
-                <img src="assets/img/site2.svg" alt="팀플 사이트">
+                <img src="assets/img/site2.svg" alt="메가박스 사이트">
             </div>  
         </section>
         <!-- //section5 -->
@@ -799,15 +794,15 @@
                     ></span>SITE
                 </div>
                 <div class="t2 fixed">
-                    회원가입, 로그인, 게시판, 댓글 등 php를 활용하여<br>제작한 사이트입니다. 
+                    회원가입, 로그인, 게시판, 댓글 등 php를 활용하여 제작한 사이트입니다. 
                 </div>
-                <div class="button fixed"><a href="http://bild.dothome.co.kr/bild-php/pages/main.php" target="_blank">view site</a></div>
+                <div class="button fixed"><a href="http://lsrljm8011.dothome.co.kr/site-php/pages/main.php" target="_blank">view site</a></div>
             </div>
             <div class="sec6-img1 fixed">
                 <img src="assets/img/mockup.svg" alt="목업">
             </div>
             <div class="sec6-img2 fixed">
-                <img src="assets/img/site3.svg" alt="팀플 사이트">
+                <img src="assets/img/site3.svg" alt="PHP 사이트">
             </div>  
         </section>
         <!-- //section6 -->
@@ -829,13 +824,13 @@
                 <div class="t2 fixed">
                     Node.js를 통해 NPM을 이용하여 터미널로<br>build후, React 컴퍼넌트를 사용하여 포트폴리오<br>소개, 콘텍트 등 가상페이지를 만들어 출력시켜<br>만든 React 사이트입니다.
                 </div>
-                <div class="button fixed"><a href="http://bild.dothome.co.kr/bild-php/pages/main.php" target="_blank">view site</a></div>
+                <div class="button fixed"><a href="https://rinreact999.firebaseapp.com/" target="_blank">view site</a></div>
             </div>
             <div class="sec7-img1 fixed">
                 <img src="assets/img/mockup.svg" alt="목업">
             </div>
             <div class="sec7-img2 fixed">
-                <img src="assets/img/site4.svg" alt="팀플 사이트">
+                <img src="assets/img/site4.svg" alt="리액트 사이트">
             </div>  
         </section>
         <!-- //section7 -->
@@ -857,13 +852,13 @@
                 <div class="t2 fixed">
                     Node.js를 통해 NPM을 이용하여 터미널로 build후, React 컴퍼넌트를 사용하여 포트폴리오 소개, 콘텍트 등 가상페이지를 만들어 출력시켜 만든 React 사이트입니다.
                 </div>
-                <div class="button fixed"><a href="http://bild.dothome.co.kr/bild-php/pages/main.php" target="_blank">view site</a></div>
+                <div class="button fixed"><a href="https://rinvue999.firebaseapp.com/" target="_blank">view site</a></div>
             </div>
             <div class="sec8-img1 fixed">
                 <img src="assets/img/mockup.svg" alt="목업">
             </div>
             <div class="sec8-img2 fixed">
-                <img src="assets/img/site4.svg" alt="팀플 사이트">
+                <img src="assets/img/site4.svg" alt="뷰 사이트">
             </div>  
         </section>
         <!-- //section8 -->
@@ -923,7 +918,7 @@
                 data-97000="left:100%"
                 data-98000="left:70%"
                 data-100000="left:70%"
-                data-101000="left:-30%"
+                data-102000="left:-30%"
             >
                 <a href="https://codepen.io/lsrljm8011/pen/abwgNbX" target="_blank"><img src="assets/img/icon8.svg" alt="구름 이미지"></a>
             </div>
@@ -932,7 +927,7 @@
                     data-97000="left:107%"
                     data-98000="left:77%"
                     data-100000="left:77%"
-                    data-101000="left:-25%"
+                    data-102000="left:-25%"
                 ><a href="https://codepen.io/lsrljm8011/pen/abwgNbX" target="_blank">view code</a></div>
             </div>
             <div class="sec9-text3">
@@ -961,7 +956,7 @@
                 data-104000="left:100%"
                 data-105000="left:70%"
                 data-107000="left:70%"
-                data-108000="left:-30%"
+                data-109000="left:-30%"
             >
                 <a href="https://codepen.io/lsrljm8011/pen/PoKjjbM?editors=0110" target="_blank"><img src="assets/img/icon8.svg" alt="구름 이미지"></a>
             </div>
@@ -970,7 +965,7 @@
                     data-104000="left:107%"
                     data-105000="left:77%"
                     data-107000="left:77%"
-                    data-108000="left:-25%"
+                    data-109000="left:-25%"
                 ><a href="https://codepen.io/lsrljm8011/pen/PoKjjbM?editors=0110" target="_blank">view code</a></div>
             </div>
             <div class="sec9-text6">
@@ -999,7 +994,7 @@
                 data-111000="left:100%"
                 data-112000="left:70%"
                 data-114000="left:70%"
-                data-115000="left:-30%"
+                data-116000="left:-30%"
             >
                 <a href="https://codepen.io/lsrljm8011/pen/GRvMXGJ" target="_blank"><img src="assets/img/icon8.svg" alt="구름 이미지"></a>
             </div>
@@ -1008,7 +1003,7 @@
                     data-111000="left:107%"
                     data-112000="left:77%"
                     data-114000="left:77%"
-                    data-115000="left:-25%"
+                    data-116000="left:-25%"
                 ><a href="https://codepen.io/lsrljm8011/pen/GRvMXGJ" target="_blank">view code</a></div>
             </div>
             <div class="sec9-text9">
@@ -1225,10 +1220,39 @@
             >
                 <path id="path4"></path>
             </svg>
-            <!-- <div class="sec15-img1 fixed"
+            <div class="sec15-img1 fixed"
+                data-165000="opacity: 0; top: 30%; transform: scale(1)"
+                data-166000="opacity: 1; top: 30%; transform: scale(1)"
+                data-167000="opacity: 1; top: -5%; transform: scale(0.5)"
+                data-181000="opacity: 1; top: -5%; transform: scale(0.5)"
+                data-182000="opacity: 1; top: 30%; transform: scale(1)"
             >
-                <img src="assets/img/logo1.svg" alt="로고">
-            </div> -->
+                <a href="https://www.instagram.com/rnnsernn/" target="_blank"><img src="assets/img/logo1.svg" alt="로고"></a>
+            </div>
+            <div class="sec15-text1">
+                <div class="t1 fixed"
+                    data-168000="left: 130vw"
+                    data-170000="left: 43vw"
+                    data-179000="left: 43vw"
+                    data-180000="left: -30vw"
+                >
+                    제<span class="line1"
+                        data-173000="width: 0vw; margin-left: 3vw; margin-right: -0.8vw;"
+                        data-175000="width: 20vw; margin-left: -1.2vw; margin-right: -0.8vw;"
+                    ></span>포트폴리오를
+                </div>
+                <div class="t2 fixed"
+                    data-170000="left: 130vw"
+                    data-172000="left: 50vw"
+                    data-179000="left: 50vw"
+                    data-180000="left: -40vw"
+                >
+                    봐주셔서<span class="line1"
+                        data-176000="width: 0vw; margin-left: 3vw; margin-right: -0.8vw;"
+                        data-178000="width: 20vw; margin-left: -1.2vw; margin-right: -1vw;"
+                    ></span>감사합니다!
+                </div>
+            </div>
         </div>
         <!-- //section15 -->
     </div>
@@ -1239,6 +1263,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
     <script>
+        const $btnSound = $(".btn-sound"),
+              $themeMusic = $("#music")[0];
+
+        //오디오 설정
+        function sound(){
+            $btnSound.find("i").toggleClass("fa-volume-up fa-volume-off");
+            $btnSound.toggleClass("is-playing");
+
+            if( $btnSound.hasClass("is-playing") ){
+                $themeMusic.play();
+                $themeMusic.volume = 0.1;
+            } else {
+                $themeMusic.pause();
+            }
+        };
+
+        $btnSound.on("click", sound);
+
         //가로모드
         const contentWrap = $(".contentWrap");
         const contentItem = $(".content__item");
@@ -1266,6 +1308,7 @@
         $(window).scroll(function(){
             //bottom 사라지게
             $(".bottom").addClass("end");
+            $(".header .logo").addClass("up");
         });
 
         //스크롤 값 출력
@@ -1369,7 +1412,6 @@
             return options;
         }
 
-        // Cardinal spline - a uniform Catmull-Rom spline with a tension option
         function cardinal(data, closed, tension) {
 
             if (data.length < 1) return "M0 0";
@@ -1411,7 +1453,7 @@
             return min + (max - min) * Math.random();
         }
 
-        //이미지 슬라이드
+        //이미지 슬라이드 (section1 svg안에 이미지슬라이드)
         const sliderWrap = $(".slider-wrap");
         const sliderImg = $(".slider-img");
         const slider = $(".cls-2");
