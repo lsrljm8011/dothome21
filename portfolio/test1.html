@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -14,6 +15,81 @@
     
 
     <style>
+        /* contact */
+        fieldset {
+            border-style: none;
+        }
+        form {
+            stroke: none;
+        }
+        .contact  .i1 {
+            position: relative;
+            margin-left: 9vw;
+            top: -0.5vw;
+        }
+        .contact  .i2 {
+            position: relative;
+            margin-left: 9vw;
+            top: -0.5vw;
+        }
+        input {
+            background: #e9e3f2;
+            border: 1px solid #E9E3F2;
+            border-radius: 50px;
+            color: #DAD1EA;
+            height: 90%; width: 60%;
+        }
+        input::placeholder {
+            color: #DAD1EA;
+        }
+        textarea {
+            background: #e9e3f2;
+            border: 1px solid #E9E3F2;
+            border-radius: 10px;
+            resize: none;
+        }
+        textarea::placeholder {
+            color: #DAD1EA;
+        }
+        .contact label {
+            font-size: 1.3vw;
+            position: absolute;
+            left: 1.2vw;
+        }
+        .contact .title-text {
+            padding: 13px;
+            margin-bottom: 20px;
+            resize: none;
+        }
+        .contact .l3 {
+            top: 9vw;
+        }
+        .contact textarea {
+            display: block;
+            position: absolute;
+            border: 1px solid #eee;
+            padding: 13px;
+            resize: none;
+            top: 12vw; left: 1vw;
+            width: 92%; height: 100%;
+        }
+        .contact .btn {
+            border-radius: 5px;
+            padding: 10px 30px;
+            float: right;
+        }
+        button {
+            border-radius: 50px;
+            width: 6vw;
+            height: 2vw;
+            line-height: 1;
+            background: #D63724;
+            color: #fff;
+            position: absolute;
+            right: 1vw;
+            top: 23vw;
+        }
+
         .flex-center {
             display: flex;
             align-items: center;
@@ -29,7 +105,6 @@
         .outer-menu {
             position: fixed;
             top: 2vw; left: 2vw;
-            z-index: 1;
         }
         .outer-menu .checkbox-toggle {
             position: absolute;
@@ -137,7 +212,7 @@
         }
         .outer-menu .menu > div img {
             width: 10vw;
-            top: 40%; left: 70%;
+            top: 42%; left: 70%;
         }
         .outer-menu .menu > div img:hover {
             width : 12vw;
@@ -193,14 +268,6 @@
             to {
                 width: 0vw;
                 margin-left: 1vw;
-            }
-        }
-        @keyframes l1 {
-            from {
-                background: #e91c0d;
-            }
-            to {
-                background: #e91c0d;
             }
         }
         .outer-menu .menu > div > div > ul > li > a > span {
@@ -360,7 +427,7 @@
                                 <li class="l1"><a href="https://lsrljm8011.github.io/dothome21" target="_blank">Git<span class="line1"></span>hub</a></li>
                                 <li class="l2"><a href="https://www.figma.com/files/project/41244108/Team-project?fuid=997698738059308147" target="_blank">Fig<span class="line2"></span>ma</a></li>
                                 <li class="l3"><a href="https://codepen.io/lsrljm8011" target="_blank">Code<span class="line3"></span>pen</a></li>
-                                <li class="l4"><a href="#" target="_blank">Con<span class="line4"></span>tact</a></li>
+                                <li class="l4"><a href="#">Con<span class="line4"></span>tact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -451,6 +518,9 @@
             data-128001="background-color: rgba(15,21,226,1); color: rgba(253,255,211,1);"
             data-157999="background-color: rgba(15,21,226,1); color: rgba(253,255,211,1);"
             data-158000="background-color: rgba(249,254,148,1); color: rgba(254,186,148,1);"
+            data-180999="background-color: rgba(249,254,148,1); color: rgba(254,186,148,1);"
+            data-181000="background-color: rgba(214,60,45,1); color: rgba(218,209,234,1);"
+            data-182000="background-color: rgba(214,60,45,1); color: rgba(218,209,234,1);"
         >0</div>
         
         <section id="section1" class="content__item">
@@ -1224,8 +1294,6 @@
                 data-165000="opacity: 0; top: 30%; transform: scale(1)"
                 data-166000="opacity: 1; top: 30%; transform: scale(1)"
                 data-167000="opacity: 1; top: -5%; transform: scale(0.5)"
-                data-181000="opacity: 1; top: -5%; transform: scale(0.5)"
-                data-182000="opacity: 1; top: 30%; transform: scale(1)"
             >
                 <a href="https://www.instagram.com/rnnsernn/" target="_blank"><img src="assets/img/logo1.svg" alt="로고"></a>
             </div>
@@ -1255,6 +1323,68 @@
             </div>
         </div>
         <!-- //section15 -->
+
+        <div id="section16" class="content__item fixed">
+            <div class="sec16-img1 fixed"
+                data-182000="left: 120vw"
+                data-185000="left: -20vw"
+            >
+                <img src="assets/img/icon10.svg" alt="contact 이미지">
+            </div>
+            <div class="contact fixed"
+                data-182000="left: 160vw"
+                data-185000="left: 25vw"
+            >
+                <div class="sec16-text1 fixed">
+                    <div class="t1">
+                        <div class="txt">CONTACT ME!</div>
+                        <div class="button fixed">
+                            <span class="button_txt">VIEW CONTACT</span>
+                            <div class="box">
+                                <h4>CONTACT ME!</h4>
+                                <form action="contactSave.php" name="contact" method="post">
+                                    <fieldset>
+                                        <div>
+                                            <label for="contactFrom">YOUR EMAIL</label>
+                                            <input type="text" name="contactFrom" id="contactFrom" class="title-text i1" placeholder="이메일을 입력해주세요.">
+                                        </div>
+                                        <!-- <div>
+                                            <label for="contactTo">TO</label>
+                                            <input type="text" name="contactTo" id="contactTo" class="title-text" value="lsrljm8011@naver.com" disabled>
+                                        </div> -->
+                                        <div>
+                                            <label for="contactSubject">SUBJECT</label>
+                                            <input type="text" name="contactSubject" id="contactSubject" class="title-text i2" placeholder="제목을 입력해주세요." >
+                                        </div>
+                                        <div>
+                                            <label class="l3" for="contactContent">CONTENT</label>
+                                            <textarea name="contactContent" id="contactContent" rows="8" placeholder="내용을 입력해주세요."></textarea>
+                                        </div>
+                                    </fieldset>
+                                    <button class="btn" type="submit" value="보내기">보내기</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sec16-text2 fixed">
+                    <div class="t1">
+                        <div class="txt">My information!</div>
+                        <div class="button fixed">
+                            <span class="button_txt">VIEW INFO</span>
+                            <div class="box">
+                                <h4>My Infomation!</h4>
+                                <p class="p1">NAME<span class="s1">이세린</span></p>
+                                <p class="p2">E-MAIL<span class="s2">lsrljm98@gmail.com</span></p>
+                                <p class="p3">KAKAO<span class="s3">serin8011</span></p>
+                                <p class="p4">PHONE NUMBER<span class="s4">010-8098-8120</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //section16 -->
     </div>
     <!-- // contentWrap-->
     
@@ -1471,7 +1601,34 @@
         } , 3000);
 
 
-        
+        //contact mouse hover
+        $('.sec16-text1 .t1 .button').hover(function() {
+            $(this).css("height", "34vw");
+            setTimeout(function(){
+                $('#section16 .sec16-text1 .box').css("opacity", "1");
+            }, 800);
+            $('.sec16-text1').addClass("active");
+            $('.sec16-text1 .t1 .txt').addClass("active");
+        }, function(){
+            $(this).css("height", "5vw");
+            $('#section16 .sec16-text1 .box').css("opacity", "0");
+            $('.sec16-text1').removeClass("active");
+            $('.sec16-text1 .t1 .txt').removeClass("active");
+        });
+
+        $('.sec16-text2 .t1 .button').hover(function() {
+            $(this).css("height", "19vw");
+            setTimeout(function(){
+                $('#section16 .sec16-text2 .box').css("opacity", "1");
+            }, 800);
+            $('.sec16-text2').addClass("active");
+            $('.sec16-text2 .t1 .txt').addClass("active");
+        }, function(){
+            $(this).css("height", "5vw");
+            $('#section16 .sec16-text2 .box').css("opacity", "0");
+            $('.sec16-text2').removeClass("active");
+            $('.sec16-text2 .t1 .txt').removeClass("active");
+        });
     </script>
 </body>
 </html>

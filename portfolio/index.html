@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -29,7 +30,6 @@
         .outer-menu {
             position: fixed;
             top: 2vw; left: 2vw;
-            z-index: 1;
         }
         .outer-menu .checkbox-toggle {
             position: absolute;
@@ -81,7 +81,7 @@
             border-radius: 3px;
             position: relative;
             flex: none;
-            width: 2.5vw; height: 0.4vw;
+            width: 2.5vw; height: 0.42vw;
             /* width: 32px; height: 8px; */
             background: #E91C0D;
             transition: all 0.4s ease;
@@ -94,10 +94,10 @@
             content: '';
             position: absolute;
             z-index: 1;
-            border-radius: 3px;
             top: -0.8vw;
             left: 0;
-            width: 100%; height: 100%;
+            width: 100%; height: 0.4vw;
+            border-radius: 3px;
             background: inherit;
             /* transition: all 0.4s ease; */
         }
@@ -135,6 +135,15 @@
             align-items: center;
             justify-content: center;
         }
+        .outer-menu .menu > div img {
+            width: 10vw;
+            top: 42%; left: 70%;
+        }
+        .outer-menu .menu > div img:hover {
+            width : 12vw;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
         .outer-menu .menu > div > div {
             text-align: center;
             max-width: 90vw;
@@ -156,8 +165,8 @@
         }
         .outer-menu .menu > div > div > ul > li {
             padding: 0;
-            margin: 2em;
-            font-size: 3vw;
+            margin: 4vw;
+            font-size: 5vw;
             display: block;
         }
         .outer-menu .menu > div > div > ul > li > a {
@@ -166,12 +175,41 @@
             cursor: pointer;
             transition: color 0.4s ease;
         }
-        .outer-menu .menu > div > div > ul > li > a:hover {
-            color: #e5e5e5;
+        @keyframes slide {
+            from {
+                width: 0vw;
+                margin-left: 1vw;
+            }
+            to {
+                width: 25vw;
+                margin-left: -1vw;
+            }
         }
-        .outer-menu .menu > div > div > ul > li > a:hover:after {
+        @keyframes unslide {
+            from {
+                width: 25vw;
+                margin-left: -1vw;
+            }
+            to {
+                width: 0vw;
+                margin-left: 1vw;
+            }
+        }
+        .outer-menu .menu > div > div > ul > li > a > span {
+           animation-duration: 0.6s;
+           animation-name: unslide;
+           animation-direction: alternate;
+           animation-fill-mode: forwards;
+        }
+        .outer-menu .menu > div > div > ul > li > a:hover span {
+           animation-duration: 0.6s;
+           animation-name: slide;
+           animation-direction: alternate;
+           animation-fill-mode: forwards;
+        }
+        /* .outer-menu .menu > div > div > ul > li > a:hover:after {
             width: 100%;
-        }
+        } */
         .outer-menu .menu > div > div > ul > li > a:after {
             content: '';
             position: absolute;
@@ -181,6 +219,50 @@
             width: 0; height: 2px;
             background: #e5e5e5;
             transition: width 0.4s ease;
+        }
+        .outer-menu .menu .line1 { 
+                /* width: 25vw; height: 0.9vw; */
+                width: 0vw; height: 0.9vw;
+                background: #e91c0d;
+                display: inline-block;
+                border-radius: 5px;
+                position: relative;
+                top: 0.6vw;
+                margin-left: 1vw;
+                margin-right: -1vw;
+        }
+        .outer-menu .menu .line2 { 
+                width: 0vw; height: 0.9vw;
+                /* width: 25vw; height: 0.9vw; */
+                background: #e91c0d;
+                display: inline-block;
+                border-radius: 5px;
+                position: relative;
+                top: -2.2vw;
+                margin-left: 1vw;
+                margin-right: -1vw;
+        }
+        .outer-menu .menu .line3 { 
+                width: 0vw; height: 0.9vw;
+                /* width: 25vw; height: 0.9vw; */
+                background: #e91c0d;
+                display: inline-block;
+                border-radius: 5px;
+                position: relative;
+                top: -1.3vw;
+                margin-left: 1vw;
+                margin-right: -1vw;
+        }
+        .outer-menu .menu .line4 { 
+                width: 0vw; height: 0.8vw;
+                /* width: 25vw; height: 0.8vw; */
+                background: #e91c0d;
+                display: inline-block;
+                border-radius: 5px;
+                position: relative;
+                top: -2.5vw;
+                margin-left: 1vw;
+                margin-right: -1vw;
         }
     </style>
 </head>
@@ -230,10 +312,14 @@
         data-155998="background-color: rgba(253,255,211,1);"
         data-155999="background-color: rgba(254,186,148,0);"
         data-156000="background-color: rgba(254,186,148,1);"
+        data-180999="background-color: rgba(254,186,148,1);"
+        data-181000="background-color: rgba(218,209,234,0.5);"
+        data-181500="background-color: rgba(218,209,234,0.8);"
+        data-182000="background-color: rgba(218,209,234,1);"
     >
 
         <div class="header">
-            <img class="logo" src="assets/img/logo1.svg" alt="logo">
+            <a href="https://www.instagram.com/rnnsernn/" target="_blank"><img class="logo" src="assets/img/logo1.svg" alt="logo"></a>
             <div class="outer-menu">
                 <input class="checkbox-toggle" type="checkbox" />
                 <div class="hamburger">
@@ -253,38 +339,25 @@
                         data-128001="background: rgba(15,21,226,1)"
                         data-157999="background: rgba(15,21,226,1)"
                         data-158000="background: rgba(249,254,148,1)"
+                        data-180999="background: rgba(249,254,148,1)"
+                        data-181000="background: rgba(214,60,45,1)"
+                        data-182000="background: rgba(214,60,45,1)"
                     ></div>
                 </div>
                 <div class="menu">
                     <div>
+                    <a href="https://www.instagram.com/rnnsernn/" target="_blank"><img class="fixed" src="assets/img/logo1.svg" alt="로고"></a>
                         <div>
                             <ul>
-                                <li><a href="#">Github</a></li>
-                                <li><a href="#">Figma</a></li>
-                                <li><a href="#">Codepen</a></li>
-                                <li><a href="#">Info</a></li>
-                                </ul>
+                                <li class="l1"><a href="https://lsrljm8011.github.io/dothome21" target="_blank">Git<span class="line1"></span>hub</a></li>
+                                <li class="l2"><a href="https://www.figma.com/files/project/41244108/Team-project?fuid=997698738059308147" target="_blank">Fig<span class="line2"></span>ma</a></li>
+                                <li class="l3"><a href="https://codepen.io/lsrljm8011" target="_blank">Code<span class="line3"></span>pen</a></li>
+                                <li class="l4"><a href="#">Con<span class="line4"></span>tact</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- <i class="fa fa-bars" aria-hidden="true"
-                data-0="color: rgba(233,28,13,1)"
-                data-22999="color: rgba(233,28,13,1)"
-                data-23000="color: rgba(248,254,130,1)"
-                data-43900="color: rgba(248,254,130,1)"
-                data-44000="color: rgba(0,164,112,1)"
-                data-57999="color: rgba(0,164,112,1)"
-                data-58000="color: rgba(251,255,245,1)"
-                data-83499="color: rgba(251,255,245,1)"
-                data-83500="color: rgba(15,21,226,1)"
-                data-116499="color: rgba(15,21,226,1)"
-                data-116500="color: rgba(249,254,148,1)"
-                data-128000="color: rgba(249,254,148,1)"
-                data-128001="color: rgba(15,21,226,1)"
-                data-157999="color: rgba(15,21,226,1)"
-                data-158000="color: rgba(249,254,148,1)"
-            ></i> -->
         </div>
         <article class="audio">
             <span class="btn-sound"
@@ -303,6 +376,10 @@
                 data-128001="border: 0.25vw solid rgba(15,21,226,1)"
                 data-157999="border: 0.25vw solid rgba(15,21,226,1)"
                 data-158000="border: 0.25vw solid rgba(249,254,148,1)"
+                data-158000="border: 0.25vw solid rgba(249,254,148,1)"
+                data-180999="border: 0.25vw solid rgba(249,254,148,1)"
+                data-181000="border: 0.25vw solid rgba(214,60,45,1)"
+                data-182000="border: 0.25vw solid rgba(214,60,45,1)"
             >
                 <!-- <i class="fa fa-volume-up" aria-hidden="true"
                         data-0="color: rgba(233,28,13,1)"
@@ -320,6 +397,9 @@
                         data-128001="color: rgba(15,21,226,1)"
                         data-157999="color: rgba(15,21,226,1)"
                         data-158000="color: rgba(249,254,148,1)"
+                        data-180999="color: rgba(249,254,148,1)"
+                        data-181000="color: rgba(214,60,45,1)"
+                        data-182000="color: rgba(214,60,45,1)"
                     ></i> -->
                 <i class="fa fa-volume-off" aria-hidden="true"
                     data-0="color: rgba(233,28,13,1)"
@@ -337,6 +417,9 @@
                     data-128001="color: rgba(15,21,226,1)"
                     data-157999="color: rgba(15,21,226,1)"
                     data-158000="color: rgba(249,254,148,1)"
+                    data-180999="color: rgba(249,254,148,1)"
+                    data-181000="color: rgba(214,60,45,1)"
+                    data-182000="color: rgba(214,60,45,1)"
                 ></i>
             </span>
             <audio id="music" src="assets/audio/bgm.mp3" loop="loop"></audio>
@@ -360,6 +443,9 @@
             data-128001="background-color: rgba(15,21,226,1); color: rgba(253,255,211,1);"
             data-157999="background-color: rgba(15,21,226,1); color: rgba(253,255,211,1);"
             data-158000="background-color: rgba(249,254,148,1); color: rgba(254,186,148,1);"
+            data-180999="background-color: rgba(249,254,148,1); color: rgba(254,186,148,1);"
+            data-181000="background-color: rgba(214,60,45,1); color: rgba(218,209,234,1);"
+            data-182000="background-color: rgba(214,60,45,1); color: rgba(218,209,234,1);"
         >0</div>
         
         <section id="section1" class="content__item">
@@ -733,13 +819,13 @@
                 <div class="t2 fixed">
                     Node.js를 통해 NPM을 이용하여 터미널로<br>build후, React 컴퍼넌트를 사용하여 포트폴리오<br>소개, 콘텍트 등 가상페이지를 만들어 출력시켜<br>만든 React 사이트입니다.
                 </div>
-                <div class="button fixed"><a href="http://bild.dothome.co.kr/bild-php/pages/main.php" target="_blank">view site</a></div>
+                <div class="button fixed"><a href="https://rinreact999.firebaseapp.com/" target="_blank">view site</a></div>
             </div>
             <div class="sec7-img1 fixed">
                 <img src="assets/img/mockup.svg" alt="목업">
             </div>
             <div class="sec7-img2 fixed">
-                <img src="assets/img/site4.svg" alt="팀플 사이트">
+                <img src="assets/img/site4.svg" alt="리액트 사이트">
             </div>  
         </section>
         <!-- //section7 -->
@@ -761,13 +847,13 @@
                 <div class="t2 fixed">
                     Node.js를 통해 NPM을 이용하여 터미널로 build후, React 컴퍼넌트를 사용하여 포트폴리오 소개, 콘텍트 등 가상페이지를 만들어 출력시켜 만든 React 사이트입니다.
                 </div>
-                <div class="button fixed"><a href="http://bild.dothome.co.kr/bild-php/pages/main.php" target="_blank">view site</a></div>
+                <div class="button fixed"><a href="https://rinvue999.firebaseapp.com/" target="_blank">view site</a></div>
             </div>
             <div class="sec8-img1 fixed">
                 <img src="assets/img/mockup.svg" alt="목업">
             </div>
             <div class="sec8-img2 fixed">
-                <img src="assets/img/site4.svg" alt="팀플 사이트">
+                <img src="assets/img/site4.svg" alt="뷰 사이트">
             </div>  
         </section>
         <!-- //section8 -->
@@ -1129,12 +1215,75 @@
             >
                 <path id="path4"></path>
             </svg>
-            <!-- <div class="sec15-img1 fixed"
+            <div class="sec15-img1 fixed"
+                data-165000="opacity: 0; top: 30%; transform: scale(1)"
+                data-166000="opacity: 1; top: 30%; transform: scale(1)"
+                data-167000="opacity: 1; top: -5%; transform: scale(0.5)"
             >
-                <img src="assets/img/logo1.svg" alt="로고">
-            </div> -->
+                <a href="https://www.instagram.com/rnnsernn/" target="_blank"><img src="assets/img/logo1.svg" alt="로고"></a>
+            </div>
+            <div class="sec15-text1">
+                <div class="t1 fixed" 
+                    data-168000="left: 130vw"
+                    data-170000="left: 43vw"
+                    data-179000="left: 43vw"
+                    data-180000="left: -30vw"
+                >
+                    제<span class="line1"
+                        data-173000="width: 0vw; margin-left: 3vw; margin-right: -0.8vw;"
+                        data-175000="width: 20vw; margin-left: -1.2vw; margin-right: -0.8vw;"
+                    ></span>포트폴리오를
+                </div>
+                <div class="t2 fixed"
+                    data-170000="left: 130vw"
+                    data-172000="left: 50vw"
+                    data-179000="left: 50vw"
+                    data-180000="left: -40vw"
+                >
+                    봐주셔서<span class="line1"
+                        data-176000="width: 0vw; margin-left: 3vw; margin-right: -0.8vw;"
+                        data-178000="width: 20vw; margin-left: -1.2vw; margin-right: -1vw;"
+                    ></span>감사합니다!
+                </div>
+            </div>
         </div>
         <!-- //section15 -->
+
+        <div id="section16" class="content__item fixed">
+            <div class="sec16-img1 fixed"
+                data-182000="left: 120vw"
+                data-185000="left: -20vw"
+            >
+                <img src="assets/img/icon10.svg" alt="contact 이미지">
+            </div>
+            <div class="contact fixed"
+                data-182000="left: 160vw"
+                data-185000="left: 25vw"
+            >
+                <div class="sec16-text1 fixed">
+                    <div class="t1">
+                        <div class="txt">CONTACT ME!</div>
+                        <div class="button fixed"><span>VIEW CONTACT</span>S</div>
+                    </div>
+                </div>
+                <div class="sec16-text2 fixed">
+                    <div class="t1">
+                        <div class="txt">My information!</div>
+                        <div class="button fixed">
+                            <span class="button_txt">VIEW INFO</span>
+                            <div class="box">
+                                <h4>My Infomation!</h4>
+                                <p class="p1">NAME<span class="s1">이세린</span></p>
+                                <p class="p2">E-MAIL<span class="s2">lsrljm98@gmail.com</span></p>
+                                <p class="p3">KAKAO<span class="s3">serin8011</span></p>
+                                <p class="p4">PHONE NUMBER<span class="s4">010-8098-8120</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //section16 -->
     </div>
     <!-- // contentWrap-->
     
@@ -1188,6 +1337,7 @@
         $(window).scroll(function(){
             //bottom 사라지게
             $(".bottom").addClass("end");
+            $(".header .logo").addClass("up");
         });
 
         //스크롤 값 출력
@@ -1350,7 +1500,30 @@
         } , 3000);
 
 
-        
+        //contact mouse hover
+        $('.sec16-text1 .t1 .button').hover(function() {
+            $(this).css("height", "20vw");
+            $('.sec16-text1').addClass("active");
+            $('.sec16-text1 .t1 .txt').addClass("active");
+        }, function(){
+            $(this).css("height", "5vw");
+            $('.sec16-text1').removeClass("active");
+            $('.sec16-text1 .t1 .txt').removeClass("active");
+        });
+
+        $('.sec16-text2 .t1 .button').hover(function() {
+            $(this).css("height", "19vw");
+            setTimeout(function(){
+                $('#section16 .sec16-text2 .box').css("opacity", "1");
+            }, 800)
+            $('.sec16-text2').addClass("active");
+            $('.sec16-text2 .t1 .txt').addClass("active");
+        }, function(){
+            $(this).css("height", "5vw");
+            $('#section16 .sec16-text2 .box').css("opacity", "0");
+            $('.sec16-text2').removeClass("active");
+            $('.sec16-text2 .t1 .txt').removeClass("active");
+        });
     </script>
 </body>
 </html>
