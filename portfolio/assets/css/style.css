@@ -1562,7 +1562,7 @@ iframe {
 #section16 .sec16-text1 .t1 .button {
     border: 3px solid #D63724;
     border-radius: 50px;
-    width: 120%;
+    width: 120%; height: 5vw;
     color: #D63724;
     font-size: 1.5vw;
     line-height: 2;
