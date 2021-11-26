@@ -1541,7 +1541,7 @@ iframe {
 
 #section16 .sec16-text1 .box {
     position: relative;
-    /* opacity: 0;  */
+    opacity: 0; 
     color: #D63724;
     top: 2vw;
 }
