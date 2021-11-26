@@ -1623,7 +1623,7 @@ iframe {
     transition: opacity 0.3s;
 }
 #section16 .sec16-text2 .t1 .txt.active {
-    opacity: 0;
+    opacity: 0; 
 }
 #section16 .sec16-text2 .box {
     position: relative;
