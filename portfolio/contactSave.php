@@ -11,7 +11,7 @@
     //SMTP::DEBUG_OFF = off (for production use)
     //SMTP::DEBUG_CLIENT = client messages
     //SMTP::DEBUG_SERVER = client and server messages
-    $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+    $mail->SMTPDebug = SMTP::DEBUG_OFF;
     $mail->Host = 'smtp.naver.com';
     $mail->Port = 465;
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
@@ -34,6 +34,6 @@
         echo 'Message sent!';
     }
 ?>
-<!-- <script>
-    location.href = "contactResult.php";
-</script> -->
+<script>
+    location.href = "index.html";
+</script>

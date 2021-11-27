@@ -15,255 +15,7 @@
     
 
     <style>
-        .flex-center {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        a,
-        a:visited,
-        a:hover,
-        a:active {
-            color: inherit;
-            text-decoration: none;
-        }
-        .outer-menu {
-            position: fixed;
-            top: 2vw; left: 2vw;
-        }
-        .outer-menu .checkbox-toggle {
-            position: absolute;
-            top: 0; left: 0;
-            z-index: 2;
-            cursor: pointer;
-            width: 3vw; height: 3vw;
-            opacity: 0;
-        }
-        .outer-menu .checkbox-toggle:checked + .hamburger > div {
-            transform: rotate(135deg);
-        }
-        .outer-menu .checkbox-toggle:checked + .hamburger > div:before,
-        .outer-menu .checkbox-toggle:checked + .hamburger > div:after {
-            top: 0;
-            transform: rotate(90deg);
-        }
-        .outer-menu .checkbox-toggle:checked + .hamburger > div:after {
-            opacity: 0;
-        }
-        .outer-menu .checkbox-toggle:checked ~ .menu {
-            pointer-events: auto;
-            visibility: visible;
-        }
-        .outer-menu .checkbox-toggle:checked ~ .menu > div {
-            transform: scale(1);
-            transition-duration: 0.75s;
-        }
-        .outer-menu .checkbox-toggle:checked ~ .menu > div > div {
-            opacity: 1;
-            transition: opacity 0.4s ease 0.4s;
-        }
-        .outer-menu .checkbox-toggle:checked:hover + .hamburger > div {
-            transform: rotate(225deg);
-        }
-        .outer-menu .hamburger {
-            position: absolute;
-            top: 0vw; left: 0;
-            z-index: 1;
-            width: 3vw; height: 3vw;
-            padding: 0.5em 1em;
-            border-radius: 0 0.12em 0.12em 0;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .outer-menu .hamburger > div {
-            border-radius: 3px;
-            position: relative;
-            flex: none;
-            width: 2.5vw; height: 0.42vw;
-            /* width: 32px; height: 8px; */
-            background: #E91C0D;
-            transition: all 0.4s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .outer-menu .hamburger > div:before,
-        .outer-menu .hamburger > div:after {
-            content: '';
-            position: absolute;
-            z-index: 1;
-            top: -0.8vw;
-            left: 0;
-            width: 100%; height: 0.4vw;
-            border-radius: 3px;
-            background: inherit;
-            /* transition: all 0.4s ease; */
-        }
-        .outer-menu .hamburger > div:after {
-            top: 0.8vw;
-        }
-        .outer-menu .menu {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%; height: 100%;
-            pointer-events: none;
-            visibility: hidden;
-            overflow: hidden;
-            -webkit-backface-visibility: hidden;
-                    backface-visibility: hidden;
-            outline: 1px solid transparent;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .outer-menu .menu > div {
-            width: 200vw;
-            height: 200vw;
-            color: #E91C0D;
-            background: rgba(218, 209, 234, 0.97);
-            border-radius: 50%;
-            transition: all 0.4s ease;
-            flex: none;
-            transform: scale(0);
-            -webkit-backface-visibility: hidden;
-                    backface-visibility: hidden;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .outer-menu .menu > div img {
-            width: 10vw;
-            top: 42%; left: 70%;
-        }
-        .outer-menu .menu > div img:hover {
-            width : 12vw;
-            transition: all 0.2s ease;
-            cursor: pointer;
-        }
-        .outer-menu .menu > div > div {
-            text-align: center;
-            max-width: 90vw;
-            max-height: 100vh;
-            opacity: 0;
-            transition: opacity 0.4s ease;
-            overflow-y: auto;
-            flex: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            }
-        .outer-menu .menu > div > div > ul {
-            list-style: none;
-            padding: 0 1em;
-            margin: 0;
-            display: block;
-            max-height: 100vh;
-        }
-        .outer-menu .menu > div > div > ul > li {
-            padding: 0;
-            margin: 4vw;
-            font-size: 5vw;
-            display: block;
-        }
-        .outer-menu .menu > div > div > ul > li > a {
-            position: relative;
-            display: inline;
-            cursor: pointer;
-            transition: color 0.4s ease;
-        }
-        @keyframes slide {
-            from {
-                width: 0vw;
-                margin-left: 1vw;
-            }
-            to {
-                width: 25vw;
-                margin-left: -1vw;
-            }
-        }
-        @keyframes unslide {
-            from {
-                width: 25vw;
-                margin-left: -1vw;
-            }
-            to {
-                width: 0vw;
-                margin-left: 1vw;
-            }
-        }
-        .outer-menu .menu > div > div > ul > li > a > span {
-           animation-duration: 0.6s;
-           animation-name: unslide;
-           animation-direction: alternate;
-           animation-fill-mode: forwards;
-        }
-        .outer-menu .menu > div > div > ul > li > a:hover span {
-           animation-duration: 0.6s;
-           animation-name: slide;
-           animation-direction: alternate;
-           animation-fill-mode: forwards;
-        }
-        /* .outer-menu .menu > div > div > ul > li > a:hover:after {
-            width: 100%;
-        } */
-        .outer-menu .menu > div > div > ul > li > a:after {
-            content: '';
-            position: absolute;
-            z-index: 1;
-            bottom: -0.15em;
-            left: 0;
-            width: 0; height: 2px;
-            background: #e5e5e5;
-            transition: width 0.4s ease;
-        }
-        .outer-menu .menu .line1 { 
-                /* width: 25vw; height: 0.9vw; */
-                width: 0vw; height: 0.9vw;
-                background: #e91c0d;
-                display: inline-block;
-                border-radius: 5px;
-                position: relative;
-                top: 0.6vw;
-                margin-left: 1vw;
-                margin-right: -1vw;
-        }
-        .outer-menu .menu .line2 { 
-                width: 0vw; height: 0.9vw;
-                /* width: 25vw; height: 0.9vw; */
-                background: #e91c0d;
-                display: inline-block;
-                border-radius: 5px;
-                position: relative;
-                top: -2.2vw;
-                margin-left: 1vw;
-                margin-right: -1vw;
-        }
-        .outer-menu .menu .line3 { 
-                width: 0vw; height: 0.9vw;
-                /* width: 25vw; height: 0.9vw; */
-                background: #e91c0d;
-                display: inline-block;
-                border-radius: 5px;
-                position: relative;
-                top: -1.3vw;
-                margin-left: 1vw;
-                margin-right: -1vw;
-        }
-        .outer-menu .menu .line4 { 
-                width: 0vw; height: 0.8vw;
-                /* width: 25vw; height: 0.8vw; */
-                background: #e91c0d;
-                display: inline-block;
-                border-radius: 5px;
-                position: relative;
-                top: -2.5vw;
-                margin-left: 1vw;
-                margin-right: -1vw;
-        }
+        
     </style>
 </head>
 <body>
@@ -348,11 +100,11 @@
                     <div>
                     <a href="https://www.instagram.com/rnnsernn/" target="_blank"><img class="fixed" src="assets/img/logo1.svg" alt="로고"></a>
                         <div>
-                            <ul>
+                            <ul class="fixed">
                                 <li class="l1"><a href="https://lsrljm8011.github.io/dothome21" target="_blank">Git<span class="line1"></span>hub</a></li>
                                 <li class="l2"><a href="https://www.figma.com/files/project/41244108/Team-project?fuid=997698738059308147" target="_blank">Fig<span class="line2"></span>ma</a></li>
                                 <li class="l3"><a href="https://codepen.io/lsrljm8011" target="_blank">Code<span class="line3"></span>pen</a></li>
-                                <li class="l4"><a href="#">Con<span class="line4"></span>tact</a></li>
+                                <!-- <li class="l4"><a href="#">Con<span class="line4"></span>tact</a></li> -->
                             </ul>
                         </div>
                     </div>
@@ -530,9 +282,9 @@
                 <img class="img3" src="assets/img/icon3.svg" alt="여자아이 이미지">
             </div>
             <div class="sec1-img slider-wrap fixed"
-                data-22000="transform:scale(1)"
-                data-23000="transform:scale(0.5)"
-                data-24000="transform:scale(0)"
+                data-22000="transform:scale(1); display: block;"
+                data-23000="transform:scale(0.5); display: block;"
+                data-24000="transform:scale(0); display: none;"
             >
                 <div class="slider-inner">
                     <div class="slider">
@@ -646,8 +398,8 @@
 
         <section id="section3" class="content__item">
             <div class="sec3-text1"
-                data-52000="opacity: 1"
-                data-53000="opacity: 0"
+                data-52000="opacity: 1; display: block;"
+                data-53000="opacity: 0; display: none;"
             >
                 <div class="t1 fixed"
                     data-46000="left: 120vw"
@@ -684,33 +436,33 @@
                     ></span>REFERENCE</div>
             </div>
             <div class="sec3-img1 fixed"
-                data-56000="opacity: 0; width: 18vw;"
-                data-57000="opacity: 1; width: 18vw;"
-                data-63000="opacity: 1; width: 18vw;"
-                data-64000="opacity: 1; width: 13vw;"
-                data-66000="opacity: 1; width: 18vw;"
-                data-67000="opacity: 1; width: 13vw;"
-                data-69000="opacity: 1; width: 18vw;"
-                data-70000="opacity: 1; width: 13vw;"
-                data-72000="opacity: 1; width: 18vw;"
-                data-73000="opacity: 1; width: 13vw;"
-                data-75000="opacity: 1; width: 18vw;"
-                data-76000="opacity: 1; width: 13vw;"
-                data-78000="opacity: 1; width: 18vw;"
-                data-84000="opacity: 1; width: 18vw;"
-                data-84001="opacity: 0; width: 18vw;"
+                data-56000="opacity: 0; width: 18vw; display: block;"
+                data-57000="opacity: 1; width: 18vw; display: block;"
+                data-63000="opacity: 1; width: 18vw; display: block;"
+                data-64000="opacity: 1; width: 13vw; display: block;"
+                data-66000="opacity: 1; width: 18vw; display: block;"
+                data-67000="opacity: 1; width: 13vw; display: block;"
+                data-69000="opacity: 1; width: 18vw; display: block;"
+                data-70000="opacity: 1; width: 13vw; display: block;"
+                data-72000="opacity: 1; width: 18vw; display: block;"
+                data-73000="opacity: 1; width: 13vw; display: block;"
+                data-75000="opacity: 1; width: 18vw; display: block;"
+                data-76000="opacity: 1; width: 13vw; display: block;"
+                data-78000="opacity: 1; width: 18vw; display: block;"
+                data-84000="opacity: 1; width: 18vw; display: block;"
+                data-84001="opacity: 0; width: 18vw; display: none;"
             >
                 <img src="assets/img/icon5.svg" alt="해달 이미지">
             </div>
             
             <svg id="svg" viewBox="0 0 1000 1000" class="fixed"
-                data-45000="transform:scale(0);"
-                data-46000="transform:scale(0.6)"
-                data-53000="transform:scale(0.6);"
-                data-56000="transform:scale(2);"
-                data-57000="transform:scale(2);"
-                data-58000="transform:scale(4);"
-                data-58001="transform:scale(0);"
+                data-45000="transform:scale(0); display: block;"
+                data-46000="transform:scale(0.6); display: block;"
+                data-53000="transform:scale(0.6); display: block;"
+                data-56000="transform:scale(2); display: block;"
+                data-57000="transform:scale(2); display: block;"
+                data-58000="transform:scale(4); display: block;"
+                data-58001="transform:scale(0); display: none;"
             >
                 <path id="path1"></path>
             </svg>
@@ -1027,19 +779,19 @@
 
         <div id="section10" class="content__item">
             <svg id="svg" viewBox="0 0 1000 1000" class="fixed"
-                data-118000="transform:scale(0);"
-                data-120000="transform:scale(0.6);"
-                data-126000="transform:scale(0.6);"
-                data-127000="transform:scale(0);"
+                data-118000="transform:scale(0); display: block;"
+                data-120000="transform:scale(0.6); display: block;"
+                data-126000="transform:scale(0.6); display: block;"
+                data-127000="transform:scale(0); display: none;"
             >
                 <path id="path2"></path>
             </svg>
             <svg id="svg" viewBox="0 0 1000 1000" class="fixed"
-                data-126999="transform:scale(0); opacity: 1"
-                data-127000="transform:scale(4); opacity: 1"
-                data-129000="transform:scale(2); opacity: 1"
-                data-133000="transform:scale(2); opacity: 1"
-                data-134000="transform:scale(2); opacity: 0"
+                data-126999="transform:scale(0); opacity: 1; display: block;"
+                data-127000="transform:scale(4); opacity: 1; display: block;"
+                data-129000="transform:scale(2); opacity: 1; display: block;"
+                data-133000="transform:scale(2); opacity: 1; display: block;"
+                data-134000="transform:scale(2); opacity: 0; display: none;"
             >
                 <path id="path3"></path>
             </svg>
@@ -1177,12 +929,12 @@
         <!-- //section13 -->
 
         <div id="section14" class="content__item fixed"
-            data-153000="top: 150%; left: 0%; transform: scale(1); opacity: 1"
-            data-154000="top: -2%; transform: scale(1); opacity: 1"
-            data-157000="top: -2%; transform: scale(1); opacity: 1"
-            data-159000="top: -2%; transform: scale(0.8); opacity: 1"
-            data-163000="top: -2%; transform: scale(0.8); opacity: 1"
-            data-164000="top: -2%; transform: scale(0.8); opacity: 0"
+            data-153000="top: 150%; left: 0%; transform: scale(1); opacity: 1; display: block;"
+            data-154000="top: -2%; transform: scale(1); opacity: 1; display: block;"
+            data-157000="top: -2%; transform: scale(1); opacity: 1; display: block;"
+            data-159000="top: -2%; transform: scale(0.8); opacity: 1; display: block;"
+            data-163000="top: -2%; transform: scale(0.8); opacity: 1; display: block;"
+            data-164000="top: -2%; transform: scale(0.8); opacity: 0; display: none;"
         >
             <div class="sec14-text1">
                 <div class="t1 fixed">
@@ -1263,7 +1015,33 @@
                 <div class="sec16-text1 fixed">
                     <div class="t1">
                         <div class="txt">CONTACT ME!</div>
-                        <div class="button fixed"><span>VIEW CONTACT</span>S</div>
+                        <div class="button fixed">
+                            <span class="button_txt">VIEW CONTACT</span>
+                            <div class="box">
+                                <h4>CONTACT ME!</h4>
+                                <form action="contactSave.php" name="contact" method="post">
+                                    <fieldset>
+                                        <div>
+                                            <label for="contactFrom">YOUR EMAIL</label>
+                                            <input type="text" name="contactFrom" id="contactFrom" class="title-text i1" placeholder="이메일을 입력해주세요." autocomplete='off'>
+                                        </div>
+                                        <div>
+                                            <label for="contactTo" class="ir_so">TO</label>
+                                            <input type="text" name="contactTo" id="contactTo" class="title-text ir_so" value="lsrljm8011@naver.com" disabled autocomplete='off'>
+                                        </div>
+                                        <div>
+                                            <label for="contactSubject">SUBJECT</label>
+                                            <input type="text" name="contactSubject" id="contactSubject" class="title-text i2" placeholder="제목을 입력해주세요." autocomplete='off'>
+                                        </div>
+                                        <div>
+                                            <label class="l3" for="contactContent">CONTENT</label>
+                                            <textarea name="contactContent" id="contactContent" rows="8" placeholder="내용을 입력해주세요."></textarea>
+                                        </div>
+                                    </fieldset>
+                                    <button class="btn" type="submit" value="보내기">보내기</button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="sec16-text2 fixed">
@@ -1500,13 +1278,17 @@
         } , 3000);
 
 
-        //contact mouse hover
+       //contact mouse hover
         $('.sec16-text1 .t1 .button').hover(function() {
-            $(this).css("height", "20vw");
+            $(this).css("height", "34vw");
+            setTimeout(function(){
+                $('#section16 .sec16-text1 .box').css("display", "block");
+            }, 800);
             $('.sec16-text1').addClass("active");
             $('.sec16-text1 .t1 .txt').addClass("active");
         }, function(){
             $(this).css("height", "5vw");
+            $('#section16 .sec16-text1 .box').css("display", "none");
             $('.sec16-text1').removeClass("active");
             $('.sec16-text1 .t1 .txt').removeClass("active");
         });
@@ -1514,13 +1296,13 @@
         $('.sec16-text2 .t1 .button').hover(function() {
             $(this).css("height", "19vw");
             setTimeout(function(){
-                $('#section16 .sec16-text2 .box').css("opacity", "1");
-            }, 800)
+                $('#section16 .sec16-text2 .box').css("display", "block");
+            }, 800);
             $('.sec16-text2').addClass("active");
             $('.sec16-text2 .t1 .txt').addClass("active");
         }, function(){
             $(this).css("height", "5vw");
-            $('#section16 .sec16-text2 .box').css("opacity", "0");
+            $('#section16 .sec16-text2 .box').css("display", "none");
             $('.sec16-text2').removeClass("active");
             $('.sec16-text2 .t1 .txt').removeClass("active");
         });
