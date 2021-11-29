@@ -513,7 +513,7 @@ a:active {
 .loading p {
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 55%;
     transform: translate(-50%, 30vh);
     font-size: 1.2vw;
     color: #e91c0d;
@@ -568,7 +568,7 @@ a:active {
 .loading .circle-wrap {
     position: relative;
     left: 85%;
-    top: 30%;
+    top: 20%;
     transform: translate(-50%, -50%);
 }
 

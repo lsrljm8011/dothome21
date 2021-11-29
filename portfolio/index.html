@@ -12,17 +12,12 @@
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/reset.css">
-    
-
-    <style>
-        
-    </style>
 </head>
 <body>
-    <!-- <div class="loading">
+    <div class="loading">
         <article class="audio">
             <span class="btn-sound">
-                <i class="fa fa-volume-up" aria-hidden="true"></i>
+                <!-- <i class="fa fa-volume-up" aria-hidden="true"></i> -->
                 <i class="fa fa-volume-off" aria-hidden="true"></i>
             </span>
             <audio id="theme-song" src="../assets/audio/gameshow-brazz-658.mp3" loop="loop"></audio>
@@ -33,7 +28,7 @@
             </div>
         </div>
         <p>제 포트폴리오의 방문해주셔서 감사합니다!</p>
-    </div> -->
+    </div>
     <!-- loding -->
 
 
@@ -101,7 +96,7 @@
                     <a href="https://www.instagram.com/rnnsernn/" target="_blank"><img class="fixed" src="assets/img/logo1.svg" alt="로고"></a>
                         <div>
                             <ul class="fixed">
-                                <li class="l1"><a href="https://lsrljm8011.github.io/dothome21" target="_blank">Git<span class="line1"></span>hub</a></li>
+                                <li class="l1"><a href="https://github.com/lsrljm8011" target="_blank">Git<span class="line1"></span>hub</a></li>
                                 <li class="l2"><a href="https://www.figma.com/files/project/41244108/Team-project?fuid=997698738059308147" target="_blank">Fig<span class="line2"></span>ma</a></li>
                                 <li class="l3"><a href="https://codepen.io/lsrljm8011" target="_blank">Code<span class="line3"></span>pen</a></li>
                                 <!-- <li class="l4"><a href="#">Con<span class="line4"></span>tact</a></li> -->
@@ -1066,6 +1061,7 @@
     <!-- // contentWrap-->
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
@@ -1089,23 +1085,23 @@
         $btnSound.on("click", sound);
 
         //가로모드
-        const contentWrap = $(".contentWrap");
-        const contentItem = $(".content__item");
+        // const contentWrap = $(".contentWrap");
+        // const contentItem = $(".content__item");
 
-        let scrollTotalWidth = contentWrap.width();
-        $("body").height(scrollTotalWidth);
+        // let scrollTotalWidth = contentWrap.width();
+        // $("body").height(scrollTotalWidth);
         
-        $(window).scroll(function(){
-            let scrollTop = $(window).scrollTop();
+        // $(window).scroll(function(){
+        //     let scrollTop = $(window).scrollTop();
  
-            let nWidth = scrollTotalWidth - $(window).width();
-            let nHeight = $("body").height() - $(window).height();
+        //     let nWidth = scrollTotalWidth - $(window).width();
+        //     let nHeight = $("body").height() - $(window).height();
 
-            let ratio = nWidth / nHeight;
-            let goLeft = scrollTop * ratio;
+        //     let ratio = nWidth / nHeight;
+        //     let goLeft = scrollTop * ratio;
 
-            contentWrap.css("left", -goLeft);
-        });
+        //     contentWrap.css("left", -goLeft);
+        // });
 
         //로딩
         $(window).load(function(){
@@ -1283,7 +1279,7 @@
             $(this).css("height", "34vw");
             setTimeout(function(){
                 $('#section16 .sec16-text1 .box').css("display", "block");
-            }, 800);
+            }, 500);
             $('.sec16-text1').addClass("active");
             $('.sec16-text1 .t1 .txt').addClass("active");
         }, function(){
@@ -1297,7 +1293,7 @@
             $(this).css("height", "19vw");
             setTimeout(function(){
                 $('#section16 .sec16-text2 .box').css("display", "block");
-            }, 800);
+            }, 500);
             $('.sec16-text2').addClass("active");
             $('.sec16-text2 .t1 .txt').addClass("active");
         }, function(){
