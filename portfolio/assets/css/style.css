@@ -536,7 +536,29 @@ a:active {
 } */
 
 /* audio */
-.loading .audio {}
+.loading .loading_audio .btn-sound {
+    display: block;
+    width: 2.5vw;
+    height: 2.5vw;
+    text-align: center;
+    line-height: 1.8vw;
+    /* background-color: #e91c0d; */
+    border: 0.25vw solid rgba(233, 28, 13, 1);
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    left: 50%; top: 94%;
+    transform: translate(-50%, -50%);
+    z-index: 99999;
+}
+.loading .loading_audio .btn-sound .fa-volume-off {
+    color: #e91c0d;
+    font-size: 1.2vw;
+}
+.loading .loading_audio .btn-sound .fa-volume-up {
+    color: #e91c0d;
+    font-size: 1.2vw;
+}
 
 .audio .btn-sound {
     display: block;
@@ -582,7 +604,7 @@ a:active {
     width: 30vw;
     background: #e91c0d;
     overflow: hidden;
-    animation: round 11000ms ease-in-out infinite alternate, rotateZ 13000ms linear infinite;
+    animation: round 11000ms ease-in-out infinite alternate, rotateZ 13000ms linear;
 }
 
 .loading .circle-wrap .circle img {
