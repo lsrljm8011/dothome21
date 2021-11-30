@@ -14,10 +14,10 @@
     <link rel="stylesheet" href="assets/css/reset.css">
 </head>
 <body>
-    <div class="loading">
+    <!-- <div class="loading">
         <article class="audio">
             <span class="btn-sound">
-                <!-- <i class="fa fa-volume-up" aria-hidden="true"></i> -->
+                <i class="fa fa-volume-up" aria-hidden="true"></i>
                 <i class="fa fa-volume-off" aria-hidden="true"></i>
             </span>
             <audio id="theme-song" src="../assets/audio/gameshow-brazz-658.mp3" loop="loop"></audio>
@@ -28,7 +28,7 @@
             </div>
         </div>
         <p>제 포트폴리오의 방문해주셔서 감사합니다!</p>
-    </div>
+    </div> -->
     <!-- loding -->
 
 
@@ -536,7 +536,7 @@
                     ></span>SITE
                 </div>
                 <div class="t2 fixed">
-                    회원가입, 로그인, 게시판, 댓글 등 php를 활용하여 제작한 사이트입니다. 
+                    MYSQL과 데이터베이스를 사용하여 완성하였고, 회원가입, 게시판, 댓글 작성 등 PHP를 활용하여 만든 포트폴리오 사이트입니다. 
                 </div>
                 <div class="button fixed"><a href="http://lsrljm8011.dothome.co.kr/site-php/pages/main.php" target="_blank">view site</a></div>
             </div>
@@ -592,7 +592,7 @@
                     ></span>SITE
                 </div>
                 <div class="t2 fixed">
-                    포트폴리오 소개, 콘텍트 등 가상페이지를 만들어 출력시켜 firebase로 호스팅 하여 만든 VUE 사이트입니다.
+                    컴포넌트와 Props를 활용하여 사이트를 완성하였고, SCSS를 사용하여 스타일을 지정했습니다. 포트폴리오 소개, 콘텍트 등 가상페이지를 만들어 출력시켜 firebase로 호스팅 하여 만든 VUE 사이트입니다.
                 </div>
                 <div class="button fixed"><a href="https://rinvue999.firebaseapp.com/" target="_blank">view site</a></div>
             </div>
@@ -1085,23 +1085,23 @@
         $btnSound.on("click", sound);
 
         //가로모드
-        // const contentWrap = $(".contentWrap");
-        // const contentItem = $(".content__item");
+        const contentWrap = $(".contentWrap");
+        const contentItem = $(".content__item");
 
-        // let scrollTotalWidth = contentWrap.width();
-        // $("body").height(scrollTotalWidth);
+        let scrollTotalWidth = contentWrap.width();
+        $("body").height(scrollTotalWidth);
         
-        // $(window).scroll(function(){
-        //     let scrollTop = $(window).scrollTop();
+        $(window).scroll(function(){
+            let scrollTop = $(window).scrollTop();
  
-        //     let nWidth = scrollTotalWidth - $(window).width();
-        //     let nHeight = $("body").height() - $(window).height();
+            let nWidth = scrollTotalWidth - $(window).width();
+            let nHeight = $("body").height() - $(window).height();
 
-        //     let ratio = nWidth / nHeight;
-        //     let goLeft = scrollTop * ratio;
+            let ratio = nWidth / nHeight;
+            let goLeft = scrollTop * ratio;
 
-        //     contentWrap.css("left", -goLeft);
-        // });
+            contentWrap.css("left", -goLeft);
+        });
 
         //로딩
         $(window).load(function(){
